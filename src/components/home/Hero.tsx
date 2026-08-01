@@ -86,9 +86,9 @@ const Hero: FC = () => {
       icon: <DollarSignIcon className='w-6 h-6' />,
     },
     {
-      title: 'Budget',
-      description: 'Appropriations & expenditures',
-      to: '/transparency/budget',
+      title: 'Procurement',
+      description: 'Bids, contracts & procurement plans',
+      to: '/transparency/procurement',
       icon: <LandmarkIcon className='w-6 h-6' />,
     },
     {

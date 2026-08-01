@@ -6,25 +6,34 @@ import { config } from './lguConfig';
  */
 const LGU_LABELS: Record<
   string,
-  { head: string; body: string; subdivisions: string; adjective: string }
+  {
+    head: string;
+    body: string;
+    subdivisions: string;
+    adjective: string;
+    seat: string;
+  }
 > = {
   municipality: {
     head: 'Mayor',
     body: 'Sangguniang Bayan',
     subdivisions: 'Barangays',
     adjective: 'Municipal',
+    seat: 'Municipal Hall',
   },
   city: {
     head: 'Mayor',
     body: 'Sangguniang Panlungsod',
     subdivisions: 'Barangays',
     adjective: 'City',
+    seat: 'City Hall',
   },
   province: {
     head: 'Governor',
     body: 'Sangguniang Panlalawigan',
     subdivisions: 'Municipalities',
     adjective: 'Provincial',
+    seat: 'Provincial Capitol',
   },
 };
 
@@ -46,6 +55,8 @@ export const lguLabels = {
   subdivisions: labels.subdivisions,
   /** "Municipal" / "City" / "Provincial" */
   adjective: labels.adjective,
+  /** "Municipal Hall" / "City Hall" / "Provincial Capitol" */
+  seat: labels.seat,
   /** "{name}, {province}" e.g. "Kalibo, Aklan" */
   location: `${config.lgu.name}, ${config.lgu.province}`,
 };

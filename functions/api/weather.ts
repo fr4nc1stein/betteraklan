@@ -47,18 +47,15 @@ function getCorsHeaders(origin: string | null): Record<string, string> {
   };
 }
 
-// CONFIGURATION - Easy to change for other municipalities
+// CONFIGURATION - Province of Aklan (capital: Kalibo)
 const DEFAULT_CITY: CityCoordinates = {
-  name: 'Aklan',
-  lat: 14.1763,
-  lon: 121.2219,
+  name: 'Kalibo',
+  lat: 11.7044,
+  lon: 122.3657,
 };
 
 // Optional: Add more cities if needed
-const ADDITIONAL_CITIES: CityCoordinates[] = [
-  // { name: 'Bay', lat: 14.1833, lon: 121.2833 },
-  // { name: 'Calamba', lat: 14.2167, lon: 121.1667 },
-];
+const ADDITIONAL_CITIES: CityCoordinates[] = [];
 
 const ALL_CITIES = [DEFAULT_CITY, ...ADDITIONAL_CITIES];
 
