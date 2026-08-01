@@ -11,8 +11,8 @@
 	"d1_databases": [
 		{
 			"binding": "BETTERLB_DB",
-			"database_name": "betteraklan-openlgu",
-			"database_id": "2adbe9e2-d061-473b-8de2-8aacdae4fb0d",
+			"database_name": "betteraklan",
+			"database_id": "f4e45f86-8f81-4cf8-898d-86b43587ade2",
 			"migrations_dir": "db/migrations"
 		}
 	],

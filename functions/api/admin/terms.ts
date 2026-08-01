@@ -46,7 +46,7 @@ async function handleListTerms(context: {
         end_date: string;
       }) => ({
         id: row.id,
-        name: formatTermName(row.term_number),
+        name: formatTermName(row.start_date, row.end_date),
         year_range: formatYearRange(row.start_date, row.end_date),
         ordinal: formatOrdinal(row.term_number),
       })

@@ -295,6 +295,13 @@ function inferTermFromNumber(value, terms, isOld) {
  */
 function normalizeSourceFields(row, sourceKey, terms) {
   const normalized = { ...row };
+
+  // Only the legacy DataTables collector emits combined_title_number
+  // (number+title packed into one cell). The WordPress collector already
+  // provides clean separate number/title/date_enacted fields — leave them
+  // untouched rather than re-deriving from a field that doesn't exist here.
+  if (!normalized.combined_title_number) return normalized;
+
   const isOld = /\(old\)/i.test(normalized.combined_title_number || '');
 
   if (sourceKey === 'resolutions') {

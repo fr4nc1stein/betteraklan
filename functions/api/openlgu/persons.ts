@@ -267,7 +267,7 @@ async function getPersonsList(context: { request: Request; env: Env }) {
                 id: row.term_id,
                 term_number: row.term_number,
                 ordinal: formatOrdinal(row.term_number),
-                name: formatTermName(row.term_number),
+                name: formatTermName(row.term_start, row.term_end),
                 year_range: formatYearRange(row.term_start, row.term_end),
                 start_date: row.term_start,
                 end_date: row.term_end,
@@ -487,7 +487,7 @@ async function getPersonDetail(context: { request: Request; env: Env }) {
               ...m,
               term_name:
                 m.term_number != null
-                  ? formatTermName(m.term_number as number)
+                  ? formatTermName(m.start_date as string, m.end_date as string)
                   : null,
               term_ordinal:
                 m.term_number != null

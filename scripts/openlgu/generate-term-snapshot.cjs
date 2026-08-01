@@ -4,31 +4,38 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const ROOT = path.resolve(__dirname, '../..');
-const OUT = path.join(ROOT, 'pipeline/openlgu/terms.json');
+const OUT = path.join(ROOT, 'pipeline/openlgu/reference/terms.json');
 
-// Sangguniang Bayan terms for Municipality of Los Baños
-// 3-year terms aligned with Philippine local election cycles
+// Sangguniang Panlalawigan terms for the Province of Aklan
+// 3-year terms aligned with Philippine local election cycles.
+// Must match db/migrations/004_aklan_baseline_data.sql.
 const TERMS = [
   {
-    term_id: 'sb_9',
+    term_id: 'sp_2013',
+    label: '2013-2016',
+    start_date: '2013-07-01',
+    end_date: '2016-06-30',
+  },
+  {
+    term_id: 'sp_2016',
     label: '2016-2019',
     start_date: '2016-07-01',
     end_date: '2019-06-30',
   },
   {
-    term_id: 'sb_10',
+    term_id: 'sp_2019',
     label: '2019-2022',
     start_date: '2019-07-01',
     end_date: '2022-06-30',
   },
   {
-    term_id: 'sb_11',
+    term_id: 'sp_2022',
     label: '2022-2025',
     start_date: '2022-07-01',
     end_date: '2025-06-30',
   },
   {
-    term_id: 'sb_12',
+    term_id: 'sp_2025',
     label: '2025-2028',
     start_date: '2025-07-01',
     end_date: '2028-06-30',

@@ -76,10 +76,17 @@ function loadSourceRecords(isRemote) {
     ...new Set(sourceRecords.map(r => r.source_key).filter(Boolean)),
   ];
   if (sourceKeys.length) {
+    const baseUrlByKey = new Map();
+    for (const r of sourceRecords) {
+      if (r.source_key && r.source_url && !baseUrlByKey.has(r.source_key)) {
+        baseUrlByKey.set(r.source_key, r.source_url);
+      }
+    }
     const scrapeSourcesSql = sourceKeys
       .map(key => {
         const id = `scrape_${key}`;
-        return `INSERT OR IGNORE INTO scrape_sources (id, name, source_type, base_url) VALUES ('${id}', '${key}', 'lgu_website', 'https://losbanos.gov.ph');`;
+        const baseUrl = escapeSql(baseUrlByKey.get(key) || null);
+        return `INSERT OR IGNORE INTO scrape_sources (id, name, source_type, base_url) VALUES ('${id}', '${key}', 'lgu_website', ${baseUrl});`;
       })
       .join('\n');
     console.log(`  Loading ${sourceKeys.length} scrape_sources...`);
@@ -111,6 +118,13 @@ function loadSourceRecords(isRemote) {
     'collector_version',
   ];
 
+  // source_records.source_kind has a CHECK constraint of
+  // ('website_table_row', 'facebook_post', 'pdf_ocr', 'manual_entry').
+  // 'website_post' (one-post-per-document collectors, e.g. WordPress
+  // category archives) isn't in that list; map it to the closest existing
+  // value rather than widening the schema for a single value.
+  const SOURCE_KIND_MAP = { website_post: 'website_table_row' };
+
   const rows = sourceRecords.map(r => ({
     id: r.id,
     scrape_run_id: null, // scrape_runs not populated yet, skip FK
@@ -119,7 +133,7 @@ function loadSourceRecords(isRemote) {
       : null,
     source_record_id: null,
     source_url: r.source_url || null,
-    source_kind: r.source_kind || 'website_table_row',
+    source_kind: SOURCE_KIND_MAP[r.source_kind] || r.source_kind || 'website_table_row',
     entity_type: 'document',
     content_hash: r.content_hash || null,
     raw_payload_json: r.raw_payload_json || null,
@@ -302,35 +316,40 @@ function loadReviewDecisions(isRemote) {
   console.log(`  Done: ${rows.length} review_decisions.`);
 }
 
+function formatOrdinal(n) {
+  const s = ['th', 'st', 'nd', 'rd'];
+  const v = n % 100;
+  return `${n}${s[(v - 20) % 10] || s[v] || s[0]}`;
+}
+
 function loadTerms(isRemote) {
   console.log('\nLoading terms...');
-  const termsPath = path.join(PIPELINE_DIR, 'terms.json');
+  const termsPath = path.join(PIPELINE_DIR, 'reference/terms.json');
   if (!fs.existsSync(termsPath)) {
     console.log('  No terms file found.');
     return;
   }
 
   const terms = JSON.parse(fs.readFileSync(termsPath, 'utf8'));
-  const termNumberMap = {
-    sb_9: 9,
-    sb_10: 10,
-    sb_11: 11,
-    sb_12: 12,
-    sb_13: 13,
-    sb_14: 14,
-    sb_15: 15,
-    sb_16: 16,
-  };
 
-  const sql = terms
-    .map(t => {
+  // term_number is a sequential index for this dataset, in chronological
+  // order. It has no authoritative meaning beyond sort order and the
+  // ordinal label — actual term naming comes from the year range (see
+  // functions/utils/formatters.ts formatTermName), not from the LGU-specific
+  // body name baked in here.
+  const sorted = [...terms].sort((a, b) =>
+    (a.start_date || '').localeCompare(b.start_date || '')
+  );
+
+  const sql = sorted
+    .map((t, i) => {
       const id = t.term_id || t.id;
-      const num = termNumberMap[id] || parseInt(id.replace('sb_', ''), 10);
-      const ordinal = `${num}${num < 20 ? ['th', 'st', 'nd', 'rd'][((num + 90) % 10) - 4 || 'th'] : 'th'}`;
+      const num = i + 1;
+      const ordinal = formatOrdinal(num);
       const label =
         t.label ||
         `${t.start_date?.split('-')[0]}-${t.end_date?.split('-')[0]}`;
-      return `INSERT OR REPLACE INTO terms (id, term_number, ordinal, name, start_date, end_date, year_range) VALUES ('${id}', ${num}, '${ordinal}', 'Sangguniang Bayan ${label}', '${t.start_date}', '${t.end_date}', '${label}');`;
+      return `INSERT OR REPLACE INTO terms (id, term_number, ordinal, name, start_date, end_date, year_range) VALUES ('${id}', ${num}, '${ordinal}', 'Term ${label}', '${t.start_date}', '${t.end_date}', '${label}');`;
     })
     .join('\n');
 

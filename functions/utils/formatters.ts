@@ -11,9 +11,14 @@ export function formatOrdinal(n: number): string {
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
 
-/** 12 -> "12th Sangguniang Panlalawigan" */
-export function formatTermName(termNumber: number): string {
-  return `${formatOrdinal(termNumber)} Sangguniang Panlalawigan`;
+/**
+ * "2022-07-01", "2025-06-30" -> "Sangguniang Panlalawigan (2022-2025)"
+ * Uses the year range rather than an ordinal session count — we don't have
+ * an authoritative historical numbering for the Aklan SP, unlike municipal
+ * Sangguniang Bayan terms which are conventionally numbered.
+ */
+export function formatTermName(startDate: string, endDate: string): string {
+  return `Sangguniang Panlalawigan (${formatYearRange(startDate, endDate)})`;
 }
 
 /** "2016-07-01", "2019-06-30" -> "2016-2019" */
