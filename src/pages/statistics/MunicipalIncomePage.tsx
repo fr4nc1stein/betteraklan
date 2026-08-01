@@ -66,8 +66,8 @@ export default function MunicipalIncomePage() {
     <>
       {/* PageHero - documented pattern for layout headers */}
       <PageHero
-        title='Municipal Income'
-        description='Detailed analysis of revenue sources, fiscal autonomy, and national tax dependency.'
+        title='Provincial Income'
+        description='Detailed analysis of revenue sources, fiscal autonomy, and national tax dependency — FY 2026 Budget, Province of Aklan.'
       >
         <div className='flex flex-wrap justify-center gap-2'>
           <Badge variant='primary' dot>

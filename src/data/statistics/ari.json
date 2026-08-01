@@ -1,10 +1,56 @@
 [
   {
+    "period": "FY-2026",
+    "location_info": {
+      "region": "Region VI (Western Visayas)",
+      "province": "Aklan",
+      "lgu_name": "Province of Aklan",
+      "lgu_type": "Province"
+    },
+    "source": "FDPP Form 1b \u2014 Annual Budget Report FY 2026, Province of Aklan",
+    "locally_sourced_revenue": {
+      "tax_revenue": {
+        "real_property_tax_general_fund": 80.0,
+        "tax_on_business": 24.1,
+        "other_taxes": 41.0,
+        "total_tax_revenue": 145.1
+      },
+      "non_tax_revenue": {
+        "regulatory_fees": 1.5,
+        "service_user_charges": 19.7,
+        "receipts_from_economic_enterprises": 905.0,
+        "total_non_tax_revenue": 931.0
+      },
+      "total_locally_sourced_revenue": 1076.1
+    },
+    "other_income_sources": {
+      "interest_income": 0.1,
+      "national_tax_allotment": 2199.43
+    },
+    "other_shares_from_national_tax_collection": {
+      "share_from_economic_zone": 0.0,
+      "share_from_evat": 0.0,
+      "share_from_national_wealth": 0.0,
+      "share_from_pagcor_pcso_lotto": 0.0,
+      "share_from_tobacco_excise_tax": 0.0,
+      "others": 0.0,
+      "total_other_shares": 0.0
+    },
+    "summary_indicators": {
+      "annual_regular_income": 3275.53,
+      "dependency_rates": {
+        "lsr_dependency": "32.8%",
+        "nta_dependency": "67.2%",
+        "other_shares_from_national_tax_dependency": "0.0%"
+      }
+    }
+  },
+  {
     "period": "FY-2024",
     "location_info": {
       "region": "Region VI (Western Visayas)",
       "province": "Aklan",
-      "lgu_name": "Aklan",
+      "lgu_name": "Province of Aklan",
       "lgu_type": "Province"
     },
     "locally_sourced_revenue": {

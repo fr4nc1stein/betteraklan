@@ -5,7 +5,7 @@
     "chamber": "Sangguniang Panlalawigan ng Aklan (Provincial Board)",
     "address": "Provincial Capitol, Kalibo, Aklan",
     "trunkline": "(036) 268-5572 / (036) 262-7340 / (036) 272-7000 local 3500",
-    "website": "https://aklan.gov.ph",
+    "website": "http://www.spaklan.ph/",
     "email": null,
     "officials": [
       {
@@ -13,6 +13,84 @@
         "name": "HON. DEXTER M. CALIZO",
         "website": null,
         "personId": "calizo-dexter-m"
+      },
+      {
+        "role": "Provincial Board Member — 1st District",
+        "name": "HON. MARK ACE L. BAUTISTA",
+        "website": null,
+        "personId": "bautista-mark-ace-l"
+      },
+      {
+        "role": "Provincial Board Member — 1st District",
+        "name": "HON. REYNALDO M. QUIMPO",
+        "website": null,
+        "personId": "quimpo-reynaldo-m"
+      },
+      {
+        "role": "Provincial Board Member — 1st District",
+        "name": "HON. MARK V. QUIMPO",
+        "website": null,
+        "personId": "quimpo-mark-v"
+      },
+      {
+        "role": "Provincial Board Member — 1st District",
+        "name": "HON. TEDDY C. TUPAS",
+        "website": null,
+        "personId": "tupas-teddy-c"
+      },
+      {
+        "role": "Provincial Board Member — 1st District",
+        "name": "HON. APOLINAR C. CLEOPE",
+        "website": null,
+        "personId": "cleope-apolinar-c"
+      },
+      {
+        "role": "Provincial Board Member — 2nd District",
+        "name": "HON. ROMEO M. DALISAY",
+        "website": null,
+        "personId": "dalisay-romeo-m"
+      },
+      {
+        "role": "Provincial Board Member — 2nd District",
+        "name": "HON. BAYANI M. CORDOVA",
+        "website": null,
+        "personId": "cordova-bayani-m"
+      },
+      {
+        "role": "Provincial Board Member — 2nd District",
+        "name": "HON. BOB AUGUSTO F. LEGASPI",
+        "website": null,
+        "personId": "legaspi-bob-augusto-f"
+      },
+      {
+        "role": "Provincial Board Member — 2nd District",
+        "name": "HON. JUPITER AELRED G. GALLENERO",
+        "website": null,
+        "personId": "gallenero-jupiter-aelred-g"
+      },
+      {
+        "role": "Provincial Board Member — 2nd District",
+        "name": "HON. GLENN C. TABANG",
+        "website": null,
+        "personId": "tabang-glenn-c"
+      },
+      {
+        "role": "PCL President",
+        "name": "HON. CONCEPCION P. LABINDAO",
+        "website": null,
+        "personId": "labindao-concepcion-p"
+      },
+      {
+        "role": "ABC President",
+        "name": "HON. RALF A. TOLOSA",
+        "website": null,
+        "personId": "tolosa-ralf-a"
+      },
+      {
+        "role": "SK Provincial Federation President",
+        "name": "HON. EDMUNDO M. TOLENTINO, JR.",
+        "website": null,
+        "personId": "tolentino-edmundo-m-jr"
       },
       {
         "role": "Secretary to the Sanggunian",

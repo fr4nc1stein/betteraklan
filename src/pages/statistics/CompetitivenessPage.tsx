@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 
 import { CHART_THEME, standardAxisProps } from '@/constants/charts';
-import { ArrowUp, BarChart3, Target, TrendingUp, Trophy } from 'lucide-react';
+import { ArrowUp, BarChart3, TrendingUp, Trophy } from 'lucide-react';
 import {
   CartesianGrid,
   Legend,
@@ -43,9 +43,6 @@ interface TrendPoint {
 
 export default function CompetitivenessPage() {
   const [activeTab, setActiveTab] = useState<'trends' | 'pillars'>('trends');
-  const [selectedPillar, setSelectedPillar] = useState(
-    cmciData.pillars[0].name
-  );
 
   const latestIdx = cmciData.meta.years.length - 1;
   const latestYear = cmciData.meta.years[latestIdx];
@@ -66,18 +63,16 @@ export default function CompetitivenessPage() {
       .filter(d => d.Overall !== null);
   }, []);
 
-  // 3. Find current pillar safely
-  const currentPillar = useMemo(
-    () => cmciData.pillars.find(p => p.name === selectedPillar),
-    [selectedPillar]
-  );
+  // 3. Find current pillar safely (unused - pillars tab shows rankings instead)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const currentPillar = null;
 
   return (
     <>
       {/* PageHero - documented pattern for layout headers */}
       <PageHero
         title='Competitiveness'
-        description='National evaluation of municipal progress across pillars of governance and development.'
+        description='Annual DTI CMCI ranking of the Province of Aklan — measuring economic dynamism, government efficiency, infrastructure, and resiliency.'
       >
         <div className='flex flex-wrap gap-2 justify-center'>
           <Badge variant='primary' dot>
@@ -92,18 +87,18 @@ export default function CompetitivenessPage() {
         <StatCard
           label='Overall Score'
           value={cmciData.overall_score[latestIdx].toFixed(2)}
-          subtext='CMCI Index'
+          subtext='CMCI Provincial Index'
           variant='primary'
         />
         <StatCard
           label='Official Rank'
-          value='33'
-          subtext='1st Class Municipality'
+          value={`${cmciData.rankings[latestIdx]}${['st','nd','rd'][((cmciData.rankings[latestIdx]+90)%100-10)%10-1]||'th'}`}
+          subtext='Among All Provinces'
           variant='secondary'
         >
           <div className='flex items-center gap-0.5 rounded-full border border-kapwa-border-success bg-kapwa-bg-success-weak px-2 py-0.5 text-kapwa-text-success'>
             <ArrowUp className='w-3 h-3 stroke-3' />
-            <span className='text-[10px] font-black uppercase'>Up</span>
+            <span className='text-[10px] font-black uppercase'>CMCI {latestYear}</span>
           </div>
         </StatCard>
         <StatCard
@@ -117,25 +112,30 @@ export default function CompetitivenessPage() {
 
       {/* Tab Switcher */}
       <nav className='mb-kapwa-lg bg-kapwa-bg-hover flex gap-1.5 rounded-2xl p-1.5'>
-        {(['trends', 'pillars'] as const).map(tab => (
-          <button
-            key={tab}
-            onClick={() => setActiveTab(tab)}
-            className={cn(
-              'min-h-[48px] flex-1 rounded-xl py-3 text-xs font-bold tracking-widest uppercase transition-all',
-              activeTab === tab
-                ? 'text-kapwa-text-brand-bold bg-kapwa-bg-surface shadow-md'
-                : 'hover:text-kapwa-text-support text-kapwa-text-strong0'
-            )}
-          >
-            {tab === 'trends' ? (
-              <TrendingUp className='inline mr-1 w-4 h-4' />
-            ) : (
-              <BarChart3 className='inline mr-1 w-4 h-4' />
-            )}
-            {tab}
-          </button>
-        ))}
+        <button
+          onClick={() => setActiveTab('trends')}
+          className={cn(
+            'min-h-[48px] flex-1 rounded-xl py-3 text-xs font-bold tracking-widest uppercase transition-all',
+            activeTab === 'trends'
+              ? 'text-kapwa-text-brand-bold bg-kapwa-bg-surface shadow-md'
+              : 'hover:text-kapwa-text-support text-kapwa-text-strong0'
+          )}
+        >
+          <TrendingUp className='inline mr-1 w-4 h-4' />
+          Overall Score Trend
+        </button>
+        <button
+          onClick={() => setActiveTab('pillars')}
+          className={cn(
+            'min-h-[48px] flex-1 rounded-xl py-3 text-xs font-bold tracking-widest uppercase transition-all',
+            activeTab === 'pillars'
+              ? 'text-kapwa-text-brand-bold bg-kapwa-bg-surface shadow-md'
+              : 'hover:text-kapwa-text-support text-kapwa-text-strong0'
+          )}
+        >
+          <BarChart3 className='inline mr-1 w-4 h-4' />
+          Rankings by Year
+        </button>
       </nav>
 
       {/* Trends Chart wrapped in DetailSection */}
@@ -186,59 +186,32 @@ export default function CompetitivenessPage() {
           </ResponsiveChart>
         </DetailSection>
       ) : (
-        <div className='grid grid-cols-1 gap-8 lg:grid-cols-12'>
-          <div className='space-y-3 lg:col-span-5'>
-            {cmciData.pillars.map(p => (
-              <button
-                key={p.name}
-                onClick={() => setSelectedPillar(p.name)}
-                className={cn(
-                  'flex min-h-[56px] w-full items-center justify-between rounded-2xl border p-4 text-left transition-all',
-                  selectedPillar === p.name
-                    ? 'bg-kapwa-bg-surface border-kapwa-border-brand shadow-sm'
-                    : 'border-kapwa-border-weak bg-kapwa-bg-surface'
-                )}
+        <DetailSection title='Provincial Rankings by Year' icon={Trophy}>
+          <div className='grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5'>
+            {cmciData.meta.years.map((year, idx) => (
+              <div
+                key={year}
+                className='border-kapwa-border-weak bg-kapwa-bg-surface flex flex-col items-center justify-center rounded-xl border p-4 shadow-xs text-center'
               >
-                <span
-                  className={cn(
-                    'text-sm font-bold',
-                    selectedPillar === p.name
-                      ? 'text-kapwa-text-brand-bold'
-                      : 'text-kapwa-text-support'
-                  )}
-                >
-                  {p.name}
+                <span className='text-kapwa-text-disabled text-[9px] font-bold tracking-widest uppercase mb-1'>
+                  {year}
                 </span>
-                <Badge variant='slate'>
-                  {p.scores[latestIdx]?.toFixed(2) || '0.00'}
-                </Badge>
-              </button>
+                <span className='text-2xl font-black text-kapwa-text-strong'>
+                  {cmciData.rankings[idx]}
+                  <span className='text-xs text-kapwa-text-disabled'>
+                    {['st','nd','rd'][((cmciData.rankings[idx]+90)%100-10)%10-1]||'th'}
+                  </span>
+                </span>
+                <span className='text-kapwa-text-brand text-xs font-bold mt-1'>
+                  {cmciData.overall_score[idx].toFixed(2)}
+                </span>
+              </div>
             ))}
           </div>
-          <div className='lg:col-span-7'>
-            <DetailSection
-              title={`${selectedPillar} Indicators`}
-              icon={Target}
-              className='bg-kapwa-bg-surface/30'
-            >
-              <div className='grid grid-cols-1 gap-3 sm:grid-cols-2'>
-                {currentPillar?.indicators.map((ind, idx) => (
-                  <div
-                    key={idx}
-                    className='border-kapwa-border-weak bg-kapwa-bg-surface flex min-h-[100px] flex-col justify-between rounded-xl border p-4 shadow-xs'
-                  >
-                    <span className='text-kapwa-text-disabled text-[10px] leading-tight font-bold tracking-widest uppercase'>
-                      {ind.name}
-                    </span>
-                    <span className='mt-2 text-xl font-black text-kapwa-text-strong'>
-                      {ind.values[latestIdx]?.toFixed(4) || '0.0000'}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </DetailSection>
-          </div>
-        </div>
+          <p className='text-kapwa-text-disabled text-[10px] mt-4 text-center italic'>
+            Pillar-level breakdown for provinces is not published separately by DTI CMCI. Source: cmci.dti.gov.ph
+          </p>
+        </DetailSection>
       )}
 
       {/* Footer */}

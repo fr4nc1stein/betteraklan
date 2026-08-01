@@ -6,10 +6,9 @@
       "lgu_name": "Province of Aklan",
       "lgu_type": "Province"
     },
-    "source": "PSA Census",
-    "notes": "Provincial population data from Philippine Statistics Authority.",
+    "source": "Philippine Statistics Authority (PSA) — 2020 & 2024 Census of Population",
+    "notes": "2020 count declared official by President Rodrigo Duterte on July 6, 2021 (Proclamation No. 1179). 2024 count declared official by President Ferdinand R. Marcos Jr. on July 11, 2025 (Proclamation No. 973). Aklan accounts for ~13% of Western Visayas total (4,861,911) in 2024.",
     "censusDates": {
-      "1960": "1960-02-15",
       "1970": "1970-05-06",
       "1975": "1975-05-01",
       "1980": "1980-05-01",
@@ -19,46 +18,419 @@
       "2007": "2007-08-01",
       "2010": "2010-05-01",
       "2015": "2015-08-01",
-      "2020": "2020-05-01"
+      "2020": "2020-05-01",
+      "2024": "2024-07-01"
     }
   },
   "municipality": {
     "name": "Province of Aklan",
     "history": [
-      { "year": 1960, "population": 253602 },
-      { "year": 1970, "population": 314180 },
-      { "year": 1975, "population": 347920 },
-      { "year": 1980, "population": 380814 },
-      { "year": 1990, "population": 445690 },
-      { "year": 1995, "population": 477300 },
-      { "year": 2000, "population": 514604 },
-      { "year": 2007, "population": 562603 },
-      { "year": 2010, "population": 571157 },
-      { "year": 2015, "population": 599249 },
-      { "year": 2020, "population": 617629 }
+      {
+        "year": 2010,
+        "population": 535725
+      },
+      {
+        "year": 2015,
+        "population": 574823
+      },
+      {
+        "year": 2020,
+        "population": 615475
+      },
+      {
+        "year": 2024,
+        "population": 634422
+      }
     ],
     "growthRates": [
-      { "period": "2010-2015", "rate": 0.97 },
-      { "period": "2015-2020", "rate": 0.60 }
+      {
+        "period": "2010-2015",
+        "rate": 1.42
+      },
+      {
+        "period": "2015-2020",
+        "rate": 1.45
+      },
+      {
+        "period": "2020-2024",
+        "rate": 0.73
+      }
     ]
   },
   "barangays": [
-    { "id": "altavas", "name": "Altavas", "history": [{ "year": 2020, "population": 22184 }] },
-    { "id": "balete", "name": "Balete", "history": [{ "year": 2020, "population": 13869 }] },
-    { "id": "banga", "name": "Banga", "history": [{ "year": 2020, "population": 51372 }] },
-    { "id": "batan", "name": "Batan", "history": [{ "year": 2020, "population": 35118 }] },
-    { "id": "buruanga", "name": "Buruanga", "history": [{ "year": 2020, "population": 14773 }] },
-    { "id": "ibajay", "name": "Ibajay", "history": [{ "year": 2020, "population": 54699 }] },
-    { "id": "kalibo", "name": "Kalibo (Capital)", "history": [{ "year": 2020, "population": 75658 }] },
-    { "id": "lezo", "name": "Lezo", "history": [{ "year": 2020, "population": 24280 }] },
-    { "id": "libacao", "name": "Libacao", "history": [{ "year": 2020, "population": 27393 }] },
-    { "id": "madalag", "name": "Madalag", "history": [{ "year": 2020, "population": 21082 }] },
-    { "id": "makato", "name": "Makato", "history": [{ "year": 2020, "population": 33140 }] },
-    { "id": "malay", "name": "Malay", "history": [{ "year": 2020, "population": 56340 }] },
-    { "id": "malinao", "name": "Malinao", "history": [{ "year": 2020, "population": 22611 }] },
-    { "id": "nabas", "name": "Nabas", "history": [{ "year": 2020, "population": 31416 }] },
-    { "id": "new-washington", "name": "New Washington", "history": [{ "year": 2020, "population": 41236 }] },
-    { "id": "numancia", "name": "Numancia", "history": [{ "year": 2020, "population": 35743 }] },
-    { "id": "tangalan", "name": "Tangalan", "history": [{ "year": 2020, "population": 26715 }] }
+    {
+      "id": "kalibo",
+      "name": "Kalibo (Capital)",
+      "history": [
+        {
+          "year": 2010,
+          "population": 74619
+        },
+        {
+          "year": 2015,
+          "population": 80605
+        },
+        {
+          "year": 2020,
+          "population": 89127
+        },
+        {
+          "year": 2024,
+          "population": 93218
+        }
+      ]
+    },
+    {
+      "id": "malay",
+      "name": "Malay",
+      "history": [
+        {
+          "year": 2010,
+          "population": 45811
+        },
+        {
+          "year": 2015,
+          "population": 52973
+        },
+        {
+          "year": 2020,
+          "population": 60077
+        },
+        {
+          "year": 2024,
+          "population": 64723
+        }
+      ]
+    },
+    {
+      "id": "ibajay",
+      "name": "Ibajay",
+      "history": [
+        {
+          "year": 2010,
+          "population": 45279
+        },
+        {
+          "year": 2015,
+          "population": 49564
+        },
+        {
+          "year": 2020,
+          "population": 52364
+        },
+        {
+          "year": 2024,
+          "population": 53399
+        }
+      ]
+    },
+    {
+      "id": "new-washington",
+      "name": "New Washington",
+      "history": [
+        {
+          "year": 2010,
+          "population": 42112
+        },
+        {
+          "year": 2015,
+          "population": 45007
+        },
+        {
+          "year": 2020,
+          "population": 47955
+        },
+        {
+          "year": 2024,
+          "population": 49204
+        }
+      ]
+    },
+    {
+      "id": "nabas",
+      "name": "Nabas",
+      "history": [
+        {
+          "year": 2010,
+          "population": 31052
+        },
+        {
+          "year": 2015,
+          "population": 36435
+        },
+        {
+          "year": 2020,
+          "population": 40632
+        },
+        {
+          "year": 2024,
+          "population": 41568
+        }
+      ]
+    },
+    {
+      "id": "banga",
+      "name": "Banga",
+      "history": [
+        {
+          "year": 2010,
+          "population": 38063
+        },
+        {
+          "year": 2015,
+          "population": 39505
+        },
+        {
+          "year": 2020,
+          "population": 40318
+        },
+        {
+          "year": 2024,
+          "population": 41188
+        }
+      ]
+    },
+    {
+      "id": "numancia",
+      "name": "Numancia",
+      "history": [
+        {
+          "year": 2010,
+          "population": 29862
+        },
+        {
+          "year": 2015,
+          "population": 31934
+        },
+        {
+          "year": 2020,
+          "population": 35693
+        },
+        {
+          "year": 2024,
+          "population": 37428
+        }
+      ]
+    },
+    {
+      "id": "batan",
+      "name": "Batan",
+      "history": [
+        {
+          "year": 2010,
+          "population": 30312
+        },
+        {
+          "year": 2015,
+          "population": 32032
+        },
+        {
+          "year": 2020,
+          "population": 33484
+        },
+        {
+          "year": 2024,
+          "population": 33932
+        }
+      ]
+    },
+    {
+      "id": "makato",
+      "name": "Makato",
+      "history": [
+        {
+          "year": 2010,
+          "population": 25461
+        },
+        {
+          "year": 2015,
+          "population": 27262
+        },
+        {
+          "year": 2020,
+          "population": 29717
+        },
+        {
+          "year": 2024,
+          "population": 30650
+        }
+      ]
+    },
+    {
+      "id": "balete",
+      "name": "Balete",
+      "history": [
+        {
+          "year": 2010,
+          "population": 27197
+        },
+        {
+          "year": 2015,
+          "population": 28920
+        },
+        {
+          "year": 2020,
+          "population": 30090
+        },
+        {
+          "year": 2024,
+          "population": 30310
+        }
+      ]
+    },
+    {
+      "id": "libacao",
+      "name": "Libacao",
+      "history": [
+        {
+          "year": 2010,
+          "population": 28005
+        },
+        {
+          "year": 2015,
+          "population": 28241
+        },
+        {
+          "year": 2020,
+          "population": 28272
+        },
+        {
+          "year": 2024,
+          "population": 28525
+        }
+      ]
+    },
+    {
+      "id": "altavas",
+      "name": "Altavas",
+      "history": [
+        {
+          "year": 2010,
+          "population": 23919
+        },
+        {
+          "year": 2015,
+          "population": 24619
+        },
+        {
+          "year": 2020,
+          "population": 25639
+        },
+        {
+          "year": 2024,
+          "population": 26181
+        }
+      ]
+    },
+    {
+      "id": "malinao",
+      "name": "Malinao",
+      "history": [
+        {
+          "year": 2010,
+          "population": 24108
+        },
+        {
+          "year": 2015,
+          "population": 23194
+        },
+        {
+          "year": 2020,
+          "population": 24517
+        },
+        {
+          "year": 2024,
+          "population": 24971
+        }
+      ]
+    },
+    {
+      "id": "tangalan",
+      "name": "Tangalan",
+      "history": [
+        {
+          "year": 2010,
+          "population": 20277
+        },
+        {
+          "year": 2015,
+          "population": 21916
+        },
+        {
+          "year": 2020,
+          "population": 23704
+        },
+        {
+          "year": 2024,
+          "population": 24004
+        }
+      ]
+    },
+    {
+      "id": "buruanga",
+      "name": "Buruanga",
+      "history": [
+        {
+          "year": 2010,
+          "population": 16962
+        },
+        {
+          "year": 2015,
+          "population": 19003
+        },
+        {
+          "year": 2020,
+          "population": 19357
+        },
+        {
+          "year": 2024,
+          "population": 19878
+        }
+      ]
+    },
+    {
+      "id": "madalag",
+      "name": "Madalag",
+      "history": [
+        {
+          "year": 2010,
+          "population": 18168
+        },
+        {
+          "year": 2015,
+          "population": 18389
+        },
+        {
+          "year": 2020,
+          "population": 18890
+        },
+        {
+          "year": 2024,
+          "population": 19043
+        }
+      ]
+    },
+    {
+      "id": "lezo",
+      "name": "Lezo",
+      "history": [
+        {
+          "year": 2010,
+          "population": 14518
+        },
+        {
+          "year": 2015,
+          "population": 15224
+        },
+        {
+          "year": 2020,
+          "population": 15639
+        },
+        {
+          "year": 2024,
+          "population": 16200
+        }
+      ]
+    }
   ]
 }

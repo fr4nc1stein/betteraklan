@@ -22,7 +22,7 @@ export default function TransparencyIndex() {
     {
       title: 'Public Funds',
       description:
-        'Independent visualization of municipal income and where your taxes are being allocated.',
+        'Independent visualization of provincial income and where your taxes are being allocated.',
       icon: Landmark,
       href: '/transparency/financial',
       color: 'blue',

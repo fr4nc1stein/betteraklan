@@ -3,40 +3,44 @@
     "slug": "municipality-of-altavas",
     "barangay_name": "ALTAVAS",
     "address": "Municipal Hall, Altavas, Aklan",
-    "trunkline": [],
+    "trunkline": ["(036) 269-1059"],
     "website": null,
+    "email": "lgualtavasaklan@gmail.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. DENNY D. REFOL SR." }
     ]
   },
   {
     "slug": "municipality-of-balete",
     "barangay_name": "BALETE",
     "address": "Municipal Hall, Balete, Aklan",
-    "trunkline": [],
+    "trunkline": ["(036) 272-3811"],
     "website": null,
+    "email": "enchantingbalete@gmail.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. PRESCILLA GALE S. CALIZO" }
     ]
   },
   {
     "slug": "municipality-of-banga",
     "barangay_name": "BANGA",
     "address": "Municipal Hall, Banga, Aklan",
-    "trunkline": [],
+    "trunkline": ["(036) 267-5823"],
     "website": null,
+    "email": "lguofbanga@gmail.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. NOEL L. REDISON" }
     ]
   },
   {
     "slug": "municipality-of-batan",
     "barangay_name": "BATAN",
     "address": "Municipal Hall, Batan, Aklan",
-    "trunkline": [],
+    "trunkline": ["(036) 272-3409"],
     "website": null,
+    "email": "lgubatan5615@gmail.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. MICHAEL R. RAMOS" }
     ]
   },
   {
@@ -45,128 +49,141 @@
     "address": "Municipal Hall, Buruanga, Aklan",
     "trunkline": [],
     "website": null,
+    "email": "lguburuanga_5609@yahoo.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. ALLAN P. DAGOHOY" }
     ]
   },
   {
     "slug": "municipality-of-ibajay",
     "barangay_name": "IBAJAY",
     "address": "Municipal Hall, Ibajay, Aklan",
-    "trunkline": [],
+    "trunkline": ["(036) 289-2677"],
     "website": null,
+    "email": "lguibajay@yahoo.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. JOSE MIGUEL M. MIRAFLORES" }
     ]
   },
   {
     "slug": "municipality-of-kalibo",
     "barangay_name": "KALIBO (Capital)",
     "address": "Municipal Hall, Kalibo, Aklan",
-    "trunkline": [],
+    "trunkline": ["(036) 262-3241"],
     "website": null,
+    "email": "ommlgukalibo@gmail.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. JURIS B. SUCRO" }
     ]
   },
   {
     "slug": "municipality-of-lezo",
     "barangay_name": "LEZO",
     "address": "Municipal Hall, Lezo, Aklan",
-    "trunkline": [],
+    "trunkline": ["(036) 274-7049"],
     "website": null,
+    "email": "lgu_lezo_aklan@yahoo.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. MEEKIA F. ICASAS" }
     ]
   },
   {
     "slug": "municipality-of-libacao",
     "barangay_name": "LIBACAO",
     "address": "Municipal Hall, Libacao, Aklan",
-    "trunkline": ["(036) 273-2108"],
+    "trunkline": ["(036) 273-2223"],
     "website": null,
+    "email": "lgulibacao2022@gmail.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. TIM BRYAN TEODOSIO" }
     ]
   },
   {
     "slug": "municipality-of-madalag",
     "barangay_name": "MADALAG",
     "address": "Municipal Hall, Madalag, Aklan",
-    "trunkline": [],
+    "trunkline": ["(036) 272-3601"],
     "website": null,
+    "email": "madalaglgu@gmail.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. REX T. GUBATINA" }
     ]
   },
   {
     "slug": "municipality-of-makato",
     "barangay_name": "MAKATO",
     "address": "Municipal Hall, Makato, Aklan",
-    "trunkline": [],
+    "trunkline": ["(036) 272-3908"],
     "website": null,
+    "email": "lgumakato2022@yahoo.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. LEONCITO Y. MATIONG" }
     ]
   },
   {
     "slug": "municipality-of-malay",
     "barangay_name": "MALAY (Home of Boracay)",
     "address": "Municipal Hall, Malay, Aklan",
-    "trunkline": ["(036) 288-8729"],
+    "trunkline": ["(036) 288-8775"],
     "website": null,
+    "email": "lgumalayaklan2@yahoo.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. FROLIBAR S. BAUTISTA, CPA" }
     ]
   },
   {
     "slug": "municipality-of-malinao",
     "barangay_name": "MALINAO",
     "address": "Municipal Hall, Malinao, Aklan",
-    "trunkline": [],
+    "trunkline": ["(036) 275-8121"],
     "website": null,
+    "email": "lgu_malinao@yahoo.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. JOSEPHINE I. IQUINA" }
     ]
   },
   {
     "slug": "municipality-of-nabas",
     "barangay_name": "NABAS",
     "address": "Municipal Hall, Nabas, Aklan",
-    "trunkline": [],
+    "trunkline": ["(036) 289-1033"],
     "website": null,
+    "email": "lgunabas2013@gmail.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. JAMES V. SOLANOY" }
     ]
   },
   {
     "slug": "municipality-of-new-washington",
     "barangay_name": "NEW WASHINGTON",
     "address": "Municipal Hall, New Washington, Aklan",
-    "trunkline": [],
+    "trunkline": ["(036) 264-4330"],
     "website": null,
+    "email": "lgunewwashington2022@gmail.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. SHIMONETTE P. FRANCISCO" }
     ]
   },
   {
     "slug": "municipality-of-numancia",
     "barangay_name": "NUMANCIA",
     "address": "Municipal Hall, Numancia, Aklan",
-    "trunkline": [],
+    "trunkline": ["(036) 265-6597"],
     "website": null,
+    "email": "lgunumanciaaklan@yahoo.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. ROGELIO M. ENERO II" }
     ]
   },
   {
     "slug": "municipality-of-tangalan",
     "barangay_name": "TANGALAN",
     "address": "Municipal Hall, Tangalan, Aklan",
-    "trunkline": [],
+    "trunkline": ["(036) 265-2004"],
     "website": null,
+    "email": "tangalanlgu@gmail.com",
     "officials": [
-      { "role": "Municipal Mayor", "name": null }
+      { "role": "Municipal Mayor", "name": "HON. GENE T. FUENTES" }
     ]
   }
 ]

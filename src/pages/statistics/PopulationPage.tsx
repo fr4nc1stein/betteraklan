@@ -87,13 +87,13 @@ export default function PopulationPage() {
       {/* PageHero - documented pattern for layout headers */}
       <PageHero
         title='Population Profile'
-        description='Detailed demographic analysis tracking growth from the municipal level down to individual barangays.'
+        description='Demographic analysis of the Province of Aklan based on the 2024 Census of Population (PSA).'
       >
         <div className='flex flex-wrap gap-2 justify-center'>
           <Badge variant='primary' dot>
             Census {latestMuni.year}
           </Badge>
-          <Badge variant='slate'>{barangays.length} Barangays</Badge>
+          <Badge variant='slate'>{barangays.length} Municipalities</Badge>
         </div>
       </PageHero>
 
@@ -115,7 +115,7 @@ export default function PopulationPage() {
         <StatCard
           label='Admin Units'
           value={barangays.length}
-          subtext='Official Barangays'
+          subtext='Municipalities'
           variant='slate'
           icon={Users}
         />
@@ -132,7 +132,7 @@ export default function PopulationPage() {
               : 'hover:text-kapwa-text-support text-kapwa-text-strong0'
           )}
         >
-          <TrendingUp className='w-4 h-4' /> Municipal Growth
+          <TrendingUp className='w-4 h-4' /> Province Growth
         </button>
         <button
           onClick={() => setActiveTab('barangays')}
@@ -143,7 +143,7 @@ export default function PopulationPage() {
               : 'hover:text-kapwa-text-support text-kapwa-text-strong0'
           )}
         >
-          <LineIcon className='w-4 h-4' /> Barangay Comparison
+          <LineIcon className='w-4 h-4' /> Municipal Comparison
         </button>
       </div>
 
@@ -151,8 +151,8 @@ export default function PopulationPage() {
       <DetailSection
         title={
           activeTab === 'municipality'
-            ? 'Total Municipal Growth'
-            : 'Barangay Trends'
+            ? 'Total Province Growth (2010–2024)'
+            : 'Municipal Population Trends'
         }
         icon={TrendingUp}
       >
@@ -245,8 +245,8 @@ export default function PopulationPage() {
       <DetailSection title='How to read this data' icon={Info}>
         <p className='text-xs italic leading-relaxed text-kapwa-text-disabled'>
           {activeTab === 'municipality'
-            ? 'The municipal growth chart tracks long-term population expansion from 1960 to current estimates.'
-            : 'The comparison chart allows you to track which barangays are experiencing the fastest urban growth relative to their 2010 baseline.'}
+            ? 'The provincial growth chart tracks long-term population expansion from 1970 to the 2024 Census.'
+            : 'The comparison chart shows population trends for all 17 municipalities of Aklan based on PSA census data.'}
         </p>
       </DetailSection>
 
