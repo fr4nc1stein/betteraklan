@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Executive Leadership",
+  "description": "Schema for municipal executive leaders (Elected and Appointed)",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["slug", "name", "role", "isElected"],
+    "properties": {
+      "slug": { "type": "string" },
+      "name": { "type": "string" },
+      "role": { "type": "string" },
+      "isElected": { "type": "boolean" },
+      "office": {
+        "type": ["string", "null"],
+        "description": "The specific office name or null"
+      },
+      "address": {
+        "type": ["string", "null"]
+      },
+      "phone": {
+        "type": ["string", "null"]
+      },
+      "email": {
+        "oneOf": [{ "type": "string", "format": "email" }, { "type": "null" }],
+        "description": "Valid email address or null",
+        "format": "email"
+      },
+      "website": {
+        "oneOf": [{ "type": "string", "format": "uri" }, { "type": "null" }],
+        "description": "Valid URL starting with http/https or null",
+        "format": "uri"
+      }
+    }
+  }
+}

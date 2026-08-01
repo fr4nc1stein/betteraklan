@@ -1,0 +1,54 @@
+{
+  "categories": [
+    {
+      "name": "Certificates & Vital Records",
+      "slug": "certificates-vital-records",
+      "description": "Birth, death, marriage certificates, and other vital records."
+    },
+    {
+      "name": "Business, Trade & Investment",
+      "slug": "business-trade-investment",
+      "description": "Business permits, licenses, and trade registration services."
+    },
+    {
+      "name": "Social Services & Assistance",
+      "slug": "social-services-assistance",
+      "description": "Welfare programs, senior citizen services, PWD benefits, and financial aid."
+    },
+    {
+      "name": "Health & Wellness",
+      "slug": "health-wellness",
+      "description": "Vaccination programs, health certificates, and medical assistance."
+    },
+    {
+      "name": "Taxation & Payments",
+      "slug": "taxation-payments",
+      "description": "Property tax, business tax, payments, and tax clearance."
+    },
+    {
+      "name": "Agriculture & Economic Development",
+      "slug": "agriculture-economic-development",
+      "description": "Agricultural loans, crop insurance, fertilizer assistance, and training."
+    },
+    {
+      "name": "Infrastructure & Public Works",
+      "slug": "infrastructure-public-works",
+      "description": "Construction permits, road maintenance requests, and public facilities."
+    },
+    {
+      "name": "Education & Scholarship",
+      "slug": "education-scholarship",
+      "description": "Scholarship programs, student assistance, and educational grants."
+    },
+    {
+      "name": "Public Safety & Security",
+      "slug": "public-safety-security",
+      "description": "Emergency services, disaster preparedness, and community safety programs."
+    },
+    {
+      "name": "Environment & Natural Resources",
+      "slug": "environment-natural-resources",
+      "description": "Environmental permits, waste management, and conservation programs."
+    }
+  ]
+}

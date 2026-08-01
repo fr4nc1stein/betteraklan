@@ -1,0 +1,100 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# E2E test snapshots
+e2e/**/*.spec.ts-snapshots/
+e2e/**/__screenshots__/
+e2e/**/__snapshots__/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.env
+.windsurf/
+.claude/
+
+
+functions/wrangler.toml
+functions/.wrangler
+.wrangler/
+wrangler.toml
+
+# Dev
+.cursor/*
+.dev.vars
+/raw_data
+_worker.bundle
+pipeline/
+pipeline/*
+pipeline/__pycache__/
+CLAUDE.md
+.local/
+
+# Large data & binary files
+*.pdf
+*.PDF
+*.csv
+*.zip
+*.tar
+*.tar.gz
+*.gz
+
+# Backup & scan artifacts
+*.backup_*.json
+*duplicates-scan*.json
+*duplicates-scan-full*.json
+.backups/
+
+# Git worktrees
+.worktrees/
+
+# Maestro
+.maestro/*
+maestro.yaml
+todo.md
+docs/qa-reports/*
+docs/decisions/*
+docs/plans/*
+docs/audits/*
+!docs/adr/
+
+# AI planning artifacts live in the workspace-level workbench, not in-repo
+# (../workbench/betterlb/) — see workbench/README.md
+docs/superpowers/
+
+# AI artifacts
+.agents/
+.graphify_python/
+.codex/
+.aider*
+.augment/
+
+# Graphify output
+graphify-out/
+
+# Memory system
+context/transcripts/
+.memsearch/

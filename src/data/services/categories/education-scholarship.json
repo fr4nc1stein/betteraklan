@@ -1,0 +1,106 @@
+[
+  {
+    "service": "Provincial Schools in Aklan",
+    "slug": "provincial-schools-directory",
+    "type": "information",
+    "description": "Overview of key public educational institutions in the Province of Aklan, including the provincial state university.",
+    "officeSlug": ["provincial-social-welfare-and-development-office"],
+    "category": {
+      "name": "Education & Scholarship",
+      "slug": "education-scholarship"
+    },
+    "steps": [
+      "Aklan State University (ASU) — Main Campus, Banga, Aklan (State University — Free tuition under RA 10931)",
+      "Aklan Catholic College — Kalibo, Aklan",
+      "Public elementary and secondary schools in all 17 municipalities (under DepEd Aklan Division)",
+      "For enrollment inquiries, contact your nearest municipal DepEd Division or school registrar."
+    ],
+    "requirements": [],
+    "faqs": [
+      {
+        "question": "When does enrollment start?",
+        "answer": "Enrollment typically begins in June–July. Follow the official DepEd Aklan Division announcements."
+      },
+      {
+        "question": "Is tuition free at Aklan State University?",
+        "answer": "Yes. Under RA 10931, tuition is free at all State Universities and Colleges (SUCs), including ASU. Only miscellaneous fees may apply."
+      }
+    ],
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Aklan State University",
+        "url": "http://www.aklanstateuniversity.edu.ph/"
+      }
+    ]
+  },
+  {
+    "service": "Provincial Scholarship Programs",
+    "slug": "provincial-scholarship-programs",
+    "type": "transaction",
+    "description": "Scholarship and educational assistance programs available to Aklan residents, administered through the Provincial Social Welfare and Development Office (PSWDO) and partner agencies.",
+    "officeSlug": ["provincial-social-welfare-and-development-office"],
+    "category": {
+      "name": "Education & Scholarship",
+      "slug": "education-scholarship"
+    },
+    "steps": [
+      "Monitor the official Provincial Government of Aklan website and Facebook page (facebook.com/aklanIMAD) for scholarship announcements.",
+      "Prepare required documents (see requirements below).",
+      "Submit your application at the PSWDO or Governor's Office during the application period.",
+      "Attend screening/interview and orientation if shortlisted."
+    ],
+    "requirements": [
+      "Barangay Certificate of Residency (from your barangay in Aklan)",
+      "PSA Birth Certificate",
+      "Report card / grades (JHS/SHS/college)",
+      "Good moral certificate from school",
+      "Income documents: parents' ITR or Certificate of Non-Filing / indigency certificate"
+    ],
+    "quickInfo": {
+      "fee": "Free",
+      "whoCanApply": "Aklan residents who are incoming or current college students"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Provincial Social Welfare and Development Office (PSWDO) — (036) 272-7000 local 3200",
+        "url": "https://aklan.gov.ph"
+      }
+    ]
+  },
+  {
+    "service": "Special Program for Employment of Students (SPES)",
+    "slug": "spes-student-employment",
+    "type": "transaction",
+    "description": "DOLE's SPES program allows poor but deserving students and out-of-school youth (15–30 years old) to work during school breaks. Coordinated locally by PESO Aklan.",
+    "officeSlug": ["office-of-the-provincial-public-employment-service"],
+    "category": {
+      "name": "Education & Scholarship",
+      "slug": "education-scholarship"
+    },
+    "steps": [
+      "Follow PESO Aklan announcements on the Provincial Government website and Facebook page for SPES application windows.",
+      "Prepare required documents (ID, school records, indigency/income proof).",
+      "Submit application at the PESO office or as directed in the announcement.",
+      "Attend orientation when shortlisted and complete the employment period."
+    ],
+    "requirements": [
+      "Valid ID (school ID or government-issued)",
+      "School enrollment/grades proof",
+      "Indigency certificate or income documents",
+      "Barangay Certificate of Residency"
+    ],
+    "quickInfo": {
+      "fee": "Free",
+      "whoCanApply": "Students and out-of-school youth aged 15–30 from Aklan"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "PESO Aklan — (036) 272-7000 local 2400",
+        "url": "https://aklan.gov.ph"
+      }
+    ]
+  }
+]

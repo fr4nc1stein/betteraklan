@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "title": "Maligayang Pagdating sa BetterAklan",
+    "subtitle": "Ang volunteer-run portal ng Munisipalidad ng Aklan. Maghanap ng impormasyon, i-access ang mga serbisyo ng pamahalaan, manatiling updated sa pinakabagong balita tungkol sa Aklan.",
+    "quickAccess": "Mabilisang Puntahan"
+  },
+  "services": {
+    "title": "Mga Sikat na Serbisyo"
+  },
+  "weather": {
+    "title": "Mga Update sa Panahon"
+  },
+  "forex": {
+    "title": "Palitan ng Pera"
+  },
+  "news": {
+    "title": "Pinakabagong Balita at Updates"
+  },
+  "footer": {
+    "copyright": "2025 BetterGov.ph - Lahat ng nilalaman ay public domain maliban kung iba ang nakasaad."
+  },
+  "navbar": {
+    "philippines": "Pilipinas",
+    "services": "Mga Serbisyo",
+    "travel": "Paglalakbay",
+    "government": "Pamahalaan",
+    "flood control projects": "Mga Proyekto sa Pagkontrol ng Baha",
+    "openlgu": "OpenLGU"
+  }
+}

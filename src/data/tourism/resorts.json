@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Boracay Island",
+    "found": true,
+    "address": "Malay, Aklan, Philippines",
+    "latitude": 11.9674,
+    "longitude": 121.9248,
+    "google_maps_link": "https://www.google.com/maps/search/?api=1&query=Boracay+Island+Malay+Aklan",
+    "notes": "World-famous beach destination, consistently ranked among the best beaches globally. Home to White Beach (4km powdery white sand).",
+    "searched": true
+  },
+  {
+    "id": 2,
+    "name": "Ati-Atihan Festival Grounds",
+    "found": true,
+    "address": "Kalibo, Aklan, Philippines",
+    "latitude": 11.7044,
+    "longitude": 122.3657,
+    "google_maps_link": "https://www.google.com/maps/search/?api=1&query=Ati-Atihan+Festival+Kalibo+Aklan",
+    "notes": "Site of the annual Ati-Atihan Festival (January), one of the Philippines' oldest and most vibrant cultural celebrations.",
+    "searched": true
+  },
+  {
+    "id": 3,
+    "name": "Jawili Falls",
+    "found": true,
+    "address": "Tangalan, Aklan, Philippines",
+    "latitude": 11.8167,
+    "longitude": 122.1833,
+    "google_maps_link": "https://www.google.com/maps/search/?api=1&query=Jawili+Falls+Tangalan+Aklan",
+    "notes": "Series of seven cascading pools with natural rock formations. A popular eco-tourism destination in Tangalan.",
+    "searched": true
+  },
+  {
+    "id": 4,
+    "name": "Bakhawan Eco-Park (Mangrove Forest)",
+    "found": true,
+    "address": "Caticlan, Malay, Aklan, Philippines",
+    "latitude": 11.9167,
+    "longitude": 121.9333,
+    "google_maps_link": "https://www.google.com/maps/search/?api=1&query=Bakhawan+Eco+Park+Caticlan+Malay+Aklan",
+    "notes": "Community-based mangrove reforestation project covering over 216 hectares near Caticlan. Bamboo boardwalk through mangroves.",
+    "searched": true
+  },
+  {
+    "id": 5,
+    "name": "Buruanga Peninsula",
+    "found": true,
+    "address": "Buruanga, Aklan, Philippines",
+    "latitude": 11.7833,
+    "longitude": 121.9167,
+    "google_maps_link": "https://www.google.com/maps/search/?api=1&query=Buruanga+Aklan",
+    "notes": "Scenic coastal area with beaches, fishing communities, and views of smaller islands. Emerging eco-tourism destination.",
+    "searched": true
+  },
+  {
+    "id": 6,
+    "name": "Punta Bunga Beach",
+    "found": true,
+    "address": "Malay, Aklan, Philippines",
+    "latitude": 11.9833,
+    "longitude": 121.9167,
+    "google_maps_link": "https://www.google.com/maps/search/?api=1&query=Punta+Bunga+Beach+Malay+Aklan",
+    "notes": "Secluded beach on the northern tip of Boracay island, accessible by tricycle and walk.",
+    "searched": true
+  },
+  {
+    "id": 7,
+    "name": "Nabas Eco-Tourism Sites",
+    "found": true,
+    "address": "Nabas, Aklan, Philippines",
+    "latitude": 11.8333,
+    "longitude": 122.0833,
+    "google_maps_link": "https://www.google.com/maps/search/?api=1&query=Nabas+Aklan+eco+tourism",
+    "notes": "Inland municipality with agri-tourism potential, waterfalls, and scenic mountain landscapes.",
+    "searched": true
+  },
+  {
+    "id": 8,
+    "name": "Ibajay Public Market & Heritage Sites",
+    "found": true,
+    "address": "Ibajay, Aklan, Philippines",
+    "latitude": 11.8167,
+    "longitude": 122.1667,
+    "google_maps_link": "https://www.google.com/maps/search/?api=1&query=Ibajay+Aklan",
+    "notes": "Known for local products, heritage church, and coastal tourism. Gateway to some of Aklan's scenic coastal areas.",
+    "searched": true
+  },
+  {
+    "id": 9,
+    "name": "Lezo Hot Spring",
+    "found": true,
+    "address": "Lezo, Aklan, Philippines",
+    "latitude": 11.7167,
+    "longitude": 122.3333,
+    "google_maps_link": "https://www.google.com/maps/search/?api=1&query=Lezo+Aklan+hot+spring",
+    "notes": "Natural hot spring in Lezo municipality near Kalibo. A local recreational attraction.",
+    "searched": true
+  },
+  {
+    "id": 10,
+    "name": "Makato Heritage Church",
+    "found": true,
+    "address": "Makato, Aklan, Philippines",
+    "latitude": 11.6667,
+    "longitude": 122.2333,
+    "google_maps_link": "https://www.google.com/maps/search/?api=1&query=Makato+Church+Aklan",
+    "notes": "Historic Spanish-era church and heritage site in Makato municipality.",
+    "searched": true
+  }
+]

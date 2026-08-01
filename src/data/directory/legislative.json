@@ -1,0 +1,25 @@
+[
+  {
+    "slug": "sangguniang-panlalawigan",
+    "branch": "Legislative Branch",
+    "chamber": "Sangguniang Panlalawigan ng Aklan (Provincial Board)",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": "(036) 268-5572 / (036) 262-7340 / (036) 272-7000 local 3500",
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "officials": [
+      {
+        "role": "Presiding Officer (Vice Governor)",
+        "name": "HON. DEXTER M. CALIZO",
+        "website": null,
+        "personId": "calizo-dexter-m"
+      },
+      {
+        "role": "Secretary to the Sanggunian",
+        "name": "MR. MICHAEL T. SOLANOY",
+        "website": null,
+        "personId": "solanoy-michael-t"
+      }
+    ]
+  }
+]

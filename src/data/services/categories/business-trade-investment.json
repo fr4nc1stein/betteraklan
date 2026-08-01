@@ -1,0 +1,115 @@
+[
+  {
+    "service": "Apply for Municipal Business Permit",
+    "slug": "apply-municipal-business-permit",
+    "type": "transaction",
+    "description": "How to obtain a business permit from any of the 17 municipal governments in Aklan. Required for all businesses operating within the Province of Aklan.",
+    "officeSlug": ["economic-enterprise-development-department"],
+    "category": {
+      "name": "Business, Trade & Investment",
+      "slug": "business-trade-investment"
+    },
+    "steps": [
+      "Step 1 — Get a Barangay Business Clearance from the Barangay Hall where your business is located.",
+      "Step 2 — Go to the Business Permit and Licensing Office (BPLO) at your Provincial Capitol, Kalibo, Aklan.",
+      "Step 3 — Fill out the Unified Application Form and submit required documents.",
+      "Step 4 — Undergo inspections (zoning, sanitary, fire safety) as required.",
+      "Step 5 — Pay the business permit fee at the Municipal Treasurer's Office.",
+      "Step 6 — Receive your Governor's Permit / Municipal Business Permit."
+    ],
+    "requirements": [
+      "Barangay Business Clearance",
+      "Community Tax Certificate (Cedula)",
+      "Lease Contract or Proof of Property Ownership",
+      "DTI/SEC/CDA Certificate of Registration",
+      "Valid government-issued ID"
+    ],
+    "quickInfo": {
+      "processingTime": "1–3 days (varies per province)",
+      "appointmentType": "Walk-in at Provincial Capitol, Kalibo, Aklan BPLO"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Local Government Code of the Philippines (RA 7160)",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "service": "Trade Fairs & Tourism Promotions",
+    "slug": "trade-fairs-tourism-promotions",
+    "type": "information",
+    "description": "Participate in provincial and municipal trade fairs, business expos, and tourism promotion events in Aklan, including the world-famous Ati-Atihan Festival (January, Kalibo).",
+    "officeSlug": ["provincial-tourism-office", "economic-enterprise-development-department"],
+    "category": {
+      "name": "Business, Trade & Investment",
+      "slug": "business-trade-investment"
+    },
+    "steps": [
+      "Check announcements from the Aklan Provincial Tourism Office and EEDD for upcoming trade fairs.",
+      "Prepare eligibility documents: DTI/SEC/CDA registration, current business permit, product list.",
+      "Submit an Application/Intent Form with your business profile and booth requirements.",
+      "Await assessment and confirmation from the organizer.",
+      "Pay booth fees (if applicable) and attend the event."
+    ],
+    "requirements": [
+      "DTI/SEC/CDA registration certificate",
+      "Current Municipal Business Permit",
+      "BIR Certificate of Registration (Form 2303)",
+      "Product compliance certificates (FDA/LTO for food/cosmetics)"
+    ],
+    "quickInfo": {
+      "fee": "Varies per event (booth fees may apply)",
+      "whoCanApply": "Registered MSMEs and tourism enterprises in Aklan"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Aklan Provincial Tourism Office — (036) 272-7000 local 6500",
+        "url": "https://aklan.gov.ph/tourism"
+      }
+    ]
+  },
+  {
+    "service": "Rent Stalls in Provincial Markets",
+    "slug": "rent-stalls-provincial-markets",
+    "type": "transaction",
+    "description": "How to rent market stalls in public markets and economic enterprise facilities managed by the Provincial Government of Aklan, including the Lee Jetty Port and Passenger Terminal.",
+    "officeSlug": ["economic-enterprise-development-department"],
+    "category": {
+      "name": "Business, Trade & Investment",
+      "slug": "business-trade-investment"
+    },
+    "steps": [
+      "Inquire at the Economic Enterprise Development Department (EEDD) or your Provincial Capitol, Kalibo, Aklan.",
+      "Fill out the market stall rental application form.",
+      "Submit proof of identity, residency, and type of goods to be sold.",
+      "Await assessment and allocation of available stall.",
+      "Pay rental fees and deposits at the EEDD or Municipal Treasurer's Office.",
+      "Comply with market sanitation and operation rules."
+    ],
+    "requirements": [
+      "Valid government-issued ID",
+      "Barangay Certificate of Residency",
+      "Sanitary Permit (for food vendors)",
+      "Business Permit (if applicable)",
+      "2×2 ID photo"
+    ],
+    "quickInfo": {
+      "fee": "Varies by stall type and location",
+      "whoCanApply": "Aklan residents and registered vendors"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Economic Enterprise Development Department (EEDD) — (036) 272-7000 local 1100",
+        "url": "https://aklan.gov.ph"
+      },
+      {
+        "name": "Lee Jetty Port and Passenger Terminal — (036) 288-7419",
+        "url": ""
+      }
+    ]
+  }
+]

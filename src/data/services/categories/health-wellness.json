@@ -1,0 +1,161 @@
+[
+  {
+    "service": "Provincial Hospital Locations in Aklan",
+    "slug": "provincial-hospital-locations",
+    "type": "information",
+    "description": "Locations and contact numbers for provincial and district hospitals providing medical care across all 17 municipalities of Aklan.",
+    "officeSlug": ["provincial-health-office"],
+    "category": {
+      "name": "Health & Wellness",
+      "slug": "health-wellness"
+    },
+    "steps": [
+      "DRSTMH (Main Provincial Hospital): Mabini St., Kalibo, Aklan — (036) 268-7062",
+      "Godofredo P. Ramos Hospital: Altavas, Aklan — (036) 269-1069",
+      "Ibajay District Hospital: Ibajay, Aklan — (036) 289-2011",
+      "Don Leovigildo N. Diapo Sr. Municipal Hospital: Kalibo, Aklan — (036) 272-3613",
+      "Malay Municipal Hospital: Malay, Aklan — (036) 288-8729",
+      "Ciriaco S. Tirol Memorial Hospital: Malay, Aklan — (036) 288-3041",
+      "Buruanga Municipal Hospital: Buruanga, Aklan",
+      "Libacao Municipal Infirmary: Libacao, Aklan — (036) 273-2108"
+    ],
+    "requirements": [],
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Aklan Provincial Government Directory",
+        "url": "https://aklan.gov.ph/directory/"
+      }
+    ]
+  },
+  {
+    "service": "Free Check-ups, Medicines, and Vaccines (RHUs)",
+    "slug": "free-checkups-medicines-vaccines",
+    "type": "information",
+    "description": "Access free medical check-ups, basic medicines, and vaccination services through Rural Health Units (RHUs) and barangay health centers across all 17 municipalities.",
+    "officeSlug": ["provincial-health-office"],
+    "category": {
+      "name": "Health & Wellness",
+      "slug": "health-wellness"
+    },
+    "steps": [
+      "Go to your nearest Rural Health Unit (RHU) or Barangay Health Center during clinic hours (Mon–Fri, 8 AM–5 PM).",
+      "First-timers will be issued an Individual Treatment Record (ITR).",
+      "For medicines, bring a doctor's prescription or referral.",
+      "For child immunization, visit on immunization day (typically Wednesdays) with your ECCD card.",
+      "For prenatal services, attend regular prenatal visits at your barangay health center."
+    ],
+    "requirements": [
+      "Valid government-issued ID",
+      "ECCD card (for child immunization)",
+      "Doctor's prescription (for medicines)",
+      "Barangay health record/ITR (if existing)"
+    ],
+    "quickInfo": {
+      "fee": "Free",
+      "whoCanApply": "All Aklan residents",
+      "processingTime": "Walk-in"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Provincial Health Office (PHO) — (036) 268-5917",
+        "url": "https://aklan.gov.ph"
+      }
+    ]
+  },
+  {
+    "service": "Animal Bite Treatment Center",
+    "slug": "animal-bite-treatment-center",
+    "type": "transaction",
+    "description": "Anti-rabies vaccination and wound management for individuals bitten by animals. Available at provincial and district hospitals and select RHUs.",
+    "officeSlug": ["provincial-health-office", "dr-rafael-s-tumbokon-memorial-hospital"],
+    "category": {
+      "name": "Health & Wellness",
+      "slug": "health-wellness"
+    },
+    "steps": [
+      "Go immediately to the nearest Animal Bite Treatment Center, RHU, or emergency room.",
+      "Present proof of Aklan residency (barangay certificate or valid ID).",
+      "Receive wound management and first dose of anti-rabies vaccine (free).",
+      "Follow up on subsequent doses as scheduled."
+    ],
+    "requirements": [
+      "Valid ID or Barangay Certificate (proof of residency)"
+    ],
+    "quickInfo": {
+      "fee": "Free (first dose)",
+      "processingTime": "Immediate",
+      "appointmentType": "Walk-in (Urgent)"
+    },
+    "updatedAt": null,
+    "sources": []
+  },
+  {
+    "service": "Maternal Care and Child Immunization",
+    "slug": "maternal-care-child-immunization",
+    "type": "information",
+    "description": "Free prenatal care, family planning services, and routine child immunization under the Expanded Program on Immunization (EPI) at RHUs and barangay health centers.",
+    "officeSlug": ["provincial-health-office"],
+    "category": {
+      "name": "Health & Wellness",
+      "slug": "health-wellness"
+    },
+    "steps": [
+      "Go to your nearest RHU or Barangay Health Center during clinic hours.",
+      "For prenatal: Bring previous prenatal records and valid ID. Staff will issue a prenatal record on first visit.",
+      "For child immunization: Visit on immunization day (typically Wednesdays, 8 AM–4 PM) with ECCD card.",
+      "For high-risk pregnancies: Request referral to DRSTMH OB-GYN department (24/7)."
+    ],
+    "requirements": [
+      "Valid ID",
+      "ECCD card (for child immunization — issued on first visit if none)",
+      "Prenatal record (issued at first visit)"
+    ],
+    "quickInfo": {
+      "fee": "Free",
+      "whoCanApply": "Pregnant women and children under 12 months",
+      "processingTime": "Walk-in"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Department of Health — Expanded Program on Immunization",
+        "url": "https://doh.gov.ph"
+      }
+    ]
+  },
+  {
+    "service": "TB-DOTS Program (Free TB Treatment)",
+    "slug": "tb-dots-program",
+    "type": "transaction",
+    "description": "Free tuberculosis screening, diagnosis, and full course of anti-TB medicines under the National Tuberculosis Program (NTP) DOTS approach at RHUs across all 17 municipalities.",
+    "officeSlug": ["provincial-health-office"],
+    "category": {
+      "name": "Health & Wellness",
+      "slug": "health-wellness"
+    },
+    "steps": [
+      "Go to your nearest RHU or Barangay Health Center for TB screening.",
+      "If diagnosed with TB, you will be enrolled in the DOTS program.",
+      "Receive free anti-TB medicines and attend regular follow-up visits.",
+      "Complete the full course of treatment as prescribed."
+    ],
+    "requirements": [
+      "Valid ID",
+      "Health record/ITR (if existing)"
+    ],
+    "quickInfo": {
+      "fee": "Free",
+      "whoCanApply": "Anyone with TB symptoms",
+      "processingTime": "Walk-in"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "National Tuberculosis Program (NTP)",
+        "url": "https://doh.gov.ph"
+      }
+    ]
+  }
+]

@@ -1,0 +1,426 @@
+import { FC } from 'react';
+
+import {
+  AlertTriangle,
+  ExternalLink,
+  FileText,
+  Mail,
+  Scale,
+  Shield,
+} from 'lucide-react';
+
+import { config } from '@/lib/lguConfig';
+import { SEO } from '@/components/layout/SEO';
+
+const TermsOfService: FC = () => {
+  const currentDate = new Date().toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
+  return (
+    <div className='bg-kapwa-bg-surface-raised min-h-screen'>
+      <SEO
+        title='Terms of Service'
+        description='Public domain content, volunteer operation, and user responsibilities for accessing government information.'
+      />
+
+      {/* Header Section */}
+      <section className='from-kapwa-brand-600 text-kapwa-text-inverse bg-linear-to-r to-kapwa-blue-700 py-16'>
+        <div className='container mx-auto px-4'>
+          <div className='mx-auto max-w-4xl text-center'>
+            <div className='mb-6 flex justify-center'>
+              <div className='bg-kapwa-bg-surface/20 rounded-full p-4 backdrop-blur-sm'>
+                <Scale className='text-kapwa-text-inverse h-12 w-12' />
+              </div>
+            </div>
+            <h1 className='text-kapwa-text-strong kapwa-heading-xl font-extrabold'>
+              Terms of Service
+            </h1>
+            <p className='text-xl opacity-90'>Last Updated: {currentDate}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <div className='container mx-auto max-w-4xl px-4 py-12'>
+        <div className='bg-kapwa-bg-surface space-y-8 rounded-lg p-8 shadow-lg'>
+          {/* Acceptance of Terms */}
+          <section>
+            <div className='mb-4 flex items-center gap-3'>
+              <FileText className='text-kapwa-text-brand h-6 w-6' />
+              <h2 className='text-kapwa-text-strong kapwa-heading-lg font-bold'>
+                Acceptance of Terms
+              </h2>
+            </div>
+            <p className='text-kapwa-text-support leading-relaxed'>
+              By accessing and using this website, you accept and agree to be
+              bound by the terms and provisions of this agreement.
+            </p>
+          </section>
+
+          {/* Public Domain Content */}
+          <section>
+            <div className='mb-4 flex items-center gap-3'>
+              <Shield className='text-kapwa-text-brand h-6 w-6' />
+              <h2 className='text-kapwa-text-strong kapwa-heading-lg font-bold'>
+                Public Domain Content and Volunteer Operation
+              </h2>
+            </div>
+            <div className='text-kapwa-text-support space-y-4 leading-relaxed'>
+              <p>
+                This website and all its content are in the public domain and
+                operated entirely by volunteers. All information, data,
+                documents, and materials provided on this website are in the
+                public domain unless otherwise noted. Public domain content may
+                be freely used, copied, distributed, and modified without
+                permission or attribution, though attribution is appreciated.
+              </p>
+              <p>
+                As a volunteer-operated resource, we encourage users to conduct
+                their own independent research and verification of information.
+              </p>
+            </div>
+          </section>
+
+          {/* "AS IS" Disclaimer */}
+          <section>
+            <div className='mb-4 flex items-center gap-3'>
+              <AlertTriangle className='h-6 w-6 text-kapwa-text-warning' />
+              <h2 className='text-kapwa-text-strong kapwa-heading-lg font-bold'>
+                &quot;AS IS&quot; Disclaimer
+              </h2>
+            </div>
+            <div className='mb-4 border-l-4 border-kapwa-border-warning bg-kapwa-bg-warning-weak p-4'>
+              <p className='mb-2 font-semibold text-kapwa-text-warning'>
+                ALL INFORMATION ON THIS WEBSITE IS PROVIDED &quot;AS IS&quot;
+                WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+                INCLUDING BUT NOT LIMITED TO:
+              </p>
+              <ul className='list-inside list-disc space-y-1 text-kapwa-text-warning'>
+                <li>Warranties of merchantability</li>
+                <li>Fitness for a particular purpose</li>
+                <li>Non-infringement of intellectual property rights</li>
+                <li>Accuracy, completeness, or reliability of information</li>
+                <li>
+                  Freedom from errors, viruses, or other harmful components
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Limitation of Liability */}
+          <section>
+            <h2 className='text-kapwa-text-strong mb-4 kapwa-heading-lg font-bold'>
+              Limitation of Liability
+            </h2>
+            <div className='text-kapwa-text-support space-y-4 leading-relaxed'>
+              <p>
+                Under no circumstances shall the website operators,
+                contributors, or affiliated parties be liable for any direct,
+                indirect, incidental, special, consequential, or punitive
+                damages arising from:
+              </p>
+              <ul className='ml-4 list-inside list-disc space-y-1'>
+                <li>Your use of this website</li>
+                <li>Any errors or omissions in the content</li>
+                <li>
+                  Any interruption or cessation of transmission to or from the
+                  website
+                </li>
+                <li>Any bugs, viruses, or other harmful components</li>
+                <li>Loss of data or information</li>
+              </ul>
+              <p>
+                This limitation applies regardless of whether such damages arise
+                from contract, tort, negligence, strict liability, or any other
+                legal theory or otherwise.
+              </p>
+            </div>
+          </section>
+
+          {/* User Responsibilities */}
+          <section>
+            <h2 className='text-kapwa-text-strong mb-4 kapwa-heading-lg font-bold'>
+              User Responsibilities and Research Guidelines
+            </h2>
+            <div className='text-kapwa-text-support space-y-4 leading-relaxed'>
+              <p className='font-semibold'>Users are solely responsible for:</p>
+              <ul className='ml-4 list-inside list-disc space-y-1'>
+                <li>
+                  <strong>Independent Verification:</strong> Conducting their
+                  own research and verification of all information obtained from
+                  this website
+                </li>
+                <li>
+                  <strong>Following Source Links:</strong> Reviewing and
+                  visiting the original source links and references provided on
+                  our pages for complete and authoritative information
+                </li>
+                <li>
+                  <strong>Cross-Referencing:</strong> Comparing information with
+                  multiple reliable sources before making decisions
+                </li>
+                <li>
+                  Determining the suitability of information for their intended
+                  use
+                </li>
+                <li>Compliance with all applicable laws and regulations</li>
+                <li>
+                  Any consequences resulting from their use of the website
+                  content
+                </li>
+              </ul>
+
+              <div className='bg-kapwa-bg-info-weak mt-4 border-l-4 border-kapwa-border-info p-4'>
+                <p className='mb-2 font-semibold text-kapwa-text-info'>
+                  We strongly encourage users to:
+                </p>
+                <ul className='text-kapwa-text-info list-inside list-disc space-y-1'>
+                  <li>
+                    Use the source links and references provided on each page to
+                    access primary documents and official sources
+                  </li>
+                  <li>
+                    Conduct independent research beyond the information
+                    presented here
+                  </li>
+                  <li>
+                    Consult official government websites and agencies for the
+                    most current information
+                  </li>
+                  <li>
+                    Verify dates, figures, and details through multiple
+                    reputable sources
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* No Professional Advice */}
+          <section>
+            <h2 className='text-kapwa-text-strong mb-4 kapwa-heading-lg font-bold'>
+              No Professional Advice
+            </h2>
+            <p className='text-kapwa-text-support leading-relaxed'>
+              Information on this website is not intended as professional advice
+              (legal, medical, financial, or otherwise). Users should consult
+              qualified professionals for specific advice related to their
+              situations.
+            </p>
+          </section>
+
+          {/* Source Links */}
+          <section>
+            <div className='mb-4 flex items-center gap-3'>
+              <ExternalLink className='text-kapwa-text-brand h-6 w-6' />
+              <h2 className='text-kapwa-text-strong kapwa-heading-lg font-bold'>
+                Source Links and External References
+              </h2>
+            </div>
+            <div className='text-kapwa-text-support space-y-4 leading-relaxed'>
+              <p>
+                This website provides links to official sources, government
+                documents, and other authoritative materials. Users are strongly
+                encouraged to:
+              </p>
+              <ul className='ml-4 list-inside list-disc space-y-1'>
+                <li>Click through and review all source links provided</li>
+                <li>
+                  Access primary documents and official publications referenced
+                </li>
+                <li>Verify information through the original sources</li>
+                <li>Check for updates or amendments to referenced materials</li>
+              </ul>
+              <p>
+                We make no guarantee as to the continued availability of
+                external links, and users should always verify information
+                through official channels.
+              </p>
+            </div>
+          </section>
+
+          {/* Website Availability */}
+          <section>
+            <h2 className='text-kapwa-text-strong mb-4 kapwa-heading-lg font-bold'>
+              Website Availability
+            </h2>
+            <div className='text-kapwa-text-support space-y-4 leading-relaxed'>
+              <p>We make no guarantee that this website will be:</p>
+              <ul className='ml-4 list-inside list-disc space-y-1'>
+                <li>Available at all times</li>
+                <li>Error-free or uninterrupted</li>
+                <li>Free from technical problems</li>
+                <li>Compatible with your equipment</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Indemnification */}
+          <section>
+            <h2 className='text-kapwa-text-strong mb-4 kapwa-heading-lg font-bold'>
+              Indemnification
+            </h2>
+            <p className='text-kapwa-text-support leading-relaxed'>
+              Users agree to indemnify and hold harmless the website operators
+              from any claims, damages, losses, or expenses arising from their
+              use of the website.
+            </p>
+          </section>
+
+          {/* Modifications */}
+          <section>
+            <h2 className='text-kapwa-text-strong mb-4 kapwa-heading-lg font-bold'>
+              Modifications
+            </h2>
+            <p className='text-kapwa-text-support leading-relaxed'>
+              These terms may be modified at any time without notice. Continued
+              use of the website constitutes acceptance of any modifications.
+            </p>
+          </section>
+
+          {/* Governing Law */}
+          <section>
+            <h2 className='text-kapwa-text-strong mb-4 kapwa-heading-lg font-bold'>
+              Governing Law
+            </h2>
+            <p className='text-kapwa-text-support leading-relaxed'>
+              These terms are governed by the laws of the Republic of the
+              Philippines without regard to conflict of law principles.
+            </p>
+          </section>
+
+          {/* Severability */}
+          <section>
+            <h2 className='text-kapwa-text-strong mb-4 kapwa-heading-lg font-bold'>
+              Severability
+            </h2>
+            <p className='text-kapwa-text-support leading-relaxed'>
+              If any provision of these terms is found to be unenforceable, the
+              remaining provisions will continue in full force and effect.
+            </p>
+          </section>
+
+          {/* Content Concerns */}
+          <section>
+            <h2 className='text-kapwa-text-strong mb-4 kapwa-heading-lg font-bold'>
+              Content Concerns and Takedown Requests
+            </h2>
+            <div className='text-kapwa-text-support space-y-4 leading-relaxed'>
+              <p>
+                While we strive to provide accurate public domain information,
+                we recognize that errors, outdated information, or other
+                concerns may arise.
+              </p>
+
+              <div className='border-kapwa-border-weak bg-kapwa-bg-surface-raised rounded-lg border p-4'>
+                <h3 className='text-kapwa-text-strong mb-2 font-semibold'>
+                  Reporting Concerning Content:
+                </h3>
+                <p className='mb-2'>
+                  If you believe content on this website is:
+                </p>
+                <ul className='mb-4 ml-4 list-inside list-disc space-y-1'>
+                  <li>Factually incorrect or misleading</li>
+                  <li>Potentially harmful or dangerous</li>
+                  <li>Violates applicable laws</li>
+                  <li>
+                    Contains personal information that should not be public
+                  </li>
+                  <li>Infringes on legitimate rights</li>
+                </ul>
+
+                <div className='mb-2 flex items-center gap-2'>
+                  <Mail className='text-kapwa-text-brand h-5 w-5' />
+                  <p className='font-semibold'>
+                    Please contact us at:{' '}
+                    <a
+                      href={`mailto:${config.portal.contactEmail}`}
+                      className='text-kapwa-text-brand hover:text-kapwa-text-brand'
+                    >
+                      {config.portal.contactEmail}
+                    </a>
+                  </p>
+                </div>
+
+                <p className='mb-2'>Please include:</p>
+                <ul className='ml-4 list-inside list-disc space-y-1'>
+                  <li>Specific URL or page location</li>
+                  <li>Clear description of the concern</li>
+                  <li>Supporting documentation or evidence where applicable</li>
+                  <li>Your contact information for follow-up</li>
+                </ul>
+              </div>
+
+              <div className='bg-kapwa-bg-success-weak rounded-lg border border-kapwa-border-success p-4'>
+                <h3 className='mb-2 font-semibold text-kapwa-text-success'>
+                  Our Response Process:
+                </h3>
+                <ul className='list-inside list-disc space-y-1 text-kapwa-text-success'>
+                  <li>We will review all legitimate concerns in good faith</li>
+                  <li>Response time may vary due to our volunteer nature</li>
+                  <li>
+                    We may remove, modify, or add disclaimers to content as
+                    appropriate
+                  </li>
+                  <li>
+                    We reserve the right to make editorial decisions about
+                    content
+                  </li>
+                  <li>
+                    We are not obligated to remove content but will consider all
+                    reasonable requests
+                  </li>
+                </ul>
+              </div>
+
+              <div className='bg-kapwa-bg-danger-weak rounded-lg border border-kapwa-border-danger p-4'>
+                <p className='text-kapwa-text-danger'>
+                  <strong>False or Frivolous Complaints:</strong> Submitting
+                  knowingly false takedown requests or complaints may result in
+                  being blocked from contacting our volunteers.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Contact Information */}
+          <section className='border-t pt-8'>
+            <div className='mb-4 flex items-center gap-3'>
+              <Mail className='text-kapwa-text-brand h-6 w-6' />
+              <h2 className='text-kapwa-text-strong kapwa-heading-lg font-bold'>
+                Contact Information
+              </h2>
+            </div>
+            <div className='bg-kapwa-bg-surface border-kapwa-border-brand rounded-lg border p-6'>
+              <p className='text-kapwa-text-brand-bold mb-2'>
+                For questions about these terms or content concerns, contact:
+              </p>
+              <p className='text-kapwa-text-brand-bold text-xl font-semibold'>
+                <a
+                  href='mailto:volunteers@bettergov.ph'
+                  className='hover:text-kapwa-text-brand transition-colors'
+                >
+                  volunteers@bettergov.ph
+                </a>
+              </p>
+              <p className='text-kapwa-text-brand-bold mt-4 italic'>
+                This website provides public domain information for educational
+                and informational purposes only.
+              </p>
+            </div>
+            <div>
+              <p className='text-kapwa-text-strong mt-4 font-semibold'>
+                Effective as of September 23, 2025
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TermsOfService;

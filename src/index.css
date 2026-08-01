@@ -1,0 +1,94 @@
+/* Local styles */
+@import 'tailwindcss';
+
+/* Scan shared packages for Tailwind classes */
+@source '../node_modules/@bettergov/kapwa/dist';
+@import '@bettergov/kapwa/styles';
+
+:root {
+  --font-kapwa-sans:
+    'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  --font-kapwa-mono:
+    'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border-kapwa-border-weak, currentcolor);
+  }
+}
+
+/* --- LEAFLET MAP OVERRIDES --- */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.5 !important;
+  font-family: var(--font-sans) !important;
+  font-size: 14px !important;
+  color: var(--color-text-kapwa-text-support) !important;
+  padding: 16px;
+  min-width: 280px;
+}
+
+.leaflet-popup-tip {
+  background: white !important;
+  box-shadow: none !important;
+}
+
+.leaflet-popup-close-button {
+  color: var(--color-text-kapwa-text-disabled) !important;
+  padding: 8px !important;
+}
+
+/* --- ANIMATIONS --- */
+@theme {
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+@layer components {
+  .sidebar-active {
+    background-color: var(--color-bg-kapwa-bg-brand-weak);
+    color: var(--color-text-kapwa-text-brand);
+    border-color: var(--color-border-kapwa-border-brand);
+    border-left-width: 2px;
+    font-weight: 600;
+  }
+}

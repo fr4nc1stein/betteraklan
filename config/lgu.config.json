@@ -1,0 +1,61 @@
+{
+  "lgu": {
+    "name": "Aklan",
+    "fullName": "Province of Aklan",
+    "province": "Aklan",
+    "districtEngineeringOffice": "Aklan DEO",
+    "region": "Region VI (Western Visayas)",
+    "regionCode": "Western Visayas",
+    "type": "province",
+    "officialWebsite": "https://aklan.gov.ph",
+    "provinceWebsite": "https://aklan.gov.ph"
+  },
+  "portal": {
+    "name": "BetterAklan",
+    "domain": "betteraklan.org",
+    "baseUrl": "https://betteraklan.org",
+    "description": "Community-powered portal of the Province of Aklan.",
+    "brandColor": "#0066eb",
+    "footerBrandName": "Better Aklan",
+    "logoWhitePath": "/logos/svg/betteraklan-icon-white.svg",
+    "navbarLogoPath": "/logos/svg/betteraklan-icon-colored.svg",
+    "defaultOgImagePath": "/logos/svg/betteraklan-icon-colored.svg",
+    "faviconPath": "/logos/png/betteraklan-banner-colored.png",
+    "faviconSvgPath": "/logos/svg/betteraklan-logo-primary.svg",
+    "appleTouchIconPath": "/logos/png/betteraklan-banner-inverted.png",
+    "githubUrl": "https://github.com/BetterAklan/betteraklan",
+    "discordUrl": "https://discord.gg/dA6tkU4FYS",
+    "facebookUrl": "https://facebook.com/aklanIMAD",
+    "contactEmail": "volunteers@bettergov.ph"
+  },
+  "location": {
+    "coordinates": {
+      "lat": 11.7044,
+      "lon": 122.3657
+    },
+    "weather": {
+      "defaultCity": "Kalibo"
+    }
+  },
+  "transparency": {
+    "procurement": {
+      "organizationName": "PROVINCIAL GOVERNMENT OF AKLAN",
+      "externalDashboard": "https://transparency.bettergov.ph/organizations/"
+    },
+    "infrastructure": {
+      "searchString": "Aklan",
+      "exactMatchTargets": ["aklan", "province of aklan"]
+    }
+  },
+  "dataPaths": {
+    "departments": "src/data/directory/departments.json",
+    "barangays": "src/data/directory/municipal.json",
+    "services": "src/data/services/categories"
+  },
+  "features": {
+    "openLGU": true,
+    "transparency": true,
+    "tourism": true,
+    "statistics": true
+  }
+}

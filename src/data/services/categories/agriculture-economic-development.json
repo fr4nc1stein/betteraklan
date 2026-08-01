@@ -1,0 +1,102 @@
+[
+  {
+    "service": "Free Seeds, Seedlings, Fertilizers, and Fingerlings",
+    "slug": "free-agricultural-inputs",
+    "type": "transaction",
+    "description": "The Office of the Provincial Agriculturist provides free agricultural inputs to qualified farmers and fisherfolk in Aklan, including seeds, seedlings, fertilizers, and fingerlings.",
+    "officeSlug": ["office-of-the-provincial-agriculturist"],
+    "category": {
+      "name": "Agriculture & Economic Development",
+      "slug": "agriculture-economic-development"
+    },
+    "steps": [
+      "Go to the Office of the Provincial Agriculturist at the Provincial Capitol, Kalibo, or contact your Municipal Agriculture Office.",
+      "Present your Farm Household ID or proof of residency and farming activity.",
+      "Submit a request/application for the specific input needed (seeds, fertilizer, fingerlings).",
+      "Await assessment and availability confirmation.",
+      "Claim the agricultural inputs on the scheduled distribution date."
+    ],
+    "requirements": [
+      "Farm Household ID (if registered with RSBSA/PhilSys)",
+      "Barangay Certificate of Residency",
+      "Valid government-issued ID",
+      "Proof of farming/fishing activity (land title, lease, or barangay certification)"
+    ],
+    "quickInfo": {
+      "fee": "Free",
+      "whoCanApply": "Registered farmers and fisherfolk in Aklan",
+      "processingTime": "Subject to availability and distribution schedule"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Office of the Provincial Agriculturist — (036) 272-7000 local 6700",
+        "url": "https://aklan.gov.ph"
+      }
+    ]
+  },
+  {
+    "service": "Veterinary Services for Livestock",
+    "slug": "veterinary-services-livestock",
+    "type": "transaction",
+    "description": "The Office of the Provincial Veterinarian provides free or subsidized veterinary care, vaccination, and deworming services for livestock and farm animals in Aklan.",
+    "officeSlug": ["office-of-the-provincial-veterinarian"],
+    "category": {
+      "name": "Agriculture & Economic Development",
+      "slug": "agriculture-economic-development"
+    },
+    "steps": [
+      "Contact the Office of the Provincial Veterinarian or your Municipal Agriculture Office.",
+      "Register your livestock for the provincial vaccination/deworming program.",
+      "Await the scheduled visit by provincial veterinary team to your barangay.",
+      "For emergency veterinary cases, bring the animal to the nearest municipal agriculture office."
+    ],
+    "requirements": [
+      "Barangay Certificate of Residency",
+      "Valid ID of livestock owner"
+    ],
+    "quickInfo": {
+      "fee": "Free (provincial vaccination programs)",
+      "whoCanApply": "Livestock owners in Aklan"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Office of the Provincial Veterinarian — (036) 272-7000 local 3400",
+        "url": "https://aklan.gov.ph"
+      }
+    ]
+  },
+  {
+    "service": "Farming and Fishing Training Programs",
+    "slug": "farming-fishing-training",
+    "type": "information",
+    "description": "Training programs for modern farming and fishing techniques offered through the Office of the Provincial Agriculturist and the Aklan Agri-Aqua Demonstration Farms and Training Center.",
+    "officeSlug": ["office-of-the-provincial-agriculturist"],
+    "category": {
+      "name": "Agriculture & Economic Development",
+      "slug": "agriculture-economic-development"
+    },
+    "steps": [
+      "Monitor announcements from the Office of the Provincial Agriculturist on the official Aklan website and Facebook page.",
+      "Register for the training program at the Provincial Agriculturist's Office or via your Municipal Agriculture Office.",
+      "Attend training sessions at the Aklan Agri-Aqua Demonstration Farms and Training Center or designated venue.",
+      "Receive training certificates upon completion."
+    ],
+    "requirements": [
+      "Barangay Certificate of Residency",
+      "Valid ID"
+    ],
+    "quickInfo": {
+      "fee": "Free",
+      "whoCanApply": "Farmers and fisherfolk in Aklan"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Office of the Provincial Agriculturist — (036) 272-7000 local 6700",
+        "url": "https://aklan.gov.ph"
+      }
+    ]
+  }
+]

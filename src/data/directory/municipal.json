@@ -1,0 +1,172 @@
+[
+  {
+    "slug": "municipality-of-altavas",
+    "barangay_name": "ALTAVAS",
+    "address": "Municipal Hall, Altavas, Aklan",
+    "trunkline": [],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-balete",
+    "barangay_name": "BALETE",
+    "address": "Municipal Hall, Balete, Aklan",
+    "trunkline": [],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-banga",
+    "barangay_name": "BANGA",
+    "address": "Municipal Hall, Banga, Aklan",
+    "trunkline": [],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-batan",
+    "barangay_name": "BATAN",
+    "address": "Municipal Hall, Batan, Aklan",
+    "trunkline": [],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-buruanga",
+    "barangay_name": "BURUANGA",
+    "address": "Municipal Hall, Buruanga, Aklan",
+    "trunkline": [],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-ibajay",
+    "barangay_name": "IBAJAY",
+    "address": "Municipal Hall, Ibajay, Aklan",
+    "trunkline": [],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-kalibo",
+    "barangay_name": "KALIBO (Capital)",
+    "address": "Municipal Hall, Kalibo, Aklan",
+    "trunkline": [],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-lezo",
+    "barangay_name": "LEZO",
+    "address": "Municipal Hall, Lezo, Aklan",
+    "trunkline": [],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-libacao",
+    "barangay_name": "LIBACAO",
+    "address": "Municipal Hall, Libacao, Aklan",
+    "trunkline": ["(036) 273-2108"],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-madalag",
+    "barangay_name": "MADALAG",
+    "address": "Municipal Hall, Madalag, Aklan",
+    "trunkline": [],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-makato",
+    "barangay_name": "MAKATO",
+    "address": "Municipal Hall, Makato, Aklan",
+    "trunkline": [],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-malay",
+    "barangay_name": "MALAY (Home of Boracay)",
+    "address": "Municipal Hall, Malay, Aklan",
+    "trunkline": ["(036) 288-8729"],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-malinao",
+    "barangay_name": "MALINAO",
+    "address": "Municipal Hall, Malinao, Aklan",
+    "trunkline": [],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-nabas",
+    "barangay_name": "NABAS",
+    "address": "Municipal Hall, Nabas, Aklan",
+    "trunkline": [],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-new-washington",
+    "barangay_name": "NEW WASHINGTON",
+    "address": "Municipal Hall, New Washington, Aklan",
+    "trunkline": [],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-numancia",
+    "barangay_name": "NUMANCIA",
+    "address": "Municipal Hall, Numancia, Aklan",
+    "trunkline": [],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  },
+  {
+    "slug": "municipality-of-tangalan",
+    "barangay_name": "TANGALAN",
+    "address": "Municipal Hall, Tangalan, Aklan",
+    "trunkline": [],
+    "website": null,
+    "officials": [
+      { "role": "Municipal Mayor", "name": null }
+    ]
+  }
+]

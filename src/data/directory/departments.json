@@ -1,0 +1,405 @@
+[
+  {
+    "slug": "provincial-administrators-office",
+    "office_name": "PROVINCIAL ADMINISTRATOR'S OFFICE",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 3900"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "ATTY. SELWYN C. IBARRETA",
+      "contact": "(036) 272-7000 local 3900",
+      "email": null
+    }
+  },
+  {
+    "slug": "provincial-legal-office",
+    "office_name": "PROVINCIAL LEGAL OFFICE",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 2900"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "ATTY. LORIELLE L. ROVERO",
+      "contact": "(036) 272-7000 local 2900",
+      "email": null
+    }
+  },
+  {
+    "slug": "aklan-environment-and-natural-resources-office",
+    "office_name": "AKLAN ENVIRONMENT AND NATURAL RESOURCES OFFICE (AENRO)",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 6300"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "ENGR. JOHN KENNETH C. ALMALBIS",
+      "contact": "(036) 272-7000 local 6300",
+      "email": null
+    }
+  },
+  {
+    "slug": "provincial-internal-audit-office",
+    "office_name": "AKLAN PROVINCIAL INTERNAL AUDIT OFFICE",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 6400"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "MRS. BRENDA O. MAGALIT",
+      "contact": "(036) 272-7000 local 6400",
+      "email": null
+    }
+  },
+  {
+    "slug": "provincial-population-and-gender-office",
+    "office_name": "AKLAN PROVINCIAL POPULATION AND GENDER OFFICE",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 1900"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "MRS. JEANY D. RACO",
+      "contact": "(036) 272-7000 local 1900",
+      "email": null
+    }
+  },
+  {
+    "slug": "provincial-ict-office",
+    "office_name": "AKLAN PROVINCIAL ICT OFFICE (APICTO)",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 4200"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "MR. DONALD R. RUBIO",
+      "contact": "(036) 272-7000 local 4200",
+      "email": null
+    }
+  },
+  {
+    "slug": "provincial-tourism-office",
+    "office_name": "AKLAN PROVINCIAL TOURISM OFFICE",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 6500"],
+    "website": "http://aklan.gov.ph/tourism",
+    "email": null,
+    "department_head": {
+      "name": "MS. ROSELLE Q. RUIZ",
+      "contact": "(036) 272-7000 local 6500",
+      "email": null
+    }
+  },
+  {
+    "slug": "economic-enterprise-development-department",
+    "office_name": "ECONOMIC ENTERPRISE DEVELOPMENT DEPARTMENT (EEDD)",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 1100"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "DR. MICHAEL I. TERENCIO",
+      "contact": "(036) 272-7000 local 1100",
+      "email": null
+    }
+  },
+  {
+    "slug": "office-of-the-provincial-agriculturist",
+    "office_name": "OFFICE OF THE PROVINCIAL AGRICULTURIST",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 6700"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "ENGR. ALEXYS T. APOLONIO",
+      "contact": "(036) 272-7000 local 6700",
+      "email": null
+    }
+  },
+  {
+    "slug": "office-of-the-provincial-public-employment-service",
+    "office_name": "OFFICE OF THE PROVINCIAL PUBLIC EMPLOYMENT SERVICE MANAGER (PESO)",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 2400"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "MR. MARSH B. BERNABE",
+      "contact": "(036) 272-7000 local 2400",
+      "email": null
+    }
+  },
+  {
+    "slug": "office-of-the-provincial-veterinarian",
+    "office_name": "OFFICE OF THE PROVINCIAL VETERINARIAN",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 3400"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "DR. MA. CYROSA LEEN MABEL C. SINEL",
+      "contact": "(036) 272-7000 local 3400",
+      "email": null
+    }
+  },
+  {
+    "slug": "office-of-the-provincial-accountant",
+    "office_name": "OFFICE OF THE PROVINCIAL ACCOUNTANT",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 2000"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "MRS. THERESA S. TEMPLONUEVO",
+      "contact": "(036) 272-7000 local 2000",
+      "email": null
+    }
+  },
+  {
+    "slug": "provincial-assessors-office",
+    "office_name": "PROVINCIAL ASSESSOR'S OFFICE",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 6800"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "MR. KOKOY B. SOGUILO",
+      "contact": "(036) 272-7000 local 6800",
+      "email": null
+    }
+  },
+  {
+    "slug": "provincial-budget-office",
+    "office_name": "PROVINCIAL BUDGET OFFICE",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 2300"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "MS. IVY R. REDISON",
+      "contact": "(036) 272-7000 local 2300",
+      "email": null
+    }
+  },
+  {
+    "slug": "provincial-engineers-office",
+    "office_name": "PROVINCIAL ENGINEER'S OFFICE",
+    "address": "Laguinbanua East, Numancia, Aklan",
+    "trunkline": ["(036) 268-4452", "(036) 268-4773"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "ENGR. BOBBY DELA CRUZ",
+      "contact": "(036) 268-4452",
+      "email": null
+    }
+  },
+  {
+    "slug": "provincial-general-services-office",
+    "office_name": "PROVINCIAL GENERAL SERVICES OFFICE",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 2600"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "MR. JERICSON C. BELLO",
+      "contact": "(036) 272-7000 local 2600",
+      "email": null
+    }
+  },
+  {
+    "slug": "provincial-health-office",
+    "office_name": "PROVINCIAL HEALTH OFFICE (PHO)",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 268-5917", "(036) 262-4224", "(036) 268-4565"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "DR. LESLIE ANN L. SEDILLO",
+      "contact": "(036) 268-5917",
+      "email": null
+    }
+  },
+  {
+    "slug": "provincial-human-resource-management-office",
+    "office_name": "PROVINCIAL HUMAN RESOURCE MANAGEMENT OFFICE",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 2800"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "MRS. METHUSELAH T. SANTAMARIA",
+      "contact": "(036) 272-7000 local 2800",
+      "email": null
+    }
+  },
+  {
+    "slug": "provincial-planning-and-development-office",
+    "office_name": "PROVINCIAL PLANNING AND DEVELOPMENT OFFICE (PPDO)",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 6600"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "ENGR. ROGER M. ESTO",
+      "contact": "(036) 272-7000 local 6600",
+      "email": null
+    }
+  },
+  {
+    "slug": "provincial-social-welfare-and-development-office",
+    "office_name": "PROVINCIAL SOCIAL WELFARE AND DEVELOPMENT OFFICE (PSWDO)",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 3200"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "MRS. EVANGELINA F. GALLEGA",
+      "contact": "(036) 272-7000 local 3200",
+      "email": null
+    }
+  },
+  {
+    "slug": "provincial-treasurers-office",
+    "office_name": "PROVINCIAL TREASURER'S OFFICE",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 3300"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "MR. BERNARDINO R. VILLARUEL",
+      "contact": "(036) 272-7000 local 3300",
+      "email": null
+    }
+  },
+  {
+    "slug": "sangguniang-panlalawigan-office",
+    "office_name": "SANGGUNIANG PANLALAWIGAN OFFICE (Provincial Board)",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 268-5572", "(036) 262-7340", "(036) 272-7000 local 3500"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "MR. MICHAEL T. SOLANOY",
+      "contact": "(036) 272-7000 local 3500",
+      "email": null
+    }
+  },
+  {
+    "slug": "provincial-disaster-risk-reduction-and-management-office",
+    "office_name": "PROVINCIAL DISASTER RISK REDUCTION AND MANAGEMENT OFFICE (PDRRMO)",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "trunkline": ["(036) 272-7000 local 6000", "Hotline: 168"],
+    "website": "https://aklan.gov.ph",
+    "email": null,
+    "department_head": {
+      "name": "MR. GALO I. IBARDOLAZA",
+      "contact": "(036) 272-7000 local 6000",
+      "email": null
+    }
+  },
+  {
+    "slug": "dr-rafael-s-tumbokon-memorial-hospital",
+    "office_name": "DR. RAFAEL S. TUMBOKON MEMORIAL HOSPITAL (DRSTMH)",
+    "address": "Mabini St., Poblacion, Kalibo, Aklan",
+    "trunkline": ["(036) 268-7062"],
+    "website": "https://www.facebook.com/DRSTMHOfficialPage",
+    "email": "drstmh@yahoo.com.ph",
+    "department_head": {
+      "name": "DR. CORNELIO V. CUACHON, JR.",
+      "contact": "(036) 268-7062",
+      "email": "drstmh@yahoo.com.ph"
+    }
+  },
+  {
+    "slug": "godofredo-p-ramos-hospital",
+    "office_name": "GODOFREDO P. RAMOS HOSPITAL (GPRH)",
+    "address": "Altavas, Aklan",
+    "trunkline": ["(036) 269-1069"],
+    "website": null,
+    "email": null,
+    "department_head": {
+      "name": "DR. JULIUS R. GONZALES",
+      "contact": "(036) 269-1069",
+      "email": null
+    }
+  },
+  {
+    "slug": "ibajay-district-hospital",
+    "office_name": "IBAJAY DISTRICT HOSPITAL (IDH)",
+    "address": "Ibajay, Aklan",
+    "trunkline": ["(036) 289-2011"],
+    "website": null,
+    "email": null,
+    "department_head": {
+      "name": "DR. MARY JEAN A. GELITO",
+      "contact": "(036) 289-2011",
+      "email": null
+    }
+  },
+  {
+    "slug": "malay-municipal-hospital",
+    "office_name": "MALAY MUNICIPAL HOSPITAL (MMH)",
+    "address": "Malay, Aklan",
+    "trunkline": ["(036) 288-8729"],
+    "website": "https://aklan.gov.ph/mmh/",
+    "email": null,
+    "department_head": {
+      "name": "DR. JENETH P. JAPITANA",
+      "contact": "(036) 288-8729",
+      "email": null
+    }
+  },
+  {
+    "slug": "ciriaco-s-tirol-memorial-hospital",
+    "office_name": "CIRIACO S. TIROL MEMORIAL HOSPITAL (CSTH)",
+    "address": "Malay, Aklan",
+    "trunkline": ["(036) 288-3041"],
+    "website": null,
+    "email": null,
+    "department_head": {
+      "name": "DR. KAROL MARK M. LACHICA",
+      "contact": "(036) 288-3041",
+      "email": null
+    }
+  },
+  {
+    "slug": "buruanga-municipal-hospital",
+    "office_name": "BURUANGA MUNICIPAL HOSPITAL (BMH)",
+    "address": "Buruanga, Aklan",
+    "trunkline": [],
+    "website": null,
+    "email": null,
+    "department_head": {
+      "name": "DR. NINO JERRYL S. DELA TORRE",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "don-leovigildo-n-diapo-sr-municipal-hospital",
+    "office_name": "DON LEOVIGILDO N. DIAPO SR. MUNICIPAL HOSPITAL",
+    "address": "Kalibo, Aklan",
+    "trunkline": ["(036) 272-3613"],
+    "website": null,
+    "email": null,
+    "department_head": {
+      "name": "DR. STEVENS N. FUENTES",
+      "contact": "(036) 272-3613",
+      "email": null
+    }
+  },
+  {
+    "slug": "libacao-municipal-infirmary",
+    "office_name": "LIBACAO MUNICIPAL INFIRMARY",
+    "address": "Libacao, Aklan",
+    "trunkline": ["(036) 273-2108"],
+    "website": null,
+    "email": null,
+    "department_head": {
+      "name": "DR. STIG U. VALENCIA",
+      "contact": "(036) 273-2108",
+      "email": null
+    }
+  }
+]

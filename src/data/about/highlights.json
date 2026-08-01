@@ -1,0 +1,32 @@
+[
+  {
+    "title": "World-Class Tourism",
+    "description": "Home to Boracay Island — consistently ranked among the world's best beaches — and the Ati-Atihan Festival, one of the Philippines' oldest and most vibrant cultural celebrations.",
+    "icon": "🏖️"
+  },
+  {
+    "title": "17 Municipalities",
+    "description": "Aklan is composed of 17 municipalities: Altavas, Balete, Banga, Batan, Buruanga, Ibajay, Kalibo (capital), Lezo, Libacao, Madalag, Makato, Malay, Malinao, Nabas, New Washington, Numancia, and Tangalan.",
+    "icon": "🗺️"
+  },
+  {
+    "title": "Rich Agriculture",
+    "description": "Aklan is a significant agricultural province in Western Visayas, known for coconut, rice, and fisheries production. The Office of the Provincial Agriculturist actively supports farmers and fisherfolk.",
+    "icon": "🌾"
+  },
+  {
+    "title": "Accessible Health Care",
+    "description": "The Provincial Government operates 8 hospitals including DRSTMH (the 300-bed main provincial hospital), ensuring accessible healthcare across all municipalities.",
+    "icon": "🏥"
+  },
+  {
+    "title": "Cultural Heritage",
+    "description": "Aklan is known for its unique Aklanon language, traditional weaving, buri crafts, and a rich cultural heritage that attracts researchers and tourists from around the world.",
+    "icon": "🎭"
+  },
+  {
+    "title": "Vision: Progressive & Sustainable",
+    "description": "The Provincial Government is guided by the vision of a 'Progressive and Sustainable Aklan' — promoting social justice, environmental stewardship, and economic prosperity for all residents.",
+    "icon": "🌿"
+  }
+]

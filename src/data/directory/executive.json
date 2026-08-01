@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "office-of-the-governor",
+    "name": "Jose Enrique M. Miraflores",
+    "role": "Governor",
+    "office": "Office of the Governor",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "phone": "(036) 272-7000 local 2700",
+    "email": null,
+    "website": "https://aklan.gov.ph",
+    "isElected": true,
+    "personId": "miraflores-jose-enrique-m"
+  },
+  {
+    "slug": "office-of-the-vice-governor",
+    "name": "Dexter M. Calizo",
+    "role": "Vice Governor",
+    "office": "Office of the Vice Governor",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "phone": "(036) 268-5572 / (036) 262-7340",
+    "email": null,
+    "website": null,
+    "isElected": true,
+    "personId": "calizo-dexter-m"
+  },
+  {
+    "slug": "office-of-the-provincial-administrator",
+    "name": "Atty. Selwyn C. Ibarreta",
+    "role": "Provincial Administrator",
+    "office": "Provincial Administrator's Office",
+    "address": "Provincial Capitol, Kalibo, Aklan",
+    "phone": "(036) 272-7000 local 3900",
+    "email": null,
+    "isElected": false
+  }
+]

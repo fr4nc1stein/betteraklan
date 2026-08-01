@@ -1,0 +1,249 @@
+/**
+ * Admin Authentication Middleware
+ * Verifies admin session and authorization for protected API routes
+ */
+import { Env } from '../types';
+import { parseCookies } from './cookies';
+import { validateCSRFToken } from './csrf';
+import {
+  UserRole,
+  Permission,
+  hasPermission,
+  requireRole as checkRole,
+} from './rbac';
+
+export interface GitHubUser {
+  id: number;
+  login: string;
+  name: string;
+  email: string | null;
+  avatar_url: string;
+}
+
+export interface AdminSession {
+  user: GitHubUser;
+  login_at: string;
+  expires_at: string;
+  role?: UserRole; // Optional for backward compatibility
+}
+
+export interface AuthContext {
+  user: GitHubUser;
+  sessionId: string;
+  role: UserRole;
+}
+
+/**
+ * Verify admin session from request cookies
+ * Returns the authenticated user context or throws an error
+ */
+export async function verifyAdminSession(
+  request: Request,
+  env: Env
+): Promise<AuthContext> {
+  // Get session from cookie
+  const cookieHeader = request.headers.get('Cookie');
+  const cookies = parseCookies(cookieHeader);
+  const sessionId = cookies.admin_session;
+
+  if (!sessionId) {
+    throw new AuthError('No session cookie found', 401);
+  }
+
+  // Fetch session from KV
+  const sessionData = await env.WEATHER_KV.get(`session:${sessionId}`);
+
+  if (!sessionData) {
+    throw new AuthError('Invalid session', 401);
+  }
+
+  let session: AdminSession;
+  try {
+    session = JSON.parse(sessionData);
+  } catch (error) {
+    console.error('Failed to parse session data:', error);
+    // Invalidate corrupted session
+    await env.WEATHER_KV.delete(`session:${sessionId}`);
+    throw new AuthError('Invalid session format', 401);
+  }
+
+  // Check if session is expired
+  if (new Date(session.expires_at) < new Date()) {
+    await env.WEATHER_KV.delete(`session:${sessionId}`);
+    throw new AuthError('Session expired', 401);
+  }
+
+  // Check if user is still authorized
+  let authorizedList: string[] = [];
+  if (env.AUTHORIZED_USERS) {
+    try {
+      const parsed = JSON.parse(env.AUTHORIZED_USERS);
+      if (!Array.isArray(parsed)) {
+        console.error('AUTHORIZED_USERS is not an array:', typeof parsed);
+        throw new AuthError(
+          'Server configuration error - authentication unavailable',
+          500
+        );
+      }
+      authorizedList = parsed;
+    } catch (error) {
+      console.error(
+        'Failed to parse AUTHORIZED_USERS environment variable:',
+        error
+      );
+      throw new AuthError(
+        'Server configuration error - authentication unavailable',
+        500
+      );
+    }
+  }
+
+  // Always enforce authorization - empty list means NO ONE is authorized
+  if (
+    authorizedList.length === 0 ||
+    !authorizedList.includes(session.user.login)
+  ) {
+    throw new AuthError('User no longer authorized', 403);
+  }
+
+  // Resolve role fresh from env on every request (authoritative source of
+  // truth). This means role changes take effect immediately and existing
+  // sessions don't need to re-authenticate. Defaults to VIEWER for security.
+  const role = resolveUserRole(session.user.login, env);
+
+  return {
+    user: session.user,
+    sessionId,
+    role,
+  };
+}
+
+/**
+ * Parse a JSON array of GitHub logins from an env var.
+ * Returns [] on missing/invalid input (fail closed).
+ */
+function parseLoginList(raw: string | undefined, varName: string): string[] {
+  if (!raw) return [];
+  try {
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) {
+      console.error(`${varName} is not an array:`, typeof parsed);
+      return [];
+    }
+    return parsed;
+  } catch (error) {
+    console.error(`Failed to parse ${varName} environment variable:`, error);
+    return [];
+  }
+}
+
+/**
+ * Resolve a user's role from env-configured login lists.
+ * Precedence: ADMIN_USERS > EDITOR_USERS > VIEWER (default).
+ *
+ * @param login - GitHub login of an already-authorized user
+ * @param env - Worker environment
+ * @returns The user's role (VIEWER if not listed)
+ */
+export function resolveUserRole(login: string, env: Env): UserRole {
+  const admins = parseLoginList(env.ADMIN_USERS, 'ADMIN_USERS');
+  if (admins.includes(login)) return UserRole.ADMIN;
+
+  const editors = parseLoginList(env.EDITOR_USERS, 'EDITOR_USERS');
+  if (editors.includes(login)) return UserRole.EDITOR;
+
+  return UserRole.VIEWER;
+}
+
+/**
+ * Custom error class for authentication failures
+ */
+export class AuthError extends Error {
+  constructor(
+    message: string,
+    public statusCode: number = 401
+  ) {
+    super(message);
+    this.name = 'AuthError';
+  }
+}
+
+/**
+ * Wrapper function to add authentication to API handlers
+ * Returns a 401/403 response if authentication fails
+ *
+ * @param handler - Request handler function
+ * @param options - Configuration options
+ * @param options.requireCSRF - Whether to require CSRF token for non-GET requests (default: false)
+ * @param options.requirePermission - Required permission for the endpoint
+ * @param options.requireRole - Required role or array of allowed roles
+ */
+export function withAuth<T extends { request: Request; env: Env }>(
+  handler: (context: T & { auth: AuthContext }) => Promise<Response> | Response,
+  options: {
+    requireCSRF?: boolean;
+    requirePermission?: Permission;
+    requireRole?: UserRole | UserRole[];
+  } = {}
+): (context: T) => Promise<Response> {
+  return async (context: T) => {
+    try {
+      const auth = await verifyAdminSession(context.request, context.env);
+
+      // RBAC: Check required permission
+      if (options.requirePermission) {
+        if (!hasPermission(auth.role, options.requirePermission)) {
+          return Response.json(
+            { error: 'Insufficient permissions' },
+            { status: 403 }
+          );
+        }
+      }
+
+      // RBAC: Check required role
+      if (options.requireRole) {
+        try {
+          checkRole(auth.role, options.requireRole);
+        } catch {
+          return Response.json(
+            { error: 'Insufficient permissions' },
+            { status: 403 }
+          );
+        }
+      }
+
+      // CSRF validation for non-GET requests
+      if (options.requireCSRF) {
+        const method = context.request.method;
+        if (method !== 'GET' && method !== 'HEAD' && method !== 'OPTIONS') {
+          const csrfToken = context.request.headers.get('X-CSRF-Token');
+          const valid = await validateCSRFToken(
+            context.env,
+            auth.sessionId,
+            csrfToken || ''
+          );
+          if (!valid) {
+            return Response.json(
+              { error: 'Invalid CSRF token' },
+              { status: 403 }
+            );
+          }
+        }
+      }
+
+      return handler({ ...context, auth });
+    } catch (error) {
+      if (error instanceof AuthError) {
+        return Response.json(
+          {
+            error: error.message,
+            authenticated: false,
+          },
+          { status: error.statusCode }
+        );
+      }
+      console.error('Auth middleware error:', error);
+      return Response.json({ error: 'Authentication failed' }, { status: 500 });
+    }
+  };
+}
