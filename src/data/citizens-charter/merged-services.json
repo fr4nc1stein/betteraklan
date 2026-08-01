@@ -135,17 +135,30 @@
     "service": "Animal Bite Treatment Center",
     "slug": "animal-bite-treatment-center",
     "type": "transaction",
-    "description": "Anti-rabies vaccination and wound management for individuals bitten by animals.",
-    "officeSlug": ["municipal-health-office"],
+    "description": "Anti-rabies vaccination and wound management for individuals bitten by animals. Available at provincial and district hospitals and select RHUs.",
+    "officeSlug": [
+      "provincial-health-office",
+      "dr-rafael-s-tumbokon-memorial-hospital"
+    ],
     "category": {
       "name": "Health & Wellness",
       "slug": "health-wellness"
     },
-    "updatedAt": null,
+    "steps": [
+      "Go immediately to the nearest Animal Bite Treatment Center, RHU, or emergency room.",
+      "Present proof of Aklan residency (barangay certificate or valid ID).",
+      "Receive wound management and first dose of anti-rabies vaccine (free).",
+      "Follow up on subsequent doses as scheduled."
+    ],
+    "requirements": [
+      "Valid ID or Barangay Certificate (proof of residency)"
+    ],
     "quickInfo": {
+      "fee": "Free (first dose)",
       "processingTime": "Immediate",
       "appointmentType": "Walk-in (Urgent)"
     },
+    "updatedAt": null,
     "sources": [],
     "source": "community"
   },
@@ -341,6 +354,46 @@
     "plainLanguageName": "Apply for and Issuance of Marriage License"
   },
   {
+    "service": "Apply for Municipal Business Permit",
+    "slug": "apply-municipal-business-permit",
+    "type": "transaction",
+    "description": "How to obtain a business permit from any of the 17 municipal governments in Aklan. Required for all businesses operating within the Province of Aklan.",
+    "officeSlug": [
+      "economic-enterprise-development-department"
+    ],
+    "category": {
+      "name": "Business, Trade & Investment",
+      "slug": "business-trade-investment"
+    },
+    "steps": [
+      "Step 1 — Get a Barangay Business Clearance from the Barangay Hall where your business is located.",
+      "Step 2 — Go to the Business Permit and Licensing Office (BPLO) at your Provincial Capitol, Kalibo, Aklan.",
+      "Step 3 — Fill out the Unified Application Form and submit required documents.",
+      "Step 4 — Undergo inspections (zoning, sanitary, fire safety) as required.",
+      "Step 5 — Pay the business permit fee at the Municipal Treasurer's Office.",
+      "Step 6 — Receive your Governor's Permit / Municipal Business Permit."
+    ],
+    "requirements": [
+      "Barangay Business Clearance",
+      "Community Tax Certificate (Cedula)",
+      "Lease Contract or Proof of Property Ownership",
+      "DTI/SEC/CDA Certificate of Registration",
+      "Valid government-issued ID"
+    ],
+    "quickInfo": {
+      "processingTime": "1–3 days (varies per province)",
+      "appointmentType": "Walk-in at Provincial Capitol, Kalibo, Aklan BPLO"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Local Government Code of the Philippines (RA 7160)",
+        "url": ""
+      }
+    ],
+    "source": "community"
+  },
+  {
     "service": "Business Registration (New Applicant) - Online",
     "slug": "business-registration-new-applicant---online",
     "serviceNumber": "1.4",
@@ -458,7 +511,10 @@
           {
             "letter": "A",
             "action": "Submit DTI, sketch and picture of location of business, and duly accomplished application form",
-            "details": ["Lessor - if renting", "Business Owner"]
+            "details": [
+              "Lessor - if renting",
+              "Business Owner"
+            ]
           },
           {
             "letter": "B",
@@ -478,7 +534,9 @@
           {
             "letter": "A",
             "action": "On the dashboard, click NEW to apply for new business",
-            "details": ["Upload all documents needed"]
+            "details": [
+              "Upload all documents needed"
+            ]
           }
         ]
       },
@@ -999,8 +1057,10 @@
     "service": "Cash Subsidy for Solo Parents",
     "slug": "solo-parents-cash-subsidy",
     "type": "transaction",
-    "description": "Financial assistance provided semi-annually to qualified solo parents in the municipality.",
-    "officeSlug": ["municipal-social-welfare-and-development-office"],
+    "description": "Financial assistance provided semi-annually to qualified solo parents in the province.",
+    "officeSlug": [
+      "provincial-social-welfare-and-development-office"
+    ],
     "category": {
       "name": "Social Services",
       "slug": "social-services"
@@ -1524,7 +1584,9 @@
     "type": "transaction",
     "description": "Provision of cash incentives for elderly residents reaching milestone ages of 80, 85, 90, and 95, facilitated by the National Commission of Senior Citizens (NCSC).",
     "url": "",
-    "officeSlug": ["municipal-treasurers-office"],
+    "officeSlug": [
+      "provincial-treasurers-office"
+    ],
     "category": {
       "name": "Social Services",
       "slug": "social-services"
@@ -1573,11 +1635,48 @@
     "source": "community"
   },
   {
+    "service": "Farming and Fishing Training Programs",
+    "slug": "farming-fishing-training",
+    "type": "information",
+    "description": "Training programs for modern farming and fishing techniques offered through the Office of the Provincial Agriculturist and the Aklan Agri-Aqua Demonstration Farms and Training Center.",
+    "officeSlug": [
+      "office-of-the-provincial-agriculturist"
+    ],
+    "category": {
+      "name": "Agriculture & Economic Development",
+      "slug": "agriculture-economic-development"
+    },
+    "steps": [
+      "Monitor announcements from the Office of the Provincial Agriculturist on the official Aklan website and Facebook page.",
+      "Register for the training program at the Provincial Agriculturist's Office or via your Municipal Agriculture Office.",
+      "Attend training sessions at the Aklan Agri-Aqua Demonstration Farms and Training Center or designated venue.",
+      "Receive training certificates upon completion."
+    ],
+    "requirements": [
+      "Barangay Certificate of Residency",
+      "Valid ID"
+    ],
+    "quickInfo": {
+      "fee": "Free",
+      "whoCanApply": "Farmers and fisherfolk in Aklan"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Office of the Provincial Agriculturist — (036) 272-7000 local 6700",
+        "url": "https://aklan.gov.ph"
+      }
+    ],
+    "source": "community"
+  },
+  {
     "service": "Fire Safety Inspection Certificate (FSIC)",
     "slug": "fire-safety-inspection-certificate",
     "type": "transaction",
     "description": "Required for occupancy and business permits to ensure the structure meets fire safety standards.",
-    "officeSlug": ["bureau-fire-protection"],
+    "officeSlug": [
+      "bureau-fire-protection"
+    ],
     "category": {
       "name": "Public Safety",
       "slug": "public-safety"
@@ -1601,18 +1700,98 @@
     "source": "community"
   },
   {
+    "service": "Free Check-ups, Medicines, and Vaccines (RHUs)",
+    "slug": "free-checkups-medicines-vaccines",
+    "type": "information",
+    "description": "Access free medical check-ups, basic medicines, and vaccination services through Rural Health Units (RHUs) and barangay health centers across all 17 municipalities.",
+    "officeSlug": [
+      "provincial-health-office"
+    ],
+    "category": {
+      "name": "Health & Wellness",
+      "slug": "health-wellness"
+    },
+    "steps": [
+      "Go to your nearest Rural Health Unit (RHU) or Barangay Health Center during clinic hours (Mon–Fri, 8 AM–5 PM).",
+      "First-timers will be issued an Individual Treatment Record (ITR).",
+      "For medicines, bring a doctor's prescription or referral.",
+      "For child immunization, visit on immunization day (typically Wednesdays) with your ECCD card.",
+      "For prenatal services, attend regular prenatal visits at your barangay health center."
+    ],
+    "requirements": [
+      "Valid government-issued ID",
+      "ECCD card (for child immunization)",
+      "Doctor's prescription (for medicines)",
+      "Barangay health record/ITR (if existing)"
+    ],
+    "quickInfo": {
+      "fee": "Free",
+      "whoCanApply": "All Aklan residents",
+      "processingTime": "Walk-in"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Provincial Health Office (PHO) — (036) 268-5917",
+        "url": "https://aklan.gov.ph"
+      }
+    ],
+    "source": "community"
+  },
+  {
+    "service": "Free Seeds, Seedlings, Fertilizers, and Fingerlings",
+    "slug": "free-agricultural-inputs",
+    "type": "transaction",
+    "description": "The Office of the Provincial Agriculturist provides free agricultural inputs to qualified farmers and fisherfolk in Aklan, including seeds, seedlings, fertilizers, and fingerlings.",
+    "officeSlug": [
+      "office-of-the-provincial-agriculturist"
+    ],
+    "category": {
+      "name": "Agriculture & Economic Development",
+      "slug": "agriculture-economic-development"
+    },
+    "steps": [
+      "Go to the Office of the Provincial Agriculturist at the Provincial Capitol, Kalibo, or contact your Municipal Agriculture Office.",
+      "Present your Farm Household ID or proof of residency and farming activity.",
+      "Submit a request/application for the specific input needed (seeds, fertilizer, fingerlings).",
+      "Await assessment and availability confirmation.",
+      "Claim the agricultural inputs on the scheduled distribution date."
+    ],
+    "requirements": [
+      "Farm Household ID (if registered with RSBSA/PhilSys)",
+      "Barangay Certificate of Residency",
+      "Valid government-issued ID",
+      "Proof of farming/fishing activity (land title, lease, or barangay certification)"
+    ],
+    "quickInfo": {
+      "fee": "Free",
+      "whoCanApply": "Registered farmers and fisherfolk in Aklan",
+      "processingTime": "Subject to availability and distribution schedule"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Office of the Provincial Agriculturist — (036) 272-7000 local 6700",
+        "url": "https://aklan.gov.ph"
+      }
+    ],
+    "source": "community"
+  },
+  {
     "service": "Garbage Collection Schedule",
     "slug": "garbage-collection-schedule",
     "type": "information",
     "description": "Weekly schedule for waste collection per barangay. Please segregate biodegradable and non-biodegradable waste.",
-    "officeSlug": ["municipal-environment-and-natural-resources-office"],
+    "officeSlug": [
+      "municipal-environment-and-natural-resources-office"
+    ],
     "category": {
       "name": "Environment & Waste",
       "slug": "environment-waste"
     },
     "steps": [
-      "Monday & Thursday: Ibajay, San Antonio, Maahas (Biodegradable)",
-      "Tuesday & Friday: Bayog, Malay, Malinta (Biodegradable)",
+      "Monday & Thursday: Batong Malake, San Antonio, Maahas (Biodegradable)",
+      "Tuesday & Friday: Bayog, Mayondon, Malinta (Biodegradable)",
       "Wednesday: All Barangays (Non-Biodegradable / Recyclables)",
       "Saturday: Special collection for Market area",
       "Sunday: No Collection"
@@ -3408,6 +3587,43 @@
     "plainLanguageName": "Get Livestock Dispersal and Monitoring"
   },
   {
+    "service": "Maternal Care and Child Immunization",
+    "slug": "maternal-care-child-immunization",
+    "type": "information",
+    "description": "Free prenatal care, family planning services, and routine child immunization under the Expanded Program on Immunization (EPI) at RHUs and barangay health centers.",
+    "officeSlug": [
+      "provincial-health-office"
+    ],
+    "category": {
+      "name": "Health & Wellness",
+      "slug": "health-wellness"
+    },
+    "steps": [
+      "Go to your nearest RHU or Barangay Health Center during clinic hours.",
+      "For prenatal: Bring previous prenatal records and valid ID. Staff will issue a prenatal record on first visit.",
+      "For child immunization: Visit on immunization day (typically Wednesdays, 8 AM–4 PM) with ECCD card.",
+      "For high-risk pregnancies: Request referral to DRSTMH OB-GYN department (24/7)."
+    ],
+    "requirements": [
+      "Valid ID",
+      "ECCD card (for child immunization — issued on first visit if none)",
+      "Prenatal record (issued at first visit)"
+    ],
+    "quickInfo": {
+      "fee": "Free",
+      "whoCanApply": "Pregnant women and children under 12 months",
+      "processingTime": "Walk-in"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Department of Health — Expanded Program on Immunization",
+        "url": "https://doh.gov.ph"
+      }
+    ],
+    "source": "community"
+  },
+  {
     "service": "Meat Inspection Services, Fee Assessment, and Issuance of Official Receipt",
     "slug": "meat-inspection-services-fee-assessment-and-issuance-of-official-receipt",
     "serviceNumber": "7.3",
@@ -3468,7 +3684,9 @@
     "slug": "medical-assistance-aics",
     "type": "transaction",
     "description": "Assistance to Individuals in Crisis Situations for medical needs.",
-    "officeSlug": ["municipal-social-welfare-and-development-office"],
+    "officeSlug": [
+      "provincial-social-welfare-and-development-office"
+    ],
     "category": {
       "name": "Social Services",
       "slug": "social-services"
@@ -3776,6 +3994,76 @@
     "plainLanguageName": "Get a Payment of Real Property Tax clearance"
   },
   {
+    "service": "Provincial Hospital Locations in Aklan",
+    "slug": "provincial-hospital-locations",
+    "type": "information",
+    "description": "Locations and contact numbers for provincial and district hospitals providing medical care across all 17 municipalities of Aklan.",
+    "officeSlug": [
+      "provincial-health-office"
+    ],
+    "category": {
+      "name": "Health & Wellness",
+      "slug": "health-wellness"
+    },
+    "steps": [
+      "DRSTMH (Main Provincial Hospital): Mabini St., Kalibo, Aklan — (036) 268-7062",
+      "Godofredo P. Ramos Hospital: Altavas, Aklan — (036) 269-1069",
+      "Ibajay District Hospital: Ibajay, Aklan — (036) 289-2011",
+      "Don Leovigildo N. Diapo Sr. Municipal Hospital: Kalibo, Aklan — (036) 272-3613",
+      "Malay Municipal Hospital: Malay, Aklan — (036) 288-8729",
+      "Ciriaco S. Tirol Memorial Hospital: Malay, Aklan — (036) 288-3041",
+      "Buruanga Municipal Hospital: Buruanga, Aklan",
+      "Libacao Municipal Infirmary: Libacao, Aklan — (036) 273-2108"
+    ],
+    "requirements": [],
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Aklan Provincial Government Directory",
+        "url": "https://aklan.gov.ph/directory/"
+      }
+    ],
+    "source": "community"
+  },
+  {
+    "service": "Provincial Scholarship Programs",
+    "slug": "provincial-scholarship-programs",
+    "type": "transaction",
+    "description": "Scholarship and educational assistance programs available to Aklan residents, administered through the Provincial Social Welfare and Development Office (PSWDO) and partner agencies.",
+    "officeSlug": [
+      "provincial-social-welfare-and-development-office"
+    ],
+    "category": {
+      "name": "Education & Scholarship",
+      "slug": "education-scholarship"
+    },
+    "steps": [
+      "Monitor the official Provincial Government of Aklan website and Facebook page (facebook.com/aklanIMAD) for scholarship announcements.",
+      "Prepare required documents (see requirements below).",
+      "Submit your application at the PSWDO or Governor's Office during the application period.",
+      "Attend screening/interview and orientation if shortlisted."
+    ],
+    "requirements": [
+      "Barangay Certificate of Residency (from your barangay in Aklan)",
+      "PSA Birth Certificate",
+      "Report card / grades (JHS/SHS/college)",
+      "Good moral certificate from school",
+      "Income documents: parents' ITR or Certificate of Non-Filing / indigency certificate"
+    ],
+    "quickInfo": {
+      "fee": "Free",
+      "whoCanApply": "Aklan residents who are incoming or current college students"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Provincial Social Welfare and Development Office (PSWDO) — (036) 272-7000 local 3200",
+        "url": "https://aklan.gov.ph"
+      }
+    ],
+    "source": "community"
+  },
+  {
     "service": "Provision of Anti-Rabies Vaccination for Cats and Dogs",
     "slug": "provision-of-anti-rabies-vaccination-for-cats-and-dogs",
     "serviceNumber": "8.3",
@@ -3824,38 +4112,48 @@
     "plainLanguageName": "Get Provision of Anti-Rabies Vaccination for Cats and Dogs"
   },
   {
-    "service": "Public School Directory",
-    "slug": "public-school-directory",
+    "service": "Public Universities in Aklan",
+    "slug": "provincial-schools-directory",
     "type": "information",
-    "description": "A comprehensive list of public elementary and secondary schools in the municipality.",
-    "officeSlug": ["department-of-education"],
+    "description": "A comprehensive list of public universities in the Province of Aklan. Aklan State University (ASU) operates five campuses across the province.",
+    "officeSlug": [
+      "provincial-social-welfare-and-development-office"
+    ],
     "category": {
       "name": "Education & Scholarship",
       "slug": "education-scholarship"
     },
     "steps": [
-      "Aklan Central Elementary School (Kalibo)",
-      "Malay Elementary School",
-      "Bayog Elementary School",
-      "Lalakay Elementary School",
-      "Aklan National High School (Poblacion)",
-      "Bernardo F. San Juan National High School",
-      "South Hill School (Private)",
-      "University of the Philippines Rural High School"
+      "Main Campus — Banga, Aklan (Banga-Libacao Highway): Focuses on agriculture, forestry, veterinary medicine, arts and sciences, and education.",
+      "Kalibo Campus — Kalibo, Aklan (Roxas Avenue Extension, Andagao): Formerly the Roxas Memorial College of Arts and Trades.",
+      "Ibajay Campus — Ibajay, Aklan: Formerly the Western Aklan Polytechnic College.",
+      "New Washington Campus — New Washington, Aklan: Formerly the Aklan National College of Fisheries.",
+      "Makato Campus — Makato, Aklan: Formerly the Northern Panay Teachers College."
     ],
     "requirements": [],
-    "relatedServices": ["scholarship-application"],
     "faqs": [
       {
+        "question": "Is tuition free at Aklan State University?",
+        "answer": "Yes. Under RA 10931 (Universal Access to Quality Tertiary Education Act), tuition is free at all State Universities and Colleges (SUCs), including all ASU campuses. Only miscellaneous fees may apply."
+      },
+      {
+        "question": "Which ASU campus should I enroll in?",
+        "answer": "Choose based on your preferred program. The Main Campus in Banga offers agriculture, forestry, and veterinary medicine; Kalibo Campus offers arts, trades, and technology programs; Ibajay Campus focuses on polytechnic courses; New Washington Campus on fisheries; and Makato Campus on teacher education."
+      },
+      {
         "question": "When does enrollment start?",
-        "answer": "Enrollment typically begins in July. Please follow the official DepEd page for announcements."
+        "answer": "Enrollment typically begins in June–July for the first semester. Check the official ASU website (aklanstateuniversity.edu.ph) or each campus for exact schedules."
       }
     ],
     "updatedAt": null,
     "sources": [
       {
-        "name": "DepEd Schools Division Office List",
-        "url": ""
+        "name": "Aklan State University",
+        "url": "http://www.aklanstateuniversity.edu.ph/"
+      },
+      {
+        "name": "RA 10931 — Universal Access to Quality Tertiary Education Act",
+        "url": "https://ched.gov.ph/ra-10931/"
       }
     ],
     "source": "community"
@@ -4324,6 +4622,50 @@
     "plainLanguageName": "Get a Registration of Regular and Timely of Marriage certificate"
   },
   {
+    "service": "Rent Stalls in Provincial Markets",
+    "slug": "rent-stalls-provincial-markets",
+    "type": "transaction",
+    "description": "How to rent market stalls in public markets and economic enterprise facilities managed by the Provincial Government of Aklan, including the Lee Jetty Port and Passenger Terminal.",
+    "officeSlug": [
+      "economic-enterprise-development-department"
+    ],
+    "category": {
+      "name": "Business, Trade & Investment",
+      "slug": "business-trade-investment"
+    },
+    "steps": [
+      "Inquire at the Economic Enterprise Development Department (EEDD) or your Provincial Capitol, Kalibo, Aklan.",
+      "Fill out the market stall rental application form.",
+      "Submit proof of identity, residency, and type of goods to be sold.",
+      "Await assessment and allocation of available stall.",
+      "Pay rental fees and deposits at the EEDD or Municipal Treasurer's Office.",
+      "Comply with market sanitation and operation rules."
+    ],
+    "requirements": [
+      "Valid government-issued ID",
+      "Barangay Certificate of Residency",
+      "Sanitary Permit (for food vendors)",
+      "Business Permit (if applicable)",
+      "2×2 ID photo"
+    ],
+    "quickInfo": {
+      "fee": "Varies by stall type and location",
+      "whoCanApply": "Aklan residents and registered vendors"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Economic Enterprise Development Department (EEDD) — (036) 272-7000 local 1100",
+        "url": "https://aklan.gov.ph"
+      },
+      {
+        "name": "Lee Jetty Port and Passenger Terminal — (036) 288-7419",
+        "url": ""
+      }
+    ],
+    "source": "community"
+  },
+  {
     "service": "Request and Issuance of Certified True Copy of Birth/Death/Marriage Certificate",
     "slug": "request-and-issuance-of-certified-true-copy-of-birthdeathmarriage-certificate",
     "serviceNumber": "5.11",
@@ -4561,33 +4903,6 @@
     "plainLanguageName": "Apply for Exhumation Permit"
   },
   {
-    "service": "Rural Health Unit (RHU) Locations",
-    "slug": "rhu-locations",
-    "type": "information",
-    "description": "Locations of health centers providing free primary care, immunization, and maternal services.",
-    "officeSlug": ["municipal-health-office"],
-    "category": {
-      "name": "Health & Wellness",
-      "slug": "health-wellness"
-    },
-    "steps": [
-      "RHU 1: Main Health Center, Provincial Capitol Compound, Brgy. Kalibo",
-      "RHU 2: Brgy. Ibajay (Near Barangay Hall)",
-      "RHU 3: Brgy. Malay (Purok 3)",
-      "Animal Bite Center: Provincial Capitol Compound"
-    ],
-    "requirements": [],
-    "relatedServices": ["health-certificate"],
-    "updatedAt": null,
-    "sources": [
-      {
-        "name": "Municipal Health Office Registry",
-        "url": ""
-      }
-    ],
-    "source": "community"
-  },
-  {
     "service": "Slaughtering of Small/Large Animals and Issuance of Local Meat Inspection Certificate",
     "slug": "slaughtering-of-smalllarge-animals-and-issuance-of-local-meat-inspection-certificate",
     "serviceNumber": "7.2",
@@ -4636,6 +4951,43 @@
     "plainLanguageName": "Get a Slaughtering of Small/Large Animals and Issuance of Local Meat Inspection certificate"
   },
   {
+    "service": "Special Program for Employment of Students (SPES)",
+    "slug": "spes-student-employment",
+    "type": "transaction",
+    "description": "DOLE's SPES program allows poor but deserving students and out-of-school youth (15–30 years old) to work during school breaks. Coordinated locally by PESO Aklan.",
+    "officeSlug": [
+      "office-of-the-provincial-public-employment-service"
+    ],
+    "category": {
+      "name": "Education & Scholarship",
+      "slug": "education-scholarship"
+    },
+    "steps": [
+      "Follow PESO Aklan announcements on the Provincial Government website and Facebook page for SPES application windows.",
+      "Prepare required documents (ID, school records, indigency/income proof).",
+      "Submit application at the PESO office or as directed in the announcement.",
+      "Attend orientation when shortlisted and complete the employment period."
+    ],
+    "requirements": [
+      "Valid ID (school ID or government-issued)",
+      "School enrollment/grades proof",
+      "Indigency certificate or income documents",
+      "Barangay Certificate of Residency"
+    ],
+    "quickInfo": {
+      "fee": "Free",
+      "whoCanApply": "Students and out-of-school youth aged 15–30 from Aklan"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "PESO Aklan — (036) 272-7000 local 2400",
+        "url": "https://aklan.gov.ph"
+      }
+    ],
+    "source": "community"
+  },
+  {
     "service": "Special Promotional Fee",
     "slug": "special-promotional-fee",
     "serviceNumber": "6.4",
@@ -4678,5 +5030,115 @@
     },
     "turnaroundTime": "3-5 working days",
     "plainLanguageName": "Get Special Promotional Fee"
+  },
+  {
+    "service": "TB-DOTS Program (Free TB Treatment)",
+    "slug": "tb-dots-program",
+    "type": "transaction",
+    "description": "Free tuberculosis screening, diagnosis, and full course of anti-TB medicines under the National Tuberculosis Program (NTP) DOTS approach at RHUs across all 17 municipalities.",
+    "officeSlug": [
+      "provincial-health-office"
+    ],
+    "category": {
+      "name": "Health & Wellness",
+      "slug": "health-wellness"
+    },
+    "steps": [
+      "Go to your nearest RHU or Barangay Health Center for TB screening.",
+      "If diagnosed with TB, you will be enrolled in the DOTS program.",
+      "Receive free anti-TB medicines and attend regular follow-up visits.",
+      "Complete the full course of treatment as prescribed."
+    ],
+    "requirements": [
+      "Valid ID",
+      "Health record/ITR (if existing)"
+    ],
+    "quickInfo": {
+      "fee": "Free",
+      "whoCanApply": "Anyone with TB symptoms",
+      "processingTime": "Walk-in"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "National Tuberculosis Program (NTP)",
+        "url": "https://doh.gov.ph"
+      }
+    ],
+    "source": "community"
+  },
+  {
+    "service": "Trade Fairs & Tourism Promotions",
+    "slug": "trade-fairs-tourism-promotions",
+    "type": "information",
+    "description": "Participate in provincial and municipal trade fairs, business expos, and tourism promotion events in Aklan, including the world-famous Ati-Atihan Festival (January, Kalibo).",
+    "officeSlug": [
+      "provincial-tourism-office",
+      "economic-enterprise-development-department"
+    ],
+    "category": {
+      "name": "Business, Trade & Investment",
+      "slug": "business-trade-investment"
+    },
+    "steps": [
+      "Check announcements from the Aklan Provincial Tourism Office and EEDD for upcoming trade fairs.",
+      "Prepare eligibility documents: DTI/SEC/CDA registration, current business permit, product list.",
+      "Submit an Application/Intent Form with your business profile and booth requirements.",
+      "Await assessment and confirmation from the organizer.",
+      "Pay booth fees (if applicable) and attend the event."
+    ],
+    "requirements": [
+      "DTI/SEC/CDA registration certificate",
+      "Current Municipal Business Permit",
+      "BIR Certificate of Registration (Form 2303)",
+      "Product compliance certificates (FDA/LTO for food/cosmetics)"
+    ],
+    "quickInfo": {
+      "fee": "Varies per event (booth fees may apply)",
+      "whoCanApply": "Registered MSMEs and tourism enterprises in Aklan"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Aklan Provincial Tourism Office — (036) 272-7000 local 6500",
+        "url": "https://aklan.gov.ph/tourism"
+      }
+    ],
+    "source": "community"
+  },
+  {
+    "service": "Veterinary Services for Livestock",
+    "slug": "veterinary-services-livestock",
+    "type": "transaction",
+    "description": "The Office of the Provincial Veterinarian provides free or subsidized veterinary care, vaccination, and deworming services for livestock and farm animals in Aklan.",
+    "officeSlug": [
+      "office-of-the-provincial-veterinarian"
+    ],
+    "category": {
+      "name": "Agriculture & Economic Development",
+      "slug": "agriculture-economic-development"
+    },
+    "steps": [
+      "Contact the Office of the Provincial Veterinarian or your Municipal Agriculture Office.",
+      "Register your livestock for the provincial vaccination/deworming program.",
+      "Await the scheduled visit by provincial veterinary team to your barangay.",
+      "For emergency veterinary cases, bring the animal to the nearest municipal agriculture office."
+    ],
+    "requirements": [
+      "Barangay Certificate of Residency",
+      "Valid ID of livestock owner"
+    ],
+    "quickInfo": {
+      "fee": "Free (provincial vaccination programs)",
+      "whoCanApply": "Livestock owners in Aklan"
+    },
+    "updatedAt": null,
+    "sources": [
+      {
+        "name": "Office of the Provincial Veterinarian — (036) 272-7000 local 3400",
+        "url": "https://aklan.gov.ph"
+      }
+    ],
+    "source": "community"
   }
 ]

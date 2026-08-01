@@ -1,29 +1,34 @@
 [
   {
-    "service": "Provincial Schools in Aklan",
+    "service": "Public Universities in Aklan",
     "slug": "provincial-schools-directory",
     "type": "information",
-    "description": "Overview of key public educational institutions in the Province of Aklan, including the provincial state university.",
+    "description": "A comprehensive list of public universities in the Province of Aklan. Aklan State University (ASU) operates five campuses across the province.",
     "officeSlug": ["provincial-social-welfare-and-development-office"],
     "category": {
       "name": "Education & Scholarship",
       "slug": "education-scholarship"
     },
     "steps": [
-      "Aklan State University (ASU) — Main Campus, Banga, Aklan (State University — Free tuition under RA 10931)",
-      "Aklan Catholic College — Kalibo, Aklan",
-      "Public elementary and secondary schools in all 17 municipalities (under DepEd Aklan Division)",
-      "For enrollment inquiries, contact your nearest municipal DepEd Division or school registrar."
+      "Main Campus — Banga, Aklan (Banga-Libacao Highway): Focuses on agriculture, forestry, veterinary medicine, arts and sciences, and education.",
+      "Kalibo Campus — Kalibo, Aklan (Roxas Avenue Extension, Andagao): Formerly the Roxas Memorial College of Arts and Trades.",
+      "Ibajay Campus — Ibajay, Aklan: Formerly the Western Aklan Polytechnic College.",
+      "New Washington Campus — New Washington, Aklan: Formerly the Aklan National College of Fisheries.",
+      "Makato Campus — Makato, Aklan: Formerly the Northern Panay Teachers College."
     ],
     "requirements": [],
     "faqs": [
       {
-        "question": "When does enrollment start?",
-        "answer": "Enrollment typically begins in June–July. Follow the official DepEd Aklan Division announcements."
+        "question": "Is tuition free at Aklan State University?",
+        "answer": "Yes. Under RA 10931 (Universal Access to Quality Tertiary Education Act), tuition is free at all State Universities and Colleges (SUCs), including all ASU campuses. Only miscellaneous fees may apply."
       },
       {
-        "question": "Is tuition free at Aklan State University?",
-        "answer": "Yes. Under RA 10931, tuition is free at all State Universities and Colleges (SUCs), including ASU. Only miscellaneous fees may apply."
+        "question": "Which ASU campus should I enroll in?",
+        "answer": "Choose based on your preferred program. The Main Campus in Banga offers agriculture, forestry, and veterinary medicine; Kalibo Campus offers arts, trades, and technology programs; Ibajay Campus focuses on polytechnic courses; New Washington Campus on fisheries; and Makato Campus on teacher education."
+      },
+      {
+        "question": "When does enrollment start?",
+        "answer": "Enrollment typically begins in June–July for the first semester. Check the official ASU website (aklanstateuniversity.edu.ph) or each campus for exact schedules."
       }
     ],
     "updatedAt": null,
@@ -31,6 +36,10 @@
       {
         "name": "Aklan State University",
         "url": "http://www.aklanstateuniversity.edu.ph/"
+      },
+      {
+        "name": "RA 10931 — Universal Access to Quality Tertiary Education Act",
+        "url": "https://ched.gov.ph/ra-10931/"
       }
     ]
   },
