@@ -317,7 +317,7 @@ BetterAklan aggregates data from multiple sources:
 
 ### For Aklan Residents
 - **Website**: https://betteraklan.org
-- **GitHub Issues**: Report bugs or suggest features at [github.com/BetterAklan/betteraklan/issues](https://github.com/BetterAklan/betteraklan/issues)
+- **GitHub Issues**: Report bugs or suggest features at [github.com/fr4nc1stein/betteraklan/issues](https://github.com/BetterAklan/betteraklan/issues)
 - **Community**: Join our community contributions via the "Contribute" page on the portal
 
 ### For Other LGUs
