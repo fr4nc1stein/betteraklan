@@ -54,6 +54,7 @@ export interface NavigationItem {
   href: string;
   target?: string;
   children?: NavigationItem[];
+  hidden?: boolean;
 }
 
 export interface ServiceCategory {

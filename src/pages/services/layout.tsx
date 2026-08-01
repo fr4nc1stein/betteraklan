@@ -67,7 +67,7 @@ export default function ServicesLayout() {
         isIndexPage ? (
           <PageHeader
             variant='hero'
-            title='Local Government Services'
+            title='Government Services'
             description='Explore official municipal services from the Citizens Charter and community contributions. Choose a category to filter or search below.'
             actions={
               <SearchInput
