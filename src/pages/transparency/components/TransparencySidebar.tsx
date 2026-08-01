@@ -7,8 +7,8 @@ import {
 
 const sections = [
   {
-    name: 'Budget & Finances',
-    slug: 'financial',
+    name: 'Budget',
+    slug: 'budget',
     icon: CreditCard,
   },
   {

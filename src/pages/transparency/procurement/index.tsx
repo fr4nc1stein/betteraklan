@@ -21,6 +21,8 @@ import { EmptyState } from '@/components/ui/EmptyState';
 import { PaginationControls } from '@/components/ui/Pagination';
 import SearchInput from '@/components/ui/SearchInput';
 
+import AnnualProcurementPlan from '@/pages/transparency/components/AnnualProcurementPlan';
+
 import { formatPesoAdaptive } from '@/lib/format';
 import { config } from '@/lib/lguConfig';
 import { lguLabels } from '@/lib/lguLabels';
@@ -31,6 +33,8 @@ interface AggregateStats {
   count: number;
   total: number;
 }
+
+const SHOW_LIVE_AWARDS_SEARCH = true;
 
 export default function ProcurementPage() {
   // --- State (Aligned with EnhancedSearchInterface) ---
@@ -116,6 +120,11 @@ export default function ProcurementPage() {
 
   // --- Data Loading ---
   useEffect(() => {
+    if (!SHOW_LIVE_AWARDS_SEARCH) {
+      setLoading(false);
+      return;
+    }
+
     const fetchData = async () => {
       setLoading(true);
 
@@ -241,175 +250,187 @@ export default function ProcurementPage() {
 
   return (
     <div className='animate-in fade-in mx-auto max-w-full space-y-8 px-4 pb-20 duration-500 md:px-8'>
-      <ModuleHeader
-        title='Procurement Transparency'
-        description={`Real-time database of bids and awards from the ${lguLabels.fullName}.`}
-      >
-        <div className='flex w-full flex-col items-center gap-4 md:w-auto md:flex-row'>
-          <SearchInput
-            value={query}
-            onChangeValue={setQuery}
-            placeholder='Search contracts...'
-            className='w-full md:w-80'
-          />
-          <div className='flex shrink-0 gap-2'>
-            <Button
-              variant='outline'
-              onClick={downloadCSV}
-              className='h-11 px-3'
-              title='Download CSV'
-            >
-              <Download className='h-4 w-4' />
-            </Button>
-          </div>
-        </div>
-      </ModuleHeader>
+      {SHOW_LIVE_AWARDS_SEARCH && (
+        <>
+          <ModuleHeader
+            title='Procurement Transparency'
+            description={`Real-time database of bids and awards from the ${lguLabels.fullName}.`}
+          >
+            <div className='flex w-full flex-col items-center gap-4 md:w-auto md:flex-row'>
+              <SearchInput
+                value={query}
+                onChangeValue={setQuery}
+                placeholder='Search contracts...'
+                className='w-full md:w-80'
+              />
+              <div className='flex shrink-0 gap-2'>
+                <Button
+                  variant='outline'
+                  onClick={downloadCSV}
+                  className='h-11 px-3'
+                  title='Download CSV'
+                >
+                  <Download className='h-4 w-4' />
+                </Button>
+              </div>
+            </div>
+          </ModuleHeader>
 
-      {/* --- STATS GRID --- */}
-      <CardGrid columns={4}>
-        <StatCard
-          icon={Tags}
-          label='Categories'
-          value={detailedStats.uniqueCategories}
-          subtext='Business Sectors'
-          iconBg='bg-kapwa-bg-surface-raised text-kapwa-text-strong'
-        />
-
-        <StatCard
-          icon={Briefcase}
-          label='Total Value'
-          value={
-            formatPesoAdaptive(detailedStats.totalContractAmount).fullString
-          }
-          subtext='Accumulated Contract Value'
-          iconBg='bg-kapwa-green-50 text-kapwa-green-600'
-        />
-
-        <StatCard
-          icon={TrendingUp}
-          label='Average'
-          value={formatPesoAdaptive(detailedStats.averageCost).fullString}
-          subtext='Per Contract'
-          iconBg='bg-kapwa-bg-brand-weak text-kapwa-text-brand'
-        />
-
-        <StatCard
-          icon={FileText}
-          label='Volume'
-          value={detailedStats.totalContractCount.toLocaleString()}
-          subtext='Total Contracts'
-          iconBg='bg-kapwa-bg-surface-raised text-kapwa-text-strong'
-        />
-      </CardGrid>
-
-      {/* --- RESULTS TABLE --- */}
-      {loading ? (
-        <div className='space-y-4'>
-          {[1, 2, 3, 4, 5].map(i => (
-            <div
-              key={i}
-              className='bg-kapwa-bg-surface-raised h-16 animate-pulse rounded-xl'
+          {/* --- STATS GRID --- */}
+          <CardGrid columns={4}>
+            <StatCard
+              icon={Tags}
+              label='Categories'
+              value={detailedStats.uniqueCategories}
+              subtext='Business Sectors'
+              iconBg='bg-kapwa-bg-surface-raised text-kapwa-text-strong'
             />
-          ))}
-        </div>
-      ) : results.length === 0 ? (
-        <EmptyState
-          title='No Records Found'
-          message='Try adjusting your search terms.'
-          icon={Search}
-        />
-      ) : (
-        <div className='border-kapwa-border-weak bg-kapwa-bg-surface overflow-hidden rounded-xl border shadow-sm'>
-          <div className='overflow-x-auto'>
-            <table className='w-full text-left text-sm'>
-              <thead className='border-kapwa-border-weak bg-kapwa-bg-surface-raised text-kapwa-text-disabled border-b text-xs font-bold tracking-wider uppercase'>
-                <tr>
-                  <th className='hidden w-32 px-3 py-3 md:table-cell md:px-6 md:py-4'>
-                    Ref ID
-                  </th>
-                  <th className='px-3 py-3 sm:px-6 sm:py-4'>Contract Title</th>
-                  <th className='px-3 py-3 text-right sm:px-6 sm:py-4'>
-                    Amount
-                  </th>
-                  <th className='hidden px-3 py-3 md:table-cell md:px-6 md:py-4'>
-                    Date
-                  </th>
-                  <th className='px-3 py-3 text-center sm:px-6 sm:py-4'>
-                    Status
-                  </th>
-                </tr>
-              </thead>
-              <tbody className='divide-y divide-kapwa-border-weak'>
-                {paginatedResults.map(row => (
-                  <tr
-                    key={row.id}
-                    className='group hover:bg-kapwa-bg-surface-raised/50 transition-colors'
-                  >
-                    <td className='group-hover:text-kapwa-text-brand text-kapwa-text-disabled hidden px-3 py-3 font-mono text-xs transition-colors md:table-cell md:px-6 md:py-4'>
-                      {row.reference_id}
-                    </td>
-                    <td className='px-3 py-3 sm:px-6 sm:py-4'>
-                      <p
-                        className='text-kapwa-text-strong line-clamp-2 leading-snug font-bold'
-                        title={row.notice_title}
+
+            <StatCard
+              icon={Briefcase}
+              label='Total Value'
+              value={
+                formatPesoAdaptive(detailedStats.totalContractAmount)
+                  .fullString
+              }
+              subtext='Accumulated Contract Value'
+              iconBg='bg-kapwa-green-50 text-kapwa-green-600'
+            />
+
+            <StatCard
+              icon={TrendingUp}
+              label='Average'
+              value={formatPesoAdaptive(detailedStats.averageCost).fullString}
+              subtext='Per Contract'
+              iconBg='bg-kapwa-bg-brand-weak text-kapwa-text-brand'
+            />
+
+            <StatCard
+              icon={FileText}
+              label='Volume'
+              value={detailedStats.totalContractCount.toLocaleString()}
+              subtext='Total Contracts'
+              iconBg='bg-kapwa-bg-surface-raised text-kapwa-text-strong'
+            />
+          </CardGrid>
+
+          {/* --- RESULTS TABLE --- */}
+          {loading ? (
+            <div className='space-y-4'>
+              {[1, 2, 3, 4, 5].map(i => (
+                <div
+                  key={i}
+                  className='bg-kapwa-bg-surface-raised h-16 animate-pulse rounded-xl'
+                />
+              ))}
+            </div>
+          ) : results.length === 0 ? (
+            <EmptyState
+              title='No Records Found'
+              message='Try adjusting your search terms.'
+              icon={Search}
+            />
+          ) : (
+            <div className='border-kapwa-border-weak bg-kapwa-bg-surface overflow-hidden rounded-xl border shadow-sm'>
+              <div className='overflow-x-auto'>
+                <table className='w-full text-left text-sm'>
+                  <thead className='border-kapwa-border-weak bg-kapwa-bg-surface-raised text-kapwa-text-disabled border-b text-xs font-bold tracking-wider uppercase'>
+                    <tr>
+                      <th className='hidden w-32 px-3 py-3 md:table-cell md:px-6 md:py-4'>
+                        Ref ID
+                      </th>
+                      <th className='px-3 py-3 sm:px-6 sm:py-4'>
+                        Contract Title
+                      </th>
+                      <th className='px-3 py-3 text-right sm:px-6 sm:py-4'>
+                        Amount
+                      </th>
+                      <th className='hidden px-3 py-3 md:table-cell md:px-6 md:py-4'>
+                        Date
+                      </th>
+                      <th className='px-3 py-3 text-center sm:px-6 sm:py-4'>
+                        Status
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className='divide-y divide-kapwa-border-weak'>
+                    {paginatedResults.map(row => (
+                      <tr
+                        key={row.id}
+                        className='group hover:bg-kapwa-bg-surface-raised/50 transition-colors'
                       >
-                        {row.notice_title}
-                      </p>
-                      <div className='mt-1 flex flex-wrap items-center gap-2'>
-                        <Badge
-                          variant={getBusinessCategoryBadgeVariant(
-                            row.business_category
-                          )}
-                          className='max-w-full text-[9px] sm:h-4 sm:px-1.5 sm:py-0'
-                        >
-                          <span className='truncate max-w-[100px] sm:max-w-[150px]'>
-                            {row.business_category}
-                          </span>
-                        </Badge>
-                        {row.awardee_name && (
-                          <span
-                            className='text-kapwa-text-disabled max-w-[150px] truncate text-xs sm:max-w-[200px]'
-                            title={row.awardee_name}
+                        <td className='group-hover:text-kapwa-text-brand text-kapwa-text-disabled hidden px-3 py-3 font-mono text-xs transition-colors md:table-cell md:px-6 md:py-4'>
+                          {row.reference_id}
+                        </td>
+                        <td className='px-3 py-3 sm:px-6 sm:py-4'>
+                          <p
+                            className='text-kapwa-text-strong line-clamp-2 leading-snug font-bold'
+                            title={row.notice_title}
                           >
-                            • {row.awardee_name}
-                          </span>
-                        )}
-                      </div>
-                    </td>
-                    <td className='text-kapwa-text-strong px-3 py-3 text-right font-mono font-bold sm:px-6 sm:py-4'>
-                      {formatPesoAdaptive(row.contract_amount).fullString}
-                    </td>
-                    <td className='text-kapwa-text-support hidden px-3 py-3 text-xs whitespace-nowrap md:table-cell md:px-6 md:py-4'>
-                      {formatDate(row.award_date)}
-                    </td>
-                    <td className='px-3 py-4 text-center sm:px-6'>
-                      <Badge
-                        variant={getAwardStatusBadgeVariant(row.award_status)}
-                        className='max-w-full text-[10px]'
-                      >
-                        <span className='truncate max-w-[80px] sm:max-w-[120px] inline-block align-bottom'>
-                          {row.award_status}
-                        </span>
-                      </Badge>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <PaginationControls
-            currentPage={currentPage}
-            totalPages={totalPages}
-            resultsPerPage={resultsPerPage}
-            totalItems={results.length}
-            onPageChange={setCurrentPage}
-            onResultsPerPageChange={limit => {
-              setResultsPerPage(limit);
-              setCurrentPage(1);
-            }}
-          />
-        </div>
+                            {row.notice_title}
+                          </p>
+                          <div className='mt-1 flex flex-wrap items-center gap-2'>
+                            <Badge
+                              variant={getBusinessCategoryBadgeVariant(
+                                row.business_category
+                              )}
+                              className='max-w-full text-[9px] sm:h-4 sm:px-1.5 sm:py-0'
+                            >
+                              <span className='truncate max-w-[100px] sm:max-w-[150px]'>
+                                {row.business_category}
+                              </span>
+                            </Badge>
+                            {row.awardee_name && (
+                              <span
+                                className='text-kapwa-text-disabled max-w-[150px] truncate text-xs sm:max-w-[200px]'
+                                title={row.awardee_name}
+                              >
+                                • {row.awardee_name}
+                              </span>
+                            )}
+                          </div>
+                        </td>
+                        <td className='text-kapwa-text-strong px-3 py-3 text-right font-mono font-bold sm:px-6 sm:py-4'>
+                          {formatPesoAdaptive(row.contract_amount).fullString}
+                        </td>
+                        <td className='text-kapwa-text-support hidden px-3 py-3 text-xs whitespace-nowrap md:table-cell md:px-6 md:py-4'>
+                          {formatDate(row.award_date)}
+                        </td>
+                        <td className='px-3 py-4 text-center sm:px-6'>
+                          <Badge
+                            variant={getAwardStatusBadgeVariant(
+                              row.award_status
+                            )}
+                            className='max-w-full text-[10px]'
+                          >
+                            <span className='truncate max-w-[80px] sm:max-w-[120px] inline-block align-bottom'>
+                              {row.award_status}
+                            </span>
+                          </Badge>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <PaginationControls
+                currentPage={currentPage}
+                totalPages={totalPages}
+                resultsPerPage={resultsPerPage}
+                totalItems={results.length}
+                onPageChange={setCurrentPage}
+                onResultsPerPageChange={limit => {
+                  setResultsPerPage(limit);
+                  setCurrentPage(1);
+                }}
+              />
+            </div>
+          )}
+        </>
       )}
+
+      {/* --- ANNUAL PROCUREMENT PLAN (planned budget, distinct from awards above) --- */}
+      <AnnualProcurementPlan />
 
       {/* --- EXTERNAL LINKS FOOTER --- */}
       <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>

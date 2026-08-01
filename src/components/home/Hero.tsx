@@ -8,7 +8,7 @@ import {
   BuildingIcon,
   DollarSignIcon,
   FileTextIcon,
-  GavelIcon,
+  LandmarkIcon,
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -80,22 +80,22 @@ const Hero: FC = () => {
   // Quick access cards for key sections
   const quickAccessCards: QuickAccessCard[] = [
     {
-      title: 'Financial Reports',
+      title: 'Budget',
       description: 'Budget & income statements',
-      to: '/transparency/financial',
+      to: '/transparency/budget',
       icon: <DollarSignIcon className='w-6 h-6' />,
     },
     {
-      title: 'Infrastructure',
-      description: 'Track municipal projects',
-      to: '/transparency/infrastructure',
-      icon: <BuildingIcon className='w-6 h-6' />,
+      title: 'Budget',
+      description: 'Appropriations & expenditures',
+      to: '/transparency/budget',
+      icon: <LandmarkIcon className='w-6 h-6' />,
     },
     {
-      title: 'Legislation',
-      description: 'Ordinances & resolutions',
-      to: '/openlgu',
-      icon: <GavelIcon className='w-6 h-6' />,
+      title: 'Departments',
+      description: 'Provincial offices & agencies',
+      to: '/government/departments',
+      icon: <BuildingIcon className='w-6 h-6' />,
     },
     {
       title: 'Statistics',
@@ -174,9 +174,9 @@ const Hero: FC = () => {
               {t('hero.quickAccess')}
             </h2>
             <div className='grid grid-cols-2 gap-4'>
-              {quickAccessCards.map(card => (
+              {quickAccessCards.map((card, index) => (
                 <Link
-                  key={card.to}
+                  key={`${card.title}-${index}`}
                   to={card.to}
                   className='flex flex-col items-center p-4 text-center rounded-lg transition-all duration-200 bg-kapwa-bg-surface/10 hover:bg-kapwa-bg-surface/20'
                 >

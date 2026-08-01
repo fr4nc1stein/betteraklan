@@ -45,7 +45,7 @@ export const Footer: FC = () => {
               <img
                 src={config.portal.logoWhitePath}
                 alt={config.portal.name}
-                className='mr-4 w-12 h-12'
+                className='object-contain mr-4 w-14 h-14'
               />
               <div>
                 <div className='text-xl font-black tracking-tighter'>

@@ -17,13 +17,13 @@
     "description": "Community-powered portal of the Province of Aklan.",
     "brandColor": "#0066eb",
     "footerBrandName": "Better Aklan",
-    "logoWhitePath": "/logos/svg/betteraklan-icon-white.svg",
-    "navbarLogoPath": "/logos/svg/betteraklan-icon-colored.svg",
-    "defaultOgImagePath": "/logos/svg/betteraklan-icon-colored.svg",
-    "faviconPath": "/logos/png/betteraklan-banner-colored.png",
-    "faviconSvgPath": "/logos/svg/betteraklan-logo-primary.svg",
-    "appleTouchIconPath": "/logos/png/betteraklan-banner-inverted.png",
-    "githubUrl": "https://github.com/BetterAklan/betteraklan",
+    "logoWhitePath": "/betterklan.png",
+    "navbarLogoPath": "/betterklan.png",
+    "defaultOgImagePath": "/betterklan.png",
+    "faviconPath": "/betterklan.png",
+    "faviconSvgPath": "/betterklan.png",
+    "appleTouchIconPath": "/betterklan.png",
+    "githubUrl": "https://github.com/fr4nc1stein/betteraklan",
     "discordUrl": "https://discord.gg/dA6tkU4FYS",
     "facebookUrl": "https://facebook.com/aklanIMAD",
     "contactEmail": "volunteers@bettergov.ph"
@@ -53,7 +53,7 @@
     "services": "src/data/services/categories"
   },
   "features": {
-    "openLGU": true,
+    "openLGU": false,
     "transparency": true,
     "tourism": true,
     "statistics": true

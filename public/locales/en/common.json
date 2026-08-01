@@ -24,7 +24,7 @@
     "title": "Latest News & Updates"
   },
   "footer": {
-    "copyright": "2025 BetterAklan.org - All content is public domain unless otherwise specified."
+    "copyright": "2026 BetterAklan.org - All content is public domain unless otherwise specified."
   },
   "navbar": {
     "home": "Home",
@@ -76,15 +76,15 @@
   },
   "government": {
     "title": "Local Government of the Province of Aklan",
-    "description": "Learn about the key offices, councils, and local units that make up the Municipal Government of Aklan.",
+    "description": "Learn about the key offices, councils, and local units that make up the Provincial Government of Aklan.",
     "executiveTitle": "Executive Branch",
-    "executiveDescription": "Led by the Governor, responsible for implementing municipal policies, programs, and ordinances.",
+    "executiveDescription": "Led by the Governor, responsible for implementing provincial policies, programs, and ordinances.",
     "legislativeTitle": "Legislative Branch",
     "legislativeDescription": "Composed of the Sangguniang Panlalawigan, responsible for making local laws.",
     "barangaysTitle": "Municipalities",
     "barangaysDescription": "The 17 component municipalities of the Province of Aklan, each led by elected local officials managing community services and programs.",
-    "departmentsTitle": "Municipal Departments",
-    "departmentsDescription" : "Municipal departments and agencies responsible for specific areas of governance.",
+    "departmentsTitle": "Provincial Departments",
+    "departmentsDescription" : "Provincial departments and agencies responsible for specific areas of governance.",
     "electedofficialsTitle": "Elected Officials",
     "electedofficialsDescription": "The elected leadership of the Executive and Legislative branches, responsible for policy implementation and law-making.",
     "learnMore": "Learn More",

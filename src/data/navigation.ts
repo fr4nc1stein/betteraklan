@@ -53,7 +53,7 @@ export const mainNavigation: NavigationItem[] = [
     label: 'Transparency',
     href: '/transparency',
     children: [
-      { label: 'Financial Reports', href: '/transparency/financial' },
+      { label: 'Budget', href: '/transparency/budget' },
       {
         label: 'Procurement',
         href: '/transparency/procurement',
@@ -99,13 +99,14 @@ export const footerNavigation = {
       ],
     },
     {
-      title: 'Local Government',
+      title: 'Provincial Government',
       links: [
         { label: 'Elected Officials', href: '/government/elected-officials' },
         { label: 'Departments', href: '/government/departments' },
-        { label: 'Barangay Directory', href: '/government/barangays' },
-        { label: 'OpenLGU Portal', href: '/openlgu' },
-        { label: 'Transparency', href: '/transparency/financial' },
+        ...(config.features.openLGU
+          ? [{ label: 'OpenLGU Portal', href: '/openlgu' }]
+          : []),
+        { label: 'Transparency', href: '/transparency/budget' },
       ],
     },
     {

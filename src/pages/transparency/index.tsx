@@ -20,13 +20,13 @@ import { Card, CardContent, CardGrid } from '@/components/ui/Card';
 export default function TransparencyIndex() {
   const sections = [
     {
-      title: 'Public Funds',
+      title: 'Budget',
       description:
         'Independent visualization of provincial income and where your taxes are being allocated.',
       icon: Landmark,
-      href: '/transparency/financial',
+      href: '/transparency/budget',
       color: 'blue',
-      badge: 'Financials',
+      badge: 'Budget',
     },
     {
       title: 'Public Works',

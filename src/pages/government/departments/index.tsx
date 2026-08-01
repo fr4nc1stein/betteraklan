@@ -9,10 +9,16 @@ import { Card, CardContent } from '@/components/ui/Card';
 import SearchInput from '@/components/ui/SearchInput';
 
 import { officeIcons } from '@/lib/officeIcons';
+import { lguLabels } from '@/lib/lguLabels';
 import { formatGovName, toTitleCase } from '@/lib/stringUtils';
 import { toTelUri } from '@/lib/utils';
 
 import departmentsData from '@/data/directory/departments.json';
+
+const prefixPattern = new RegExp(
+  `DEPARTMENT OF |${lguLabels.adjective.toUpperCase()} |LOCAL |PROVINCIAL |MUNICIPAL `,
+  'g'
+);
 
 export default function DepartmentsIndex() {
   const [search, setSearch] = useState('');
@@ -20,15 +26,14 @@ export default function DepartmentsIndex() {
   const filtered = departmentsData
     .filter(d => d.office_name.toLowerCase().includes(search.toLowerCase()))
     .sort((a, b) => {
-      const clean = (name: string) =>
-        name.replace(/DEPARTMENT OF |MUNICIPAL |LOCAL /g, '');
+      const clean = (name: string) => name.replace(prefixPattern, '');
       return clean(a.office_name).localeCompare(clean(b.office_name));
     });
 
   return (
     <>
       <PageHero
-        title='Municipal Departments'
+        title={`${lguLabels.adjective} Departments`}
         description={`${filtered.length} active offices.`}
       >
         <SearchInput

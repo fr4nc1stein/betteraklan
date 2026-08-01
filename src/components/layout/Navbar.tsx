@@ -110,7 +110,7 @@ export const Navbar: FC = () => {
             <img
               src={config.portal.navbarLogoPath}
               alt={`${config.portal.name} Logo`}
-              className='mr-3 w-10 h-10 transition-transform shrink-0 group-hover:scale-105 md:h-12 md:w-12'
+              className='object-contain mr-3 w-12 h-12 transition-transform shrink-0 group-hover:scale-105 md:h-14 md:w-14'
             />
             <div className='flex flex-col justify-center min-w-0'>
               <div className='text-lg font-black tracking-tighter leading-none text-kapwa-text-strong md:text-xl'>
@@ -124,57 +124,59 @@ export const Navbar: FC = () => {
 
           {/* Desktop Menu */}
           <div className='hidden items-center space-x-1 lg:flex xl:space-x-4'>
-            {mainNavigation.map(item => {
-              const active = isActiveRoute(item.href);
-              const hasChildren = item.children && item.children.length > 0;
+            {mainNavigation
+              .filter(item => !item.hidden)
+              .map(item => {
+                const active = isActiveRoute(item.href);
+                const hasChildren = item.children && item.children.length > 0;
 
-              return (
-                <div
-                  key={item.label}
-                  className='flex relative items-center h-full'
-                  onMouseEnter={() =>
-                    hasChildren && setHoveredDropdown(item.label)
-                  }
-                  onMouseLeave={() => setHoveredDropdown(null)}
-                >
-                  <Link
-                    to={item.href}
-                    className={cn(
-                      'flex gap-1 items-center px-3 py-2 text-sm font-bold tracking-widest uppercase border-b-2 transition-all',
-                      active
-                        ? 'text-kapwa-text-brand border-kapwa-border-brand'
-                        : 'border-transparent hover:text-kapwa-text-brand text-kapwa-text-strong'
-                    )}
+                return (
+                  <div
+                    key={item.label}
+                    className='flex relative items-center h-full'
+                    onMouseEnter={() =>
+                      hasChildren && setHoveredDropdown(item.label)
+                    }
+                    onMouseLeave={() => setHoveredDropdown(null)}
                   >
-                    {t(`navbar.${item.label.toLowerCase()}`)}
-                    {hasChildren && (
-                      <ChevronDownIcon
-                        className={cn(
-                          'h-3 w-3 transition-transform',
-                          hoveredDropdown === item.label && 'rotate-180'
-                        )}
-                      />
-                    )}
-                  </Link>
+                    <Link
+                      to={item.href}
+                      className={cn(
+                        'flex gap-1 items-center px-3 py-2 text-sm font-bold tracking-widest uppercase border-b-2 transition-all',
+                        active
+                          ? 'text-kapwa-text-brand border-kapwa-border-brand'
+                          : 'border-transparent hover:text-kapwa-text-brand text-kapwa-text-strong'
+                      )}
+                    >
+                      {t(`navbar.${item.label.toLowerCase()}`)}
+                      {hasChildren && (
+                        <ChevronDownIcon
+                          className={cn(
+                            'h-3 w-3 transition-transform',
+                            hoveredDropdown === item.label && 'rotate-180'
+                          )}
+                        />
+                      )}
+                    </Link>
 
-                  {/* Desktop Dropdown Menu */}
-                  {hasChildren && hoveredDropdown === item.label && (
-                    <div className='absolute left-0 top-full py-2 w-64 rounded-b-xl border shadow-xl duration-200 animate-in fade-in slide-in-from-top-2 border-kapwa-border-weak bg-kapwa-bg-surface'>
-                      {item.children?.map(child => (
-                        <Link
-                          key={child.label}
-                          to={child.href}
-                          className='block px-5 py-3 text-xs font-bold tracking-wider uppercase transition-colors hover:bg-kapwa-bg-surface-raised hover:text-kapwa-text-link-hover text-kapwa-text-strong'
-                          onClick={closeMenu}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+                    {/* Desktop Dropdown Menu */}
+                    {hasChildren && hoveredDropdown === item.label && (
+                      <div className='absolute left-0 top-full py-2 w-64 rounded-b-xl border shadow-xl duration-200 animate-in fade-in slide-in-from-top-2 border-kapwa-border-weak bg-kapwa-bg-surface'>
+                        {item.children?.map(child => (
+                          <Link
+                            key={child.label}
+                            to={child.href}
+                            className='block px-5 py-3 text-xs font-bold tracking-wider uppercase transition-colors hover:bg-kapwa-bg-surface-raised hover:text-kapwa-text-link-hover text-kapwa-text-strong'
+                            onClick={closeMenu}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             <Link
               to='/search'
               className='p-3 ml-4 transition-colors hover:text-kapwa-text-brand text-kapwa-text-strong'
@@ -213,65 +215,69 @@ export const Navbar: FC = () => {
       {isOpen && (
         <div className='animate-in slide-in-from-right fixed inset-0 top-[104px] z-40 overflow-y-auto bg-kapwa-bg-surface duration-300 lg:hidden'>
           <div className='flex flex-col p-4 pb-20'>
-            {mainNavigation.map(item => {
-              const hasChildren = item.children && item.children.length > 0;
-              const isSubOpen = activeMobileSubmenu === item.label;
+            {mainNavigation
+              .filter(item => !item.hidden)
+              .map(item => {
+                const hasChildren = item.children && item.children.length > 0;
+                const isSubOpen = activeMobileSubmenu === item.label;
 
-              return (
-                <div
-                  key={item.label}
-                  className='border-b border-kapwa-border-weak last:border-0'
-                >
-                  <div className='flex items-center'>
-                    <Link
-                      to={item.href}
-                      onClick={closeMenu}
-                      className={cn(
-                        'flex-1 p-4 text-lg font-bold transition-colors',
-                        isActiveRoute(item.href)
-                          ? 'text-kapwa-text-brand'
-                          : 'text-kapwa-text-strong'
-                      )}
-                    >
-                      {t(`navbar.${item.label.toLowerCase()}`)}
-                    </Link>
-                    {hasChildren && (
-                      <Button
-                        onClick={e => {
-                          e.preventDefault();
-                          setActiveMobileSubmenu(isSubOpen ? null : item.label);
-                        }}
-                        variant='ghost'
-                        className='p-4 text-kapwa-text-disabled'
+                return (
+                  <div
+                    key={item.label}
+                    className='border-b border-kapwa-border-weak last:border-0'
+                  >
+                    <div className='flex items-center'>
+                      <Link
+                        to={item.href}
+                        onClick={closeMenu}
+                        className={cn(
+                          'flex-1 p-4 text-lg font-bold transition-colors',
+                          isActiveRoute(item.href)
+                            ? 'text-kapwa-text-brand'
+                            : 'text-kapwa-text-strong'
+                        )}
                       >
-                        <ChevronDownIcon
-                          className={cn(
-                            'h-6 w-6 transition-transform',
-                            isSubOpen && 'rotate-180'
-                          )}
-                        />
-                      </Button>
+                        {t(`navbar.${item.label.toLowerCase()}`)}
+                      </Link>
+                      {hasChildren && (
+                        <Button
+                          onClick={e => {
+                            e.preventDefault();
+                            setActiveMobileSubmenu(
+                              isSubOpen ? null : item.label
+                            );
+                          }}
+                          variant='ghost'
+                          className='p-4 text-kapwa-text-disabled'
+                        >
+                          <ChevronDownIcon
+                            className={cn(
+                              'h-6 w-6 transition-transform',
+                              isSubOpen && 'rotate-180'
+                            )}
+                          />
+                        </Button>
+                      )}
+                    </div>
+
+                    {/* Mobile Submenu Items */}
+                    {hasChildren && isSubOpen && (
+                      <div className='overflow-hidden mx-2 mb-2 rounded-2xl animate-in slide-in-from-top-2 bg-kapwa-bg-surface-raised'>
+                        {item.children?.map(child => (
+                          <Link
+                            key={child.label}
+                            to={child.href}
+                            onClick={closeMenu}
+                            className='block p-4 text-sm font-bold border-b border-kapwa-bg-surface text-kapwa-text-strong last:border-0'
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
                     )}
                   </div>
-
-                  {/* Mobile Submenu Items */}
-                  {hasChildren && isSubOpen && (
-                    <div className='overflow-hidden mx-2 mb-2 rounded-2xl animate-in slide-in-from-top-2 bg-kapwa-bg-surface-raised'>
-                      {item.children?.map(child => (
-                        <Link
-                          key={child.label}
-                          to={child.href}
-                          onClick={closeMenu}
-                          className='block p-4 text-sm font-bold border-b border-kapwa-bg-surface text-kapwa-text-strong last:border-0'
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+                );
+              })}
 
             {/* Mobile-only additional links */}
             <div className='pt-4 mt-4 space-y-1 border-t border-kapwa-border-weak'>

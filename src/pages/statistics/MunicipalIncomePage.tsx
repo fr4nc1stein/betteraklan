@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 
 import { Coins, Landmark, Wallet } from 'lucide-react';
 
@@ -20,8 +20,17 @@ const COLORS = {
   other: '#64748b',
 };
 
+// Hide proposed years (e.g. 2026) for now — not yet actual/current income.
+const visibleAriData = ariData.filter(d => d.status !== 'proposed');
+
 export default function MunicipalIncomePage() {
-  const data = ariData[0];
+  const [selectedPeriod, setSelectedPeriod] = useState(
+    visibleAriData[visibleAriData.length - 1].period
+  );
+
+  const data =
+    visibleAriData.find(d => d.period === selectedPeriod) ??
+    visibleAriData[visibleAriData.length - 1];
 
   const drillDownIncomeData = useMemo(
     () => [
@@ -67,7 +76,7 @@ export default function MunicipalIncomePage() {
       {/* PageHero - documented pattern for layout headers */}
       <PageHero
         title='Provincial Income'
-        description='Detailed analysis of revenue sources, fiscal autonomy, and national tax dependency — FY 2026 Budget, Province of Aklan.'
+        description={`Detailed analysis of revenue sources, fiscal autonomy, and national tax dependency — ${data.period} Budget, Province of Aklan.`}
       >
         <div className='flex flex-wrap justify-center gap-2'>
           <Badge variant='primary' dot>
@@ -75,21 +84,49 @@ export default function MunicipalIncomePage() {
           </Badge>
           <Badge variant='slate'>BLGF Data</Badge>
         </div>
+        <div className='mt-4 flex justify-center gap-1'>
+          {visibleAriData.map(d => (
+            <button
+              key={d.period}
+              onClick={() => setSelectedPeriod(d.period)}
+              className={`rounded-xl px-4 py-2 text-sm font-bold transition-colors ${
+                d.period === selectedPeriod
+                  ? 'bg-kapwa-brand-600 text-kapwa-text-inverse'
+                  : 'border-kapwa-border-weak bg-kapwa-bg-surface text-kapwa-text-support hover:bg-kapwa-bg-surface-raised border'
+              }`}
+            >
+              {d.period}
+            </button>
+          ))}
+        </div>
       </PageHero>
+
+      {'note' in data && data.note && (
+        <div className='mb-kapwa-lg border-kapwa-border-weak bg-kapwa-bg-surface-raised mx-auto max-w-2xl rounded-xl border p-4 text-center'>
+          <p className='text-kapwa-text-disabled text-xs leading-relaxed'>
+            {data.note}
+          </p>
+        </div>
+      )}
 
       {/* KPI Cards - using StatGrid with StatCard */}
       <div className='mb-kapwa-lg'>
         <StatGrid
-          columns={3}
+          columns={data.status === 'proposed' ? 2 : 3}
           stats={[
-            {
-              label: 'Total Income',
-              value: formatPesoAdaptive(
-                data.summary_indicators.annual_regular_income * 1_000_000
-              ).fullString,
-              subtext: 'Annual Revenue',
-              variant: 'primary',
-            },
+            ...(data.status === 'proposed'
+              ? []
+              : [
+                  {
+                    label: 'Total Income',
+                    value: formatPesoAdaptive(
+                      data.summary_indicators.annual_regular_income *
+                        1_000_000
+                    ).fullString,
+                    subtext: 'Annual Revenue',
+                    variant: 'primary' as const,
+                  },
+                ]),
             {
               label: 'Local Sufficiency',
               value: `${data.summary_indicators.dependency_rates.lsr_dependency}`,

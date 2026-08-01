@@ -94,7 +94,7 @@ const TermDetail = lazy(() => import('@/pages/openlgu/[term]'));
 // Transparency Portal
 const TransparencyLayout = lazy(() => import('@/pages/transparency/layout'));
 const TransparencyIndex = lazy(() => import('@/pages/transparency/index'));
-const FinancialPage = lazy(() => import('@/pages/transparency/financial'));
+const BudgetPage = lazy(() => import('@/pages/transparency/budget'));
 const ProcurementPage = lazy(() => import('@/pages/transparency/procurement'));
 const InfrastructurePage = lazy(
   () => import('@/pages/transparency/infrastructure')
@@ -255,7 +255,7 @@ function AppContent() {
           {config.features.transparency && (
             <Route path='/transparency' element={<TransparencyLayout />}>
               <Route index element={<TransparencyIndex />} />
-              <Route path='financial' element={<FinancialPage />} />
+              <Route path='budget' element={<BudgetPage />} />
               <Route path='procurement' element={<ProcurementPage />} />
               <Route path='/transparency/infrastructure'>
                 <Route index element={<InfrastructurePage />} />

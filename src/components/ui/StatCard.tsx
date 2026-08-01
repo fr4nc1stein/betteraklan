@@ -63,6 +63,17 @@ export function StatCard(props: StatCardProps) {
     : 'text-kapwa-text-danger';
   const TrendIcon = trend?.positive ? ArrowUpRight : ArrowDownRight;
 
+  const displayValue =
+    typeof value === 'number' ? value.toLocaleString() : value;
+  // Long formatted values (e.g. "₱2,989,341,075.00") would otherwise get
+  // clipped by `truncate` at the default size — scale down instead of hiding.
+  const valueSizeClass =
+    displayValue.length > 14
+      ? 'text-lg sm:text-xl'
+      : displayValue.length > 9
+        ? 'text-xl sm:text-2xl'
+        : 'text-2xl sm:text-3xl';
+
   return (
     <Card
       variant='default'
@@ -78,10 +89,13 @@ export function StatCard(props: StatCardProps) {
           <p className='text-kapwa-text-disabled truncate text-[10px] font-bold tracking-widest uppercase'>
             {label}
           </p>
-          <div className='text-kapwa-text-strong flex items-center gap-2 text-3xl font-black'>
-            <span className='truncate'>
-              {typeof value === 'number' ? value.toLocaleString() : value}
-            </span>
+          <div
+            className={cn(
+              'text-kapwa-text-strong flex flex-wrap items-center gap-x-2 gap-y-0 font-black',
+              valueSizeClass
+            )}
+          >
+            <span className='leading-tight break-words'>{displayValue}</span>
             <span
               className={cn(
                 'inline-flex items-center text-lg font-semibold',
