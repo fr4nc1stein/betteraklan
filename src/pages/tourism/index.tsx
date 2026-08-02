@@ -16,6 +16,7 @@ import {
 import { PageHero } from '@/components/layout/PageLayouts';
 import { Badge } from '@/components/ui/Badge';
 import { Card, CardContent } from '@/components/ui/Card';
+import { YouTubeFacade } from '@/components/ui/YouTubeFacade';
 
 import { lguLabels } from '@/lib/lguLabels';
 
@@ -45,6 +46,15 @@ export default function TourismIndex() {
         title='Tourism'
         description={`From the world-famous shores of Boracay to the hidden waterfalls and centuries-old festivals of its 17 municipalities, ${lguLabels.fullName} invites you to discover a province where nature, culture, and hospitality meet.`}
       />
+
+      {/* --- PROMO VIDEO --- */}
+      <section>
+        <YouTubeFacade
+          videoId='0iy3YKv1FZk'
+          title='Welcome to Aklan!'
+          subtitle='Watch · Aklan Tourism'
+        />
+      </section>
 
       {/* --- FEATURED HIGHLIGHTS --- */}
       <section className='space-y-4'>
