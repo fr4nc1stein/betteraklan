@@ -51,6 +51,7 @@ export interface LGUConfig {
     transparency: boolean;
     tourism: boolean;
     statistics: boolean;
+    map: boolean;
   };
 }
 

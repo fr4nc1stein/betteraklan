@@ -45,6 +45,11 @@ export const mainNavigation: NavigationItem[] = [
     ...(config.features.tourism ? {} : { hidden: true }),
   },
   {
+    label: 'Map',
+    href: '/map',
+    ...(config.features.map ? {} : { hidden: true }),
+  },
+  {
     label: 'OpenLGU',
     href: '/openlgu',
     children: [

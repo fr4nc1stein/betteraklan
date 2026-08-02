@@ -80,6 +80,9 @@ const CompetitivenessPage = lazy(
   () => import('@/pages/statistics/CompetitivenessPage')
 );
 
+// Map
+const MapPage = lazy(() => import('@/pages/map/index'));
+
 // Tourism
 const TourismLayout = lazy(() => import('@/pages/tourism/layout'));
 const TourismIndex = lazy(() => import('@/pages/tourism/index'));
@@ -237,6 +240,9 @@ function AppContent() {
               <Route path='competitiveness' element={<CompetitivenessPage />} />
             </Route>
           )}
+
+          {/* Map — feature gated */}
+          {config.features.map && <Route path='map' element={<MapPage />} />}
 
           {/* Tourism — feature gated */}
           {config.features.tourism && (
