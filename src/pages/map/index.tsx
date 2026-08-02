@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom';
 
-import { MapPinIcon } from 'lucide-react';
 import type { Feature, FeatureCollection } from 'geojson';
 import type { Layer, PathOptions } from 'leaflet';
 import { GeoJSON, MapContainer, TileLayer } from 'react-leaflet';
@@ -10,6 +9,8 @@ import 'leaflet/dist/leaflet.css';
 import { PageHero } from '@/components/layout/PageLayouts';
 import { Card } from '@/components/ui/Card';
 
+import { getMunicipalityColor } from '@/lib/municipalityColors';
+
 import municipalitiesBoundaries from '@/data/geo/municipalities-boundaries.json';
 
 interface MunicipalityProperties {
@@ -17,11 +18,18 @@ interface MunicipalityProperties {
   name: string;
 }
 
-const pathOptions: PathOptions = {
-  weight: 1.5,
-  fillOpacity: 0.45,
-  className:
-    'fill-kapwa-bg-brand-weak stroke-kapwa-border-brand hover:fill-kapwa-bg-brand-default cursor-pointer transition-colors duration-200',
+const getPathOptions = (feature?: Feature): PathOptions => {
+  const slug = (feature?.properties as MunicipalityProperties | undefined)
+    ?.slug;
+  const color = getMunicipalityColor(slug ?? '');
+  return {
+    weight: 1.5,
+    color,
+    fillColor: color,
+    fillOpacity: 0.45,
+    className:
+      'hover:fill-kapwa-bg-brand-default cursor-pointer transition-colors duration-200',
+  };
 };
 
 export default function MapPage() {
@@ -63,7 +71,7 @@ export default function MapPage() {
             />
             <GeoJSON
               data={boundaries}
-              style={pathOptions}
+              style={getPathOptions}
               onEachFeature={onEachFeature}
             />
           </MapContainer>
@@ -81,7 +89,11 @@ export default function MapPage() {
               onClick={() => goToMunicipality(props.slug)}
               className='border-kapwa-border-weak bg-kapwa-bg-surface hover:border-kapwa-border-brand hover:text-kapwa-text-brand text-kapwa-text-support flex items-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium transition-colors'
             >
-              <MapPinIcon className='h-3.5 w-3.5 shrink-0' />
+              <span
+                className='h-2.5 w-2.5 shrink-0 rounded-full'
+                style={{ backgroundColor: getMunicipalityColor(props.slug) }}
+                aria-hidden='true'
+              />
               <span className='truncate'>{props.name}</span>
             </button>
           );

@@ -7,6 +7,8 @@ import { GeoJSON, MapContainer, TileLayer, useMap } from 'react-leaflet';
 
 import 'leaflet/dist/leaflet.css';
 
+import { getMunicipalityColor } from '@/lib/municipalityColors';
+
 import municipalitiesBoundaries from '@/data/geo/municipalities-boundaries.json';
 
 interface MunicipalityBoundaryMapProps {
@@ -14,12 +16,6 @@ interface MunicipalityBoundaryMapProps {
   slug: string;
   className?: string;
 }
-
-const pathOptions: PathOptions = {
-  weight: 2,
-  fillOpacity: 0.35,
-  className: 'fill-kapwa-bg-brand-weak stroke-kapwa-border-brand',
-};
 
 /**
  * The surrounding SidebarLayout finishes its collapse/expand transition
@@ -56,6 +52,14 @@ export function MunicipalityBoundaryMap({
   );
 
   if (!feature || !bounds) return null;
+
+  const color = getMunicipalityColor(slug);
+  const pathOptions: PathOptions = {
+    weight: 2,
+    color,
+    fillColor: color,
+    fillOpacity: 0.35,
+  };
 
   return (
     <div className={className}>
