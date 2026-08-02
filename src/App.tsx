@@ -83,6 +83,11 @@ const CompetitivenessPage = lazy(
 // Map
 const MapPage = lazy(() => import('@/pages/map/index'));
 
+// Airports
+const AirportsLayout = lazy(() => import('@/pages/airports/layout'));
+const AirportsIndex = lazy(() => import('@/pages/airports/index'));
+const AirportDetail = lazy(() => import('@/pages/airports/[airport]'));
+
 // Tourism
 const TourismLayout = lazy(() => import('@/pages/tourism/layout'));
 const TourismIndex = lazy(() => import('@/pages/tourism/index'));
@@ -243,6 +248,14 @@ function AppContent() {
 
           {/* Map — feature gated */}
           {config.features.map && <Route path='map' element={<MapPage />} />}
+
+          {/* Airports — feature gated */}
+          {config.features.airports && (
+            <Route path='airports' element={<AirportsLayout />}>
+              <Route index element={<AirportsIndex />} />
+              <Route path=':airport' element={<AirportDetail />} />
+            </Route>
+          )}
 
           {/* Tourism — feature gated */}
           {config.features.tourism && (

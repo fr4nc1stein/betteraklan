@@ -50,6 +50,11 @@ export const mainNavigation: NavigationItem[] = [
     ...(config.features.map ? {} : { hidden: true }),
   },
   {
+    label: 'Airports',
+    href: '/airports',
+    ...(config.features.airports ? {} : { hidden: true }),
+  },
+  {
     label: 'OpenLGU',
     href: '/openlgu',
     children: [

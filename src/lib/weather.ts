@@ -29,38 +29,24 @@ export const mapWeatherIconToLucide = (iconCode: string): string => {
   return iconMap[iconCode] || 'Cloud';
 };
 
-/**
- * Fetch weather data for configured LGU and transform to frontend type
- */
-export const fetchWeatherData = async (): Promise<WeatherData[]> => {
-  // Normalize city name for API call (handle special characters)
-  const cityName = config.location.weather.defaultCity;
-  const cityKey = config.lgu.name
-    .toLowerCase()
-    .replace(/\s+/g, '_')
-    .replace(/ñ/g, 'n');
+// Raw shape returned per-city by /api/weather (OpenWeatherMap-flavored JSON)
+interface RawCityWeather {
+  name?: string;
+  weather?: Array<{ description: string; icon: string }>;
+  main?: {
+    temp: number;
+    humidity: number;
+    pressure: number;
+  };
+  wind?: { speed: number };
+  visibility?: number;
+  hourly?: HourlyForecast[];
+}
 
-  // Always fetch specific city
-  let data = await fetchWithCache(
-    `/api/weather?city=${encodeURIComponent(cityName)}`
-  );
-
-  // If KV is empty or city missing, fallback to update
-  if (!data || Object.keys(data).length === 0) {
-    data = await fetchWithCache('/api/weather?update=true');
-  }
-
-  const city =
-    data[cityKey] ||
-    data[config.lgu.name.toLowerCase()] ||
-    data[Object.keys(data)[0]];
-  if (!city) {
-    // Fallback in case API completely failed
-    console.warn(`No weather data returned for ${config.lgu.name}`);
-    return [];
-  }
-
-  // Transform 3-hour forecast (first 4 entries)
+function transformCityWeather(
+  city: RawCityWeather,
+  fallbackName: string
+): WeatherData {
   const hourly: HourlyForecast[] = (city.hourly || [])
     .slice(0, 4)
     .map((h: HourlyForecast) => ({
@@ -72,8 +58,8 @@ export const fetchWeatherData = async (): Promise<WeatherData[]> => {
       icon: mapWeatherIconToLucide(h.icon),
     }));
 
-  const weatherData: WeatherData = {
-    location: city.name || config.lgu.name,
+  return {
+    location: city.name || fallbackName,
     temperature: Math.round(city.main?.temp ?? 0),
     condition: city.weather?.[0]?.description ?? 'Unknown',
     humidity: city.main?.humidity ?? 0,
@@ -83,6 +69,40 @@ export const fetchWeatherData = async (): Promise<WeatherData[]> => {
     pressure: city.main?.pressure ?? 0,
     visibility: Math.round((city.visibility ?? 0) / 1000),
   };
+}
 
-  return [weatherData];
+/**
+ * Fetch weather for an arbitrary configured city (see functions/api/weather.ts
+ * DEFAULT_CITY/ADDITIONAL_CITIES) and transform to the frontend type.
+ */
+export const fetchWeatherForCity = async (
+  cityName: string
+): Promise<WeatherData | null> => {
+  const cityKey = cityName.toLowerCase().replace(/\s+/g, '_');
+
+  let data = await fetchWithCache(
+    `/api/weather?city=${encodeURIComponent(cityName)}`
+  );
+
+  if (!data || Object.keys(data).length === 0) {
+    data = await fetchWithCache('/api/weather?update=true');
+  }
+
+  const city =
+    data[cityKey] || data[cityName.toLowerCase()] || data[Object.keys(data)[0]];
+  if (!city) {
+    console.warn(`No weather data returned for ${cityName}`);
+    return null;
+  }
+
+  return transformCityWeather(city, cityName);
+};
+
+/**
+ * Fetch weather data for configured LGU and transform to frontend type
+ */
+export const fetchWeatherData = async (): Promise<WeatherData[]> => {
+  const cityName = config.location.weather.defaultCity;
+  const weatherData = await fetchWeatherForCity(cityName);
+  return weatherData ? [weatherData] : [];
 };

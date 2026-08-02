@@ -57,6 +57,7 @@
     "transparency": true,
     "tourism": true,
     "statistics": true,
-    "map": true
+    "map": true,
+    "airports": true
   }
 }

@@ -12,6 +12,7 @@ export interface Env {
   WEATHER_API_KEY?: string;
   OPENWEATHERMAP_API_KEY?: string;
   FOREX_API_KEY?: string;
+  AERODATABOX_API_KEY?: string;
   MEILISEARCH_HOST?: string;
   MEILISEARCH_API_KEY?: string;
   JINA_API_KEY?: string;

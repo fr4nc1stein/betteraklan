@@ -52,6 +52,7 @@ export interface LGUConfig {
     tourism: boolean;
     statistics: boolean;
     map: boolean;
+    airports: boolean;
   };
 }
 

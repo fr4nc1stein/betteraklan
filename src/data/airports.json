@@ -1,0 +1,31 @@
+[
+  {
+    "slug": "kalibo",
+    "icao": "RPVK",
+    "iata": "KLO",
+    "name": "Kalibo International Airport",
+    "municipality": "Kalibo",
+    "municipalitySlug": "kalibo",
+    "latitude": 11.6794,
+    "longitude": 122.376,
+    "elevationMeters": 4.27,
+    "elevationFeet": 14,
+    "timezone": "Asia/Manila",
+    "weatherCity": "Kalibo"
+  },
+  {
+    "slug": "caticlan",
+    "icao": "RPVE",
+    "iata": "MPH",
+    "name": "Godofredo P. Ramos Airport",
+    "shortName": "Caticlan Airport",
+    "municipality": "Malay",
+    "municipalitySlug": "malay",
+    "latitude": 11.9245,
+    "longitude": 121.954,
+    "elevationMeters": 2.13,
+    "elevationFeet": 7,
+    "timezone": "Asia/Manila",
+    "weatherCity": "Caticlan"
+  }
+]

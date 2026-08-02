@@ -24,6 +24,15 @@
 }
 
 /* --- LEAFLET MAP OVERRIDES --- */
+/* Leaflet's internal panes/controls use z-index up to 1000, which — without
+   its own stacking context — competes directly against the sticky navbar's
+   z-50 in the root stacking context and can render on top of it. Isolating
+   the container contains all of Leaflet's internal stacking so it can never
+   escape above the navbar or its dropdowns. */
+.leaflet-container {
+  isolation: isolate;
+}
+
 .leaflet-popup-content-wrapper {
   border-radius: 12px !important;
   box-shadow:
@@ -78,6 +87,25 @@
     }
     to {
       transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Split-flap / Solari board character flip, used by <SplitFlap> */
+  @keyframes flap {
+    0% {
+      transform: scaleY(1);
+    }
+    45% {
+      transform: scaleY(0.05);
+      opacity: 0.4;
+    }
+    55% {
+      transform: scaleY(0.05);
+      opacity: 0.4;
+    }
+    100% {
+      transform: scaleY(1);
       opacity: 1;
     }
   }

@@ -55,7 +55,9 @@ const DEFAULT_CITY: CityCoordinates = {
 };
 
 // Optional: Add more cities if needed
-const ADDITIONAL_CITIES: CityCoordinates[] = [];
+const ADDITIONAL_CITIES: CityCoordinates[] = [
+  { name: 'Caticlan', lat: 11.9245, lon: 121.954 },
+];
 
 const ALL_CITIES = [DEFAULT_CITY, ...ADDITIONAL_CITIES];
 
