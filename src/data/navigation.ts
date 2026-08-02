@@ -40,6 +40,11 @@ export const mainNavigation: NavigationItem[] = [
     ...(config.features.statistics ? {} : { hidden: true }),
   },
   {
+    label: 'Tourism',
+    href: '/tourism',
+    ...(config.features.tourism ? {} : { hidden: true }),
+  },
+  {
     label: 'OpenLGU',
     href: '/openlgu',
     children: [

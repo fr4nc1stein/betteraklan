@@ -80,6 +80,13 @@ const CompetitivenessPage = lazy(
   () => import('@/pages/statistics/CompetitivenessPage')
 );
 
+// Tourism
+const TourismLayout = lazy(() => import('@/pages/tourism/layout'));
+const TourismIndex = lazy(() => import('@/pages/tourism/index'));
+const TourismMunicipalityDetail = lazy(
+  () => import('@/pages/tourism/[municipality]')
+);
+
 // OpenLGU Portal
 const OpenLGULayout = lazy(() => import('@/pages/openlgu/layout'));
 const LegislationIndex = lazy(() => import('@/pages/openlgu/index'));
@@ -228,6 +235,14 @@ function AppContent() {
                 element={<ProvincialIncomePage />}
               />
               <Route path='competitiveness' element={<CompetitivenessPage />} />
+            </Route>
+          )}
+
+          {/* Tourism — feature gated */}
+          {config.features.tourism && (
+            <Route path='tourism' element={<TourismLayout />}>
+              <Route index element={<TourismIndex />} />
+              <Route path=':municipality' element={<TourismMunicipalityDetail />} />
             </Route>
           )}
 
