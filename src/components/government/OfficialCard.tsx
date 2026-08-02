@@ -61,7 +61,7 @@ export function MayorCard({ official }: MayorCardProps) {
         </div>
         <div className='min-w-0'>
           <h2 className='text-kapwa-text-strong text-lg font-black'>
-            Hon. {toTitleCase(official.name)}
+            {toTitleCase(official.name)}
           </h2>
           <Badge
             variant='primary'

@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 
 import { Briefcase, GraduationCapIcon, UsersIcon } from 'lucide-react';
 
+import { MunicipalityBoundaryMap } from '@/components/government/MunicipalityBoundaryMap';
 import { MunicipalityHeader } from '@/components/government/MunicipalityHeader';
 import {
   MayorCard,
@@ -44,6 +45,7 @@ export default function MunicipalityDetail() {
     o.role.includes('Treasurer')
   );
   const hasAdministration = Boolean(secretary || treasurer);
+  const boundarySlug = municipality.slug.replace('municipality-of-', '');
 
   return (
     <div className='animate-in fade-in space-y-6 pb-20 duration-500'>
@@ -80,6 +82,13 @@ export default function MunicipalityDetail() {
 
       {/* --- COMPACT IDENTITY HEADER --- */}
       <MunicipalityHeader municipality={municipality} />
+
+      {/* --- BOUNDARY MAP --- */}
+      <MunicipalityBoundaryMap
+        key={boundarySlug}
+        slug={boundarySlug}
+        className='border-kapwa-border-weak h-64 w-full overflow-hidden rounded-xl border shadow-sm md:h-80'
+      />
 
       {/* --- OFFICIALS SECTION (Unified) --- */}
       <main id='main-content' className='space-y-6'>
