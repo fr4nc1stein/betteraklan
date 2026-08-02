@@ -1,0 +1,18 @@
+{
+	"name": "betteraklan-flights-refresh",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-01-13",
+	"kv_namespaces": [
+		{
+			// Same namespace as the main betteraklan Pages project's WEATHER_KV —
+			// this Worker writes the "aklan_flights" key that
+			// functions/api/flights.ts (in the Pages project) reads.
+			"binding": "WEATHER_KV",
+			"id": "c6e6f4d4f62e4375836e2962f75a3867"
+		}
+	],
+	"triggers": {
+		// Every 6 hours, UTC (08:00 / 14:00 / 20:00 / 02:00 Manila time).
+		"crons": ["0 */6 * * *"]
+	}
+}
