@@ -23,7 +23,7 @@ export const mainNavigation: NavigationItem[] = [
     children: [
       { label: 'Elected Officials', href: '/government/elected-officials' },
       { label: 'Departments', href: '/government/departments' },
-      { label: 'Municipalities', href: '/government/barangays' },
+      { label: 'Municipalities', href: '/government/municipalities' },
     ],
   },
   {
@@ -34,7 +34,7 @@ export const mainNavigation: NavigationItem[] = [
       { label: 'Competitiveness', href: '/statistics/competitiveness' },
       {
         label: `${lguLabels.adjective} Income`,
-        href: '/statistics/municipal-income',
+        href: '/statistics/provincial-income',
       },
     ],
     ...(config.features.statistics ? {} : { hidden: true }),

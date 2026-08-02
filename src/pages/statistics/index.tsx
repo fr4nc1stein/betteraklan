@@ -7,7 +7,7 @@ export default function StatisticsIndex() {
   return (
     <div className='space-y-6'>
       <Outlet />{' '}
-      {/* Will render PopulationPage, CompetitivenessPage, or MunicipalIncomePage based on route */}
+      {/* Will render PopulationPage, CompetitivenessPage, or ProvincialIncomePage based on route */}
     </div>
   );
 }

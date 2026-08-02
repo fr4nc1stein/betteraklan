@@ -1,4 +1,3 @@
-// Changed icon for variety
 import { useNavigate, useParams } from 'react-router-dom';
 
 import { MapPinIcon } from 'lucide-react';
@@ -10,24 +9,24 @@ import {
 
 import { formatGovName } from '@/lib/stringUtils';
 
-import barangaysData from '@/data/directory/municipal.json';
+import municipalitiesData from '@/data/directory/municipal.json';
 
-export default function BarangaysSidebar() {
-  const { barangay: activeSlug } = useParams(); // URL param: /barangays/:barangay
+export default function MunicipalitiesSidebar() {
+  const { municipality: activeSlug } = useParams(); // URL param: /municipalities/:municipality
   const navigate = useNavigate();
 
   return (
     <SidebarContainer title='Municipalities'>
-      {barangaysData
+      {municipalitiesData
         .sort((a, b) => a.barangay_name.localeCompare(b.barangay_name))
-        .map(brgy => (
+        .map(municipality => (
           <SidebarItem
-            key={brgy.slug}
-            label={formatGovName(brgy.barangay_name, 'municipality')}
+            key={municipality.slug}
+            label={formatGovName(municipality.barangay_name, 'municipality')}
             icon={MapPinIcon}
-            isActive={activeSlug === brgy.slug}
+            isActive={activeSlug === municipality.slug}
             onClick={() =>
-              navigate(`/government/barangays/${brgy.slug}`, {
+              navigate(`/government/municipalities/${municipality.slug}`, {
                 state: { scrollToContent: true },
               })
             }

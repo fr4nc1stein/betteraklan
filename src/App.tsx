@@ -57,12 +57,14 @@ const DepartmentsIndex = lazy(() => import('@/pages/government/departments'));
 const DepartmentDetail = lazy(
   () => import('@/pages/government/departments/[department]')
 );
-const BarangaysLayout = lazy(
-  () => import('@/pages/government/barangays/layout')
+const MunicipalitiesLayout = lazy(
+  () => import('@/pages/government/municipalities/layout')
 );
-const BarangaysIndex = lazy(() => import('@/pages/government/barangays'));
-const BarangayDetail = lazy(
-  () => import('@/pages/government/barangays/[barangay]')
+const MunicipalitiesIndex = lazy(
+  () => import('@/pages/government/municipalities')
+);
+const MunicipalityDetail = lazy(
+  () => import('@/pages/government/municipalities/[municipality]')
 );
 const ReferenceImplementationPage = lazy(
   () => import('@/pages/government/reference-implementation')
@@ -71,8 +73,8 @@ const ReferenceImplementationPage = lazy(
 // Statistics Dashboard
 const StatisticsLayout = lazy(() => import('@/pages/statistics/layout'));
 const PopulationPage = lazy(() => import('@/pages/statistics/PopulationPage'));
-const MunicipalIncomePage = lazy(
-  () => import('@/pages/statistics/MunicipalIncomePage')
+const ProvincialIncomePage = lazy(
+  () => import('@/pages/statistics/ProvincialIncomePage')
 );
 const CompetitivenessPage = lazy(
   () => import('@/pages/statistics/CompetitivenessPage')
@@ -197,16 +199,16 @@ function AppContent() {
               <Route path='committees' element={<MunicipalCommitteesPage />} />
             </Route>
 
-            {/* 2. Municipal Departments */}
+            {/* 2. Provincial Departments */}
             <Route path='departments' element={<DepartmentsLayout />}>
               <Route index element={<DepartmentsIndex />} />
               <Route path=':department' element={<DepartmentDetail />} />
             </Route>
 
-            {/* 3. Barangay Directory */}
-            <Route path='barangays' element={<BarangaysLayout />}>
-              <Route index element={<BarangaysIndex />} />
-              <Route path=':barangay' element={<BarangayDetail />} />
+            {/* 3. Municipality Directory */}
+            <Route path='municipalities' element={<MunicipalitiesLayout />}>
+              <Route index element={<MunicipalitiesIndex />} />
+              <Route path=':municipality' element={<MunicipalityDetail />} />
             </Route>
 
             {/* 4. Reference Implementation */}
@@ -222,8 +224,8 @@ function AppContent() {
               <Route index element={<PopulationPage />} />
               <Route path='population' element={<PopulationPage />} />
               <Route
-                path='municipal-income'
-                element={<MunicipalIncomePage />}
+                path='provincial-income'
+                element={<ProvincialIncomePage />}
               />
               <Route path='competitiveness' element={<CompetitivenessPage />} />
             </Route>

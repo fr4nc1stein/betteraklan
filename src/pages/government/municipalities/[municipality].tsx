@@ -2,10 +2,10 @@ import { useParams } from 'react-router-dom';
 
 import { Briefcase, GraduationCapIcon, UsersIcon } from 'lucide-react';
 
-import { BarangayHeader } from '@/components/government/BarangayHeader';
+import { MunicipalityHeader } from '@/components/government/MunicipalityHeader';
 import {
+  MayorCard,
   OfficialCard,
-  PunongBarangayCard,
 } from '@/components/government/OfficialCard';
 import {
   Breadcrumb,
@@ -19,24 +19,31 @@ import {
 
 import { toTitleCase } from '@/lib/stringUtils';
 
-import barangaysData from '@/data/directory/municipal.json';
+import municipalitiesData from '@/data/directory/municipal.json';
 
-export default function BarangayDetail() {
-  const { barangay: slug } = useParams();
-  const barangay = barangaysData.find(b => b.slug === slug);
+export default function MunicipalityDetail() {
+  const { municipality: slug } = useParams();
+  const municipality = municipalitiesData.find(m => m.slug === slug);
 
-  if (!barangay)
+  if (!municipality)
     return <div className='p-20 text-center'>Municipality not found</div>;
 
-  const punongBarangay = barangay.officials?.find(o =>
-    o.role.includes('Punong Barangay')
+  const mayor = municipality.officials?.find(o =>
+    o.role.includes('Municipal Mayor')
   );
-  const kagawads = barangay.officials?.filter(o =>
+  const councilors = municipality.officials?.filter(o =>
     o.role.includes('SB Member')
   );
-  const skOfficials = barangay.officials?.filter(o => o.role.includes('SK'));
-  const secretary = barangay.officials?.find(o => o.role.includes('Secretary'));
-  const treasurer = barangay.officials?.find(o => o.role.includes('Treasurer'));
+  const skOfficials = municipality.officials?.filter(o =>
+    o.role.includes('SK')
+  );
+  const secretary = municipality.officials?.find(o =>
+    o.role.includes('Secretary')
+  );
+  const treasurer = municipality.officials?.find(o =>
+    o.role.includes('Treasurer')
+  );
+  const hasAdministration = Boolean(secretary || treasurer);
 
   return (
     <div className='animate-in fade-in space-y-6 pb-20 duration-500'>
@@ -56,21 +63,23 @@ export default function BarangayDetail() {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink href='/government/barangays'>
+            <BreadcrumbLink href='/government/municipalities'>
               Municipalities
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
             <BreadcrumbPage>
-              {toTitleCase(barangay.barangay_name.replace('BARANGAY ', ''))}
+              {toTitleCase(
+                municipality.barangay_name.replace('BARANGAY ', '')
+              )}
             </BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
 
       {/* --- COMPACT IDENTITY HEADER --- */}
-      <BarangayHeader barangay={barangay} />
+      <MunicipalityHeader municipality={municipality} />
 
       {/* --- OFFICIALS SECTION (Unified) --- */}
       <main id='main-content' className='space-y-6'>
@@ -84,42 +93,44 @@ export default function BarangayDetail() {
             id='officials-heading'
             className='kapwa-heading-md text-kapwa-text-strong'
           >
-            Barangay Officials
+            Municipal Officials
           </h2>
         </div>
 
-        {/* Punong Barangay */}
-        {punongBarangay && (
+        {/* Mayor */}
+        {mayor && (
           <div className='space-y-2' role='group' aria-label='Chief Executive'>
             <p className='sr-only'>Chief Executive</p>
             <p className='text-kapwa-text-disabled pl-1 text-[10px] font-bold tracking-widest uppercase'>
               Chief Executive
             </p>
-            <PunongBarangayCard official={punongBarangay} />
+            <MayorCard official={mayor} />
           </div>
         )}
 
-        {/* Sangguniang Barangay */}
-        <div
-          className='space-y-2'
-          role='group'
-          aria-label='Sangguniang Barangay'
-        >
-          <p className='sr-only'>Sangguniang Barangay</p>
-          <p className='text-kapwa-text-disabled pl-1 text-[10px] font-bold tracking-widest uppercase'>
-            Sangguniang Barangay
-          </p>
-          <div className='grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3'>
-            {kagawads?.map(kagawad => (
-              <OfficialCard
-                key={kagawad.name}
-                official={kagawad}
-                role='Barangay Kagawad'
-                icon={UsersIcon}
-              />
-            ))}
+        {/* Sangguniang Bayan */}
+        {councilors && councilors.length > 0 && (
+          <div
+            className='space-y-2'
+            role='group'
+            aria-label='Sangguniang Bayan'
+          >
+            <p className='sr-only'>Sangguniang Bayan</p>
+            <p className='text-kapwa-text-disabled pl-1 text-[10px] font-bold tracking-widest uppercase'>
+              Sangguniang Bayan
+            </p>
+            <div className='grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3'>
+              {councilors.map(councilor => (
+                <OfficialCard
+                  key={councilor.name}
+                  official={councilor}
+                  role='Councilor'
+                  icon={UsersIcon}
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Sangguniang Kabataan */}
         {skOfficials && skOfficials.length > 0 && (
@@ -145,33 +156,35 @@ export default function BarangayDetail() {
           </div>
         )}
 
-        {/* Barangay Administration */}
-        <div
-          className='space-y-2'
-          role='group'
-          aria-label='Barangay Administration'
-        >
-          <p className='sr-only'>Barangay Administration</p>
-          <p className='text-kapwa-text-disabled pl-1 text-[10px] font-bold tracking-widest uppercase'>
-            Barangay Administration
-          </p>
-          <div className='grid grid-cols-1 gap-3 md:grid-cols-2'>
-            {secretary && (
-              <OfficialCard
-                official={secretary}
-                role='Barangay Secretary'
-                icon={Briefcase}
-              />
-            )}
-            {treasurer && (
-              <OfficialCard
-                official={treasurer}
-                role='Barangay Treasurer'
-                icon={Briefcase}
-              />
-            )}
+        {/* Municipal Administration */}
+        {hasAdministration && (
+          <div
+            className='space-y-2'
+            role='group'
+            aria-label='Municipal Administration'
+          >
+            <p className='sr-only'>Municipal Administration</p>
+            <p className='text-kapwa-text-disabled pl-1 text-[10px] font-bold tracking-widest uppercase'>
+              Municipal Administration
+            </p>
+            <div className='grid grid-cols-1 gap-3 md:grid-cols-2'>
+              {secretary && (
+                <OfficialCard
+                  official={secretary}
+                  role='Municipal Secretary'
+                  icon={Briefcase}
+                />
+              )}
+              {treasurer && (
+                <OfficialCard
+                  official={treasurer}
+                  role='Municipal Treasurer'
+                  icon={Briefcase}
+                />
+              )}
+            </div>
           </div>
-        </div>
+        )}
       </main>
     </div>
   );

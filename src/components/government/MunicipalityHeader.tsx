@@ -5,8 +5,8 @@ import { Badge } from '@/components/ui/Badge';
 import { toTitleCase } from '@/lib/stringUtils';
 import { lguLabels } from '@/lib/lguLabels';
 
-interface BarangayHeaderProps {
-  barangay: {
+interface MunicipalityHeaderProps {
+  municipality: {
     barangay_name: string;
     address?: string;
     trunkline?: string[];
@@ -14,16 +14,16 @@ interface BarangayHeaderProps {
   };
 }
 
-export function BarangayHeader({ barangay }: BarangayHeaderProps) {
-  const contactValue = Array.isArray(barangay.trunkline)
-    ? barangay.trunkline[0]
-    : barangay.trunkline;
+export function MunicipalityHeader({ municipality }: MunicipalityHeaderProps) {
+  const contactValue = Array.isArray(municipality.trunkline)
+    ? municipality.trunkline[0]
+    : municipality.trunkline;
 
   return (
     <header
       className='bg-kapwa-bg-surface border-kapwa-border-weak rounded-xl border p-6 shadow-sm'
       role='banner'
-      aria-label='Barangay information header'
+      aria-label='Municipality information header'
     >
       {/* Top Row: Name + Badge */}
       <div className='mb-4 flex items-center justify-between gap-4'>
@@ -33,8 +33,8 @@ export function BarangayHeader({ barangay }: BarangayHeaderProps) {
             className='text-kapwa-text-brand h-5 w-5'
           />
           <h1 className='kapwa-heading-lg text-kapwa-text-strong'>
-            Barangay{' '}
-            {toTitleCase(barangay.barangay_name.replace('BARANGAY', ''))}
+            Municipality of{' '}
+            {toTitleCase(municipality.barangay_name.replace('BARANGAY', ''))}
           </h1>
         </div>
         <Badge variant='secondary' dot>
@@ -43,9 +43,9 @@ export function BarangayHeader({ barangay }: BarangayHeaderProps) {
       </div>
 
       {/* Middle: Address */}
-      {barangay.address && (
+      {municipality.address && (
         <p className='text-kapwa-text-support mb-4 text-sm'>
-          {barangay.address}, {lguLabels.location}
+          {municipality.address}, {lguLabels.location}
         </p>
       )}
 
@@ -60,9 +60,9 @@ export function BarangayHeader({ barangay }: BarangayHeaderProps) {
             <span>{contactValue}</span>
           </a>
         )}
-        {barangay.website && (
+        {municipality.website && (
           <a
-            href={barangay.website}
+            href={municipality.website}
             target='_blank'
             rel='noreferrer'
             className='text-kapwa-text-support hover:text-kapwa-text-brand flex items-center gap-2 transition-colors'

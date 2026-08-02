@@ -36,11 +36,11 @@ const GovernmentSection: FC = () => {
       link: '/government/departments',
     },
     {
-      id: 'barangays',
+      id: 'municipalities',
       title: t('government.barangaysTitle'),
       description: t('government.barangaysDescription'),
       icon: <HomeIcon className='text-kapwa-text-brand h-10 w-10' />,
-      link: '/government/barangays',
+      link: '/government/municipalities',
     },
   ];
 

@@ -84,7 +84,7 @@ export interface PageHeaderProps {
 const DEFAULT_BREADCRUMB_CONFIG: Record<string, string> = {
   '/government/elected-officials': 'Elected Officials',
   '/government/departments': 'Departments & Offices',
-  '/government/barangays': 'Municipalities',
+  '/government/municipalities': 'Municipalities',
   '/services': 'Services',
   '/openlgu': 'OpenLGU Portal',
   '/transparency': 'Transparency',

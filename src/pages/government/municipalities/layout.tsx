@@ -2,17 +2,17 @@ import { Outlet, useLocation } from 'react-router-dom';
 
 import { SidebarLayout } from '@/components/layout/SidebarLayout';
 
-import BarangaysSidebar from './components/BarangaysSidebar';
+import MunicipalitiesSidebar from './components/MunicipalitiesSidebar';
 
-export default function BarangaysPageLayout() {
+export default function MunicipalitiesPageLayout() {
   const location = useLocation();
 
   // Logic: Collapse if not on the index
-  const isDeepPage = location.pathname !== '/government/barangays';
+  const isDeepPage = location.pathname !== '/government/municipalities';
 
   return (
     <SidebarLayout
-      sidebar={<BarangaysSidebar />}
+      sidebar={<MunicipalitiesSidebar />}
       collapsible={true}
       defaultCollapsed={isDeepPage}
     >

@@ -11,13 +11,13 @@ import SearchInput from '@/components/ui/SearchInput';
 import { toTitleCase } from '@/lib/stringUtils';
 import { lguLabels } from '@/lib/lguLabels';
 
-import barangaysData from '@/data/directory/municipal.json';
+import municipalitiesData from '@/data/directory/municipal.json';
 
-export default function BarangaysIndex() {
+export default function MunicipalitiesIndex() {
   const [search, setSearch] = useState('');
 
-  const filtered = barangaysData
-    .filter(b => b.barangay_name.toLowerCase().includes(search.toLowerCase()))
+  const filtered = municipalitiesData
+    .filter(m => m.barangay_name.toLowerCase().includes(search.toLowerCase()))
     .sort((a, b) => a.barangay_name.localeCompare(b.barangay_name));
 
   return (
@@ -35,17 +35,17 @@ export default function BarangaysIndex() {
       </PageHero>
 
       <div className='grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3'>
-        {filtered.map(brgy => {
-          const punong = brgy.officials?.find(o =>
+        {filtered.map(municipality => {
+          const mayor = municipality.officials?.find(o =>
             o.role.includes('Municipal Mayor')
           );
 
           return (
             <Link
-              key={brgy.slug}
-              to={brgy.slug}
+              key={municipality.slug}
+              to={municipality.slug}
               className='group block h-full'
-              aria-label={`View profile of Municipality of ${brgy.barangay_name}`}
+              aria-label={`View profile of Municipality of ${municipality.barangay_name}`}
             >
               <Card
                 hover
@@ -60,7 +60,7 @@ export default function BarangaysIndex() {
                     </div>
                     <div className='min-w-0 flex-1'>
                       <h3 className='group-hover:text-kapwa-text-brand text-kapwa-text-strong text-base leading-tight font-bold transition-colors'>
-                        {toTitleCase(brgy.barangay_name)}
+                        {toTitleCase(municipality.barangay_name)}
                       </h3>
                       <p className='text-kapwa-text-disabled mt-0.5 text-[10px] font-bold tracking-widest uppercase'>
                         Official Municipality Profile
@@ -69,7 +69,7 @@ export default function BarangaysIndex() {
                     <ArrowRight className='group-hover:text-kapwa-text-link text-kapwa-text-support mt-1 h-4 w-4 transition-all' />
                   </div>
 
-                  {/* Middle Row: Punong Barangay (Standardized Highlight Box) */}
+                  {/* Middle Row: Mayor (Standardized Highlight Box) */}
                   <div className='border-kapwa-border-weak bg-kapwa-bg-surface-raised/50 flex items-center gap-2 rounded-xl border px-3 py-2'>
                     <div className='border-kapwa-border-weak bg-kapwa-bg-surface text-kapwa-text-disabled shrink-0 rounded-full border p-1 shadow-sm'>
                       <User2 className='h-3.5 w-3.5' />
@@ -79,17 +79,18 @@ export default function BarangaysIndex() {
                         Municipal Mayor
                       </p>
                       <p className='text-kapwa-text-support truncate text-xs leading-tight font-bold'>
-                        {punong ? toTitleCase(punong.name) : 'Awaiting Data'}
+                        {mayor ? toTitleCase(mayor.name) : 'Awaiting Data'}
                       </p>
                     </div>
                   </div>
 
                   {/* Bottom Row: Trunkline & Action */}
                   <div className='mt-auto flex items-center justify-between gap-4 border-t border-kapwa-border-weak pt-3'>
-                    {brgy.trunkline && brgy.trunkline.length > 0 ? (
+                    {municipality.trunkline &&
+                    municipality.trunkline.length > 0 ? (
                       <div className='text-kapwa-text-disabled flex items-center gap-1.5 text-[11px] font-medium'>
                         <Phone className='text-kapwa-text-brand h-3 w-3' />
-                        <span>{brgy.trunkline[0]}</span>
+                        <span>{municipality.trunkline[0]}</span>
                       </div>
                     ) : (
                       <div className='text-kapwa-text-support text-[10px] italic'>

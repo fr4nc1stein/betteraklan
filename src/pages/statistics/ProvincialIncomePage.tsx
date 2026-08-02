@@ -23,7 +23,7 @@ const COLORS = {
 // Hide proposed years (e.g. 2026) for now — not yet actual/current income.
 const visibleAriData = ariData.filter(d => d.status !== 'proposed');
 
-export default function MunicipalIncomePage() {
+export default function ProvincialIncomePage() {
   const [selectedPeriod, setSelectedPeriod] = useState(
     visibleAriData[visibleAriData.length - 1].period
   );

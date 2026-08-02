@@ -20,7 +20,7 @@ export default function StatisticsSidebar() {
       description: 'CMCI Index & rankings',
     },
     {
-      path: '/statistics/municipal-income',
+      path: '/statistics/provincial-income',
       label: 'Provincial Income',
       icon: Wallet,
       description: 'Revenue sources',
@@ -28,7 +28,7 @@ export default function StatisticsSidebar() {
   ];
 
   return (
-    <SidebarContainer title='City Statistics'>
+    <SidebarContainer title='Provincial Statistics'>
       <ul className='space-y-1'>
         {sections.map(section => (
           <SidebarItem key={section.path} {...section} />

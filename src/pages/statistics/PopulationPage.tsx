@@ -113,7 +113,7 @@ export default function PopulationPage() {
           variant='secondary'
         />
         <StatCard
-          label='Admin Units'
+          label='Local Units'
           value={barangays.length}
           subtext='Municipalities'
           variant='slate'

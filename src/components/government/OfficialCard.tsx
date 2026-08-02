@@ -46,13 +46,13 @@ export function OfficialCard({
   );
 }
 
-interface PunongBarangayCardProps {
+interface MayorCardProps {
   official: {
     name: string;
   };
 }
 
-export function PunongBarangayCard({ official }: PunongBarangayCardProps) {
+export function MayorCard({ official }: MayorCardProps) {
   return (
     <Card className='border-kapwa-border-brand h-30' variant='default'>
       <CardContent className='flex h-full flex-col items-center justify-center gap-2 px-6 py-4 text-center'>
@@ -66,9 +66,9 @@ export function PunongBarangayCard({ official }: PunongBarangayCardProps) {
           <Badge
             variant='primary'
             className='mt-1'
-            aria-label='Position: Punong Barangay'
+            aria-label='Position: Municipal Mayor'
           >
-            Punong Barangay
+            Municipal Mayor
           </Badge>
         </div>
       </CardContent>
