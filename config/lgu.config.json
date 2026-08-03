@@ -59,6 +59,6 @@
     "statistics": true,
     "map": true,
     "airports": true,
-    "citizensCharterChat": true
+    "citizensCharterChat": false
   }
 }

@@ -1,13 +1,14 @@
 // Citizens Charter AI Chat - Path: functions/api/citizens-charter-chat.ts
-// Backs the lower-left chat bubble. Every message is gated by a Turnstile
-// siteverify check (env.TURNSTILE_SECRET) before it's allowed to spend
-// AI Search quota (env.AI_SEARCH_API_TOKEN / env.AI_SEARCH_INSTANCE) —
-// AI Search beta has account-level quota limits, so this endpoint is the
+// Backs the /chat page. Every message is gated by a Turnstile siteverify
+// check (env.TURNSTILE_SECRET) and a per-IP daily cap before it's allowed
+// to spend AI Search quota (env.AI_SEARCH_API_TOKEN / env.AI_SEARCH_INSTANCE)
+// — AI Search beta has account-level quota limits, so this endpoint is the
 // only thing that ever calls it; nothing AI-Search-related touches the
 // client directly.
 import type { Env } from '../types';
 import { verifyTurnstileToken } from '../lib/turnstile';
 import { queryCitizensCharter } from '../lib/aisearch';
+import { checkAndIncrementDailyLimit } from '../lib/rateLimit';
 
 const ALLOWED_ORIGINS = [
   'https://betteraklan.pages.dev',
@@ -47,6 +48,15 @@ function json(
 }
 
 const MAX_MESSAGE_LENGTH = 2000;
+const DAILY_MESSAGE_LIMIT = 20;
+
+// Kill switch: flip to true to re-enable. While false, this endpoint never
+// reads Turnstile/AI Search config or touches KV — it's a hard stop before
+// any of that, so it's safe to leave the secrets configured while this is
+// off. Disabled while we settle on an abuse-prevention strategy before
+// exposing this publicly (see src/pages/chat and the `citizensCharterChat`
+// feature flag, which are disabled in lockstep with this).
+const CHAT_ENABLED = false;
 
 export async function onRequest(context: {
   request: Request;
@@ -57,6 +67,10 @@ export async function onRequest(context: {
 
   if (request.method === 'OPTIONS') {
     return new Response(null, { status: 204, headers: getCorsHeaders(origin) });
+  }
+
+  if (!CHAT_ENABLED) {
+    return json({ error: 'Chat is temporarily unavailable' }, 503, origin);
   }
 
   if (request.method !== 'POST') {
@@ -92,6 +106,22 @@ export async function onRequest(context: {
   );
   if (!verified) {
     return json({ error: 'Verification failed' }, 403, origin);
+  }
+
+  const rateLimit = await checkAndIncrementDailyLimit(
+    env.WEATHER_KV,
+    'chat_rl',
+    remoteIp || 'unknown',
+    DAILY_MESSAGE_LIMIT
+  );
+  if (!rateLimit.allowed) {
+    return json(
+      {
+        error: `You've reached today's limit of ${DAILY_MESSAGE_LIMIT} questions. Please try again tomorrow.`,
+      },
+      429,
+      origin
+    );
   }
 
   if (!env.AI_SEARCH_API_TOKEN || !env.AI_SEARCH_INSTANCE) {
