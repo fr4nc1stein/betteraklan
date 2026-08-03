@@ -38,7 +38,8 @@
     "openlgu": "OpenLGU",
     "tourism": "Tourism",
     "map": "Map",
-    "airports": "Airports"
+    "airports": "Airports",
+    "chat": "Chat"
   },
   "joinUs": {
     "stripTitle": "🚀 Join the #CivicTech Revolution",
@@ -94,5 +95,22 @@
     "directoryTitle": "Official Directory",
     "directoryDescription": "Find contact information for government officials, agencies, and offices at national and local levels.",
     "viewDirectory": "View Directory"
+  },
+  "chat": {
+    "title": "Aklan Citizens Charter Assistant",
+    "intro": "Ask me anything about the Aklan Citizens Charter — requirements, fees, and processing times for provincial services.",
+    "placeholder": "Type your question...",
+    "send": "Send",
+    "thinking": "Thinking...",
+    "emptyAnswer": "I couldn't find an answer to that.",
+    "genericError": "Something went wrong. Please try again.",
+    "verificationUnavailable": "Verification is unavailable right now. Please try again in a moment.",
+    "disclaimer": "Answers are generated from the Aklan Citizens Charter and may be incomplete. Confirm details with the relevant office before relying on them.",
+    "suggestions": [
+      "How do I get medical assistance?",
+      "What are the requirements for a business permit?",
+      "How do I request a certified true copy of a tax declaration?",
+      "What are the requirements for livestock dispersal assistance?"
+    ]
   }
 }

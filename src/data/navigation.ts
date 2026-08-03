@@ -55,6 +55,11 @@ export const mainNavigation: NavigationItem[] = [
     ...(config.features.airports ? {} : { hidden: true }),
   },
   {
+    label: 'Chat',
+    href: '/chat',
+    ...(config.features.citizensCharterChat ? {} : { hidden: true }),
+  },
+  {
     label: 'OpenLGU',
     href: '/openlgu',
     children: [

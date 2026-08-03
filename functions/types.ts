@@ -19,6 +19,11 @@ export interface Env {
   CF_ACCOUNT_ID?: string;
   CF_API_TOKEN?: string;
 
+  // Citizens Charter AI chat (Cloudflare AI Search + Turnstile)
+  TURNSTILE_SECRET?: string;
+  AI_SEARCH_INSTANCE?: string;
+  AI_SEARCH_API_TOKEN?: string;
+
   // Admin Authentication
   GITHUB_CLIENT_ID?: string;
   GITHUB_CLIENT_SECRET?: string;

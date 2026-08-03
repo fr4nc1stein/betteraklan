@@ -144,6 +144,9 @@ const AdminOpenLguWorkbench = lazy(
 // NotFound — keep eager, it's tiny and needs to render instantly
 import NotFound from '@/pages/NotFound';
 
+// Citizens Charter AI Chat — feature gated
+const ChatPage = lazy(() => import('@/pages/chat'));
+
 /** Minimal loading fallback for route transitions */
 function PageLoader() {
   return (
@@ -166,12 +169,13 @@ function App() {
 function AppContent() {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith('/admin');
+  const isChatRoute = location.pathname.startsWith('/chat');
 
   return (
     <div className='flex flex-col min-h-screen'>
       <SEO />
       {!isAdminRoute && <Navbar />}
-      {!isAdminRoute && <Ticker />}
+      {!isAdminRoute && !isChatRoute && <Ticker />}
       <ScrollToTop />
 
       <Suspense fallback={<PageLoader />}>
@@ -303,6 +307,11 @@ function AppContent() {
           {/* Community Contribution Flow */}
           <Route path='contribute' element={<ContributePage />} />
 
+          {/* Citizens Charter AI Chat — feature gated */}
+          {config.features.citizensCharterChat && (
+            <Route path='chat' element={<ChatPage />} />
+          )}
+
           {/* Admin Routes */}
           <Route path='/admin' element={<AdminLayout />}>
             <Route index element={<AdminDashboard />} />
@@ -324,7 +333,7 @@ function AppContent() {
         </Routes>
       </Suspense>
 
-      {!isAdminRoute && <Footer />}
+      {!isAdminRoute && !isChatRoute && <Footer />}
     </div>
   );
 }

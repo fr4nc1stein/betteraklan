@@ -53,6 +53,7 @@ export interface LGUConfig {
     statistics: boolean;
     map: boolean;
     airports: boolean;
+    citizensCharterChat: boolean;
   };
 }
 

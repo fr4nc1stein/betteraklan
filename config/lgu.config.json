@@ -58,6 +58,7 @@
     "tourism": true,
     "statistics": true,
     "map": true,
-    "airports": true
+    "airports": true,
+    "citizensCharterChat": true
   }
 }

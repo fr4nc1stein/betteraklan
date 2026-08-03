@@ -28,6 +28,24 @@
     "openlgu": "OpenLGU",
     "tourism": "Turismo",
     "map": "Mapa",
-    "airports": "Paliparan"
+    "airports": "Paliparan",
+    "chat": "Chat"
+  },
+  "chat": {
+    "title": "Katuwang sa Citizens Charter ng Aklan",
+    "intro": "Magtanong tungkol sa Citizens Charter ng Aklan — mga kinakailangan, bayad, at oras ng pagproseso ng mga serbisyong panlalawigan.",
+    "placeholder": "I-type ang iyong tanong...",
+    "send": "Ipadala",
+    "thinking": "Nag-iisip...",
+    "emptyAnswer": "Wala akong nahanap na sagot dito.",
+    "genericError": "May naganap na problema. Pakisubukang muli.",
+    "verificationUnavailable": "Hindi pa available ang beripikasyon. Pakisubukang muli sandali.",
+    "disclaimer": "Ang mga sagot ay batay sa Citizens Charter ng Aklan at maaaring hindi kumpleto. Kumpirmahin ang detalye sa kaukulang opisina bago umasa dito.",
+    "suggestions": [
+      "Paano makakuha ng tulong medikal?",
+      "Ano ang mga kailangan para sa business permit?",
+      "Paano humiling ng certified true copy ng tax declaration?",
+      "Ano ang mga kailangan para sa livestock dispersal assistance?"
+    ]
   }
 }
