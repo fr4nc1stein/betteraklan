@@ -22,6 +22,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/navigation/Breadcrumb';
 import { Card, CardContent } from '@/components/ui/Card';
+import { PaginationControls } from '@/components/ui/Pagination';
 
 import accommodationsData from '@/data/tourism/accommodations.json';
 import { Accommodation } from '@/types/tourism';
@@ -64,32 +65,72 @@ function escapeHtml(s: string) {
   return s.replace(/[&<>"']/g, c => map[c]);
 }
 
+type MappableAccommodation = Accommodation & { lat: number; lon: number };
+
+interface CoordinateGroup {
+  lat: number;
+  lon: number;
+  items: MappableAccommodation[];
+}
+
+/** Many published addresses only say e.g. "Station 1, Brgy. Balabag" with no
+ * street/building detail, so geocoding — however accurate — collapses dozens
+ * of establishments onto one point. Rather than let leaflet.markercluster
+ * spiderfy those into a fan of fake individual positions, group them into a
+ * single marker with a list popup: an honest representation of what the
+ * source data can actually support. */
+function groupByCoordinate(points: MappableAccommodation[]): CoordinateGroup[] {
+  const groups = new Map<string, CoordinateGroup>();
+  for (const p of points) {
+    const key = `${p.lat},${p.lon}`;
+    const existing = groups.get(key);
+    if (existing) existing.items.push(p);
+    else groups.set(key, { lat: p.lat, lon: p.lon, items: [p] });
+  }
+  return [...groups.values()];
+}
+
+function groupPopupHtml(g: CoordinateGroup): string {
+  if (g.items.length === 1) {
+    const p = g.items[0];
+    return `<div class="space-y-1 text-sm">
+      <p class="font-semibold">${escapeHtml(p.name)}</p>
+      <p class="text-xs text-gray-500">${escapeHtml(p.address)}</p>
+      <a href="${googleMapsUrl(p.lat, p.lon)}" target="_blank" rel="noreferrer" class="text-xs font-medium text-blue-600">Open in Google Maps →</a>
+    </div>`;
+  }
+  const list = g.items
+    .map(
+      p => `<li class="border-b border-gray-100 py-1 last:border-0">
+        <p class="font-medium">${escapeHtml(p.name)}</p>
+        <p class="text-[11px] text-gray-500">${escapeHtml(p.address)}</p>
+      </li>`
+    )
+    .join('');
+  return `<div class="max-w-[260px] space-y-1 text-sm">
+    <p class="font-semibold">${g.items.length} establishments in this area</p>
+    <p class="text-xs text-gray-500">Their published addresses aren't precise enough to place them individually.</p>
+    <ul class="mt-1 max-h-48 overflow-y-auto">${list}</ul>
+    <a href="${googleMapsUrl(g.lat, g.lon)}" target="_blank" rel="noreferrer" class="mt-1 block text-xs font-medium text-blue-600">Open area in Google Maps →</a>
+  </div>`;
+}
+
 /** Vanilla leaflet.markercluster layer — used for Boracay's ~430 points,
  * where individual react-leaflet Markers would be an unreadable pile. */
-function ClusterLayer({
-  points,
-}: {
-  points: Array<Accommodation & { lat: number; lon: number }>;
-}) {
+function ClusterLayer({ groups }: { groups: CoordinateGroup[] }) {
   const map = useMap();
   useEffect(() => {
     const cluster = L.markerClusterGroup();
-    points.forEach(p => {
-      const marker = L.marker([p.lat, p.lon]);
-      marker.bindPopup(
-        `<div class="space-y-1 text-sm">
-          <p class="font-semibold">${escapeHtml(p.name)}</p>
-          <p class="text-xs text-gray-500">${escapeHtml(p.address)}</p>
-          <a href="${googleMapsUrl(p.lat, p.lon)}" target="_blank" rel="noreferrer" class="text-xs font-medium text-blue-600">Open in Google Maps →</a>
-        </div>`
-      );
+    groups.forEach(g => {
+      const marker = L.marker([g.lat, g.lon]);
+      marker.bindPopup(groupPopupHtml(g), { maxWidth: 280 });
       cluster.addLayer(marker);
     });
     map.addLayer(cluster);
     return () => {
       map.removeLayer(cluster);
     };
-  }, [points, map]);
+  }, [groups, map]);
   return null;
 }
 
@@ -106,6 +147,8 @@ export default function AccommodationsPage() {
   const [search, setSearch] = useState('');
   const [municipalityFilter, setMunicipalityFilter] = useState('');
   const [flyTarget, setFlyTarget] = useState<[number, number] | null>(null);
+  const [page, setPage] = useState(1);
+  const [perPage, setPerPage] = useState(20);
 
   const isValidArea = areaParam === 'mainland' || areaParam === 'boracay';
   const area = (isValidArea ? areaParam : 'mainland') as Area;
@@ -134,14 +177,27 @@ export default function AccommodationsPage() {
     [all, search, municipalityFilter]
   );
 
+  // Reset to page 1 whenever the visible result set changes shape, so a
+  // filter/search doesn't strand the user on a now-empty page.
+  useEffect(() => {
+    setPage(1);
+  }, [search, municipalityFilter, area]);
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
+  const pagedFiltered = useMemo(
+    () => filtered.slice((page - 1) * perPage, page * perPage),
+    [filtered, page, perPage]
+  );
+
   const mappable = useMemo(
     () =>
       filtered.filter(
-        (a): a is Accommodation & { lat: number; lon: number } =>
-          a.lat != null && a.lon != null
+        (a): a is MappableAccommodation => a.lat != null && a.lon != null
       ),
     [filtered]
   );
+
+  const groupedMappable = useMemo(() => groupByCoordinate(mappable), [mappable]);
 
   if (!isValidArea) {
     return <Navigate to='/tourism/accommodations/mainland' replace />;
@@ -224,26 +280,66 @@ export default function AccommodationsPage() {
               url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
             />
             {area === 'boracay' ? (
-              <ClusterLayer points={mappable} />
+              <ClusterLayer groups={groupedMappable} />
             ) : (
-              mappable.map(a => (
-                <Marker key={`${a.name}-${a.lat}-${a.lon}`} position={[a.lat, a.lon]}>
+              groupedMappable.map(g => (
+                <Marker
+                  key={`${g.lat}-${g.lon}`}
+                  position={[g.lat, g.lon]}
+                >
                   <Tooltip direction='top' offset={[0, -35]}>
-                    {a.name}
+                    {g.items.length === 1
+                      ? g.items[0].name
+                      : `${g.items.length} establishments`}
                   </Tooltip>
                   <Popup>
-                    <div className='space-y-1 text-sm'>
-                      <p className='font-semibold'>{a.name}</p>
-                      <p className='text-xs text-gray-500'>{a.address}</p>
-                      <a
-                        href={googleMapsUrl(a.lat, a.lon)}
-                        target='_blank'
-                        rel='noreferrer'
-                        className='text-xs font-medium text-blue-600 hover:underline'
-                      >
-                        Open in Google Maps →
-                      </a>
-                    </div>
+                    {g.items.length === 1 ? (
+                      <div className='space-y-1 text-sm'>
+                        <p className='font-semibold'>{g.items[0].name}</p>
+                        <p className='text-xs text-gray-500'>
+                          {g.items[0].address}
+                        </p>
+                        <a
+                          href={googleMapsUrl(g.lat, g.lon)}
+                          target='_blank'
+                          rel='noreferrer'
+                          className='text-xs font-medium text-blue-600 hover:underline'
+                        >
+                          Open in Google Maps →
+                        </a>
+                      </div>
+                    ) : (
+                      <div className='max-w-[260px] space-y-1 text-sm'>
+                        <p className='font-semibold'>
+                          {g.items.length} establishments in this area
+                        </p>
+                        <p className='text-xs text-gray-500'>
+                          Their published addresses aren&apos;t precise
+                          enough to place them individually.
+                        </p>
+                        <ul className='mt-1 max-h-48 overflow-y-auto'>
+                          {g.items.map(p => (
+                            <li
+                              key={p.name}
+                              className='border-b border-gray-100 py-1 last:border-0'
+                            >
+                              <p className='font-medium'>{p.name}</p>
+                              <p className='text-[11px] text-gray-500'>
+                                {p.address}
+                              </p>
+                            </li>
+                          ))}
+                        </ul>
+                        <a
+                          href={googleMapsUrl(g.lat, g.lon)}
+                          target='_blank'
+                          rel='noreferrer'
+                          className='mt-1 block text-xs font-medium text-blue-600 hover:underline'
+                        >
+                          Open area in Google Maps →
+                        </a>
+                      </div>
+                    )}
                   </Popup>
                 </Marker>
               ))
@@ -253,44 +349,57 @@ export default function AccommodationsPage() {
         </div>
       </Card>
 
-      <div className='grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3'>
-        {filtered.map(a => (
-          <Card
-            key={`${a.name}-${a.address}`}
-            hover={false}
-            className='border-kapwa-border-weak shadow-xs'
-          >
-            <CardContent className='space-y-1.5 p-4'>
-              <h4 className='text-kapwa-text-strong text-sm leading-tight font-bold'>
-                {a.name}
-              </h4>
-              <p className='text-kapwa-text-support text-xs leading-relaxed'>
-                {a.address}
-              </p>
-              <div className='flex items-center gap-2 pt-1'>
-                {a.lat != null && a.lon != null ? (
-                  <button
-                    type='button'
-                    onClick={() => setFlyTarget([a.lat as number, a.lon as number])}
-                    className='text-kapwa-text-brand flex items-center gap-1 text-xs font-medium hover:underline'
-                  >
-                    <MapPinIcon className='h-3 w-3' /> Show on map
-                  </button>
-                ) : (
-                  <span className='text-kapwa-text-disabled text-xs italic'>
-                    Location unavailable
-                  </span>
-                )}
-                {a.geocodePrecision !== 'exact' && a.lat != null && (
-                  <span className='text-kapwa-text-disabled text-[10px] tracking-wide uppercase'>
-                    ~{a.geocodePrecision}
-                  </span>
-                )}
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      <Card className='overflow-hidden p-0' hover={false}>
+        <div className='grid grid-cols-1 gap-3 p-4 sm:grid-cols-2 lg:grid-cols-3'>
+          {pagedFiltered.map(a => (
+            <Card
+              key={`${a.name}-${a.address}`}
+              hover={false}
+              className='border-kapwa-border-weak shadow-xs'
+            >
+              <CardContent className='space-y-1.5 p-4'>
+                <h4 className='text-kapwa-text-strong text-sm leading-tight font-bold'>
+                  {a.name}
+                </h4>
+                <p className='text-kapwa-text-support text-xs leading-relaxed'>
+                  {a.address}
+                </p>
+                <div className='flex items-center gap-2 pt-1'>
+                  {a.lat != null && a.lon != null ? (
+                    <button
+                      type='button'
+                      onClick={() => setFlyTarget([a.lat as number, a.lon as number])}
+                      className='text-kapwa-text-brand flex items-center gap-1 text-xs font-medium hover:underline'
+                    >
+                      <MapPinIcon className='h-3 w-3' /> Show on map
+                    </button>
+                  ) : (
+                    <span className='text-kapwa-text-disabled text-xs italic'>
+                      Location unavailable
+                    </span>
+                  )}
+                  {a.geocodePrecision !== 'exact' && a.lat != null && (
+                    <span className='text-kapwa-text-disabled text-[10px] tracking-wide uppercase'>
+                      ~{a.geocodePrecision}
+                    </span>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+        <PaginationControls
+          currentPage={page}
+          totalPages={totalPages}
+          resultsPerPage={perPage}
+          totalItems={filtered.length}
+          onPageChange={setPage}
+          onResultsPerPageChange={n => {
+            setPerPage(n);
+            setPage(1);
+          }}
+        />
+      </Card>
 
       <p className='text-kapwa-text-disabled text-center text-xs italic'>
         Source:{' '}
