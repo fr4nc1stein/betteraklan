@@ -9,6 +9,7 @@ import type {
   WeatherData,
   WeatherResponseData,
 } from '../types';
+import municipalityCentroids from '../../src/data/geo/municipality-centroids.json';
 
 /**
  * CORS Configuration
@@ -54,9 +55,18 @@ const DEFAULT_CITY: CityCoordinates = {
   lon: 122.3657,
 };
 
+// All 17 Aklan municipalities (excluding Kalibo, already DEFAULT_CITY above),
+// generated from the boundary GeoJSON — see
+// scripts/generate-municipality-centroids.ts. Powers the /map weather
+// overlay (one municipality per marker).
+const MUNICIPALITY_CITIES: CityCoordinates[] = (
+  municipalityCentroids as CityCoordinates[]
+).filter(city => city.slug !== 'kalibo');
+
 // Optional: Add more cities if needed
 const ADDITIONAL_CITIES: CityCoordinates[] = [
   { name: 'Caticlan', lat: 11.9245, lon: 121.954 },
+  ...MUNICIPALITY_CITIES,
 ];
 
 const ALL_CITIES = [DEFAULT_CITY, ...ADDITIONAL_CITIES];
@@ -209,7 +219,7 @@ async function fetchWeatherData(
 export async function onRequest(context: {
   request: Request;
   env: Env;
-  ctx: ExecutionContext;
+  waitUntil: (promise: Promise<unknown>) => void;
 }): Promise<Response> {
   try {
     const url = new URL(context.request.url);
@@ -233,7 +243,7 @@ export async function onRequest(context: {
       // Store the data in KV regardless of whether a specific city was requested
       // Use waitUntil for fire-and-forget cache write
       if (!cityParam) {
-        context.ctx.waitUntil(
+        context.waitUntil(
           context.env.WEATHER_KV.put(
             'philippines_weather',
             JSON.stringify(weatherData),
@@ -317,7 +327,7 @@ export async function onRequest(context: {
 
     // Store the data in KV - use waitUntil for fire-and-forget cache write
     if (!cityParam) {
-      context.ctx.waitUntil(
+      context.waitUntil(
         context.env.WEATHER_KV.put(
           'philippines_weather',
           JSON.stringify(weatherData),

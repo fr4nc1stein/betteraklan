@@ -1,4 +1,5 @@
 import { HourlyForecast, WeatherData } from '../types';
+import municipalityCentroids from '../data/geo/municipality-centroids.json';
 import { fetchWithCache } from './api';
 import { config } from './lguConfig';
 
@@ -105,4 +106,41 @@ export const fetchWeatherData = async (): Promise<WeatherData[]> => {
   const cityName = config.location.weather.defaultCity;
   const weatherData = await fetchWeatherForCity(cityName);
   return weatherData ? [weatherData] : [];
+};
+
+export interface MunicipalityWeather extends WeatherData {
+  slug: string;
+}
+
+/**
+ * Fetch weather for all 17 Aklan municipalities in one request (powers the
+ * /map weather overlay). Backend keys weather by a name-derived slug, so
+ * results are matched back to municipality slugs via
+ * src/data/geo/municipality-centroids.json (see functions/api/weather.ts).
+ */
+export const fetchAllMunicipalitiesWeather = async (): Promise<
+  Record<string, MunicipalityWeather>
+> => {
+  let data = await fetchWithCache<Record<string, RawCityWeather>>(
+    '/api/weather'
+  );
+
+  if (!data || Object.keys(data).length === 0) {
+    data = await fetchWithCache<Record<string, RawCityWeather>>(
+      '/api/weather?update=true'
+    );
+  }
+
+  const result: Record<string, MunicipalityWeather> = {};
+  for (const centroid of municipalityCentroids) {
+    const cityKey = centroid.name.toLowerCase().replace(/\s+/g, '_');
+    const city = data[cityKey];
+    if (city) {
+      result[centroid.slug] = {
+        ...transformCityWeather(city, centroid.name),
+        slug: centroid.slug,
+      };
+    }
+  }
+  return result;
 };

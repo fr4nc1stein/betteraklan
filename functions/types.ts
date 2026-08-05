@@ -46,6 +46,7 @@ export interface CityCoordinates {
   name: string;
   lat: number;
   lon: number;
+  slug?: string;
 }
 
 // Interface for OpenWeatherMap API response

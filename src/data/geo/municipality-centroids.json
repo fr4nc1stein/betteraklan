@@ -1,0 +1,104 @@
+[
+  {
+    "slug": "altavas",
+    "name": "Altavas",
+    "lat": 11.5092,
+    "lon": 122.4654
+  },
+  {
+    "slug": "balete",
+    "name": "Balete",
+    "lat": 11.5229,
+    "lon": 122.3773
+  },
+  {
+    "slug": "banga",
+    "name": "Banga",
+    "lat": 11.6036,
+    "lon": 122.3381
+  },
+  {
+    "slug": "batan",
+    "name": "Batan",
+    "lat": 11.6022,
+    "lon": 122.4969
+  },
+  {
+    "slug": "buruanga",
+    "name": "Buruanga",
+    "lat": 11.8702,
+    "lon": 121.8779
+  },
+  {
+    "slug": "ibajay",
+    "name": "Ibajay",
+    "lat": 11.7993,
+    "lon": 122.2001
+  },
+  {
+    "slug": "kalibo",
+    "name": "Kalibo",
+    "lat": 11.7654,
+    "lon": 122.4341
+  },
+  {
+    "slug": "lezo",
+    "name": "Lezo",
+    "lat": 11.673,
+    "lon": 122.3139
+  },
+  {
+    "slug": "libacao",
+    "name": "Libacao",
+    "lat": 11.4188,
+    "lon": 122.2819
+  },
+  {
+    "slug": "madalag",
+    "name": "Madalag",
+    "lat": 11.4483,
+    "lon": 122.2332
+  },
+  {
+    "slug": "makato",
+    "name": "Makato",
+    "lat": 11.7611,
+    "lon": 122.2865
+  },
+  {
+    "slug": "malay",
+    "name": "Malay",
+    "lat": 11.9314,
+    "lon": 121.8879
+  },
+  {
+    "slug": "malinao",
+    "name": "Malinao",
+    "lat": 11.6109,
+    "lon": 122.2246
+  },
+  {
+    "slug": "nabas",
+    "name": "Nabas",
+    "lat": 11.8903,
+    "lon": 122.0438
+  },
+  {
+    "slug": "new-washington",
+    "name": "New Washington",
+    "lat": 11.6678,
+    "lon": 122.4695
+  },
+  {
+    "slug": "numancia",
+    "name": "Numancia",
+    "lat": 11.7739,
+    "lon": 122.3383
+  },
+  {
+    "slug": "tangalan",
+    "name": "Tangalan",
+    "lat": 11.8005,
+    "lon": 122.2831
+  }
+]
