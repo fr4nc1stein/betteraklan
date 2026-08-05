@@ -1,9 +1,10 @@
 import { useNavigate, useParams } from 'react-router-dom';
 
-import { CompassIcon, MapPinIcon } from 'lucide-react';
+import { BedIcon, CompassIcon, MapPinIcon } from 'lucide-react';
 
 import {
   SidebarContainer,
+  SidebarGroup,
   SidebarItem,
 } from '@/components/navigation/SidebarNavigation';
 
@@ -15,30 +16,44 @@ export default function TourismSidebar() {
 
   return (
     <SidebarContainer title='Tourism'>
-      <SidebarItem
-        label='Overview'
-        icon={CompassIcon}
-        isActive={!activeSlug}
-        onClick={() =>
-          navigate('/tourism', { state: { scrollToContent: true } })
-        }
-      />
-      <div className='border-kapwa-border-weak my-2 border-t' />
-      {[...municipalitiesTourism]
-        .sort((a, b) => a.name.localeCompare(b.name))
-        .map(municipality => (
-          <SidebarItem
-            key={municipality.slug}
-            label={municipality.name}
-            icon={MapPinIcon}
-            isActive={activeSlug === municipality.slug}
-            onClick={() =>
-              navigate(`/tourism/${municipality.slug}`, {
-                state: { scrollToContent: true },
-              })
-            }
-          />
-        ))}
+      <SidebarGroup title='Attractions'>
+        <SidebarItem
+          label='Overview'
+          icon={CompassIcon}
+          isActive={!activeSlug}
+          onClick={() =>
+            navigate('/tourism', { state: { scrollToContent: true } })
+          }
+        />
+        {[...municipalitiesTourism]
+          .sort((a, b) => a.name.localeCompare(b.name))
+          .map(municipality => (
+            <SidebarItem
+              key={municipality.slug}
+              label={municipality.name}
+              icon={MapPinIcon}
+              isActive={activeSlug === municipality.slug}
+              onClick={() =>
+                navigate(`/tourism/${municipality.slug}`, {
+                  state: { scrollToContent: true },
+                })
+              }
+            />
+          ))}
+      </SidebarGroup>
+
+      <SidebarGroup title='Accommodations'>
+        <SidebarItem
+          label='Boracay'
+          icon={BedIcon}
+          path='/tourism/accommodations/boracay'
+        />
+        <SidebarItem
+          label='Aklan Mainland'
+          icon={BedIcon}
+          path='/tourism/accommodations/mainland'
+        />
+      </SidebarGroup>
     </SidebarContainer>
   );
 }

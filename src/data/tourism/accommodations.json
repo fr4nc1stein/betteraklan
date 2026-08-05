@@ -1,0 +1,4304 @@
+[
+  {
+    "name": "AGZAM RESORT & SPA MANAGEMENT CORPORATION",
+    "address": "Libertad Rd., Linabuan Norte, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7088966,
+    "lon": 122.3640225,
+    "geocodePrecision": "municipality",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "AIRPORTLINE PENSIONE HOUSE",
+    "address": "Brgy. Pook, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.6932142,
+    "lon": 122.3846329,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "ASIA NOVO BOUTIQUE HOTEL INC.",
+    "address": "Toting Reyes Street, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.704673,
+    "lon": 122.3686628,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "ATI-ATIHAN FESTIVAL HOTEL CORPORATION",
+    "address": "19 Martyrs Street, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7067349,
+    "lon": 122.368345,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "CENTER PARKWAY PENSION HOUSE",
+    "address": "C&A Bldg., Omeña Avenue, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7088966,
+    "lon": 122.3640225,
+    "geocodePrecision": "municipality",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "BEASE’S BED AND BREAKFAST",
+    "address": "N. Roldan St., Poblacion, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7108659,
+    "lon": 122.3664167,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "BEE BEE LODGE",
+    "address": "Old Buswang, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7161633,
+    "lon": 122.3753223,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "CANDICE HOTEL",
+    "address": "Tolosa Street, Brgy. Caticlan, Aklan",
+    "area": "mainland",
+    "lat": 11.9245,
+    "lon": 121.954,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "CARILLO C-9 HOTEL",
+    "address": "Toting Reyes St., Andagao, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.704673,
+    "lon": 122.3686628,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "CESS SUMMER HOTEL",
+    "address": "Jaime Cardinal Sin, Andagao, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.6948699,
+    "lon": 122.3751701,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "ECL TRAVELLER’S INN",
+    "address": "Union, Nabas, Aklan",
+    "area": "mainland",
+    "lat": 11.9322706,
+    "lon": 121.9618124,
+    "geocodePrecision": "exact",
+    "municipality": "Nabas"
+  },
+  {
+    "name": "EDGE AIRPORT HOTEL",
+    "address": "Caticlan Airport, Brgy. Caticlan, Malay, Aklan",
+    "area": "mainland",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "EMEN’S COTTAGES",
+    "address": "Hinugtan Beach, Brgy. Bel-is Buruanga, Aklan",
+    "area": "mainland",
+    "lat": 11.8444711,
+    "lon": 121.8882356,
+    "geocodePrecision": "municipality",
+    "municipality": "Buruanga"
+  },
+  {
+    "name": "ETT HOMETEL",
+    "address": "Tirol Bldg., Quezon Avenue, Brgy. Estancia, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.6850416,
+    "lon": 122.3659557,
+    "geocodePrecision": "barangay",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "FEANNE PENSION HOUSE",
+    "address": "National Highway, Brgy. Agbago, Ibajay, Aklan",
+    "area": "mainland",
+    "lat": 11.8086595,
+    "lon": 122.1427701,
+    "geocodePrecision": "barangay",
+    "municipality": "Ibajay"
+  },
+  {
+    "name": "GQ PLAZA BED AND BREAKFAST",
+    "address": "19 Martyrs Street, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7067349,
+    "lon": 122.368345,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "HAVILA INN",
+    "address": "Brgy. Mabilo, New Washington, Aklan",
+    "area": "mainland",
+    "lat": 11.664417,
+    "lon": 122.402012,
+    "geocodePrecision": "exact",
+    "municipality": "New Washington"
+  },
+  {
+    "name": "HOTEL CARMEN",
+    "address": "Cor. Pastrana & 19 Martyrs Sts., Poblacion, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7088966,
+    "lon": 122.3640225,
+    "geocodePrecision": "municipality",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "HOTEL METRO AND SKY BAR RESTAURANT",
+    "address": "Toting Reyes Street, New Buswang, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7088966,
+    "lon": 122.3640225,
+    "geocodePrecision": "municipality",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "JEONVILLE TRAVELLER’S INN",
+    "address": "Old Buswang, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7161633,
+    "lon": 122.3753223,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "KALIBO ATI-ATIHAN PENSIONE HOUSE",
+    "address": "Osmeña Ave., Estancia, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.6878804,
+    "lon": 122.3664286,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "KALIBO QUEEN’S INN",
+    "address": "#047 Toting Reyes Street, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7091078,
+    "lon": 122.3706857,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "LA ESPERANZA HOTEL",
+    "address": "Osmeña Ave., Estancia, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.6878804,
+    "lon": 122.3664286,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "LITTLE GLOWMOON PENSION HOUSE",
+    "address": "0845 F. Quimpo St., Poblacion, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.707479,
+    "lon": 122.3644907,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "LR LODGING HOUSE",
+    "address": "1019 Roxas Avenue Ext., Andagao, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7055339,
+    "lon": 122.3738046,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "MARZET INN",
+    "address": "Sitio Airport, Brgy. Caticlan, Malay, Aklan",
+    "area": "mainland",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "MARZON HOTEL",
+    "address": "Jaime Cardinal Sin, Andagao, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.6948699,
+    "lon": 122.3751701,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "MZJ BALIKBAYAN INN",
+    "address": "0326 Bayanihan Road, Tinigaw, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7088966,
+    "lon": 122.3640225,
+    "geocodePrecision": "municipality",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "MZJ CONDOTEL",
+    "address": "Estancia, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.6864,
+    "lon": 122.3702,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "NAVARRO HOTEL AND SOTERA CAFÉ AND RESTAURANT",
+    "address": "Brgy. Caticlan, Malay, Aklan",
+    "area": "mainland",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "ORTEGA’S BEACH RESORT",
+    "address": "Ochando, New Washington, Aklan",
+    "area": "mainland",
+    "lat": 11.617317,
+    "lon": 122.4711482,
+    "geocodePrecision": "exact",
+    "municipality": "New Washington"
+  },
+  {
+    "name": "PAIERUS PENSIONNE",
+    "address": "647 Osmeña Ave., Capitol Site, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7088966,
+    "lon": 122.3640225,
+    "geocodePrecision": "municipality",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "RAFAELA’S GARDEN",
+    "address": "Ochando, New Washington, Aklan",
+    "area": "mainland",
+    "lat": 11.617317,
+    "lon": 122.4711482,
+    "geocodePrecision": "exact",
+    "municipality": "New Washington"
+  },
+  {
+    "name": "RB BED AND BREAKFAST",
+    "address": "RB Bldg., Pastrana Street, Poblacion, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7088966,
+    "lon": 122.3640225,
+    "geocodePrecision": "municipality",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "RESIDENCE RIVER INN & IHAW-IHAW RESTO BAR",
+    "address": "Tambak, New Washington, Aklan",
+    "area": "mainland",
+    "lat": 11.6646029,
+    "lon": 122.4155774,
+    "geocodePrecision": "exact",
+    "municipality": "New Washington"
+  },
+  {
+    "name": "ROYAL SUITES CONDOTEL",
+    "address": "Royal Season Corp. Bldg., Rizal St., Poblacion, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7088966,
+    "lon": 122.3640225,
+    "geocodePrecision": "municipality",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "S-E HOTEL & RESIDENCE",
+    "address": "Sitio Airport, Brgy. Caticlan, Malay, Aklan",
+    "area": "mainland",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "SHEMAJA INN",
+    "address": "Cor. Mabini & Roxas Ave. Streets, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7088966,
+    "lon": 122.3640225,
+    "geocodePrecision": "municipality",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "STEVEN’S GUEST HOUSE",
+    "address": "0808 M. Laserna Cor. L. Barrios Streets, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7088966,
+    "lon": 122.3640225,
+    "geocodePrecision": "municipality",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "SUBURBIA GARDEN HOTEL",
+    "address": "Brgy. Tigayon, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.6850416,
+    "lon": 122.3659557,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "THE PREMIERE BUSINESS HOTEL",
+    "address": "Quezon Avenue, Andagao, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.6948699,
+    "lon": 122.3751701,
+    "geocodePrecision": "exact",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "WEBER LODGE",
+    "address": "Tigum, Buruanga, Aklan",
+    "area": "mainland",
+    "lat": 11.8183958,
+    "lon": 121.8815226,
+    "geocodePrecision": "exact",
+    "municipality": "Buruanga"
+  },
+  {
+    "name": "WHITE BEACH FRONT AND COTTAGES",
+    "address": "Hinugtan Beach, Brgy. Bel-is Buruanga, Aklan",
+    "area": "mainland",
+    "lat": 11.8444711,
+    "lon": 121.8882356,
+    "geocodePrecision": "municipality",
+    "municipality": "Buruanga"
+  },
+  {
+    "name": "WYN’S TRAVELLERS INN",
+    "address": "Eid Bldg., Gumamela St., Brgy. Andagao, Kalibo, Aklan",
+    "area": "mainland",
+    "lat": 11.7043014,
+    "lon": 122.3757302,
+    "geocodePrecision": "barangay",
+    "municipality": "Kalibo"
+  },
+  {
+    "name": "357 Resort Boracay",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "7Stones Boracay",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "8 Colors Beach House Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Abozza Resort",
+    "address": "Station 2 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9608886,
+    "lon": 121.9285761,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Agos Boracay Rooms + Beds",
+    "address": "Station 2 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9608886,
+    "lon": 121.9285761,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Aira Boracay Beachfront Hotel",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Aissatou Apartments",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "AJ Travellers Inn (Branch 1)",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Alice in Wonderland Beach Hotel",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Aloe De Diniwid",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Aloha Boracay Hotel",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Alta Vista De Boracay",
+    "address": "Sitio Hagdan, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Altabriza Resort Boracay",
+    "address": "Station 2 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9608886,
+    "lon": 121.9285761,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Amable Suites Hotel",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Ambassador in Paradise Resort",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Amigos Beach Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Anahaw Apartments",
+    "address": "Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Anahaw Studio Suites",
+    "address": "Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Anahaw.Suites",
+    "address": "Sitio Ambulong, Brgy. Manocmanoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9000941,
+    "lon": 121.9099,
+    "geocodePrecision": "municipality",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Aqua Boracay",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Aquarius Terraces Boutique Hotel",
+    "address": "0661 Balabag Plaza, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9680954,
+    "lon": 121.9202128,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Areca Apartments",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Argonauta Boracay",
+    "address": "Sitio Hagdan, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "A-Rock Resort",
+    "address": "Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Astoria Boracay",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Astoria Current",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Asya Premier Suites Boracay",
+    "address": "Sitio Cagban, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Austrian Pension House",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Azalea Hotels & Residences Boracay",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Azul Pension House",
+    "address": "Zone IV, Balabag Proper, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "B Pod Hotel",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Babosam Hotel",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Bakshi’s Lovely Haven Apartment",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Bakshi’s Lovely Haven Apartment (Branch)",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Balay Sa Bukid",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Balemi Apartments",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Bamboo Boracay Beach Resort",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Bamboo Bungalows Resthouse",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Bambooze Hauz",
+    "address": "Sitio Pinaungon, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Banana Bay Boracay",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Bans Beach Resort",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Barkadahan and Family Apartment",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Beach Anne Boracay Inn",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Beachcomber Resort",
+    "address": "Station 1 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Bei Kurt Und Magz Inn",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Bella Vista De Boracay",
+    "address": "Lapus-Lapus, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9783732,
+    "lon": 121.9270409,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Bellarmine Properties Corporation Apartment",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Belmont Hotel Boracay",
+    "address": "Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9849731,
+    "lon": 121.9220321,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Benkay’s Apartment",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Bianca’s Garden Apartment",
+    "address": "Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Blanche Hotel Boracay",
+    "address": "Sitio Cagban, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Bloom Boracay",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Blue Coral Resort",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Blue Lotus Hotel Boracay",
+    "address": "Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Blue Marina Boracay",
+    "address": "Sitio Manggayad, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Blue Ocean Boutique Hotel",
+    "address": "Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Blue Suites",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Blue Waves Beach House",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Blue Waves Westcliff Villa",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Bolabog Beach Resort",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Bora Sky Hotel / Boracaysky Entertainment Corp.",
+    "address": "Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9609551,
+    "lon": 121.9279209,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Actopia Resort",
+    "address": "Sitio Cagban, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Amor Apartments",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Backpackers Inc.",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Balcony Inn",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Beach Houses",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Breeze Resort",
+    "address": "Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Coco English Corporation",
+    "address": "Sitio Bantud, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9488106,
+    "lon": 121.9399662,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Coco Huts",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Grace Hotel",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Haven Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Haven Suites",
+    "address": "Station 1 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Holiday Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Mandarin Island Hotel",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Mandarin White Sand Resort",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Midtown Hotel",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Morning Beach Resort",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Ocean Club Beach Resort",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Oceanbay Hotel",
+    "address": "Zone 4, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968512,
+    "lon": 121.9205631,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Peninsula Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Pito Huts",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Sands Hotel",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Sea View Hotel",
+    "address": "Sitio Manggayad, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Staycations Condotel",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Suites",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Summer Palace Resort",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Travelodge Beach Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Tropics",
+    "address": "Station 2 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9608886,
+    "lon": 121.9285761,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Uptown Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay Water World Inc. – Resort",
+    "address": "Sitio Tulubhan, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boracay White Coral Hotel",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Boramiramare Condotel",
+    "address": "Sitio Cagban, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Borazen Inc.",
+    "address": "Sitio Hagdan, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Breeze Haven Condotel",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Breeze Oceanway Condo Unit Rental",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "C and PG Space Rental",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Caipirinha Villa",
+    "address": "Diniwid Hills, Sitio Hagdan, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Calypso Beach and Dive Resort",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Campion’s Place",
+    "address": "Hampstead Compound, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Canvass Inn",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Canyon Hotels & Resorts – Boracay",
+    "address": "Sitio Sinagpa, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Casa D’ Estrella Apartelle",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Casa Fiesta Resort",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Casa Lucila",
+    "address": "Sitio Bantud, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9488106,
+    "lon": 121.9399662,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Casa Pilar Beach Resort",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Casa Puti Boracay Apartment",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Casa Sta. Fe",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Casimero Pension House",
+    "address": "Sitio Tambisaan, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Casita Isla Beach Inn",
+    "address": "Zone VI, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968512,
+    "lon": 121.9205631,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Casitas de Boracay Beach Resort",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Castle Rock Apartelle",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Cathy’s Apartelle",
+    "address": "Sitio Manggayad, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Cerca Hotel",
+    "address": "Zone 6, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Cez Manor Resort Bar & Restaurant",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Chateau De Boracay",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Chill Out Hostel",
+    "address": "Zone 5A, Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Club Boracay Apartelle",
+    "address": "Road 1-A Extension, Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Coast Boracay Isles",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Cocoloco Boracay Beach Resort",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Commander Suites De Boracay",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Con-Els Apartelle",
+    "address": "Zone VII, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Consuelo Boracay Condo Unit Rental",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Cool Stay Inn",
+    "address": "Zone 5A, Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Coralyn’s Place",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Crimson Resort & Spa Boracay",
+    "address": "Punta Bunga, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9841669,
+    "lon": 121.9076526,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Crown Regency Beach Resort",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Crown Regency Courtyard Resort",
+    "address": "Station 2 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9608886,
+    "lon": 121.9285761,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Crown Regency Prince Resort",
+    "address": "Station 1 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Crystal Ocean Resort",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Culpepper Lodge",
+    "address": "Station 2, Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Dakong Amihan Home",
+    "address": "Station 2, Zone 7, Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Danish Condotel",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Dante’s Hideaway Beach Resort",
+    "address": "Sitio Tulubhan, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Debora Free Tour, Inc. / Sea World Dive Center",
+    "address": "Sitio Ambulong, Brgy. Manocmanoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9000941,
+    "lon": 121.9099,
+    "geocodePrecision": "municipality",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Dee and Timmy Cottages",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Delnora Accommodation Reservation Services",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Dennis Guest House",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Diamond Water Edge Resort Boracay",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Diniview Villa Resort",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Discovery Shores Boracay",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Dive Gurus Boracay Beach Resort",
+    "address": "Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Diwa Apartelle",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Double Diamond Inn",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "D’Palm Boracay Condotel",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "ECL Resort Hotel",
+    "address": "ECL Bldg., Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Edith’s Place",
+    "address": "Sitio Cabanbanan, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "EGB Condotel / Ernesto G. Bautista and Associates",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "El Centro Beach Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "El Demetri Apartel",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "El Moro Beach Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "El Puerto Boracay",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "El Puerto Boracay Shore",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Ellen’s Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Ellen’s Resort Annex",
+    "address": "Zone VII, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Emerald Bay Boracay",
+    "address": "Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Emerald Island Hotel",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Emerald Shores Boracay",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Eriko’s House",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Ernest’s Place Resort",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Erus Suites Hotel",
+    "address": "Sitio Manggayad, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Escurel Inn",
+    "address": "Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Estacio Uno Boracay Lifestyle Resort",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Estacio Uno Boracay Lifestyle Resort Building B",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Eurotel Boracay",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Everrich Resort Boracay",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Exclusive Beach And Pools, Oceanway Residences",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Fairways & Bluewater Resort",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Faith Village Gardens",
+    "address": "Station 3, Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Fat Jimmy’s Resort Boracay",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Featherstone Apartment",
+    "address": "Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Feliz Hotel Boracay",
+    "address": "D’Mall, Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9630298,
+    "lon": 121.9262054,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Fernando Condominium Unit Rental",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Ferra Hotel and Garden Suites",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Ferra Premier by JG Hotel",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Fiesta Haus",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "FLG Condominium Unit Rental",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "FLN’s Searenity Guest House",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Frendz Boracay Hostel",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Frendz Resort Boracay",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Gabi Leaf",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Galleria De Boracay",
+    "address": "Sitio Manggayad, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Gerbi’s Condoplace At Oceanway Residences",
+    "address": "Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9849731,
+    "lon": 121.9220321,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Giulius Boracay Italian Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Golden Phoenix Hotel",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Gracias Inn",
+    "address": "Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Grand Blue Beach Hotel",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Grand Boracay Resort",
+    "address": "Station 2 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9608886,
+    "lon": 121.9285761,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Green Monkey Resort",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Greenyard Inn",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "GT Hotel Boracay",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Gumamela Resort – Branch 1",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Handum Hillside Apartments",
+    "address": "Zone IV, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968512,
+    "lon": 121.9205631,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Hannah Hotel",
+    "address": "Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Happy’s Homestay",
+    "address": "Sitio Tambisaan, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Harlan Beach Villa Boracay",
+    "address": "Sitio Pinaungon, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Harzel Apartelle",
+    "address": "Harvey Gelito Building, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Henann Crystal Sands Resort",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Henann Garden Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Henann Lagoon Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Henann Palm Beach Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Henann Park Resort",
+    "address": "Station 2 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9608886,
+    "lon": 121.9285761,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Henann Prime Beach Resort",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Henann Regency Resort & Spa",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Hey Jude Bulabog House Rental",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Hidden Gem Condo Unit Rental",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Hillside Guesthouse",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Hostel Avenue Inn",
+    "address": "NTS Building, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Hotel Gray In Boracay",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Hotel Soffia",
+    "address": "Sitio Hagdan, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Hotels Maryjoy",
+    "address": "Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "HR’s Residence",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Hue Hotels & Resorts Boracay",
+    "address": "Station 3 Main Road, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "IC Sam Condo Unit Rental",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Il Mare Sakura Resort Boracay",
+    "address": "Zone 4, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968512,
+    "lon": 121.9205631,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Ilaw-Ilaw Villas Pulang Lupa",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "I-Midas Condo Unit Rental",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Indila Boracay Resort",
+    "address": "Zone 7, Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Isla Azul Boracay Hotel",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Isla Del Mar Beach Hotel",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Isla Gecko Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Island Inn",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Island Nook Hotel",
+    "address": "Zone 6, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Island Princess Resort",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "JD’s Garden Inn",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Jeffrey S Hotel",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Jejsellends Garden Cottages",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Jella’s Guest House",
+    "address": "Sitio Pinaungon, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Jerome Bungalow",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Jinjiang Inn – Boracay / Milflores De Boracay",
+    "address": "Station 1 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Jony’s Beach Resort",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Jony’s Boutique Hotel",
+    "address": "Station 1 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Jung’s Resort",
+    "address": "Station 3, Sitio Manggayad, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Kaaya Resort North Boracay",
+    "address": "Sitio Ilig-Iligan, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Kalamansi House and Villas",
+    "address": "Diniwid Hills, Sitio Hagdan, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Kamusta Boutique Hotel",
+    "address": "Florista Bldg., Station 1 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Kash Condo Unit Rental",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Kawasaki Apartment",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Kommons Hotel",
+    "address": "Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "KV Property Services",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "La Bella Casa De Boracay",
+    "address": "Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "La Carmela De Boracay Hotel and Convention Center (Main)",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "La Carmela De Boracay Hotel and Convention Center (Premier Wing)",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "La’ Casa B Hotel",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "La Fiesta Resort",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "La Isla Bonita Resort",
+    "address": "Sitio Manggayad, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "La Oviedo Villas",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "La Playa Boracay, Inc.",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Lady Jean Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Lake Suites",
+    "address": "0446 Road 1A, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Lanterna Hotel",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Las Brisas De Boracay Resort",
+    "address": "Sitio Pinaungon, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Le Soleil D’ Boracay Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "L’eau Bleue Boracay Condotel",
+    "address": "Ocean Garden Villas, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9840857,
+    "lon": 121.916987,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Levantin",
+    "address": "Bolabog Beach, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9684563,
+    "lon": 121.9272027,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Lilyville Lodge",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Lime Hotel Boracay",
+    "address": "Station 2 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9608886,
+    "lon": 121.9285761,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Lingganay Boracay Hotel Resort",
+    "address": "Sitio Tulubhan, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Lishui Beach Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Little Gem Residence",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Lola’s Lodge",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Lucky Six Pension House",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Lugar Bonito",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Lushfield Boracay Guesthouse",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Luxx Boutique Hotel Boracay",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "M & E Guesthouse",
+    "address": "Station 3, Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "M.R. Holidays Hotel",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Mabuhai Resort",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Madid’s Inn Beach Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Magarbo Hotel",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Magerife’s Home",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Maja’s Place",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Mandala Spa & Resort Villas",
+    "address": "Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Mandarin Bay Resort And Spa Boracay Philippines",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Mandarin Nest Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Margaretta Villa",
+    "address": "Diniwid Hills, Sitio Hagdan, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Mario Residencial Inn",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Marnin’s Place",
+    "address": "Sitio Tambisaan, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Marzon Beach Resort",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Maxima De Boracay",
+    "address": "Station 2 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9608886,
+    "lon": 121.9285761,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Mayumi Beach Villa",
+    "address": "Sitio Sinagpa, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Mecasa Hotel",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Merly’s Place",
+    "address": "Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "MGG Casa De La Playa",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Microtel by Wyndham Boracay",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Mirage Suites De Boracay",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "MJ Hostel & Dormitory",
+    "address": "Sitio Cabanbanan, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Modern Tropical Luxe Apartment",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Monallan Boracay Hotel",
+    "address": "Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Moreno’s Cottages",
+    "address": "Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Moreno’s Lodging",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Movenpick Resort & Spa Boracay",
+    "address": "Punta Bunga, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9841669,
+    "lon": 121.9076526,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "My Hostel",
+    "address": "Sitio Cagban, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "My Station Hotel",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Mylene Inn / Mylene Rental Room",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Nanette Anselmo Apartment",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Nhotel Boracay Guesthouse",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Nigi Nigi Nu Noos ‘E’ Nu Nu Noos Beach Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Nigi Nigi Too Beach Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Nirvana Beach Resort",
+    "address": "Station 2 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9608886,
+    "lon": 121.9285761,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Niu Ohana East Bay Apartments",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Nonet’s Place",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Nonna’s House",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Oasis Resort and Spa",
+    "address": "Sitio Ilig-Iligan, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Ocean Breeze Inn",
+    "address": "Sitio Ambulong, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Oceanway Boracay Brisas Residential Unit Rental",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Oceanway Suites B3FJ, OPC",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "One Azul Boracay",
+    "address": "Sitio Pinaungon, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "One Crescent Place Hotel",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "One Hagdan Villas",
+    "address": "Sitio Hagdan, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Oseidon Hotel",
+    "address": "Zone IV, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968512,
+    "lon": 121.9205631,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Palais Boracay",
+    "address": "Sitio Tulubhan, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Palassa Private Residences",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Palm Hill Villa Rental",
+    "address": "Sitio Bantud, Brgy. Manocmanoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9000941,
+    "lon": 121.9099,
+    "geocodePrecision": "municipality",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Paradise Garden Resort Hotel & Convention Center",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Paras Inn",
+    "address": "Tambisaan Beach, Brgy. Manocmanoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9000941,
+    "lon": 121.9099,
+    "geocodePrecision": "municipality",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Patio Pacific Resort",
+    "address": "Station 1 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Perez Cabrera Apartment",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Piccolo Hotel",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Pinjalo Resort Villas",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Pinnacle Resort and Villas",
+    "address": "Sitio Pinaungon, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "R House Apartelle",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "R.A.V. Residence",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Ralph’s Place Boracay",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Real Maris Resort and Hotel",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Red Coco Inn De Boracay",
+    "address": "Station 2 Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9608886,
+    "lon": 121.9285761,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Red Coconut Beach Hotel",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Residencia Boracay",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Residencia Dela Torre",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Rob and Fred Resort",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Roger’s Place Guesthouse – Boracay",
+    "address": "Sitio Bantud, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9488106,
+    "lon": 121.9399662,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Ronald Apartments at Greenpoint",
+    "address": "Greenpoint Residences, Angol Road, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Rosemarie Ellam Apartment",
+    "address": "Sitio Cagban, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Ross Residences",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Royal Palazzo Italian Apartments",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Royal Park Hotel",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Royal Ridge Residence Inn",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Roy’s Rendezvous Guesthouse",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "RR Backpackers Real Estate Leasing",
+    "address": "Ocean Garden Villas, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9840857,
+    "lon": 121.916987,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Ruben and Rodel Ventures",
+    "address": "Sitio Cagban, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sandal’s Inn",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sanders White Resort",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Savoy Hotel Boracay",
+    "address": "Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9849731,
+    "lon": 121.9220321,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Scandi Boracay Inc.",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "SCPA Inc. – Apartelle",
+    "address": "Sitio Bantud, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9488106,
+    "lon": 121.9399662,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sea Wind Resort",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Seabird International Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Seaworthy",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Secret Garden Residential Apartment Rental",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Senare Boracay Hotel",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Serene Boracay Inc. – Deparis Beach Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Shangri-La’s Boracay Resort & Spa",
+    "address": "Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Shenna’s Beach Resort (Annex)",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Shenna’s Beach Resort (Main)",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sheratong Boracay Condotel",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Shore Time Dormitel",
+    "address": "Sitio Cagban, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Shore Time Hotel Annex",
+    "address": "D’Mall, Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9630298,
+    "lon": 121.9262054,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Shore Time Hotel Main",
+    "address": "Main Road, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9609551,
+    "lon": 121.9279209,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Shorebreak Boracay Resort",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Signature Boracay – Blue",
+    "address": "Station 3, Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Signature Boracay – Punta Rosa",
+    "address": "Sitio Sinagpa, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Signature Boracay – South Beach",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sir Albert Spiral Hotel",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sir G Hotel Boracay",
+    "address": "Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "SixRns Casa Rayluz",
+    "address": "Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sol Y Sombra Boracay Hotel",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sorum Ocean Way Condominium Unit Rental",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Stay Inn",
+    "address": "Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sulu Plaza Lodge",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sulu Sea Boutique Hotel",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Summer Breeze Welcome Home",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sundown Beach Studios",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sundown Resort",
+    "address": "Station 3, Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sunrise View Condominium Unit Rental",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sun’s Boracay Condotel",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sunshine’s Resort",
+    "address": "Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sunvilla Beachfront Hotel",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Sur Beach Resort",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Surfside Boracay Resort & Spa",
+    "address": "Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Swahili Apartelle",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Taj Resort and Spa Main",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Tan’s Guesthouse Annex",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Tans Guesthouse Main",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "The A Hostel",
+    "address": "Casa Dayang Bldg., Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "The Auhana Boracay",
+    "address": "Purok 1, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "The Central Inn Boracay Island",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "The District Boracay",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "The Henry Resort Boracay",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "The Lazy Dog Cottages",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "The Lind Boracay",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "The Muse Incorporated",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "The Orient Beach Boracay",
+    "address": "Sitio Hagdan, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "The Paragon Boracay Suites",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "The Rose Pike Boracay",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "The Sitio Suites",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "The Strand Boutique Resort",
+    "address": "Sitio Sinagpa, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "The Tides Hotel Boracay",
+    "address": "D’Mall, Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9630298,
+    "lon": 121.9262054,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Thearon’s Condo Unit Rentals",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Timog Kiteboarding Resort",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Tita Magz Inn",
+    "address": "Ambulong North, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Tophill House Space Rental",
+    "address": "Oceanway Residences, Boracay Newcoast, Brgy. Yapak, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9921986,
+    "lon": 121.9162565,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Tresha Lance Apartelle",
+    "address": "Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Tropicana Ocean Villas",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "True Home Hotel",
+    "address": "Zone IV, Balabag Proper, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "T-Three Apartment",
+    "address": "D’Mall, Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9630298,
+    "lon": 121.9262054,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Turtle Inn Resort",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Twin AP Homes",
+    "address": "Sitio Sinagpa, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Two Seasons Boracay",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Under The Stars Luxury Apartments",
+    "address": "Sitio Tambisaan, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Urban Boutique Hotel",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Vargas Apartelle",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Ventoso Residences",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Viajeros Hostel",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Vicente Aguirre Cottages",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Victoria’s Inn",
+    "address": "Sitio Bantud, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9488106,
+    "lon": 121.9399662,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Villa Ambria",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Villa Caemilla Beach Boutique Hotel",
+    "address": "Station 3, Sitio Angol, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Villa D’ Enghien",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Villa Lourdes Resort",
+    "address": "Zone VI, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968512,
+    "lon": 121.9205631,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Villa Romero De Boracay",
+    "address": "Station 3, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9521561,
+    "lon": 121.9298356,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Villa Simprosa Resort",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Villa Sunset Boracay",
+    "address": "Station 2, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9589985,
+    "lon": 121.9279941,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Vilus Place",
+    "address": "Diniwid, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9768696,
+    "lon": 121.9121498,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Wald’s Place",
+    "address": "St. Vincent Compound, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Water Colors Boracay Dive Resort",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Wendy’s Apartelle",
+    "address": "Station 3 Main Road, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "White Beach De Boracay",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "White Beach De Boracay Station 1 Extension Hotel",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "White House Beach Resort",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "White Shamrock Hotel",
+    "address": "Sitio Manggayad, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Wind Riders Inn Resort",
+    "address": "Sitio Bolabog, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Woza Inn Boracay",
+    "address": "Sitio Manggayad, Brgy. Manoc-Manoc, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9412504,
+    "lon": 121.9428278,
+    "geocodePrecision": "barangay",
+    "municipality": "Malay"
+  },
+  {
+    "name": "YCL Hotel Boracay",
+    "address": "Zone 6, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Yegrina Resort Boracay",
+    "address": "Zone 6, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.968142,
+    "lon": 121.9202877,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  },
+  {
+    "name": "Zuzuni Boutique Hotel",
+    "address": "Station 1, Brgy. Balabag, Malay, Aklan",
+    "area": "boracay",
+    "lat": 11.9660671,
+    "lon": 121.9214786,
+    "geocodePrecision": "exact",
+    "municipality": "Malay"
+  }
+]

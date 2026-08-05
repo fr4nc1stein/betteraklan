@@ -42,6 +42,10 @@ export const mainNavigation: NavigationItem[] = [
   {
     label: 'Tourism',
     href: '/tourism',
+    children: [
+      { label: 'Attractions', href: '/tourism' },
+      { label: 'Accommodations', href: '/tourism/accommodations/mainland' },
+    ],
     ...(config.features.tourism ? {} : { hidden: true }),
   },
   {
