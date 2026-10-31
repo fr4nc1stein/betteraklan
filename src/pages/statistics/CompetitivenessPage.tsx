@@ -92,13 +92,15 @@ export default function CompetitivenessPage() {
         />
         <StatCard
           label='Official Rank'
-          value={`${cmciData.rankings[latestIdx]}${['st','nd','rd'][((cmciData.rankings[latestIdx]+90)%100-10)%10-1]||'th'}`}
+          value={`${cmciData.rankings[latestIdx]}${['st', 'nd', 'rd'][((((cmciData.rankings[latestIdx] + 90) % 100) - 10) % 10) - 1] || 'th'}`}
           subtext='Among All Provinces'
           variant='secondary'
         >
           <div className='flex items-center gap-0.5 rounded-full border border-kapwa-border-success bg-kapwa-bg-success-weak px-2 py-0.5 text-kapwa-text-success'>
             <ArrowUp className='w-3 h-3 stroke-3' />
-            <span className='text-[10px] font-black uppercase'>CMCI {latestYear}</span>
+            <span className='text-[10px] font-black uppercase'>
+              CMCI {latestYear}
+            </span>
           </div>
         </StatCard>
         <StatCard
@@ -199,7 +201,9 @@ export default function CompetitivenessPage() {
                 <span className='text-2xl font-black text-kapwa-text-strong'>
                   {cmciData.rankings[idx]}
                   <span className='text-xs text-kapwa-text-disabled'>
-                    {['st','nd','rd'][((cmciData.rankings[idx]+90)%100-10)%10-1]||'th'}
+                    {['st', 'nd', 'rd'][
+                      ((((cmciData.rankings[idx] + 90) % 100) - 10) % 10) - 1
+                    ] || 'th'}
                   </span>
                 </span>
                 <span className='text-kapwa-text-brand text-xs font-bold mt-1'>
@@ -209,7 +213,8 @@ export default function CompetitivenessPage() {
             ))}
           </div>
           <p className='text-kapwa-text-disabled text-[10px] mt-4 text-center italic'>
-            Pillar-level breakdown for provinces is not published separately by DTI CMCI. Source: cmci.dti.gov.ph
+            Pillar-level breakdown for provinces is not published separately by
+            DTI CMCI. Source: cmci.dti.gov.ph
           </p>
         </DetailSection>
       )}

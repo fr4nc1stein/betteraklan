@@ -118,7 +118,10 @@ export default function TourismMunicipalityDetail() {
 
       {/* --- PRODUCTS & LOCAL DELICACIES --- */}
       {municipality.products.length > 0 && (
-        <DetailSection title='Products & Local Delicacies' icon={ShoppingBagIcon}>
+        <DetailSection
+          title='Products & Local Delicacies'
+          icon={ShoppingBagIcon}
+        >
           <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
             {municipality.products.map((p, i) => (
               <EntryCard key={p.name ?? `product-${i}`} entry={p} />

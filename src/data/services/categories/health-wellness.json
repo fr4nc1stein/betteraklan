@@ -69,7 +69,10 @@
     "slug": "animal-bite-treatment-center",
     "type": "transaction",
     "description": "Anti-rabies vaccination and wound management for individuals bitten by animals. Available at provincial and district hospitals and select RHUs.",
-    "officeSlug": ["provincial-health-office", "dr-rafael-s-tumbokon-memorial-hospital"],
+    "officeSlug": [
+      "provincial-health-office",
+      "dr-rafael-s-tumbokon-memorial-hospital"
+    ],
     "category": {
       "name": "Health & Wellness",
       "slug": "health-wellness"
@@ -80,9 +83,7 @@
       "Receive wound management and first dose of anti-rabies vaccine (free).",
       "Follow up on subsequent doses as scheduled."
     ],
-    "requirements": [
-      "Valid ID or Barangay Certificate (proof of residency)"
-    ],
+    "requirements": ["Valid ID or Barangay Certificate (proof of residency)"],
     "quickInfo": {
       "fee": "Free (first dose)",
       "processingTime": "Immediate",
@@ -141,10 +142,7 @@
       "Receive free anti-TB medicines and attend regular follow-up visits.",
       "Complete the full course of treatment as prescribed."
     ],
-    "requirements": [
-      "Valid ID",
-      "Health record/ITR (if existing)"
-    ],
+    "requirements": ["Valid ID", "Health record/ITR (if existing)"],
     "quickInfo": {
       "fee": "Free",
       "whoCanApply": "Anyone with TB symptoms",

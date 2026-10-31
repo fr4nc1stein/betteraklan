@@ -41,7 +41,10 @@
     "slug": "trade-fairs-tourism-promotions",
     "type": "information",
     "description": "Participate in provincial and municipal trade fairs, business expos, and tourism promotion events in Aklan, including the world-famous Ati-Atihan Festival (January, Kalibo).",
-    "officeSlug": ["provincial-tourism-office", "economic-enterprise-development-department"],
+    "officeSlug": [
+      "provincial-tourism-office",
+      "economic-enterprise-development-department"
+    ],
     "category": {
       "name": "Business, Trade & Investment",
       "slug": "business-trade-investment"

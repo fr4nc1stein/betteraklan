@@ -18,5 +18,7 @@ export function isExecutiveRole(chamber?: string): boolean {
  * @returns true if the role is legislative (Sangguniang Panlalawigan)
  */
 export function isLegislativeRole(chamber?: string): boolean {
-  return chamber === 'sangguniang-panlalawigan' || chamber === 'sangguniang-bayan';
+  return (
+    chamber === 'sangguniang-panlalawigan' || chamber === 'sangguniang-bayan'
+  );
 }

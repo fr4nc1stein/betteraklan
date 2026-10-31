@@ -4,10 +4,7 @@ import { Briefcase, GraduationCapIcon, UsersIcon } from 'lucide-react';
 
 import { MunicipalityBoundaryMap } from '@/components/government/MunicipalityBoundaryMap';
 import { MunicipalityHeader } from '@/components/government/MunicipalityHeader';
-import {
-  MayorCard,
-  OfficialCard,
-} from '@/components/government/OfficialCard';
+import { MayorCard, OfficialCard } from '@/components/government/OfficialCard';
 import {
   Breadcrumb,
   BreadcrumbHome,
@@ -72,9 +69,7 @@ export default function MunicipalityDetail() {
           <BreadcrumbSeparator />
           <BreadcrumbItem>
             <BreadcrumbPage>
-              {toTitleCase(
-                municipality.barangay_name.replace('BARANGAY ', '')
-              )}
+              {toTitleCase(municipality.barangay_name.replace('BARANGAY ', ''))}
             </BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>

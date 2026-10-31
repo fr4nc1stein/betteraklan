@@ -27,7 +27,9 @@ const STATUS_VARIANT_MAP: Record<string, BadgeVariant> = {
 };
 
 export function getStatusVariant(status: string): BadgeVariant {
-  return STATUS_VARIANT_MAP[status.toLowerCase().replace(/\s+/g, '')] ?? 'slate';
+  return (
+    STATUS_VARIANT_MAP[status.toLowerCase().replace(/\s+/g, '')] ?? 'slate'
+  );
 }
 
 // AeroDataBox local times look like "2026-08-02 11:20+08:00" — valid ISO
@@ -62,7 +64,10 @@ export function formatRelativeToNow(value: string | null): string {
 
   const hours = Math.floor(absMin / 60);
   const minutes = absMin % 60;
-  const parts = [hours > 0 ? `${hours}h` : null, minutes > 0 ? `${minutes}m` : null]
+  const parts = [
+    hours > 0 ? `${hours}h` : null,
+    minutes > 0 ? `${minutes}m` : null,
+  ]
     .filter(Boolean)
     .join(' ');
 

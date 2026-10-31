@@ -23,8 +23,10 @@ const outputPath = resolve(
   '../src/data/geo/municipality-centroids.json'
 );
 
-const boundaries: FeatureCollection<MultiPolygon, { slug: string; name: string }> =
-  JSON.parse(readFileSync(boundariesPath, 'utf-8'));
+const boundaries: FeatureCollection<
+  MultiPolygon,
+  { slug: string; name: string }
+> = JSON.parse(readFileSync(boundariesPath, 'utf-8'));
 
 const centroids = boundaries.features
   .map((feature: Feature<MultiPolygon, { slug: string; name: string }>) => {
@@ -40,7 +42,9 @@ const centroids = boundaries.features
   .sort((a, b) => a.slug.localeCompare(b.slug));
 
 writeFileSync(outputPath, JSON.stringify(centroids, null, 2) + '\n');
-console.log(`Wrote ${centroids.length} municipality centroids to ${outputPath}`);
+console.log(
+  `Wrote ${centroids.length} municipality centroids to ${outputPath}`
+);
 for (const c of centroids) {
   console.log(`  ${c.slug.padEnd(16)} ${c.lat}, ${c.lon}`);
 }

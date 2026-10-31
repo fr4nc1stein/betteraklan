@@ -28,10 +28,8 @@ function extractAnswer(data: unknown): ChatAnswer {
 
   const answer =
     (result.response as string) ??
-    (
-      (result.choices as Array<{ message?: { content?: string } }>)?.[0]
-        ?.message?.content
-    ) ??
+    (result.choices as Array<{ message?: { content?: string } }>)?.[0]?.message
+      ?.content ??
     (result.answer as string) ??
     '';
 

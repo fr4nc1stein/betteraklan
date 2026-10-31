@@ -36,11 +36,7 @@ function getCorsHeaders(origin: string | null): Record<string, string> {
   };
 }
 
-function json(
-  body: unknown,
-  status: number,
-  origin: string | null
-): Response {
+function json(body: unknown, status: number, origin: string | null): Response {
   return new Response(JSON.stringify(body), {
     status,
     headers: { 'Content-Type': 'application/json', ...getCorsHeaders(origin) },

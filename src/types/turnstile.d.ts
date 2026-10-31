@@ -11,7 +11,10 @@ interface TurnstileRenderOptions {
 }
 
 interface TurnstileApi {
-  render(container: HTMLElement | string, options: TurnstileRenderOptions): string;
+  render(
+    container: HTMLElement | string,
+    options: TurnstileRenderOptions
+  ): string;
   execute(widgetId: string): void;
   reset(widgetId?: string): void;
   remove(widgetId: string): void;

@@ -71,9 +71,7 @@ export function FlightRow({
             {flight.terminal ? ` · Terminal ${flight.terminal}` : ''}
           </p>
         </div>
-        <Badge variant={getStatusVariant(flight.status)}>
-          {flight.status}
-        </Badge>
+        <Badge variant={getStatusVariant(flight.status)}>{flight.status}</Badge>
       </div>
     </div>
   );

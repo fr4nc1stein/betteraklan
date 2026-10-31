@@ -40,7 +40,9 @@ export function SplitFlap({
   cellHeightEm = 1.4,
   cellWidthEm = 0.85,
 }: SplitFlapProps) {
-  const target = (length ? text.padEnd(length).slice(0, length) : text).toUpperCase();
+  const target = (
+    length ? text.padEnd(length).slice(0, length) : text
+  ).toUpperCase();
   const [display, setDisplay] = useState(target);
   const [tick, setTick] = useState(0);
   // null so the very first mount also plays the flap-in animation,

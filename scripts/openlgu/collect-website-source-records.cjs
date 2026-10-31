@@ -123,10 +123,7 @@ function timestampSlug() {
 }
 
 function slugFromUrl(url) {
-  return String(url)
-    .replace(/\/+$/, '')
-    .split('/')
-    .pop();
+  return String(url).replace(/\/+$/, '').split('/').pop();
 }
 
 // --- HTTP ---
@@ -225,7 +222,10 @@ async function checkUrlReachability(url) {
     clearTimeout(timeout);
 
     if (res.ok) {
-      return { reachability: res.redirected ? 'redirect' : 'reachable', redirect_url: res.redirected ? res.url : null };
+      return {
+        reachability: res.redirected ? 'redirect' : 'reachable',
+        redirect_url: res.redirected ? res.url : null,
+      };
     }
     if (res.status === 404) {
       return { reachability: 'dead', redirect_url: null };
@@ -287,7 +287,8 @@ function extractDescription($, contentRoot) {
 
 function parsePost($, postUrl) {
   const title = normalizeCellValue($('h1.entry-title').first().text());
-  const dateEnacted = $('time.entry-date.published').first().attr('datetime') || '';
+  const dateEnacted =
+    $('time.entry-date.published').first().attr('datetime') || '';
   const contentRoot = $('.entry-content').first();
   const { url: documentUrl, kind: documentUrlKind } = extractDocumentLink(
     $,
@@ -463,7 +464,8 @@ async function main() {
       if (postUrls.length === 0) {
         throw {
           type: 'listing_shape_failure',
-          message: 'No article.hentry / h2.entry-title links found on archive page',
+          message:
+            'No article.hentry / h2.entry-title links found on archive page',
         };
       }
 

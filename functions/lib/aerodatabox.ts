@@ -92,7 +92,9 @@ function toApiTimestamp(date: Date): string {
   return `${get('year')}-${get('month')}-${get('day')}T${get('hour')}:${get('minute')}`;
 }
 
-function normalizeFlights(data: AeroDataBoxScheduleResponse): NormalizedFlight[] {
+function normalizeFlights(
+  data: AeroDataBoxScheduleResponse
+): NormalizedFlight[] {
   const departures = (data.departures ?? []).map(
     (f): NormalizedFlight => ({
       direction: 'departure',
@@ -190,7 +192,9 @@ export async function fetchAllSchedules(
     if (result) {
       airports.push(result);
     } else {
-      const lastKnownGood = previous?.airports.find(a => a.slug === airport.slug);
+      const lastKnownGood = previous?.airports.find(
+        a => a.slug === airport.slug
+      );
       airports.push(lastKnownGood ?? { ...airport, flights: [] });
     }
     await new Promise(resolve => setTimeout(resolve, 1100));

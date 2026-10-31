@@ -259,8 +259,8 @@ export default function AirportDetail() {
           AeroDataBox
           <ExternalLinkIcon className='ml-1 inline h-3 w-3' />
         </a>
-        . Schedules may change without notice — confirm with your airline
-        before traveling.
+        . Schedules may change without notice — confirm with your airline before
+        traveling.
       </p>
     </div>
   );

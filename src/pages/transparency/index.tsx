@@ -61,8 +61,8 @@ export default function TransparencyIndex() {
               Independent Grassroots Initiative
             </h3>
             <p className='text-sm leading-relaxed text-kapwa-orange-600'>
-              Better Aklan is <strong>not an official government portal</strong>.
-              We are a volunteer movement mirroring public records to empower
+              Better Aklan is <strong>not an official government portal</strong>
+              . We are a volunteer movement mirroring public records to empower
               citizens with the information they need to engage in local
               governance.
             </p>

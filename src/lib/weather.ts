@@ -121,9 +121,8 @@ export interface MunicipalityWeather extends WeatherData {
 export const fetchAllMunicipalitiesWeather = async (): Promise<
   Record<string, MunicipalityWeather>
 > => {
-  let data = await fetchWithCache<Record<string, RawCityWeather>>(
-    '/api/weather'
-  );
+  let data =
+    await fetchWithCache<Record<string, RawCityWeather>>('/api/weather');
 
   if (!data || Object.keys(data).length === 0) {
     data = await fetchWithCache<Record<string, RawCityWeather>>(

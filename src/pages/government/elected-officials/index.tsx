@@ -91,7 +91,10 @@ function ElectedLeaderCard({ leader }: { leader: ExecutiveOfficial }) {
           <h2 className='text-kapwa-text-strong text-2xl leading-tight font-black'>
             Hon. {toTitleCase(leader.name)}
           </h2>
-          <Badge variant={isGovernor ? 'primary' : 'secondary'} className='mt-2'>
+          <Badge
+            variant={isGovernor ? 'primary' : 'secondary'}
+            className='mt-2'
+          >
             {leader.role}
           </Badge>
         </div>
@@ -113,7 +116,6 @@ function ElectedLeaderCard({ leader }: { leader: ExecutiveOfficial }) {
             </ContactContainer>
           </div>
         )}
-
       </CardContent>
     </Card>
   );

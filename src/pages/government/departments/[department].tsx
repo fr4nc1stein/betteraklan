@@ -236,7 +236,6 @@ export default function DepartmentDetail() {
             </div>
           </div>
         )}
-
       </main>
     </div>
   );

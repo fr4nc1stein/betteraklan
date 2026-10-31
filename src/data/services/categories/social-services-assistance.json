@@ -4,9 +4,7 @@
     "slug": "medical-assistance-aics",
     "type": "transaction",
     "description": "Assistance to Individuals in Crisis Situations for medical needs.",
-    "officeSlug": [
-      "provincial-social-welfare-and-development-office"
-    ],
+    "officeSlug": ["provincial-social-welfare-and-development-office"],
     "category": {
       "name": "Social Services",
       "slug": "social-services"
@@ -44,9 +42,7 @@
     "slug": "solo-parents-cash-subsidy",
     "type": "transaction",
     "description": "Financial assistance provided semi-annually to qualified solo parents in the province.",
-    "officeSlug": [
-      "provincial-social-welfare-and-development-office"
-    ],
+    "officeSlug": ["provincial-social-welfare-and-development-office"],
     "category": {
       "name": "Social Services",
       "slug": "social-services"
@@ -79,9 +75,7 @@
     "type": "transaction",
     "description": "Provision of cash incentives for elderly residents reaching milestone ages of 80, 85, 90, and 95, facilitated by the National Commission of Senior Citizens (NCSC).",
     "url": "",
-    "officeSlug": [
-      "provincial-treasurers-office"
-    ],
+    "officeSlug": ["provincial-treasurers-office"],
     "category": {
       "name": "Social Services",
       "slug": "social-services"

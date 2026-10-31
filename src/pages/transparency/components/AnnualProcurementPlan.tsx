@@ -37,9 +37,9 @@ const AnnualProcurementPlan: FC = () => {
           </h2>
           <p className='text-kapwa-text-disabled max-w-xl text-sm leading-relaxed'>
             Each department&apos;s planned procurement budget for the year, as
-            filed with the Bids and Awards Committee. This is the budget
-            plan, not the record of contracts actually awarded &mdash; see
-            the award search above for that.
+            filed with the Bids and Awards Committee. This is the budget plan,
+            not the record of contracts actually awarded &mdash; see the award
+            search above for that.
           </p>
         </div>
 
@@ -89,7 +89,9 @@ const AnnualProcurementPlan: FC = () => {
           <table className='w-full text-left text-sm'>
             <thead className='border-kapwa-border-weak bg-kapwa-bg-surface-raised text-kapwa-text-disabled border-b text-xs font-bold tracking-wider uppercase'>
               <tr>
-                <th className='px-4 py-3 sm:px-6 sm:py-4'>Office / Department</th>
+                <th className='px-4 py-3 sm:px-6 sm:py-4'>
+                  Office / Department
+                </th>
                 <th className='hidden px-4 py-3 sm:table-cell sm:px-6 sm:py-4'>
                   Head
                 </th>

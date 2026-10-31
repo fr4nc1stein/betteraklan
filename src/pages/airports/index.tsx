@@ -48,13 +48,13 @@ export default function AirportsIndex() {
         {airports.map(airport => {
           const schedule = schedules[airport.slug];
           const departures =
-            schedule?.flights.filter(f => f.direction === 'departure')
-              .length ?? null;
+            schedule?.flights.filter(f => f.direction === 'departure').length ??
+            null;
           const arrivals =
-            schedule?.flights.filter(f => f.direction === 'arrival')
-              .length ?? null;
-          const nextFlight = schedule?.flights.find(
-            f => (formatRelativeToNow(f.scheduledLocal) || '').startsWith('in')
+            schedule?.flights.filter(f => f.direction === 'arrival').length ??
+            null;
+          const nextFlight = schedule?.flights.find(f =>
+            (formatRelativeToNow(f.scheduledLocal) || '').startsWith('in')
           );
 
           return (
@@ -113,9 +113,7 @@ export default function AirportsIndex() {
 
                   {nextFlight && (
                     <div className='border-kapwa-border-weak bg-kapwa-bg-surface-raised/50 rounded-lg border px-3 py-2 text-xs'>
-                      <span className='text-kapwa-text-disabled'>
-                        Next:{' '}
-                      </span>
+                      <span className='text-kapwa-text-disabled'>Next: </span>
                       <span className='text-kapwa-text-strong font-bold'>
                         {nextFlight.flightNumber}
                       </span>{' '}

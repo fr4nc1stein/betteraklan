@@ -120,8 +120,7 @@ export default function ProvincialIncomePage() {
                   {
                     label: 'Total Income',
                     value: formatPesoAdaptive(
-                      data.summary_indicators.annual_regular_income *
-                        1_000_000
+                      data.summary_indicators.annual_regular_income * 1_000_000
                     ).fullString,
                     subtext: 'Annual Revenue',
                     variant: 'primary' as const,

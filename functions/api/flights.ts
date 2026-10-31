@@ -75,7 +75,9 @@ export async function onRequest(context: {
     }
     const data = await fetchAllSchedules(apiKey, null);
 
-    context.waitUntil(context.env.WEATHER_KV.put(CACHE_KEY, JSON.stringify(data)));
+    context.waitUntil(
+      context.env.WEATHER_KV.put(CACHE_KEY, JSON.stringify(data))
+    );
 
     return new Response(JSON.stringify(data), {
       headers: {

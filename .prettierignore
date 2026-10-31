@@ -34,6 +34,8 @@ public/
 # Generated files
 *.min.js
 *.map
+# Minified GeoJSON: generated coordinate data, kept on one line on purpose.
+src/data/geo/municipalities-boundaries.json
 
 # Markdown files (skip formatting)
 *.md

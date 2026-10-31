@@ -272,7 +272,10 @@ function AppContent() {
                 <Route index element={<Navigate to='mainland' replace />} />
                 <Route path=':area' element={<AccommodationsPage />} />
               </Route>
-              <Route path=':municipality' element={<TourismMunicipalityDetail />} />
+              <Route
+                path=':municipality'
+                element={<TourismMunicipalityDetail />}
+              />
             </Route>
           )}
 

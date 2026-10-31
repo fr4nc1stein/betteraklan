@@ -133,7 +133,8 @@ function loadSourceRecords(isRemote) {
       : null,
     source_record_id: null,
     source_url: r.source_url || null,
-    source_kind: SOURCE_KIND_MAP[r.source_kind] || r.source_kind || 'website_table_row',
+    source_kind:
+      SOURCE_KIND_MAP[r.source_kind] || r.source_kind || 'website_table_row',
     entity_type: 'document',
     content_hash: r.content_hash || null,
     raw_payload_json: r.raw_payload_json || null,

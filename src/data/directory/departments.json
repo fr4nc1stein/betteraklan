@@ -276,7 +276,11 @@
     "slug": "sangguniang-panlalawigan-office",
     "office_name": "SANGGUNIANG PANLALAWIGAN OFFICE (Provincial Board)",
     "address": "Provincial Capitol, Kalibo, Aklan",
-    "trunkline": ["(036) 268-5572", "(036) 262-7340", "(036) 272-7000 local 3500"],
+    "trunkline": [
+      "(036) 268-5572",
+      "(036) 262-7340",
+      "(036) 272-7000 local 3500"
+    ],
     "website": "https://aklan.gov.ph",
     "email": null,
     "department_head": {

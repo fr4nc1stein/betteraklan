@@ -19,9 +19,7 @@ export function FlightBoard({ flights }: { flights: NormalizedFlight[] }) {
 
   const filtered = useMemo(
     () =>
-      filter === 'all'
-        ? flights
-        : flights.filter(f => f.direction === filter),
+      filter === 'all' ? flights : flights.filter(f => f.direction === filter),
     [flights, filter]
   );
 
@@ -49,7 +47,9 @@ export function FlightBoard({ flights }: { flights: NormalizedFlight[] }) {
               {label}
               <span
                 className={
-                  active ? 'text-kapwa-text-inverse/70' : 'text-kapwa-text-disabled'
+                  active
+                    ? 'text-kapwa-text-inverse/70'
+                    : 'text-kapwa-text-disabled'
                 }
               >
                 {count}

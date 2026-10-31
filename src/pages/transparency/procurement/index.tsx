@@ -290,8 +290,7 @@ export default function ProcurementPage() {
               icon={Briefcase}
               label='Total Value'
               value={
-                formatPesoAdaptive(detailedStats.totalContractAmount)
-                  .fullString
+                formatPesoAdaptive(detailedStats.totalContractAmount).fullString
               }
               subtext='Accumulated Contract Value'
               iconBg='bg-kapwa-green-50 text-kapwa-green-600'

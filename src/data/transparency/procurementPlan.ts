@@ -29,8 +29,7 @@ const procurementPlan: ProcurementPlanYear[] = [
       },
       { department: 'Department of Education', totalCost: 21_525_963.9 },
       {
-        department:
-          'Provincial Disaster Risk Reduction & Management Office',
+        department: 'Provincial Disaster Risk Reduction & Management Office',
         totalCost: 17_181_387.2,
       },
       {
@@ -51,8 +50,7 @@ const procurementPlan: ProcurementPlanYear[] = [
       },
       { department: 'Peace and Order Program', totalCost: 5_136_633.0 },
       {
-        department:
-          'PGO-Aklan Tourism Trade Investment & Promotional Center',
+        department: 'PGO-Aklan Tourism Trade Investment & Promotional Center',
         totalCost: 3_913_764.0,
       },
       {
@@ -80,7 +78,7 @@ const procurementPlan: ProcurementPlanYear[] = [
       { department: 'Buruanga Municipal Hospital', totalCost: 1_108_718.0 },
       { department: "Provincial Treasurer's Office", totalCost: 1_040_000.0 },
       {
-        department: "Don Leovigildo N. Diapo Sr. Municipal Hospital",
+        department: 'Don Leovigildo N. Diapo Sr. Municipal Hospital',
         totalCost: 1_013_628.0,
       },
       { department: 'Libacao Municipal Infirmary', totalCost: 985_000.0 },
@@ -179,8 +177,7 @@ const procurementPlan: ProcurementPlanYear[] = [
         totalCost: 302_000.0,
       },
       {
-        department:
-          'Provincial Disaster Risk Reduction & Management Office',
+        department: 'Provincial Disaster Risk Reduction & Management Office',
         head: 'Manuel Jayfree M. Jizmundo',
         totalCost: 3_890_389.0,
       },
@@ -200,8 +197,7 @@ const procurementPlan: ProcurementPlanYear[] = [
         totalCost: 300_000.0,
       },
       {
-        department:
-          'PGO-Aklan Tourism Trade Investment & Promotional Center',
+        department: 'PGO-Aklan Tourism Trade Investment & Promotional Center',
         head: 'Marsh B. Bernabe',
         totalCost: 2_982_540.0,
       },
@@ -343,7 +339,7 @@ const procurementPlan: ProcurementPlanYear[] = [
         totalCost: 1_397_484.0,
       },
       {
-        department: "Don Leovigildo N. Diapo Sr. Municipal Hospital",
+        department: 'Don Leovigildo N. Diapo Sr. Municipal Hospital',
         head: 'Dr. Stevens N. Fuentes',
         totalCost: 1_062_075.0,
       },
@@ -562,7 +558,7 @@ const procurementPlan: ProcurementPlanYear[] = [
         totalCost: 4_125_192.04,
       },
       {
-        department: "Don Leovigildo N. Diapo Sr. Municipal Hospital",
+        department: 'Don Leovigildo N. Diapo Sr. Municipal Hospital',
         head: 'Dr. Stevens N. Fuentes',
         totalCost: 1_279_480.0,
       },

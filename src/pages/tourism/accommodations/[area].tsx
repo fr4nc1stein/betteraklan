@@ -5,7 +5,14 @@ import { MapPinIcon, SearchIcon } from 'lucide-react';
 import L from 'leaflet';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
-import { MapContainer, Marker, Popup, TileLayer, Tooltip, useMap } from 'react-leaflet';
+import {
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  Tooltip,
+  useMap,
+} from 'react-leaflet';
 
 import 'leaflet/dist/leaflet.css';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
@@ -197,7 +204,10 @@ export default function AccommodationsPage() {
     [filtered]
   );
 
-  const groupedMappable = useMemo(() => groupByCoordinate(mappable), [mappable]);
+  const groupedMappable = useMemo(
+    () => groupByCoordinate(mappable),
+    [mappable]
+  );
 
   if (!isValidArea) {
     return <Navigate to='/tourism/accommodations/mainland' replace />;
@@ -283,10 +293,7 @@ export default function AccommodationsPage() {
               <ClusterLayer groups={groupedMappable} />
             ) : (
               groupedMappable.map(g => (
-                <Marker
-                  key={`${g.lat}-${g.lon}`}
-                  position={[g.lat, g.lon]}
-                >
+                <Marker key={`${g.lat}-${g.lon}`} position={[g.lat, g.lon]}>
                   <Tooltip direction='top' offset={[0, -35]}>
                     {g.items.length === 1
                       ? g.items[0].name
@@ -314,8 +321,8 @@ export default function AccommodationsPage() {
                           {g.items.length} establishments in this area
                         </p>
                         <p className='text-xs text-gray-500'>
-                          Their published addresses aren&apos;t precise
-                          enough to place them individually.
+                          Their published addresses aren&apos;t precise enough
+                          to place them individually.
                         </p>
                         <ul className='mt-1 max-h-48 overflow-y-auto'>
                           {g.items.map(p => (
@@ -368,7 +375,9 @@ export default function AccommodationsPage() {
                   {a.lat != null && a.lon != null ? (
                     <button
                       type='button'
-                      onClick={() => setFlyTarget([a.lat as number, a.lon as number])}
+                      onClick={() =>
+                        setFlyTarget([a.lat as number, a.lon as number])
+                      }
                       className='text-kapwa-text-brand flex items-center gap-1 text-xs font-medium hover:underline'
                     >
                       <MapPinIcon className='h-3 w-3' /> Show on map
@@ -411,8 +420,8 @@ export default function AccommodationsPage() {
         >
           Provincial Government of Aklan
         </a>
-        . Locations geocoded from published addresses via OpenStreetMap and
-        may not be exact.
+        . Locations geocoded from published addresses via OpenStreetMap and may
+        not be exact.
       </p>
     </div>
   );

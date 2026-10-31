@@ -2,7 +2,8 @@
 // coupling) so it can be reused from any Pages Function or standalone
 // Worker, matching the pattern in functions/lib/aerodatabox.ts.
 
-const SITEVERIFY_URL = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+const SITEVERIFY_URL =
+  'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 
 interface SiteverifyResponse {
   success: boolean;

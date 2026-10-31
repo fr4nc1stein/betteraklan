@@ -83,10 +83,7 @@
       "Attend training sessions at the Aklan Agri-Aqua Demonstration Farms and Training Center or designated venue.",
       "Receive training certificates upon completion."
     ],
-    "requirements": [
-      "Barangay Certificate of Residency",
-      "Valid ID"
-    ],
+    "requirements": ["Barangay Certificate of Residency", "Valid ID"],
     "quickInfo": {
       "fee": "Free",
       "whoCanApply": "Farmers and fisherfolk in Aklan"

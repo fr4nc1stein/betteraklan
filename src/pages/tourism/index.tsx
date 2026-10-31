@@ -176,8 +176,7 @@ export default function TourismIndex() {
 
       {/* --- SOURCE NOTE --- */}
       <p className='text-kapwa-text-disabled text-center text-xs italic'>
-        Attraction, festival, and product details are adapted from the
-        official{' '}
+        Attraction, festival, and product details are adapted from the official{' '}
         <a
           href='https://aklan.gov.ph/tourism/'
           target='_blank'

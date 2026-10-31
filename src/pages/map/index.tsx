@@ -21,7 +21,10 @@ import { PageHero } from '@/components/layout/PageLayouts';
 import { Card } from '@/components/ui/Card';
 
 import { getMunicipalityColor } from '@/lib/municipalityColors';
-import { fetchAllMunicipalitiesWeather, MunicipalityWeather } from '@/lib/weather';
+import {
+  fetchAllMunicipalitiesWeather,
+  MunicipalityWeather,
+} from '@/lib/weather';
 
 import municipalityCentroids from '@/data/geo/municipality-centroids.json';
 import municipalitiesBoundaries from '@/data/geo/municipalities-boundaries.json';
@@ -190,8 +193,7 @@ export default function MapPage() {
 
         {viewMode === 'weather' && weatherFetchedAt && (
           <span className='text-kapwa-text-muted text-xs'>
-            Updated{' '}
-            {formatDistanceToNow(weatherFetchedAt, { addSuffix: true })}
+            Updated {formatDistanceToNow(weatherFetchedAt, { addSuffix: true })}
           </span>
         )}
       </div>

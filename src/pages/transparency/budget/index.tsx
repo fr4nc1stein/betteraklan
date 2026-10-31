@@ -93,10 +93,7 @@ const BudgetPage: FC = () => {
           {
             name: 'External Sources',
             value: current.income.totalExternalSources,
-            percent: calcPct(
-              current.income.totalExternalSources,
-              incomeTotal
-            ),
+            percent: calcPct(current.income.totalExternalSources, incomeTotal),
             details: [
               {
                 name: 'National Tax Allotment',
@@ -262,8 +259,7 @@ const BudgetPage: FC = () => {
             icon={Info}
             label='National Tax Allotment'
             value={
-              formatPesoAdaptive(current.income.nationalTaxAllotment)
-                .fullString
+              formatPesoAdaptive(current.income.nationalTaxAllotment).fullString
             }
             subtext='Share from national government'
             iconBg='bg-kapwa-bg-surface-raised text-kapwa-text-strong'

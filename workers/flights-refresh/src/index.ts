@@ -37,7 +37,9 @@ export default {
       refresh(env).then(data => {
         console.log(
           '[flights-refresh] updated',
-          data.airports.map(a => `${a.slug}:${a.flights.length} flights`).join(', ')
+          data.airports
+            .map(a => `${a.slug}:${a.flights.length} flights`)
+            .join(', ')
         );
       })
     );

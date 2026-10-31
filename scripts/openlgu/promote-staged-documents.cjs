@@ -111,10 +111,7 @@ function main() {
   ];
 
   const values = rows
-    .map(
-      row =>
-        `(${columns.map(col => escapeSql(row[col])).join(', ')})`
-    )
+    .map(row => `(${columns.map(col => escapeSql(row[col])).join(', ')})`)
     .join(',\n  ');
 
   // INSERT OR IGNORE: never overwrites a canonical document that already
@@ -139,7 +136,9 @@ function main() {
 
   console.log(`Done: ${rows.length} document(s) promoted.`);
   if (skipped) {
-    console.log(`  (${skipped} staged document(s) need review and were skipped)`);
+    console.log(
+      `  (${skipped} staged document(s) need review and were skipped)`
+    );
   }
 }
 

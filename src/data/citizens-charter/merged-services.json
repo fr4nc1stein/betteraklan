@@ -150,9 +150,7 @@
       "Receive wound management and first dose of anti-rabies vaccine (free).",
       "Follow up on subsequent doses as scheduled."
     ],
-    "requirements": [
-      "Valid ID or Barangay Certificate (proof of residency)"
-    ],
+    "requirements": ["Valid ID or Barangay Certificate (proof of residency)"],
     "quickInfo": {
       "fee": "Free (first dose)",
       "processingTime": "Immediate",
@@ -358,9 +356,7 @@
     "slug": "apply-municipal-business-permit",
     "type": "transaction",
     "description": "How to obtain a business permit from any of the 17 municipal governments in Aklan. Required for all businesses operating within the Province of Aklan.",
-    "officeSlug": [
-      "economic-enterprise-development-department"
-    ],
+    "officeSlug": ["economic-enterprise-development-department"],
     "category": {
       "name": "Business, Trade & Investment",
       "slug": "business-trade-investment"
@@ -511,10 +507,7 @@
           {
             "letter": "A",
             "action": "Submit DTI, sketch and picture of location of business, and duly accomplished application form",
-            "details": [
-              "Lessor - if renting",
-              "Business Owner"
-            ]
+            "details": ["Lessor - if renting", "Business Owner"]
           },
           {
             "letter": "B",
@@ -534,9 +527,7 @@
           {
             "letter": "A",
             "action": "On the dashboard, click NEW to apply for new business",
-            "details": [
-              "Upload all documents needed"
-            ]
+            "details": ["Upload all documents needed"]
           }
         ]
       },
@@ -1058,9 +1049,7 @@
     "slug": "solo-parents-cash-subsidy",
     "type": "transaction",
     "description": "Financial assistance provided semi-annually to qualified solo parents in the province.",
-    "officeSlug": [
-      "provincial-social-welfare-and-development-office"
-    ],
+    "officeSlug": ["provincial-social-welfare-and-development-office"],
     "category": {
       "name": "Social Services",
       "slug": "social-services"
@@ -1584,9 +1573,7 @@
     "type": "transaction",
     "description": "Provision of cash incentives for elderly residents reaching milestone ages of 80, 85, 90, and 95, facilitated by the National Commission of Senior Citizens (NCSC).",
     "url": "",
-    "officeSlug": [
-      "provincial-treasurers-office"
-    ],
+    "officeSlug": ["provincial-treasurers-office"],
     "category": {
       "name": "Social Services",
       "slug": "social-services"
@@ -1639,9 +1626,7 @@
     "slug": "farming-fishing-training",
     "type": "information",
     "description": "Training programs for modern farming and fishing techniques offered through the Office of the Provincial Agriculturist and the Aklan Agri-Aqua Demonstration Farms and Training Center.",
-    "officeSlug": [
-      "office-of-the-provincial-agriculturist"
-    ],
+    "officeSlug": ["office-of-the-provincial-agriculturist"],
     "category": {
       "name": "Agriculture & Economic Development",
       "slug": "agriculture-economic-development"
@@ -1652,10 +1637,7 @@
       "Attend training sessions at the Aklan Agri-Aqua Demonstration Farms and Training Center or designated venue.",
       "Receive training certificates upon completion."
     ],
-    "requirements": [
-      "Barangay Certificate of Residency",
-      "Valid ID"
-    ],
+    "requirements": ["Barangay Certificate of Residency", "Valid ID"],
     "quickInfo": {
       "fee": "Free",
       "whoCanApply": "Farmers and fisherfolk in Aklan"
@@ -1674,9 +1656,7 @@
     "slug": "fire-safety-inspection-certificate",
     "type": "transaction",
     "description": "Required for occupancy and business permits to ensure the structure meets fire safety standards.",
-    "officeSlug": [
-      "bureau-fire-protection"
-    ],
+    "officeSlug": ["bureau-fire-protection"],
     "category": {
       "name": "Public Safety",
       "slug": "public-safety"
@@ -1704,9 +1684,7 @@
     "slug": "free-checkups-medicines-vaccines",
     "type": "information",
     "description": "Access free medical check-ups, basic medicines, and vaccination services through Rural Health Units (RHUs) and barangay health centers across all 17 municipalities.",
-    "officeSlug": [
-      "provincial-health-office"
-    ],
+    "officeSlug": ["provincial-health-office"],
     "category": {
       "name": "Health & Wellness",
       "slug": "health-wellness"
@@ -1743,9 +1721,7 @@
     "slug": "free-agricultural-inputs",
     "type": "transaction",
     "description": "The Office of the Provincial Agriculturist provides free agricultural inputs to qualified farmers and fisherfolk in Aklan, including seeds, seedlings, fertilizers, and fingerlings.",
-    "officeSlug": [
-      "office-of-the-provincial-agriculturist"
-    ],
+    "officeSlug": ["office-of-the-provincial-agriculturist"],
     "category": {
       "name": "Agriculture & Economic Development",
       "slug": "agriculture-economic-development"
@@ -1782,9 +1758,7 @@
     "slug": "garbage-collection-schedule",
     "type": "information",
     "description": "Weekly schedule for waste collection per barangay. Please segregate biodegradable and non-biodegradable waste.",
-    "officeSlug": [
-      "municipal-environment-and-natural-resources-office"
-    ],
+    "officeSlug": ["municipal-environment-and-natural-resources-office"],
     "category": {
       "name": "Environment & Waste",
       "slug": "environment-waste"
@@ -3591,9 +3565,7 @@
     "slug": "maternal-care-child-immunization",
     "type": "information",
     "description": "Free prenatal care, family planning services, and routine child immunization under the Expanded Program on Immunization (EPI) at RHUs and barangay health centers.",
-    "officeSlug": [
-      "provincial-health-office"
-    ],
+    "officeSlug": ["provincial-health-office"],
     "category": {
       "name": "Health & Wellness",
       "slug": "health-wellness"
@@ -3684,9 +3656,7 @@
     "slug": "medical-assistance-aics",
     "type": "transaction",
     "description": "Assistance to Individuals in Crisis Situations for medical needs.",
-    "officeSlug": [
-      "provincial-social-welfare-and-development-office"
-    ],
+    "officeSlug": ["provincial-social-welfare-and-development-office"],
     "category": {
       "name": "Social Services",
       "slug": "social-services"
@@ -3998,9 +3968,7 @@
     "slug": "provincial-hospital-locations",
     "type": "information",
     "description": "Locations and contact numbers for provincial and district hospitals providing medical care across all 17 municipalities of Aklan.",
-    "officeSlug": [
-      "provincial-health-office"
-    ],
+    "officeSlug": ["provincial-health-office"],
     "category": {
       "name": "Health & Wellness",
       "slug": "health-wellness"
@@ -4030,9 +3998,7 @@
     "slug": "provincial-scholarship-programs",
     "type": "transaction",
     "description": "Scholarship and educational assistance programs available to Aklan residents, administered through the Provincial Social Welfare and Development Office (PSWDO) and partner agencies.",
-    "officeSlug": [
-      "provincial-social-welfare-and-development-office"
-    ],
+    "officeSlug": ["provincial-social-welfare-and-development-office"],
     "category": {
       "name": "Education & Scholarship",
       "slug": "education-scholarship"
@@ -4116,9 +4082,7 @@
     "slug": "provincial-schools-directory",
     "type": "information",
     "description": "A comprehensive list of public universities in the Province of Aklan. Aklan State University (ASU) operates five campuses across the province.",
-    "officeSlug": [
-      "provincial-social-welfare-and-development-office"
-    ],
+    "officeSlug": ["provincial-social-welfare-and-development-office"],
     "category": {
       "name": "Education & Scholarship",
       "slug": "education-scholarship"
@@ -4626,9 +4590,7 @@
     "slug": "rent-stalls-provincial-markets",
     "type": "transaction",
     "description": "How to rent market stalls in public markets and economic enterprise facilities managed by the Provincial Government of Aklan, including the Lee Jetty Port and Passenger Terminal.",
-    "officeSlug": [
-      "economic-enterprise-development-department"
-    ],
+    "officeSlug": ["economic-enterprise-development-department"],
     "category": {
       "name": "Business, Trade & Investment",
       "slug": "business-trade-investment"
@@ -4955,9 +4917,7 @@
     "slug": "spes-student-employment",
     "type": "transaction",
     "description": "DOLE's SPES program allows poor but deserving students and out-of-school youth (15–30 years old) to work during school breaks. Coordinated locally by PESO Aklan.",
-    "officeSlug": [
-      "office-of-the-provincial-public-employment-service"
-    ],
+    "officeSlug": ["office-of-the-provincial-public-employment-service"],
     "category": {
       "name": "Education & Scholarship",
       "slug": "education-scholarship"
@@ -5036,9 +4996,7 @@
     "slug": "tb-dots-program",
     "type": "transaction",
     "description": "Free tuberculosis screening, diagnosis, and full course of anti-TB medicines under the National Tuberculosis Program (NTP) DOTS approach at RHUs across all 17 municipalities.",
-    "officeSlug": [
-      "provincial-health-office"
-    ],
+    "officeSlug": ["provincial-health-office"],
     "category": {
       "name": "Health & Wellness",
       "slug": "health-wellness"
@@ -5049,10 +5007,7 @@
       "Receive free anti-TB medicines and attend regular follow-up visits.",
       "Complete the full course of treatment as prescribed."
     ],
-    "requirements": [
-      "Valid ID",
-      "Health record/ITR (if existing)"
-    ],
+    "requirements": ["Valid ID", "Health record/ITR (if existing)"],
     "quickInfo": {
       "fee": "Free",
       "whoCanApply": "Anyone with TB symptoms",
@@ -5111,9 +5066,7 @@
     "slug": "veterinary-services-livestock",
     "type": "transaction",
     "description": "The Office of the Provincial Veterinarian provides free or subsidized veterinary care, vaccination, and deworming services for livestock and farm animals in Aklan.",
-    "officeSlug": [
-      "office-of-the-provincial-veterinarian"
-    ],
+    "officeSlug": ["office-of-the-provincial-veterinarian"],
     "category": {
       "name": "Agriculture & Economic Development",
       "slug": "agriculture-economic-development"

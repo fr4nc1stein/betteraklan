@@ -28,9 +28,7 @@
     "trunkline": ["(036) 267-5823"],
     "website": null,
     "email": "lguofbanga@gmail.com",
-    "officials": [
-      { "role": "Municipal Mayor", "name": "HON. NOEL L. REDISON" }
-    ]
+    "officials": [{ "role": "Municipal Mayor", "name": "HON. NOEL L. REDISON" }]
   },
   {
     "slug": "municipality-of-batan",
@@ -72,9 +70,7 @@
     "trunkline": ["(036) 262-3241"],
     "website": null,
     "email": "ommlgukalibo@gmail.com",
-    "officials": [
-      { "role": "Municipal Mayor", "name": "HON. JURIS B. SUCRO" }
-    ]
+    "officials": [{ "role": "Municipal Mayor", "name": "HON. JURIS B. SUCRO" }]
   },
   {
     "slug": "municipality-of-lezo",
@@ -105,9 +101,7 @@
     "trunkline": ["(036) 272-3601"],
     "website": null,
     "email": "madalaglgu@gmail.com",
-    "officials": [
-      { "role": "Municipal Mayor", "name": "HON. REX T. GUBATINA" }
-    ]
+    "officials": [{ "role": "Municipal Mayor", "name": "HON. REX T. GUBATINA" }]
   },
   {
     "slug": "municipality-of-makato",
@@ -182,8 +176,6 @@
     "trunkline": ["(036) 265-2004"],
     "website": null,
     "email": "tangalanlgu@gmail.com",
-    "officials": [
-      { "role": "Municipal Mayor", "name": "HON. GENE T. FUENTES" }
-    ]
+    "officials": [{ "role": "Municipal Mayor", "name": "HON. GENE T. FUENTES" }]
   }
 ]
