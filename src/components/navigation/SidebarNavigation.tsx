@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import { Link, useLocation } from 'react-router-dom';
 
-import { LucideIcon } from 'lucide-react';
+import { ExternalLink as ExternalLinkIcon, LucideIcon } from 'lucide-react';
 
 // 1. The Outer Wrapper
 export function SidebarContainer({
@@ -103,6 +103,25 @@ export function SidebarItem({
 
   // Use tooltip if provided, otherwise fallback to label
   const hoverTitle = tooltip || label;
+
+  // An absolute URL leaves the app, so it needs a plain anchor: react-router's
+  // Link would treat it as a route and drop target/rel.
+  if (path?.startsWith('http')) {
+    return (
+      <li>
+        <a
+          href={path}
+          target='_blank'
+          rel='noreferrer'
+          title={hoverTitle}
+          className={baseStyles}
+        >
+          {content}
+          <ExternalLinkIcon className='text-kapwa-text-disabled mt-1 ml-auto h-3 w-3 shrink-0' />
+        </a>
+      </li>
+    );
+  }
 
   if (path) {
     return (

@@ -83,8 +83,11 @@ export const mainNavigation: NavigationItem[] = [
         href: '/transparency/procurement',
       },
       {
+        // The FY2027 budget transparency portal: a separate deployment of
+        // bettergovph/transparency-portal, scoped to Aklan's two districts.
         label: 'DPWH Projects',
-        href: '/transparency/infrastructure',
+        href: 'https://transparency.betteraklan.org',
+        target: '_blank',
       },
     ],
     ...(config.features.transparency ? {} : { hidden: true }),

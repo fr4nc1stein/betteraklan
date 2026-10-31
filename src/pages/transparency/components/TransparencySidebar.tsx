@@ -17,8 +17,9 @@ const sections = [
     icon: Hammer,
   },
   {
+    // The FY2027 budget transparency portal, deployed separately.
     name: 'DPWH Projects',
-    slug: 'infrastructure',
+    slug: 'https://transparency.betteraklan.org',
     icon: Truck,
   },
 ];

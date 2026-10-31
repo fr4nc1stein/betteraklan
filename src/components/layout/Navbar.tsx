@@ -2,7 +2,13 @@ import { FC, useState } from 'react';
 
 import { Link, useLocation } from 'react-router-dom';
 
-import { ChevronDownIcon, MenuIcon, SearchIcon, XIcon } from 'lucide-react';
+import {
+  ChevronDownIcon,
+  ExternalLink,
+  MenuIcon,
+  SearchIcon,
+  XIcon,
+} from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@bettergov/kapwa/button';
@@ -162,16 +168,30 @@ export const Navbar: FC = () => {
                     {/* Desktop Dropdown Menu */}
                     {hasChildren && hoveredDropdown === item.label && (
                       <div className='absolute left-0 top-full py-2 w-64 rounded-b-xl border shadow-xl duration-200 animate-in fade-in slide-in-from-top-2 border-kapwa-border-weak bg-kapwa-bg-surface'>
-                        {item.children?.map(child => (
-                          <Link
-                            key={child.label}
-                            to={child.href}
-                            className='block px-5 py-3 text-xs font-bold tracking-wider uppercase transition-colors hover:bg-kapwa-bg-surface-raised hover:text-kapwa-text-link-hover text-kapwa-text-strong'
-                            onClick={closeMenu}
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
+                        {item.children?.map(child =>
+                          child.href.startsWith('http') ? (
+                            <a
+                              key={child.label}
+                              href={child.href}
+                              target={child.target ?? '_blank'}
+                              rel='noreferrer'
+                              className='flex gap-1 items-center px-5 py-3 text-xs font-bold tracking-wider uppercase transition-colors hover:bg-kapwa-bg-surface-raised hover:text-kapwa-text-link-hover text-kapwa-text-strong'
+                              onClick={closeMenu}
+                            >
+                              {child.label}
+                              <ExternalLink className='w-3 h-3 shrink-0' />
+                            </a>
+                          ) : (
+                            <Link
+                              key={child.label}
+                              to={child.href}
+                              className='block px-5 py-3 text-xs font-bold tracking-wider uppercase transition-colors hover:bg-kapwa-bg-surface-raised hover:text-kapwa-text-link-hover text-kapwa-text-strong'
+                              onClick={closeMenu}
+                            >
+                              {child.label}
+                            </Link>
+                          )
+                        )}
                       </div>
                     )}
                   </div>
@@ -263,16 +283,30 @@ export const Navbar: FC = () => {
                     {/* Mobile Submenu Items */}
                     {hasChildren && isSubOpen && (
                       <div className='overflow-hidden mx-2 mb-2 rounded-2xl animate-in slide-in-from-top-2 bg-kapwa-bg-surface-raised'>
-                        {item.children?.map(child => (
-                          <Link
-                            key={child.label}
-                            to={child.href}
-                            onClick={closeMenu}
-                            className='block p-4 text-sm font-bold border-b border-kapwa-bg-surface text-kapwa-text-strong last:border-0'
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
+                        {item.children?.map(child =>
+                          child.href.startsWith('http') ? (
+                            <a
+                              key={child.label}
+                              href={child.href}
+                              target={child.target ?? '_blank'}
+                              rel='noreferrer'
+                              onClick={closeMenu}
+                              className='flex gap-1 items-center p-4 text-sm font-bold border-b border-kapwa-bg-surface text-kapwa-text-strong last:border-0'
+                            >
+                              {child.label}
+                              <ExternalLink className='w-3 h-3 shrink-0' />
+                            </a>
+                          ) : (
+                            <Link
+                              key={child.label}
+                              to={child.href}
+                              onClick={closeMenu}
+                              className='block p-4 text-sm font-bold border-b border-kapwa-bg-surface text-kapwa-text-strong last:border-0'
+                            >
+                              {child.label}
+                            </Link>
+                          )
+                        )}
                       </div>
                     )}
                   </div>
