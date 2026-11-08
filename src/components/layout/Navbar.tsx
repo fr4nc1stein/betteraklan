@@ -119,7 +119,7 @@ export const Navbar: FC = () => {
               className='object-contain mr-3 w-12 h-12 transition-transform shrink-0 group-hover:scale-105 md:h-14 md:w-14'
             />
             <div className='flex flex-col justify-center min-w-0'>
-              <div className='text-lg font-black tracking-tighter leading-none text-kapwa-text-strong md:text-xl'>
+              <div className='truncate text-lg font-black tracking-tighter leading-none text-kapwa-text-strong md:text-xl'>
                 {config.portal.name}
               </div>
               <div className='line-clamp-2 text-[9px] leading-tight font-medium text-kapwa-text-support md:line-clamp-1 md:text-xs md:leading-normal'>
@@ -129,12 +129,37 @@ export const Navbar: FC = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className='hidden items-center space-x-1 lg:flex xl:space-x-4'>
+          <div className='hidden items-center space-x-0.5 lg:flex xl:space-x-1'>
             {mainNavigation
               .filter(item => !item.hidden)
               .map(item => {
                 const active = isActiveRoute(item.href);
                 const hasChildren = item.children && item.children.length > 0;
+                // '#' marks a menu-only parent: it has no page of its own, so
+                // it toggles its dropdown instead of navigating.
+                const isMenuOnly = item.href === '#';
+                const triggerClass = cn(
+                  // Between lg and xl the container is too narrow for the
+                  // full-size labels, so the type steps down rather than
+                  // crushing the brand beside it.
+                  'flex gap-1 items-center px-2 py-2 text-xs font-bold tracking-wide uppercase border-b-2 transition-all xl:text-sm xl:tracking-widest',
+                  active
+                    ? 'text-kapwa-text-brand border-kapwa-border-brand'
+                    : 'border-transparent hover:text-kapwa-text-brand text-kapwa-text-strong'
+                );
+                const triggerContent = (
+                  <>
+                    {t(`navbar.${item.label.toLowerCase()}`)}
+                    {hasChildren && (
+                      <ChevronDownIcon
+                        className={cn(
+                          'h-3 w-3 transition-transform',
+                          hoveredDropdown === item.label && 'rotate-180'
+                        )}
+                      />
+                    )}
+                  </>
+                );
 
                 return (
                   <div
@@ -145,25 +170,25 @@ export const Navbar: FC = () => {
                     }
                     onMouseLeave={() => setHoveredDropdown(null)}
                   >
-                    <Link
-                      to={item.href}
-                      className={cn(
-                        'flex gap-1 items-center px-3 py-2 text-sm font-bold tracking-widest uppercase border-b-2 transition-all',
-                        active
-                          ? 'text-kapwa-text-brand border-kapwa-border-brand'
-                          : 'border-transparent hover:text-kapwa-text-brand text-kapwa-text-strong'
-                      )}
-                    >
-                      {t(`navbar.${item.label.toLowerCase()}`)}
-                      {hasChildren && (
-                        <ChevronDownIcon
-                          className={cn(
-                            'h-3 w-3 transition-transform',
-                            hoveredDropdown === item.label && 'rotate-180'
-                          )}
-                        />
-                      )}
-                    </Link>
+                    {isMenuOnly ? (
+                      <button
+                        type='button'
+                        aria-haspopup='true'
+                        aria-expanded={hoveredDropdown === item.label}
+                        onClick={() =>
+                          setHoveredDropdown(
+                            hoveredDropdown === item.label ? null : item.label
+                          )
+                        }
+                        className={triggerClass}
+                      >
+                        {triggerContent}
+                      </button>
+                    ) : (
+                      <Link to={item.href} className={triggerClass}>
+                        {triggerContent}
+                      </Link>
+                    )}
 
                     {/* Desktop Dropdown Menu */}
                     {hasChildren && hoveredDropdown === item.label && (
@@ -199,7 +224,7 @@ export const Navbar: FC = () => {
               })}
             <Link
               to='/search'
-              className='p-3 ml-4 transition-colors hover:text-kapwa-text-brand text-kapwa-text-strong'
+              className='p-2 ml-2 transition-colors hover:text-kapwa-text-brand text-kapwa-text-strong'
               aria-label='Search'
             >
               <SearchIcon className='w-5 h-5' />
@@ -240,6 +265,7 @@ export const Navbar: FC = () => {
               .map(item => {
                 const hasChildren = item.children && item.children.length > 0;
                 const isSubOpen = activeMobileSubmenu === item.label;
+                const isMenuOnly = item.href === '#';
 
                 return (
                   <div
@@ -247,18 +273,33 @@ export const Navbar: FC = () => {
                     className='border-b border-kapwa-border-weak last:border-0'
                   >
                     <div className='flex items-center'>
-                      <Link
-                        to={item.href}
-                        onClick={closeMenu}
-                        className={cn(
-                          'flex-1 p-4 text-lg font-bold transition-colors',
-                          isActiveRoute(item.href)
-                            ? 'text-kapwa-text-brand'
-                            : 'text-kapwa-text-strong'
-                        )}
-                      >
-                        {t(`navbar.${item.label.toLowerCase()}`)}
-                      </Link>
+                      {isMenuOnly ? (
+                        <button
+                          type='button'
+                          aria-expanded={isSubOpen}
+                          onClick={() =>
+                            setActiveMobileSubmenu(
+                              isSubOpen ? null : item.label
+                            )
+                          }
+                          className='flex-1 p-4 text-left text-lg font-bold text-kapwa-text-strong transition-colors'
+                        >
+                          {t(`navbar.${item.label.toLowerCase()}`)}
+                        </button>
+                      ) : (
+                        <Link
+                          to={item.href}
+                          onClick={closeMenu}
+                          className={cn(
+                            'flex-1 p-4 text-lg font-bold transition-colors',
+                            isActiveRoute(item.href)
+                              ? 'text-kapwa-text-brand'
+                              : 'text-kapwa-text-strong'
+                          )}
+                        >
+                          {t(`navbar.${item.label.toLowerCase()}`)}
+                        </Link>
+                      )}
                       {hasChildren && (
                         <Button
                           onClick={e => {

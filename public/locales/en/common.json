@@ -39,7 +39,8 @@
     "tourism": "Tourism",
     "map": "Map",
     "airports": "Airports",
-    "chat": "Chat"
+    "chat": "Chat",
+    "projects": "Projects"
   },
   "joinUs": {
     "stripTitle": "🚀 Join the #CivicTech Revolution",
@@ -88,7 +89,7 @@
     "barangaysTitle": "Municipalities",
     "barangaysDescription": "The 17 component municipalities of the Province of Aklan, each led by elected local officials managing community services and programs.",
     "departmentsTitle": "Provincial Departments",
-    "departmentsDescription" : "Provincial departments and agencies responsible for specific areas of governance.",
+    "departmentsDescription": "Provincial departments and agencies responsible for specific areas of governance.",
     "electedofficialsTitle": "Elected Officials",
     "electedofficialsDescription": "The elected leadership of the Executive and Legislative branches, responsible for policy implementation and law-making.",
     "learnMore": "Learn More",

@@ -92,6 +92,25 @@ export const mainNavigation: NavigationItem[] = [
     ],
     ...(config.features.transparency ? {} : { hidden: true }),
   },
+  {
+    // Sibling deployments of the Better Aklan project. These live on their own
+    // subdomains, so the parent is a dropdown trigger only ('#') with no page
+    // of its own.
+    label: 'Projects',
+    href: '#',
+    children: [
+      {
+        label: 'Dynasties Map',
+        href: 'https://dynasties.betteraklan.org/',
+        target: '_blank',
+      },
+      {
+        label: 'Transparency Portal',
+        href: 'https://transparency.betteraklan.org/',
+        target: '_blank',
+      },
+    ],
+  },
 ].filter(item => !(item as NavigationItem & { hidden?: boolean }).hidden);
 
 export const footerNavigation = {
