@@ -121,6 +121,7 @@
     "react-dom": "$react-dom",
     "esbuild": "0.25.0",
     "undici": "8.0.2",
-    "lucide-react": "^0.575.0"
+    "lucide-react": "^0.575.0",
+    "minimatch": "^11.0.5"
   }
 }
