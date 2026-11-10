@@ -8,7 +8,7 @@ import {
 
 import { lazy, Suspense } from 'react';
 
-import { NuqsAdapter } from 'nuqs/adapters/react-router/v6';
+import { NuqsAdapter } from 'nuqs/adapters/react-router/v7';
 
 import { config } from '@/lib/lguConfig';
 import { Footer } from '@/components/layout/Footer';

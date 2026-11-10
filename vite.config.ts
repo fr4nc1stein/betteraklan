@@ -11,11 +11,13 @@ export default defineConfig({
       output: {
         manualChunks: {
           // React core — loaded on every page
+          // react-router v7 absorbed the old @remix-run/router internals,
+          // so the shared routing core is now plain 'react-router'.
           'vendor-react': [
             'react',
             'react-dom',
             'react-router-dom',
-            '@remix-run/router',
+            'react-router',
           ],
           // Maps — only needed on map pages
           'vendor-leaflet': ['leaflet', 'react-leaflet'],

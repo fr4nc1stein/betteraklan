@@ -95,41 +95,37 @@ function toApiTimestamp(date: Date): string {
 function normalizeFlights(
   data: AeroDataBoxScheduleResponse
 ): NormalizedFlight[] {
-  const departures = (data.departures ?? []).map(
-    (f): NormalizedFlight => ({
-      direction: 'departure',
-      flightNumber: f.number ?? 'Unknown',
-      airline: f.airline?.name ?? 'Unknown',
-      status: f.status ?? 'Unknown',
-      scheduledLocal: f.departure?.scheduledTime?.local ?? null,
-      revisedLocal: f.departure?.revisedTime?.local ?? null,
-      terminal: f.departure?.terminal ?? null,
-      otherAirport: f.arrival?.airport
-        ? {
-            iata: f.arrival.airport.iata ?? '',
-            name: f.arrival.airport.name ?? '',
-          }
-        : null,
-    })
-  );
+  const departures = (data.departures ?? []).map((f): NormalizedFlight => ({
+    direction: 'departure',
+    flightNumber: f.number ?? 'Unknown',
+    airline: f.airline?.name ?? 'Unknown',
+    status: f.status ?? 'Unknown',
+    scheduledLocal: f.departure?.scheduledTime?.local ?? null,
+    revisedLocal: f.departure?.revisedTime?.local ?? null,
+    terminal: f.departure?.terminal ?? null,
+    otherAirport: f.arrival?.airport
+      ? {
+          iata: f.arrival.airport.iata ?? '',
+          name: f.arrival.airport.name ?? '',
+        }
+      : null,
+  }));
 
-  const arrivals = (data.arrivals ?? []).map(
-    (f): NormalizedFlight => ({
-      direction: 'arrival',
-      flightNumber: f.number ?? 'Unknown',
-      airline: f.airline?.name ?? 'Unknown',
-      status: f.status ?? 'Unknown',
-      scheduledLocal: f.arrival?.scheduledTime?.local ?? null,
-      revisedLocal: f.arrival?.revisedTime?.local ?? null,
-      terminal: f.arrival?.terminal ?? null,
-      otherAirport: f.departure?.airport
-        ? {
-            iata: f.departure.airport.iata ?? '',
-            name: f.departure.airport.name ?? '',
-          }
-        : null,
-    })
-  );
+  const arrivals = (data.arrivals ?? []).map((f): NormalizedFlight => ({
+    direction: 'arrival',
+    flightNumber: f.number ?? 'Unknown',
+    airline: f.airline?.name ?? 'Unknown',
+    status: f.status ?? 'Unknown',
+    scheduledLocal: f.arrival?.scheduledTime?.local ?? null,
+    revisedLocal: f.arrival?.revisedTime?.local ?? null,
+    terminal: f.arrival?.terminal ?? null,
+    otherAirport: f.departure?.airport
+      ? {
+          iata: f.departure.airport.iata ?? '',
+          name: f.departure.airport.name ?? '',
+        }
+      : null,
+  }));
 
   // AeroDataBox (with withCodeshared=true) can return the same physical
   // flight twice under identical numbers — dedupe on direction + number +
