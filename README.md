@@ -60,11 +60,13 @@ BetterAklan is designed to be easily adapted for any Local Government Unit (LGU)
 **Note:** See [`FORKING.md`](./FORKING.md) for comprehensive forking instructions including database setup for legislative data.
 
 ## Technical Stack
+*   **Runtime**: Node.js 22 (see [`.nvmrc`](./.nvmrc) — required, not optional)
 *   **Frontend**: React 19, Vite, TypeScript (Strict mode)
+*   **Routing**: React Router 7
 *   **Styling**: Tailwind CSS v4 (CSS variables, high-contrast tokens)
 *   **Design System**: @bettergov/kapwa (semantic tokens, component library)
 *   **Backend**: Cloudflare Pages Functions (TypeScript)
-*   **Deployment**: Wrangler 4.70.0 (pinned for compatibility)
+*   **Deployment**: Wrangler 4.159.0 (pinned; requires Node 22)
 *   **Data**: Structured JSON (Modular category-based architecture)
 *   **Search**: Meilisearch with Fuse.js fuzzy search
 *   **Localization**: i18next with English & Filipino support
@@ -72,7 +74,8 @@ BetterAklan is designed to be easily adapted for any Local Government Unit (LGU)
 *   **Data Pipeline**: Python scripts for legislative document processing
 *   **Testing**: Playwright (E2E tests across multiple browsers)
 *   **Code Quality**: ESLint, Prettier, Husky pre-commit hooks
-*   **Security**: Undici 8.0.2 (pinned for security fixes)
+*   **Security**: `npm audit` clean. Undici is pinned via `overrides` to
+    `^8.12.4` — a *floor*, not a freeze, so patches keep flowing
 
 ---
 
@@ -189,6 +192,19 @@ See [`pipeline/README.md`](./pipeline/README.md) for complete documentation.
 
 ## 🚀 How to Run Locally
 
+### 0. Prerequisites
+
+**Node.js 22 is required.** The toolchain will not run on Node 20: `undici`
+declares `engines.node >=22.19.0` and calls `zlib.createZstdDecompress`, which
+does not exist before Node 22.15, and Wrangler 4.159 requires Node >= 22.12.
+
+```bash
+nvm use          # reads .nvmrc (22.21.0)
+node -v          # expect v22.x
+```
+
+Python 3 is also needed for the data-merge scripts used by the build.
+
 ### 1. Clone and Install
 ```bash
 git clone https://github.com/BetterAklan/betteraklan
@@ -277,7 +293,7 @@ BetterAklan is deployed on **Cloudflare Pages** with:
 - **Database**: Cloudflare D1 (`betteraklan_openlgu`) for legislative data
 - **Search**: Meilisearch instance for fuzzy search
 - **KV Storage**: Weather data caching with automatic updates
-- **Wrangler**: Version 4.70.0 (pinned for compatibility)
+- **Wrangler**: Version 4.159.0 (pinned; the deploy job runs on Node 22)
 
 ### Deployment for Other LGUs
 
@@ -289,7 +305,17 @@ When deploying for your own LGU:
 4. **Database Migration**: Run database migrations on remote D1 instance
 5. **Meilisearch**: Deploy your own Meilisearch instance or use alternative search
 
-**Note:** The deployment workflow uses Wrangler 4.70.0 (pinned in both `.github/workflows/deploy.yml` and `package.json`). If upgrading, ensure compatibility with the Wrangler Action and test thoroughly.
+**Note:** The deployment workflow uses Wrangler 4.159.0, pinned in **two
+places that must move together** — `wranglerVersion` in
+`.github/workflows/deploy.yml` and `devDependencies.wrangler` in
+`package.json`. Wrangler also requires an exact `esbuild` (4.159.0 wants
+0.28.2), so do not add an `esbuild` override: it silently breaks the Worker
+build with `"import-source" is not a valid feature name`, which neither
+`npm audit` nor the Vite build will catch. Verify with:
+
+```bash
+cd workers/flights-refresh && npx wrangler deploy --dry-run
+```
 
 See [`ARCHITECTURE.md`](./ARCHITECTURE.md#deployment) for detailed deployment strategies.
 
