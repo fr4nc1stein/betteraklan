@@ -1,4 +1,4 @@
-import { config } from '../lib/lguConfig';
+import { config, isAklanProvince } from '../lib/lguConfig';
 import { lguLabels } from '../lib/lguLabels';
 import { NavigationItem } from '../types';
 import serviceCategories from './service_categories.json';
@@ -82,6 +82,14 @@ export const mainNavigation: NavigationItem[] = [
         label: 'Procurement',
         href: '/transparency/procurement',
       },
+      ...(isAklanProvince
+        ? [
+            {
+              label: 'School and Disaster Funds',
+              href: '/transparency/fund-tracker',
+            },
+          ]
+        : []),
       {
         // The FY2027 budget transparency portal: a separate deployment of
         // bettergovph/transparency-portal, scoped to Aklan's two districts.
