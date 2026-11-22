@@ -26,7 +26,7 @@ describe('School and Disaster Fund Tracker', () => {
 
     const summary = screen.getByRole('region', { name: 'Reported totals' });
     const trend = screen.getByRole('region', {
-      name: /reported spending through each quarter/i,
+      name: /reported spending by quarter/i,
     });
     expect(within(summary).getByText('₱85,621,172.88')).toBeDefined();
     expect(within(trend).getByText('Q1: ₱1,747,380.30')).toBeDefined();
@@ -83,7 +83,7 @@ describe('School and Disaster Fund Tracker', () => {
       for (const action of ['Official workbook', 'Download CSV']) {
         expect(
           screen.getByRole('link', {
-            name: `${action} for Local Disaster Risk Reduction and Management Fund, Quarter ${number}`,
+            name: `${action} for Local Disaster Risk Reduction and Management Fund, Quarter ${number}, 2025`,
           })
         ).toBeDefined();
       }
@@ -91,9 +91,45 @@ describe('School and Disaster Fund Tracker', () => {
     expect(screen.queryByRole('table', { name: /education fund/i })).toBeNull();
     expect(
       within(
-        screen.getByRole('region', { name: 'Latest reported totals' })
+        screen.getByRole('region', { name: 'Latest digitized totals' })
       ).getByText('₱66,708,894.10')
     ).toBeDefined();
+  });
+
+  it('navigates the full archive and distinguishes digitized, PDF, and missing quarters', () => {
+    render(<FundTracker />);
+    const year = screen.getByRole('combobox', { name: 'Year' });
+    const quarter = screen.getByRole('combobox', { name: 'Quarter' });
+    expect(within(year).getAllByRole('option')).toHaveLength(15);
+
+    fireEvent.change(year, { target: { value: '2026' } });
+    expect(
+      screen.getAllByRole('table', { name: /education fund.*2026/i })
+    ).toHaveLength(3);
+    expect(
+      screen.getByText('The province does not list a report for this quarter.')
+    ).toBeDefined();
+    expect(
+      screen
+        .getByRole('link', { name: /download csv.*quarter 3.*2026/i })
+        .getAttribute('download')
+    ).toBe('aklan-2026-sef-q3.csv');
+
+    fireEvent.change(screen.getByLabelText('Fund'), {
+      target: { value: 'drrmf' },
+    });
+    fireEvent.change(year, { target: { value: '2012' } });
+    expect(screen.queryByRole('table')).toBeNull();
+    expect(
+      screen.getByRole('link', { name: /official pdf.*quarter 4.*2012/i })
+    ).toBeDefined();
+
+    fireEvent.change(year, { target: { value: '2019' } });
+    fireEvent.change(quarter, { target: { value: '1' } });
+    expect(
+      screen.getByText(/20% Internal Revenue Allotment report/i)
+    ).toBeDefined();
+    expect(screen.queryByRole('table')).toBeNull();
   });
 
   it('exports the complete financial tables for every quarterly report', () => {

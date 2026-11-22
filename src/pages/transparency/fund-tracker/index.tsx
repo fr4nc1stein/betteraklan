@@ -3,35 +3,42 @@ import { useState } from 'react';
 import { Banknote, Landmark, ReceiptText, Wallet } from 'lucide-react';
 
 import { StatGrid } from '@/components/ui/StatCard';
-import fundReports from '@/data/transparency/fundReports2025.json';
 import { formatPeso } from '@/lib/format';
 
+import ArchiveReport from './ArchiveReport';
 import FundReportTable from './FundReportTable';
 import SpendingChart from './SpendingChart';
-import { type Fund, funds, reportedAmount } from './reports';
-
-const disclosureUrl =
-  'https://aklan.gov.ph/full-disclosures/2025-full-disclosure/';
+import {
+  archiveYears,
+  disclosureUrl,
+  type Fund,
+  funds,
+  quarters,
+  reportedAmount,
+  reportsFor,
+} from './reports';
 const selectClass =
   'border-kapwa-border-weak bg-kapwa-bg-surface w-full rounded-xl border px-3 py-2 text-sm';
 
 export default function FundTracker() {
   const [fund, setFund] = useState<Fund>('sef');
+  const [year, setYear] = useState(2025);
   const [quarter, setQuarter] = useState('4');
   const allQuarters = quarter === 'all';
-  const reports = fundReports
-    .filter(report => report.fund === fund)
-    .sort((a, b) => a.quarter - b.quarter);
-  const visibleReports = allQuarters
-    ? reports
-    : reports.filter(report => String(report.quarter) === quarter);
-  const latestVisibleReport = visibleReports.at(-1);
+  const reports = reportsFor(year, fund);
+  const visibleQuarters = allQuarters ? quarters : [Number(quarter)];
+  const latestVisibleReport = reports
+    .filter(report => visibleQuarters.includes(report.quarter))
+    .sort((a, b) => b.quarter - a.quarter)[0];
   const { receiptsLabel, spendingLabel, spendingRow, balanceLabel } =
     funds[fund];
-  const spendingHistory = reports.map(report => ({
-    quarter: `Q${report.quarter}`,
-    spending: reportedAmount(report, spendingRow),
-  }));
+  const spendingHistory = quarters.map(quarter => {
+    const report = reports.find(report => report.quarter === quarter);
+    return {
+      quarter: `Q${quarter}`,
+      spending: report ? reportedAmount(report, spendingRow) : null,
+    };
+  });
 
   return (
     <div className='text-kapwa-text-strong mx-auto max-w-7xl space-y-6 pb-12'>
@@ -45,18 +52,18 @@ export default function FundTracker() {
             School and Disaster Fund Tracker
           </h2>
           <p className='text-kapwa-text-support max-w-lg text-sm'>
-            See how the Province of Aklan used its school and disaster funds in
-            2025.
+            Browse Aklan’s published school and disaster fund reports from 2012
+            to 2026.
           </p>
           <a
             className='text-kapwa-text-brand text-sm underline'
-            href={disclosureUrl}
+            href={disclosureUrl(year)}
           >
-            Aklan Province 2025 Full Disclosure
+            Aklan Province {year} Full Disclosure
           </a>
         </div>
 
-        <div className='bg-kapwa-bg-surface-raised grid min-w-0 gap-3 rounded-2xl p-3 sm:grid-cols-[minmax(0,1fr)_auto]'>
+        <div className='bg-kapwa-bg-surface-raised grid min-w-0 gap-3 rounded-2xl p-3 sm:grid-cols-[minmax(12rem,1fr)_auto_auto] xl:shrink-0'>
           <label className='flex min-w-0 flex-col gap-1 text-sm font-medium'>
             Fund
             <select
@@ -71,6 +78,30 @@ export default function FundTracker() {
             </select>
           </label>
           <label className='flex min-w-0 flex-col gap-1 text-sm font-medium'>
+            Year
+            <select
+              className={selectClass}
+              value={year}
+              onChange={event => {
+                const nextYear = Number(event.target.value);
+                setYear(nextYear);
+                if (
+                  !reportsFor(nextYear, fund).some(
+                    report => String(report.quarter) === quarter
+                  )
+                ) {
+                  setQuarter('all');
+                }
+              }}
+            >
+              {archiveYears.map(year => (
+                <option key={year} value={year}>
+                  {year}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className='flex min-w-0 flex-col gap-1 text-sm font-medium'>
             Quarter
             <select
               className={selectClass}
@@ -78,7 +109,7 @@ export default function FundTracker() {
               onChange={event => setQuarter(event.target.value)}
             >
               <option value='all'>All quarters</option>
-              {reports.map(({ quarter }) => (
+              {quarters.map(quarter => (
                 <option key={quarter} value={quarter}>
                   Quarter {quarter}
                 </option>
@@ -91,12 +122,12 @@ export default function FundTracker() {
       {latestVisibleReport && (
         <section
           aria-label={
-            allQuarters ? 'Latest reported totals' : 'Reported totals'
+            allQuarters ? 'Latest digitized totals' : 'Reported totals'
           }
         >
           {allQuarters && (
             <h3 className='mb-3 text-lg font-semibold'>
-              Latest reported totals
+              Latest digitized totals
             </h3>
           )}
           <StatGrid
@@ -124,7 +155,7 @@ export default function FundTracker() {
                 iconBg,
                 label,
                 value: amount === null ? 'Unavailable' : formatPeso(amount),
-                subtext: `Through Q${latestVisibleReport.quarter} 2025`,
+                subtext: `Q${latestVisibleReport.quarter} ${year}`,
                 hover: false,
               };
             })}
@@ -132,22 +163,26 @@ export default function FundTracker() {
         </section>
       )}
 
-      <SpendingChart
-        data={spendingHistory}
-        selectedQuarter={allQuarters ? undefined : `Q${quarter}`}
-      />
-
-      {visibleReports.length ? (
-        visibleReports.map(report => (
-          <FundReportTable
-            key={`${fund}-${report.quarter}`}
-            fund={fund}
-            report={report}
-          />
-        ))
-      ) : (
-        <p role='status'>No report is available for this quarter.</p>
+      {spendingHistory.some(point => point.spending !== null) && (
+        <SpendingChart
+          data={spendingHistory}
+          selectedQuarter={allQuarters ? undefined : `Q${quarter}`}
+        />
       )}
+
+      {visibleQuarters.map(quarter => {
+        const report = reports.find(report => report.quarter === quarter);
+        return report ? (
+          <FundReportTable key={quarter} fund={fund} report={report} />
+        ) : (
+          <ArchiveReport
+            key={quarter}
+            fund={fund}
+            year={year}
+            quarter={quarter}
+          />
+        );
+      })}
     </div>
   );
 }

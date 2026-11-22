@@ -14,7 +14,7 @@ test('residents can reach the fund tracker and download a quarterly report', asy
     page.getByRole('table', { name: /education fund, quarter 4/i })
   ).toBeVisible();
   const chart = page.getByRole('region', {
-    name: 'Reported spending through each quarter',
+    name: 'Reported spending by quarter',
   });
   await expect(chart.locator('.recharts-line-curve')).toBeVisible();
   await page
@@ -36,4 +36,25 @@ test('residents can reach the fund tracker and download a quarterly report', asy
     page.getByRole('link', { name: /download csv.*quarter 2/i }).click(),
   ]);
   expect(download.suggestedFilename()).toBe('aklan-2025-drrmf-q2.csv');
+});
+
+test('residents can browse available reports across years', async ({
+  page,
+}) => {
+  await page.goto('/transparency/fund-tracker');
+  const year = page.getByRole('combobox', { name: 'Year', exact: true });
+  await year.selectOption('2026');
+  await expect(page.getByRole('table', { name: /2026/ })).toHaveCount(3);
+  await expect(
+    page.getByRole('article', { name: /quarter 4, 2026/i })
+  ).toContainText('The province does not list a report for this quarter.');
+
+  await page
+    .getByRole('combobox', { name: 'Fund', exact: true })
+    .selectOption('drrmf');
+  await year.selectOption('2012');
+  await expect(
+    page.getByRole('link', { name: /official pdf.*quarter 4.*2012/i })
+  ).toBeVisible();
+  await expect(page.getByRole('table')).toHaveCount(0);
 });

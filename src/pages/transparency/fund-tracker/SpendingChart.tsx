@@ -32,10 +32,11 @@ export default function SpendingChart({
       className='border-kapwa-border-weak bg-kapwa-bg-surface min-w-0 space-y-3 rounded-3xl border p-4 shadow-sm sm:p-6'
     >
       <h3 id='fund-spending-chart-title' className='text-lg font-semibold'>
-        Reported spending through each quarter
+        Reported spending by quarter
       </h3>
       <p className='text-kapwa-text-support text-sm'>
-        Each point is the cumulative amount reported through that quarter.
+        Each point shows the published total for that quarter. Gaps mark
+        quarters without digitized figures.
       </p>
       <ResponsiveChart height={240}>
         <LineChart
