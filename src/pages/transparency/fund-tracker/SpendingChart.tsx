@@ -12,6 +12,11 @@ import { ResponsiveChart } from '@/components/data-display';
 import { standardAxisProps } from '@/constants/charts';
 import { formatPeso } from '@/lib/format';
 
+const axisProps = {
+  ...standardAxisProps,
+  tick: { ...standardAxisProps.tick, fill: 'var(--color-kapwa-text-support)' },
+};
+
 type SpendingPoint = { quarter: string; spending: number | null };
 
 export default function SpendingChart({
@@ -43,12 +48,12 @@ export default function SpendingChart({
             stroke='var(--color-kapwa-border-weak)'
           />
           <XAxis
-            {...standardAxisProps}
+            {...axisProps}
             dataKey='quarter'
             padding={{ left: 8, right: 8 }}
           />
           <YAxis
-            {...standardAxisProps}
+            {...axisProps}
             width={56}
             domain={[0, 'auto']}
             tickFormatter={value => `₱${value / 1_000_000}M`}

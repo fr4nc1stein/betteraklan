@@ -2,8 +2,7 @@ import { useState } from 'react';
 
 import { Banknote, Landmark, ReceiptText, Wallet } from 'lucide-react';
 
-import { CardGrid } from '@/components/ui/Card';
-import { StatCard } from '@/components/ui/StatCard';
+import { StatGrid } from '@/components/ui/StatCard';
 import fundReports from '@/data/transparency/fundReports2025.json';
 import { formatPeso } from '@/lib/format';
 
@@ -84,8 +83,9 @@ export default function FundTracker() {
 
       {report && (
         <section aria-label='Reported totals'>
-          <CardGrid columns={3}>
-            {[
+          <StatGrid
+            columns={3}
+            stats={[
               {
                 label: receiptsLabel,
                 icon: Landmark,
@@ -100,19 +100,16 @@ export default function FundTracker() {
               { label: balanceLabel, icon: Wallet },
             ].map(({ label, sourceLabel, icon, iconBg }) => {
               const amount = reportedAmount(report, sourceLabel ?? label);
-              return (
-                <StatCard
-                  key={label}
-                  icon={icon}
-                  iconBg={iconBg}
-                  label={label}
-                  value={amount === null ? 'Unavailable' : formatPeso(amount)}
-                  subtext={`Through Q${report.quarter} 2025`}
-                  hover={false}
-                />
-              );
+              return {
+                icon,
+                iconBg,
+                label,
+                value: amount === null ? 'Unavailable' : formatPeso(amount),
+                subtext: `Through Q${report.quarter} 2025`,
+                hover: false,
+              };
             })}
-          </CardGrid>
+          />
         </section>
       )}
 
