@@ -18,7 +18,7 @@ const tourismServices = [
   },
   {
     name: 'Get tourist assistance at Kalibo International Airport',
-    requirements: /No documents required\./,
+    requirements: /The Charter checklist lists no documents\./,
     time: '10 minutes',
     pages: 'pp. 113–114',
   },

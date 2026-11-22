@@ -49,6 +49,8 @@ export default function ServiceCard({ service }: ServiceCardProps) {
   const isOfficialSource = service.source === 'citizens-charter';
   const needsVerification = service.needsVerification === true;
   const isTransaction = service.type === 'transaction';
+  const title = service.plainLanguageName || service.service;
+  const office = service.charter && service.officeDivision;
 
   return (
     <Link
@@ -56,7 +58,11 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       className='group min-h-[200px]'
       data-testid='service-card'
       data-service-slug={service.slug}
-      aria-label={`View details for ${service.plainLanguageName || service.service}`}
+      aria-label={
+        office
+          ? `View details for ${title} — ${office}`
+          : `View details for ${title}`
+      }
     >
       <Card
         hover
@@ -73,12 +79,15 @@ export default function ServiceCard({ service }: ServiceCardProps) {
               <Badge variant={isOfficialSource ? 'success' : 'secondary'} dot>
                 {isOfficialSource ? 'Official' : 'Community'}
               </Badge>
+              {service.charter?.audience === 'internal' && (
+                <Badge variant='secondary'>Internal</Badge>
+              )}
               {/* Online/Walk-in Badge */}
               {service.url ? (
                 <Badge variant='success' dot>
                   Online
                 </Badge>
-              ) : isTransaction ? (
+              ) : isTransaction && !service.charter ? (
                 <Badge variant='slate' dot>
                   Walk-in
                 </Badge>
@@ -98,7 +107,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           {/* Title & Category Label */}
           <div className='flex-1'>
             <h3 className='group-hover:text-kapwa-text-brand text-kapwa-text-strong mb-1 leading-snug font-bold transition-colors'>
-              {service.plainLanguageName || service.service}
+              {title}
             </h3>
             <p className='text-kapwa-text-disabled text-[10px] font-bold tracking-widest uppercase'>
               {service.category.name}

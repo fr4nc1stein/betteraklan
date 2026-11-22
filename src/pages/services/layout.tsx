@@ -1,27 +1,36 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { Outlet, useLocation, useSearchParams } from 'react-router-dom';
 
-import { useQueryState } from 'nuqs';
+import { parseAsStringLiteral, useQueryState } from 'nuqs';
 
 import { PageHeader } from '@/components/layout';
 import { SidebarLayout } from '@/components/layout/SidebarLayout';
 import SearchInput from '@/components/ui/SearchInput';
+import type {
+  CharterAudienceFilter,
+  ServiceSourceFilter,
+} from '@/types/servicesTypes';
 
 import ServicesSidebar from './components/ServicesSidebar';
 
 // Additional filter types
-export type ServiceSource = 'citizens-charter' | 'community' | 'all';
-export type ClassificationFilter = 'Simple' | 'Complex' | 'all';
+export type ClassificationFilter =
+  | 'Simple'
+  | 'Complex'
+  | 'Highly Technical'
+  | 'all';
 
 export interface ServicesOutletContext {
   searchQuery: string;
   selectedCategorySlug: string;
   selectedOfficeDivision: string;
-  selectedSource: ServiceSource;
+  selectedSource: ServiceSourceFilter;
+  selectedAudience: CharterAudienceFilter;
   selectedClassification: ClassificationFilter;
   setOfficeDivision: (division: string) => void;
-  setSource: (source: ServiceSource) => void;
+  setSource: (source: ServiceSourceFilter) => void;
+  setAudience: (audience: CharterAudienceFilter) => void;
   setClassification: (classification: ClassificationFilter) => void;
 }
 
@@ -32,21 +41,15 @@ export default function ServicesLayout() {
   const isIndexPage =
     location.pathname === '/services' || location.pathname === '/services/';
 
-  const initialCategory = searchParams.get('category') || 'all';
-  const [selectedCategorySlug, setSelectedCategorySlug] =
-    useState(initialCategory);
+  const selectedCategorySlug = searchParams.get('category') || 'all';
 
   const handleCategoryChange = (slug: string) => {
-    setSelectedCategorySlug(slug);
-    setSearchParams({ category: slug });
+    setSearchParams(prev => {
+      const next = new URLSearchParams(prev);
+      next.set('category', slug);
+      return next;
+    });
   };
-
-  useEffect(() => {
-    const categoryFromUrl = searchParams.get('category');
-    if (categoryFromUrl && categoryFromUrl !== selectedCategorySlug) {
-      setSelectedCategorySlug(categoryFromUrl);
-    }
-  }, [searchParams, selectedCategorySlug]);
 
   const [searchQuery, setSearchQuery] = useQueryState('search', {
     defaultValue: '',
@@ -54,7 +57,21 @@ export default function ServicesLayout() {
 
   // New filter states
   const [selectedOfficeDivision, setSelectedOfficeDivision] = useState('all');
-  const [selectedSource, setSelectedSource] = useState<ServiceSource>('all');
+  const [selectedSource, setSelectedSource] = useQueryState(
+    'source',
+    parseAsStringLiteral([
+      'all',
+      'aklan-2026',
+      'citizens-charter',
+      'community',
+    ] as const).withDefault('all')
+  );
+  const [selectedAudience, setSelectedAudience] = useQueryState(
+    'audience',
+    parseAsStringLiteral(['public', 'internal', 'all'] as const).withDefault(
+      'public'
+    )
+  );
   const [selectedClassification, setSelectedClassification] =
     useState<ClassificationFilter>('all');
 
@@ -83,7 +100,6 @@ export default function ServicesLayout() {
             variant='compact'
             title='Service Directory'
             description='Browse requirements and procedures.'
-            autoBreadcrumbs={true}
           />
         )
       }
@@ -100,9 +116,11 @@ export default function ServicesLayout() {
           selectedCategorySlug,
           selectedOfficeDivision,
           selectedSource,
+          selectedAudience,
           selectedClassification,
           setOfficeDivision: setSelectedOfficeDivision,
           setSource: setSelectedSource,
+          setAudience: setSelectedAudience,
           setClassification: setSelectedClassification,
         }}
       />

@@ -1,0 +1,11 @@
+# Aklan Citizen’s Charter, fourth edition
+
+`aklan-2026.json` maps 409 entries across 37 provincial office and facility groups from the [official 2026 Charter PDF](https://drive.google.com/file/d/1KVbRhrNpCuZWBIdN-m-uWc3hFnzLqgyl/view). The [Provincial Government of Aklan publication page](https://aklan.gov.ph/citizens-charter/) links the edition. Page ranges use the printed page numbers, which match the PDF viewer for this edition.
+
+The printed contents on pages 4–17 index 413 items. Six are group headings whose named transactions have their own entries. The Mapping Services entry on page 88 is named after its actual plotting and digitizing procedure. Two distinct workflows from the body supplement the contents: Buruanga Municipal Hospital dental services on pages 132–133 and the walk-in Child Protection Unit procedure on pages 720–721. The catalogue retains one index-only entry for the Governor’s Office educational assistance and explains the source discrepancy.
+
+The snapshot includes external, internal, and mixed procedures. The Provincial Health Office and Sangguniang Panlalawigan audience labels follow their section covers on pages 594 and 768. Their labels differ from the table of contents. The emergency and disaster response pages follow their actual headings on pages 588 and 587 respectively. Facility names distinguish similar transactions across hospitals, and existing directory profiles are linked when available.
+
+Structured fields are drawn from the requirement, fee, processing time and office tables. Some fees vary by case or require a separate rate table, and some workflow times are given only per step. Detail pages cite the exact page ranges, link the published PDF, and show a source fallback for unconfirmed fields. An omitted `detailedRequirements` is unconfirmed, while an empty list means the source explicitly lists no documents. For conditional workflows or conflicting figures, consult the cited pages.
+
+Edit `aklan-2026.json` and run `npm run merge:services` to regenerate the catalogue. Keep existing slugs stable and check cited page ranges against the published edition. The older Charter data and community service records are merged separately and keep their existing URLs.

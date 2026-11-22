@@ -54,6 +54,16 @@
       "name": "Tourism",
       "slug": "tourism",
       "description": "Tourist information and assistance from the Aklan Provincial Tourism Office."
+    },
+    {
+      "name": "Employment & Livelihood",
+      "slug": "employment-livelihood",
+      "description": "Job registration, recruitment and employment assistance."
+    },
+    {
+      "name": "Government Operations",
+      "slug": "government-operations",
+      "description": "Provincial records, legislative services and administrative transactions."
     }
   ]
 }

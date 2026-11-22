@@ -25,6 +25,8 @@ CITIZENS_CHARTER_PATH = PROJECT_ROOT / "src" / "data" / "citizens-charter" / "ci
 CATEGORY_MAPPING_PATH = PROJECT_ROOT / "src" / "data" / "citizens-charter" / "category-mapping.json"
 SERVICES_JSON_PATH = PROJECT_ROOT / "src" / "data" / "services" / "services.json"
 OUTPUT_DIR = PROJECT_ROOT / "src" / "data" / "citizens-charter"
+AKLAN_CHARTER_PATH = OUTPUT_DIR / "aklan-2026.json"
+CATEGORIES_PATH = OUTPUT_DIR.parent / "service_categories.json"
 OUTPUT_PATH = OUTPUT_DIR / "merged-services.json"
 VERIFICATION_QUEUE_PATH = OUTPUT_DIR / "verification-queue.json"
 
@@ -174,7 +176,6 @@ def map_office_division_to_slug(office_division: str) -> str:
         "MUNICIPAL RECORDS OFFICE": "municipal-general-services-office",
         "MUNICIPAL SOCIAL WELFARE AND DEVELOPMENT OFFICE": "municipal-social-welfare-development-office",
         "MUNICIPAL TOURISM OFFICE": "municipal-tourism-office",
-        "Aklan Provincial Tourism Office": "provincial-tourism-office",
         "MUNICIPAL URBAN DEVELOPMENT AND HOUSING OFFICE": "municipal-urban-development-and-housing-office",
         "PERSON WITH DISABILITY AFFAIRS OFFICE": "persons-with-disability-affairs-office",
         "PHILIPPINE NATIONAL POLICE (PNP) - LOS BAÑOS MPS": "municipal-police-station",
@@ -218,12 +219,6 @@ def convert_cc_service_to_service(cc_service: dict, category: dict, slug: str, m
     }
 
     # Add detailed fields if available
-    if cc_service.get("description"):
-        service["description"] = cc_service["description"]
-
-    if cc_service.get("sources"):
-        service["sources"] = cc_service["sources"]
-
     if "requirements" in cc_service and cc_service["requirements"]:
         service["detailedRequirements"] = cc_service["requirements"]
 
@@ -255,6 +250,40 @@ def convert_cc_service_to_service(cc_service: dict, category: dict, slug: str, m
         service["personResponsible"] = cc_service["person_responsible"]
 
     return service
+
+
+def provincial_services(used_slugs: set[str]) -> list[dict]:
+    edition = load_json(AKLAN_CHARTER_PATH)
+    categories = {category["slug"]: {"slug": category["slug"], "name": category["name"]}
+                  for category in load_json(CATEGORIES_PATH)["categories"]}
+    services = []
+    for office in edition["offices"]:
+        for entry in office["services"]:
+            slug = entry["slug"]
+            if slug in used_slugs:
+                raise ValueError(f"Duplicate service slug: {slug}")
+            used_slugs.add(slug)
+            start, end = entry["pages"]
+            if not 18 <= start <= end <= edition["lastServicePage"]:
+                raise ValueError(f"Invalid Charter pages for {slug}: {start}–{end}")
+            pages = f"p. {start}" if start == end else f"pp. {start}–{end}"
+            service = {
+                "service": entry["title"],
+                "slug": slug,
+                "source": "citizens-charter",
+                "type": "transaction",
+                "officeDivision": office["name"],
+                "officeSlug": office.get("directorySlug", ""),
+                "category": categories[entry.get("category", office["category"])],
+                "sources": [{"name": f'{edition["name"]}, {pages}', "url": edition["url"]}],
+                "charter": {key: entry[key] for key in ("audience", "division", "feeLines", "stepTimes", "notes") if key in entry},
+            }
+            for key in ("classification", "typeOfTransaction", "whoMayAvail", "processingTime",
+                        "detailedRequirements", "plainLanguageName", "description", "clientSteps", "fees", "serviceNumber"):
+                if key in entry:
+                    service[key] = entry[key]
+            services.append(service)
+    return services
 
 
 def main():
@@ -331,6 +360,7 @@ def main():
         service["source"] = "community"
 
     # Merge services - CC services first, then community services
+    cc_services.extend(provincial_services(used_slugs))
     merged_services = cc_services + existing_services
 
     # Sort by service name for better UX

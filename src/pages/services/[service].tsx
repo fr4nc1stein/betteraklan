@@ -112,6 +112,7 @@ export default function ServiceDetail() {
   // Citizens Charter specific
   const isOfficialSource = service.source === 'citizens-charter';
   const needsVerification = service.needsVerification === true;
+  const charter = service.charter;
 
   const quickInfoArray = service.quickInfo
     ? (Object.entries(service.quickInfo) as [keyof QuickInfo, string][]).map(
@@ -196,6 +197,15 @@ export default function ServiceDetail() {
             <Badge variant={isOfficialSource ? 'success' : 'secondary'} dot>
               {isOfficialSource ? 'Official (CC)' : 'Community'}
             </Badge>
+            {charter && (
+              <Badge variant='outline'>
+                {charter.audience === 'mixed'
+                  ? 'Internal and external'
+                  : charter.audience === 'internal'
+                    ? 'Internal service'
+                    : 'External service'}
+              </Badge>
+            )}
             {service.serviceNumber && (
               <Badge variant='outline'>
                 Service No. {service.serviceNumber}
@@ -286,6 +296,32 @@ export default function ServiceDetail() {
           {/* Fees Card (Citizens Charter) */}
           {isOfficialSource && service.fees && <FeesCard fees={service.fees} />}
 
+          {charter && !service.fees && (
+            <DetailSection title='Fees' icon={Banknote}>
+              {charter.feeLines?.length ? (
+                <ul className='text-kapwa-text-support list-inside list-disc space-y-2 text-sm'>
+                  {charter.feeLines.map(fee => (
+                    <li key={fee}>{fee}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className='text-kapwa-text-support text-sm'>
+                  Fee details are unconfirmed. Check the cited Charter pages.
+                </p>
+              )}
+            </DetailSection>
+          )}
+
+          {charter && !service.processingTime && (
+            <DetailSection title='Processing Time' icon={Clock}>
+              <p className='text-kapwa-text-support text-sm'>
+                {charter.stepTimes?.length
+                  ? `Times listed for individual steps: ${charter.stepTimes.join('; ')}. See the Charter for the steps and conditions.`
+                  : 'Processing time is unconfirmed. Check the cited Charter pages.'}
+              </p>
+            </DetailSection>
+          )}
+
           {/* Pending Verification Notice */}
           {needsVerification && (
             <div className='border-kapwa-border-warning bg-kapwa-bg-warning-weak/30 flex items-start gap-3 rounded-2xl border p-4'>
@@ -310,6 +346,22 @@ export default function ServiceDetail() {
             service.detailedRequirements.length > 0 && (
               <RequirementGrid requirements={service.detailedRequirements} />
             )}
+
+          {charter && !service.detailedRequirements?.length && (
+            <DetailSection title='Requirements' icon={FileText}>
+              <p className='text-kapwa-text-support text-sm'>
+                {service.detailedRequirements
+                  ? 'The Charter checklist lists no documents.'
+                  : 'Check the cited Charter pages for the requirements.'}
+              </p>
+            </DetailSection>
+          )}
+
+          {charter?.notes?.map(note => (
+            <p key={note} className='text-kapwa-text-support text-sm'>
+              {note}
+            </p>
+          ))}
 
           {/* Supporting Documents Detail (Citizens Charter - optional) */}
           {isOfficialSource &&
@@ -474,9 +526,17 @@ export default function ServiceDetail() {
           </div>
 
           {/* Involved Offices */}
-          {involvedOffices.length > 0 && (
+          {(involvedOffices.length > 0 || charter) && (
             <DetailSection title='Responsible Offices' icon={Building2}>
               <div className='space-y-6'>
+                {charter && (
+                  <p className='text-kapwa-text-support text-sm'>
+                    {service.officeDivision}
+                    {charter.division && (
+                      <span className='mt-1 block'>{charter.division}</span>
+                    )}
+                  </p>
+                )}
                 {involvedOffices.map((off, idx) => {
                   const officePath =
                     off.type === 'executive'

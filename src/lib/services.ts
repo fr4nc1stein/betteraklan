@@ -8,11 +8,19 @@ import type {
   Service,
   ServiceFilterOptions,
   ServiceSource,
+  ServiceSourceFilter,
   VerificationItem,
 } from '@/types/servicesTypes';
 
 // Import the merged services data
 import mergedServicesData from '@/data/citizens-charter/merged-services.json';
+
+export const serviceSourceLabels: Record<ServiceSourceFilter, string> = {
+  all: 'All',
+  'aklan-2026': '2026 Aklan Charter',
+  'citizens-charter': 'Official',
+  community: 'Community',
+};
 
 /**
  * Get all merged services (Citizens Charter + community)
@@ -62,6 +70,7 @@ function matchesSearch(service: Service, lowerQuery: string): boolean {
     service.plainLanguageName,
     service.category.name,
     service.officeDivision,
+    service.charter?.division,
     service.description,
   ].some(field => field?.toLowerCase().includes(lowerQuery));
 }
@@ -100,14 +109,25 @@ export function filterServices(options: ServiceFilterOptions): Service[] {
   }
 
   // Filter by source
-  if (options.source && options.source !== 'all') {
+  if (options.source === 'aklan-2026') {
+    services = services.filter(s => s.charter);
+  } else if (options.source && options.source !== 'all') {
     services = services.filter(s => s.source === options.source);
   }
 
-  // Filter by classification (Citizens Charter only)
-  if (options.classification) {
+  if (options.audience === 'public') {
+    services = services.filter(s => s.charter?.audience !== 'internal');
+  } else if (options.audience === 'internal') {
     services = services.filter(
-      s => s.classification === options.classification
+      s => s.charter?.audience === 'internal' || s.charter?.audience === 'mixed'
+    );
+  }
+
+  // Filter by classification (Citizens Charter only)
+  const classification = options.classification?.toLowerCase();
+  if (classification) {
+    services = services.filter(s =>
+      s.classification?.toLowerCase().includes(classification)
     );
   }
 

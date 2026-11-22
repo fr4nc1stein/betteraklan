@@ -14,6 +14,17 @@ export type ServiceType = 'transaction' | 'information';
 // Service source type
 export type ServiceSource = 'citizens-charter' | 'community';
 
+export type ServiceSourceFilter = ServiceSource | 'aklan-2026' | 'all';
+export type CharterAudienceFilter = 'public' | 'internal' | 'all';
+
+export interface ProvincialCharterDetails {
+  audience: 'external' | 'internal' | 'mixed';
+  division?: string;
+  feeLines?: string[];
+  stepTimes?: string[];
+  notes?: string[];
+}
+
 export interface QuickInfo {
   processingTime?: string;
   fee?: string;
@@ -116,9 +127,10 @@ export interface Service {
   // NEW: Citizens Charter fields (optional - only for CC services)
   serviceNumber?: string; // e.g., "1.1", "9.2"
   officeDivision?: string; // Full office name from CC
-  classification?: 'Simple' | 'Complex';
+  classification?: string;
   typeOfTransaction?: string; // G2C, G2B, G2G
   whoMayAvail?: string;
+  charter?: ProvincialCharterDetails;
 
   // NEW: Detailed data from Citizens Charter
   detailedRequirements?: DetailedRequirement[]; // { requirement, where_to_secure }
@@ -134,9 +146,6 @@ export interface Service {
   // NEW: Plain language name (user-friendly version)
   plainLanguageName?: string; // Simplified name following UK GOV.UK plain language principles
 
-  // NEW: Fee schedule for services that are lists of fees
-  feeSchedule?: FeeItem[];
-
   // NEW: Data quality flags
   dataComplete?: boolean; // false if has "See document" placeholders
   needsVerification?: boolean; // flagged for manual review
@@ -146,8 +155,9 @@ export interface Service {
 export interface ServiceFilterOptions {
   category?: string;
   officeDivision?: string;
-  source?: ServiceSource | 'all';
-  classification?: 'Simple' | 'Complex';
+  source?: ServiceSourceFilter;
+  audience?: CharterAudienceFilter;
+  classification?: 'Simple' | 'Complex' | 'Highly Technical';
   search?: string;
 }
 

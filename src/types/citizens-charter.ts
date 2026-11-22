@@ -5,8 +5,6 @@
  * raw_data/citizens_charter2026.pdf
  */
 
-import type { Source } from './servicesTypes';
-
 /**
  * A single requirement for a service
  */
@@ -163,8 +161,6 @@ export interface CitizensCharterService {
   service_number: string;
   /** Full name of the service (as it appears in the Citizens Charter document) */
   service_name: string;
-  description?: string;
-  sources?: Source[];
   /**
    * Plain language name of the service
    *
@@ -185,8 +181,8 @@ export interface CitizensCharterService {
   office_division: string;
   /** Service classification: "Simple" or "Complex" */
   classification: 'Simple' | 'Complex';
-  /** Transaction type codes as published, including services with multiple audiences. */
-  type_of_transaction: string;
+  /** Type of transaction: "G2C" or "G2B" */
+  type_of_transaction: 'G2C' | 'G2B';
   /** Description of who may avail of the service */
   who_may_avail: string;
   /** Array of requirements with sources */
@@ -202,10 +198,13 @@ export interface CitizensCharterService {
   /** Optional: Fee schedule for services that are lists of fees (e.g., Collection of Other Payments) */
   fee_schedule?: FeeItem[];
   /**
-   * Published transaction processing time
+   * In-person transaction time
    *
-   * Examples: "15 minutes", "2 hours", "5 days and 25 minutes"
-   * Use turnaround_time when the Charter lists a separate overall timeframe.
+   * The time it takes to complete the transaction in person at the office.
+   * Examples: "15 minutes", "2 hours", "4 hours"
+   *
+   * For simple services, this is the full service time.
+   * For complex services, this excludes waiting/approval periods (see turnaround_time).
    */
   processing_time: string;
   /**

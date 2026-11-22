@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
-import { useOutletContext } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 
 import { SearchXIcon } from 'lucide-react';
 
@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/Badge';
 import { CardGrid } from '@/components/ui/Card';
 import { EmptyState } from '@/components/ui/EmptyState';
 import { config } from '@/lib/lguConfig';
-import { filterServices } from '@/lib/services';
+import { filterServices, serviceSourceLabels } from '@/lib/services';
 
 import ServiceCard from './components/ServiceCard';
 import FilterBar from './components/FilterBar';
@@ -22,9 +22,11 @@ export default function ServicesPage() {
     selectedCategorySlug,
     selectedOfficeDivision,
     selectedSource,
+    selectedAudience,
     selectedClassification,
     setOfficeDivision,
     setSource,
+    setAudience,
     setClassification,
   } = useOutletContext<ServicesOutletContext>();
 
@@ -37,6 +39,7 @@ export default function ServicesPage() {
       category: selectedCategorySlug,
       officeDivision: selectedOfficeDivision,
       source: selectedSource,
+      audience: selectedAudience,
       classification:
         selectedClassification !== 'all' ? selectedClassification : undefined,
       search: searchQuery || undefined,
@@ -46,6 +49,7 @@ export default function ServicesPage() {
     selectedCategorySlug,
     selectedOfficeDivision,
     selectedSource,
+    selectedAudience,
     selectedClassification,
   ]);
 
@@ -57,6 +61,7 @@ export default function ServicesPage() {
     selectedCategorySlug,
     selectedOfficeDivision,
     selectedSource,
+    selectedAudience,
     selectedClassification,
   ]);
 
@@ -78,30 +83,40 @@ export default function ServicesPage() {
     return () => observer.disconnect();
   }, [handleLoadMore]);
 
-  // 3. EMPTY STATE
-  if (filteredServices.length === 0) {
-    return (
-      <EmptyState
-        icon={SearchXIcon}
-        title='No services found'
-        message={
-          "We couldn't find any services matching your filters. Try adjusting your search or filters."
-        }
-        actionHref={`${config.portal.githubUrl}/issues/new?template=contribution.yml`}
-        actionLabel='Suggest New Service'
-      />
-    );
-  }
+  const emptyState = (
+    <EmptyState
+      icon={SearchXIcon}
+      title='No services found'
+      message={
+        "We couldn't find any services matching your filters. Try adjusting your search or filters."
+      }
+      actionHref={`${config.portal.githubUrl}/issues/new?template=contribution.yml`}
+      actionLabel='Suggest New Service'
+    />
+  );
 
   return (
     <div className='animate-in fade-in space-y-6 duration-500'>
-      {/* Filter Bar */}
+      {selectedSource !== 'aklan-2026' && (
+        <Link
+          to='/services?source=aklan-2026&audience=all'
+          onClick={() => {
+            setOfficeDivision('all');
+            setClassification('all');
+          }}
+          className='text-kapwa-text-brand text-sm font-semibold hover:underline'
+        >
+          Browse all 2026 Aklan Charter services
+        </Link>
+      )}
       <FilterBar
         selectedOfficeDivision={selectedOfficeDivision}
         selectedSource={selectedSource}
+        selectedAudience={selectedAudience}
         selectedClassification={selectedClassification}
         onOfficeDivisionChange={setOfficeDivision}
         onSourceChange={setSource}
+        onAudienceChange={setAudience}
         onClassificationChange={setClassification}
       />
 
@@ -133,9 +148,7 @@ export default function ServicesPage() {
             )}
             {selectedSource !== 'all' && (
               <Badge variant='primary' className='gap-1'>
-                {selectedSource === 'citizens-charter'
-                  ? 'Official'
-                  : 'Community'}
+                {serviceSourceLabels[selectedSource]}
                 <button
                   type='button'
                   onClick={() => setSource('all')}
@@ -162,23 +175,27 @@ export default function ServicesPage() {
       </div>
 
       {/* Services Grid - Using CardGrid for consistency */}
-      <CardGrid columns={filteredServices.length > 12 ? 3 : 2}>
-        {filteredServices
-          .slice(0, currentPage * ITEMS_PER_PAGE)
-          .map(service => (
-            <ServiceCard key={service.slug} service={service} />
-          ))}
+      {filteredServices.length === 0 ? (
+        emptyState
+      ) : (
+        <CardGrid columns={filteredServices.length > 12 ? 3 : 2}>
+          {filteredServices
+            .slice(0, currentPage * ITEMS_PER_PAGE)
+            .map(service => (
+              <ServiceCard key={service.slug} service={service} />
+            ))}
 
-        {/* Infinite Scroll Loader */}
-        {filteredServices.length > currentPage * ITEMS_PER_PAGE && (
-          <div
-            ref={loadMoreRef}
-            className='flex justify-center py-12 col-span-full'
-          >
-            <div className='border-kapwa-border-brand h-6 w-6 animate-spin rounded-full border-2 border-t-transparent' />
-          </div>
-        )}
-      </CardGrid>
+          {/* Infinite Scroll Loader */}
+          {filteredServices.length > currentPage * ITEMS_PER_PAGE && (
+            <div
+              ref={loadMoreRef}
+              className='flex justify-center py-12 col-span-full'
+            >
+              <div className='border-kapwa-border-brand h-6 w-6 animate-spin rounded-full border-2 border-t-transparent' />
+            </div>
+          )}
+        </CardGrid>
+      )}
     </div>
   );
 }

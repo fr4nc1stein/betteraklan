@@ -32,9 +32,11 @@ export function RequirementCard({ requirement }: RequirementCardProps) {
           <h4 className='text-kapwa-text-strong text-sm font-semibold'>
             {title}
           </h4>
-          <p className='text-kapwa-text-support mt-1 text-xs'>
-            from: {where_to_secure}
-          </p>
+          {where_to_secure && (
+            <p className='text-kapwa-text-support mt-1 text-xs'>
+              from: {where_to_secure}
+            </p>
+          )}
           {copies && (
             <p className='text-kapwa-text-brand mt-1 text-xs font-medium'>
               {copies}
