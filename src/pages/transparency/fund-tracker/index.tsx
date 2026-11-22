@@ -17,9 +17,15 @@ const selectClass =
 
 export default function FundTracker() {
   const [fund, setFund] = useState<Fund>('sef');
-  const [quarter, setQuarter] = useState(4);
-  const reports = fundReports.filter(report => report.fund === fund);
-  const report = reports.find(report => report.quarter === quarter);
+  const [quarter, setQuarter] = useState('4');
+  const allQuarters = quarter === 'all';
+  const reports = fundReports
+    .filter(report => report.fund === fund)
+    .sort((a, b) => a.quarter - b.quarter);
+  const visibleReports = allQuarters
+    ? reports
+    : reports.filter(report => String(report.quarter) === quarter);
+  const latestVisibleReport = visibleReports.at(-1);
   const { receiptsLabel, spendingLabel, spendingRow, balanceLabel } =
     funds[fund];
   const spendingHistory = reports.map(report => ({
@@ -69,8 +75,9 @@ export default function FundTracker() {
             <select
               className={selectClass}
               value={quarter}
-              onChange={event => setQuarter(Number(event.target.value))}
+              onChange={event => setQuarter(event.target.value)}
             >
+              <option value='all'>All quarters</option>
               {reports.map(({ quarter }) => (
                 <option key={quarter} value={quarter}>
                   Quarter {quarter}
@@ -81,8 +88,17 @@ export default function FundTracker() {
         </div>
       </header>
 
-      {report && (
-        <section aria-label='Reported totals'>
+      {latestVisibleReport && (
+        <section
+          aria-label={
+            allQuarters ? 'Latest reported totals' : 'Reported totals'
+          }
+        >
+          {allQuarters && (
+            <h3 className='mb-3 text-lg font-semibold'>
+              Latest reported totals
+            </h3>
+          )}
           <StatGrid
             columns={3}
             stats={[
@@ -99,13 +115,16 @@ export default function FundTracker() {
               },
               { label: balanceLabel, icon: Wallet },
             ].map(({ label, sourceLabel, icon, iconBg }) => {
-              const amount = reportedAmount(report, sourceLabel ?? label);
+              const amount = reportedAmount(
+                latestVisibleReport,
+                sourceLabel ?? label
+              );
               return {
                 icon,
                 iconBg,
                 label,
                 value: amount === null ? 'Unavailable' : formatPeso(amount),
-                subtext: `Through Q${report.quarter} 2025`,
+                subtext: `Through Q${latestVisibleReport.quarter} 2025`,
                 hover: false,
               };
             })}
@@ -113,10 +132,19 @@ export default function FundTracker() {
         </section>
       )}
 
-      <SpendingChart data={spendingHistory} selectedQuarter={`Q${quarter}`} />
+      <SpendingChart
+        data={spendingHistory}
+        selectedQuarter={allQuarters ? undefined : `Q${quarter}`}
+      />
 
-      {report ? (
-        <FundReportTable fund={fund} report={report} />
+      {visibleReports.length ? (
+        visibleReports.map(report => (
+          <FundReportTable
+            key={`${fund}-${report.quarter}`}
+            fund={fund}
+            report={report}
+          />
+        ))
       ) : (
         <p role='status'>No report is available for this quarter.</p>
       )}

@@ -63,6 +63,30 @@ describe('School and Disaster Fund Tracker', () => {
         .getAttribute('href')
     ).toContain('1vVawHiTrAS7OBvcTT-1zgXcCG7_gb3iM');
   });
+  it('shows all four reports for the selected fund and keeps the latest reported totals', () => {
+    render(<FundTracker />);
+    const quarter = screen.getByRole('combobox', { name: 'Quarter' });
+    expect(
+      within(quarter).getByRole('option', { name: 'All quarters' })
+    ).toBeDefined();
+
+    fireEvent.change(quarter, { target: { value: 'all' } });
+    expect(
+      screen.getAllByRole('table', { name: /education fund/i })
+    ).toHaveLength(4);
+
+    fireEvent.change(screen.getByLabelText('Fund'), {
+      target: { value: 'drrmf' },
+    });
+    expect(screen.getAllByRole('table', { name: /disaster/i })).toHaveLength(4);
+    expect(screen.queryByRole('table', { name: /education fund/i })).toBeNull();
+    expect(
+      within(
+        screen.getByRole('region', { name: 'Latest reported totals' })
+      ).getByText('₱66,708,894.10')
+    ).toBeDefined();
+  });
+
   it('exports the complete financial tables for every quarterly report', () => {
     render(<FundTracker />);
 

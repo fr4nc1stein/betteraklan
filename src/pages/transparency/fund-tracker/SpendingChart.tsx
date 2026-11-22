@@ -24,7 +24,7 @@ export default function SpendingChart({
   selectedQuarter,
 }: {
   data: SpendingPoint[];
-  selectedQuarter: string;
+  selectedQuarter?: string;
 }) {
   return (
     <section
@@ -59,11 +59,13 @@ export default function SpendingChart({
             tickFormatter={value => `₱${value / 1_000_000}M`}
           />
           <Tooltip formatter={formatPeso} />
-          <ReferenceLine
-            x={selectedQuarter}
-            stroke='var(--color-kapwa-border-weak)'
-            strokeDasharray='4 4'
-          />
+          {selectedQuarter && (
+            <ReferenceLine
+              x={selectedQuarter}
+              stroke='var(--color-kapwa-border-weak)'
+              strokeDasharray='4 4'
+            />
+          )}
           <Line
             dataKey='spending'
             name='Reported spending'

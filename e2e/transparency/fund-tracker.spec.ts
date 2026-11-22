@@ -20,9 +20,10 @@ test('residents can reach the fund tracker and download a quarterly report', asy
   await page
     .getByRole('combobox', { name: 'Fund', exact: true })
     .selectOption('drrmf');
-  await page
-    .getByRole('combobox', { name: 'Quarter', exact: true })
-    .selectOption('2');
+  const quarter = page.getByRole('combobox', { name: 'Quarter', exact: true });
+  await quarter.selectOption('all');
+  await expect(page.getByRole('table', { name: /disaster/i })).toHaveCount(4);
+  await quarter.selectOption('2');
 
   await expect(
     page.getByRole('table', { name: /disaster.*quarter 2/i })
