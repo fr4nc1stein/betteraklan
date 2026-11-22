@@ -5,19 +5,34 @@ import {
   screen,
   within,
 } from '@testing-library/react';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import FundTracker from './index';
 
-afterEach(cleanup);
+beforeEach(() => {
+  vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue(
+    new DOMRect(0, 0, 640, 240)
+  );
+});
+
+afterEach(() => {
+  cleanup();
+  vi.restoreAllMocks();
+});
 
 describe('School and Disaster Fund Tracker', () => {
-  it('shows all eight reports and filters them by fund and quarter', () => {
+  it('opens on the latest school report and updates totals and trend when the fund changes', () => {
     render(<FundTracker />);
 
+    const summary = screen.getByRole('region', { name: 'Reported totals' });
+    const trend = screen.getByRole('region', {
+      name: /reported spending through each quarter/i,
+    });
+    expect(within(summary).getByText('₱85,621,172.88')).toBeDefined();
+    expect(within(trend).getByText('Q1: ₱1,747,380.30')).toBeDefined();
     expect(
-      screen.getAllByRole('link', { name: /official workbook/i })
-    ).toHaveLength(8);
+      screen.getByRole('table', { name: /school|education/i })
+    ).toBeDefined();
 
     fireEvent.change(screen.getByLabelText('Fund'), {
       target: { value: 'drrmf' },
@@ -29,6 +44,8 @@ describe('School and Disaster Fund Tracker', () => {
     expect(
       screen.getAllByRole('link', { name: /official workbook/i })
     ).toHaveLength(1);
+    expect(within(summary).getByText('₱66,708,894.10')).toBeDefined();
+    expect(within(trend).getByText('Q1: ₱55,386,350.00')).toBeDefined();
     const report = screen.getByRole('article', {
       name: /disaster.*quarter 4/i,
     });
@@ -59,11 +76,15 @@ describe('School and Disaster Fund Tracker', () => {
       ['drrmf-q3', 51, '63221488.10'],
       ['drrmf-q4', 58, '66708894.10'],
     ] as const;
-    const links = screen.getAllByRole('link', { name: 'Download CSV' });
-    expect(links).toHaveLength(reports.length);
-
-    for (const [index, link] of links.entries()) {
-      const [id, expectedRows, utilization] = reports[index];
+    for (const [id, expectedRows, utilization] of reports) {
+      const [fund, quarter] = id.split('-q');
+      fireEvent.change(screen.getByLabelText('Fund'), {
+        target: { value: fund },
+      });
+      fireEvent.change(screen.getByLabelText('Quarter'), {
+        target: { value: quarter },
+      });
+      const link = screen.getByRole('link', { name: 'Download CSV' });
       expect(link.getAttribute('download')).toBe(`aklan-2025-${id}.csv`);
       const csv = decodeURIComponent(
         (link.getAttribute('href') ?? '').split(',')[1]

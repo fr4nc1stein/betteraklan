@@ -10,19 +10,29 @@ test('residents can reach the fund tracker and download a quarterly report', asy
     .click();
 
   await expect(page).toHaveURL(/\/transparency\/fund-tracker$/);
-  await expect(page.getByRole('status')).toHaveText('8 of 8 reports');
+  await expect(
+    page.getByRole('table', { name: /education fund, quarter 4/i })
+  ).toBeVisible();
+  const chart = page.getByRole('region', {
+    name: 'Reported spending through each quarter',
+  });
+  await expect(chart.locator('.recharts-line-curve')).toBeVisible();
   await page
     .getByRole('combobox', { name: 'Fund', exact: true })
     .selectOption('drrmf');
   await page
     .getByRole('combobox', { name: 'Quarter', exact: true })
-    .selectOption('4');
+    .selectOption('2');
 
-  await expect(page.getByRole('status')).toHaveText('1 of 8 reports');
-  await expect(page.getByRole('table')).toBeVisible();
+  await expect(
+    page.getByRole('table', { name: /disaster.*quarter 2/i })
+  ).toBeVisible();
+  await expect(
+    page.getByRole('region', { name: 'Reported totals' })
+  ).toContainText('₱57,430,309.20');
   const [download] = await Promise.all([
     page.waitForEvent('download'),
     page.getByRole('link', { name: 'Download CSV' }).click(),
   ]);
-  expect(download.suggestedFilename()).toBe('aklan-2025-drrmf-q4.csv');
+  expect(download.suggestedFilename()).toBe('aklan-2025-drrmf-q2.csv');
 });
