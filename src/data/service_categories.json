@@ -49,6 +49,11 @@
       "name": "Environment & Natural Resources",
       "slug": "environment-natural-resources",
       "description": "Environmental permits, waste management, and conservation programs."
+    },
+    {
+      "name": "Tourism",
+      "slug": "tourism",
+      "description": "Tourist information and assistance from the Aklan Provincial Tourism Office."
     }
   ]
 }

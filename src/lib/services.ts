@@ -56,6 +56,16 @@ export function getServicesBySource(source: ServiceSource): Service[] {
   return getMergedServices().filter(service => service.source === source);
 }
 
+function matchesSearch(service: Service, lowerQuery: string): boolean {
+  return [
+    service.service,
+    service.plainLanguageName,
+    service.category.name,
+    service.officeDivision,
+    service.description,
+  ].some(field => field?.toLowerCase().includes(lowerQuery));
+}
+
 /**
  * Search services by query string
  * @param query - The search query
@@ -64,12 +74,8 @@ export function getServicesBySource(source: ServiceSource): Service[] {
 export function searchServices(query: string): Service[] {
   if (!query) return getMergedServices();
   const lowerQuery = query.toLowerCase();
-  return getMergedServices().filter(
-    service =>
-      service.service.toLowerCase().includes(lowerQuery) ||
-      service.category.name.toLowerCase().includes(lowerQuery) ||
-      service.officeDivision?.toLowerCase().includes(lowerQuery) ||
-      service.description?.toLowerCase().includes(lowerQuery)
+  return getMergedServices().filter(service =>
+    matchesSearch(service, lowerQuery)
   );
 }
 
@@ -108,13 +114,7 @@ export function filterServices(options: ServiceFilterOptions): Service[] {
   // Search filter
   if (options.search) {
     const lowerQuery = options.search.toLowerCase();
-    services = services.filter(
-      service =>
-        service.service.toLowerCase().includes(lowerQuery) ||
-        service.category.name.toLowerCase().includes(lowerQuery) ||
-        service.officeDivision?.toLowerCase().includes(lowerQuery) ||
-        service.description?.toLowerCase().includes(lowerQuery)
-    );
+    services = services.filter(service => matchesSearch(service, lowerQuery));
   }
 
   return services;

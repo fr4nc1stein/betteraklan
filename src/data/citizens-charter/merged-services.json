@@ -5023,6 +5023,152 @@
     "source": "community"
   },
   {
+    "service": "Tourist Information and Assistance (Complex Tourism Information)",
+    "slug": "tourist-information-and-assistance-complex-tourism-information",
+    "serviceNumber": "2",
+    "source": "citizens-charter",
+    "type": "transaction",
+    "officeDivision": "Aklan Provincial Tourism Office",
+    "officeSlug": "provincial-tourism-office",
+    "category": {
+      "name": "Tourism",
+      "slug": "tourism"
+    },
+    "classification": "Complex",
+    "typeOfTransaction": "G2C, G2B, G2G",
+    "whoMayAvail": "Everyone",
+    "dataComplete": true,
+    "needsVerification": false,
+    "description": "Ask the tourism office to prepare detailed information about programs, projects, activities, accreditation, or statistics.",
+    "sources": [
+      {
+        "name": "2026 Aklan Citizen’s Charter (4th Edition), pp. 111–113",
+        "url": "https://drive.google.com/file/d/1KVbRhrNpCuZWBIdN-m-uWc3hFnzLqgyl/view"
+      }
+    ],
+    "detailedRequirements": [
+      {
+        "requirement": "Request form",
+        "where_to_secure": "Aklan Provincial Tourism Office front desk"
+      }
+    ],
+    "clientSteps": [
+      {
+        "step": 1,
+        "action": "Fill out the request form and submit it at the front desk or information counter. The office then prepares the requested information.",
+        "processing_time": "5 days and 5 minutes"
+      },
+      {
+        "step": 2,
+        "action": "Receive the requested tourism information.",
+        "processing_time": "15 minutes"
+      },
+      {
+        "step": 3,
+        "action": "Sign the client logbook.",
+        "processing_time": "5 minutes"
+      }
+    ],
+    "fees": {
+      "amount": "Free",
+      "description": "No fee"
+    },
+    "processingTime": "5 days and 25 minutes",
+    "plainLanguageName": "Request detailed tourism information"
+  },
+  {
+    "service": "Tourist Information and Assistance (Kalibo International Airport)",
+    "slug": "tourist-information-and-assistance-kalibo-international-airport",
+    "serviceNumber": "3",
+    "source": "citizens-charter",
+    "type": "transaction",
+    "officeDivision": "Aklan Provincial Tourism Office",
+    "officeSlug": "provincial-tourism-office",
+    "category": {
+      "name": "Tourism",
+      "slug": "tourism"
+    },
+    "classification": "Simple",
+    "typeOfTransaction": "G2C",
+    "whoMayAvail": "Arriving passengers at the Kalibo International Airport domestic passenger terminal",
+    "dataComplete": true,
+    "needsVerification": false,
+    "description": "Ask for basic tourism information at the domestic passenger terminal information counter. No documents required.",
+    "sources": [
+      {
+        "name": "2026 Aklan Citizen’s Charter (4th Edition), pp. 113–114",
+        "url": "https://drive.google.com/file/d/1KVbRhrNpCuZWBIdN-m-uWc3hFnzLqgyl/view"
+      }
+    ],
+    "clientSteps": [
+      {
+        "step": 1,
+        "action": "Approach the information counter to ask for tourism information.",
+        "processing_time": "10 minutes"
+      }
+    ],
+    "fees": {
+      "amount": "Free",
+      "description": "No fee"
+    },
+    "processingTime": "10 minutes",
+    "plainLanguageName": "Get tourist assistance at Kalibo International Airport"
+  },
+  {
+    "service": "Tourist Information and Assistance (Simple Tourism Information)",
+    "slug": "tourist-information-and-assistance-simple-tourism-information",
+    "serviceNumber": "1",
+    "source": "citizens-charter",
+    "type": "transaction",
+    "officeDivision": "Aklan Provincial Tourism Office",
+    "officeSlug": "provincial-tourism-office",
+    "category": {
+      "name": "Tourism",
+      "slug": "tourism"
+    },
+    "classification": "Simple",
+    "typeOfTransaction": "G2C, G2B, G2G",
+    "whoMayAvail": "Everyone",
+    "dataComplete": true,
+    "needsVerification": false,
+    "description": "Ask for basic information about tourism programs, projects, activities, accreditation, or statistics.",
+    "sources": [
+      {
+        "name": "2026 Aklan Citizen’s Charter (4th Edition), pp. 110–111",
+        "url": "https://drive.google.com/file/d/1KVbRhrNpCuZWBIdN-m-uWc3hFnzLqgyl/view"
+      }
+    ],
+    "detailedRequirements": [
+      {
+        "requirement": "Request form",
+        "where_to_secure": "Aklan Provincial Tourism Office front desk"
+      }
+    ],
+    "clientSteps": [
+      {
+        "step": 1,
+        "action": "Fill out the request form and submit it at the front desk or information counter.",
+        "processing_time": "5 minutes"
+      },
+      {
+        "step": 2,
+        "action": "Receive the requested tourism information.",
+        "processing_time": "15 minutes"
+      },
+      {
+        "step": 3,
+        "action": "Sign the client logbook.",
+        "processing_time": "5 minutes"
+      }
+    ],
+    "fees": {
+      "amount": "Free",
+      "description": "No fee"
+    },
+    "processingTime": "25 minutes",
+    "plainLanguageName": "Get basic tourism information"
+  },
+  {
     "service": "Trade Fairs & Tourism Promotions",
     "slug": "trade-fairs-tourism-promotions",
     "type": "information",

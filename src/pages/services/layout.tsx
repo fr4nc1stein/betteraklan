@@ -68,7 +68,7 @@ export default function ServicesLayout() {
           <PageHeader
             variant='hero'
             title='Government Services'
-            description='Explore official municipal services from the Citizens Charter and community contributions. Choose a category to filter or search below.'
+            description='Explore provincial and municipal services from citizens’ charters and community contributions.'
             actions={
               <SearchInput
                 placeholder='Search for services (e.g., Business Permit)...'

@@ -1,6 +1,11 @@
 {
   "mappings": [
     {
+      "officeDivision": "Aklan Provincial Tourism Office",
+      "categorySlug": "tourism",
+      "subcategory": "Tourism"
+    },
+    {
       "officeDivision": "BUSINESS PERMIT AND LICENSING OFFICE (BPLO)",
       "categorySlug": "business-trade-investment",
       "subcategory": "Business Permits"

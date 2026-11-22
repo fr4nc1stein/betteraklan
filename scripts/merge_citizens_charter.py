@@ -174,6 +174,7 @@ def map_office_division_to_slug(office_division: str) -> str:
         "MUNICIPAL RECORDS OFFICE": "municipal-general-services-office",
         "MUNICIPAL SOCIAL WELFARE AND DEVELOPMENT OFFICE": "municipal-social-welfare-development-office",
         "MUNICIPAL TOURISM OFFICE": "municipal-tourism-office",
+        "Aklan Provincial Tourism Office": "provincial-tourism-office",
         "MUNICIPAL URBAN DEVELOPMENT AND HOUSING OFFICE": "municipal-urban-development-and-housing-office",
         "PERSON WITH DISABILITY AFFAIRS OFFICE": "persons-with-disability-affairs-office",
         "PHILIPPINE NATIONAL POLICE (PNP) - LOS BAÑOS MPS": "municipal-police-station",
@@ -217,6 +218,12 @@ def convert_cc_service_to_service(cc_service: dict, category: dict, slug: str, m
     }
 
     # Add detailed fields if available
+    if cc_service.get("description"):
+        service["description"] = cc_service["description"]
+
+    if cc_service.get("sources"):
+        service["sources"] = cc_service["sources"]
+
     if "requirements" in cc_service and cc_service["requirements"]:
         service["detailedRequirements"] = cc_service["requirements"]
 
