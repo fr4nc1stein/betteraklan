@@ -10,7 +10,7 @@ import { lazy, Suspense } from 'react';
 
 import { NuqsAdapter } from 'nuqs/adapters/react-router/v6';
 
-import { config } from '@/lib/lguConfig';
+import { config, isAklanProvince } from '@/lib/lguConfig';
 import { Footer } from '@/components/layout/Footer';
 // --- Layouts ---
 import { Navbar } from '@/components/layout/Navbar';
@@ -307,7 +307,9 @@ function AppContent() {
             <Route path='/transparency' element={<TransparencyLayout />}>
               <Route index element={<TransparencyIndex />} />
               <Route path='budget' element={<BudgetPage />} />
-              <Route path='fund-tracker' element={<FundTracker />} />
+              {isAklanProvince && (
+                <Route path='fund-tracker' element={<FundTracker />} />
+              )}
               <Route path='procurement' element={<ProcurementPage />} />
               <Route path='/transparency/infrastructure'>
                 <Route index element={<InfrastructurePage />} />

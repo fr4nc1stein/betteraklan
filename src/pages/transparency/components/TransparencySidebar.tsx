@@ -4,6 +4,7 @@ import {
   SidebarContainer,
   SidebarItem,
 } from '@/components/navigation/SidebarNavigation';
+import { isAklanProvince } from '@/lib/lguConfig';
 
 const sections = [
   {
@@ -20,6 +21,7 @@ const sections = [
     name: 'School and Disaster Funds',
     slug: 'fund-tracker',
     icon: Wallet,
+    hidden: !isAklanProvince,
   },
   {
     // The FY2027 budget transparency portal, deployed separately.
@@ -27,7 +29,7 @@ const sections = [
     slug: 'https://transparency.betteraklan.org',
     icon: Truck,
   },
-];
+].filter(section => !section.hidden);
 
 export default function TransparencySidebar() {
   return (

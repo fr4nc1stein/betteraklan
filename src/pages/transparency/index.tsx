@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 
 import { DetailSection } from '@/components/layout';
-import { config } from '@/lib/lguConfig';
+import { config, isAklanProvince } from '@/lib/lguConfig';
 import { Badge } from '@/components/ui/Badge';
 import { Card, CardContent, CardGrid } from '@/components/ui/Card';
 
@@ -55,8 +55,9 @@ export default function TransparencyIndex() {
       href: '/transparency/fund-tracker',
       color: 'blue',
       badge: 'Fund reports',
+      hidden: !isAklanProvince,
     },
-  ];
+  ].filter(section => !section.hidden);
 
   return (
     <div className='animate-in fade-in duration-500'>
@@ -81,7 +82,7 @@ export default function TransparencyIndex() {
       </div>
 
       {/* 2. Transparency sections - Using CardGrid */}
-      <CardGrid columns={2}>
+      <CardGrid columns={isAklanProvince ? 2 : 3}>
         {sections.map(section => (
           <Link
             key={section.href}

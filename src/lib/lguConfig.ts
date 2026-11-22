@@ -58,4 +58,6 @@ export interface LGUConfig {
 }
 
 export const config = lguConfig as LGUConfig;
+export const isAklanProvince =
+  config.lgu.type === 'province' && config.lgu.name === 'Aklan';
 export default config;
