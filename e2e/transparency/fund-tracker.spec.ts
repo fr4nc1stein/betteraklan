@@ -33,7 +33,7 @@ test('residents can reach the fund tracker and download a quarterly report', asy
   ).toContainText('₱57,430,309.20');
   const [download] = await Promise.all([
     page.waitForEvent('download'),
-    page.getByRole('link', { name: 'Download CSV' }).click(),
+    page.getByRole('link', { name: /download csv.*quarter 2/i }).click(),
   ]);
   expect(download.suggestedFilename()).toBe('aklan-2025-drrmf-q2.csv');
 });

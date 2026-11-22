@@ -27,6 +27,7 @@ export default function FundReportTable({
       <div className='text-kapwa-text-brand flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium'>
         <a
           className='inline-flex items-center gap-1.5 underline'
+          aria-label={`Official workbook for ${name}, Quarter ${report.quarter}`}
           href={report.source}
           target='_blank'
           rel='noreferrer'
@@ -36,6 +37,7 @@ export default function FundReportTable({
         </a>
         <a
           className='inline-flex items-center gap-1.5 underline'
+          aria-label={`Download CSV for ${name}, Quarter ${report.quarter}`}
           href={reportCsv(report, fund)}
           download={`aklan-2025-${id}.csv`}
         >

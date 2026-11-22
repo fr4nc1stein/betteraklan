@@ -79,6 +79,15 @@ describe('School and Disaster Fund Tracker', () => {
       target: { value: 'drrmf' },
     });
     expect(screen.getAllByRole('table', { name: /disaster/i })).toHaveLength(4);
+    for (const number of [1, 2, 3, 4]) {
+      for (const action of ['Official workbook', 'Download CSV']) {
+        expect(
+          screen.getByRole('link', {
+            name: `${action} for Local Disaster Risk Reduction and Management Fund, Quarter ${number}`,
+          })
+        ).toBeDefined();
+      }
+    }
     expect(screen.queryByRole('table', { name: /education fund/i })).toBeNull();
     expect(
       within(
@@ -108,7 +117,7 @@ describe('School and Disaster Fund Tracker', () => {
       fireEvent.change(screen.getByLabelText('Quarter'), {
         target: { value: quarter },
       });
-      const link = screen.getByRole('link', { name: 'Download CSV' });
+      const link = screen.getByRole('link', { name: /download csv/i });
       expect(link.getAttribute('download')).toBe(`aklan-2025-${id}.csv`);
       const csv = decodeURIComponent(
         (link.getAttribute('href') ?? '').split(',')[1]
