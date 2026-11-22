@@ -8,27 +8,32 @@ import {
 } from 'lucide-react';
 
 import { Badge } from '@/components/ui/Badge';
-import { getAllOfficeDivisions } from '@/lib/services';
-
-// Types
-export type ServiceSource = 'citizens-charter' | 'community' | 'all';
-export type ClassificationFilter = 'Simple' | 'Complex' | 'all';
+import { getAllOfficeDivisions, serviceSourceLabels } from '@/lib/services';
+import type {
+  CharterAudienceFilter,
+  ServiceSourceFilter,
+} from '@/types/servicesTypes';
+import type { ClassificationFilter } from '../layout';
 
 interface FilterBarProps {
   selectedOfficeDivision: string;
-  selectedSource: ServiceSource;
+  selectedSource: ServiceSourceFilter;
+  selectedAudience: CharterAudienceFilter;
   selectedClassification: ClassificationFilter;
   onOfficeDivisionChange: (division: string) => void;
-  onSourceChange: (source: ServiceSource) => void;
+  onSourceChange: (source: ServiceSourceFilter) => void;
+  onAudienceChange: (audience: CharterAudienceFilter) => void;
   onClassificationChange: (classification: ClassificationFilter) => void;
 }
 
 export default function FilterBar({
   selectedOfficeDivision,
   selectedSource,
+  selectedAudience,
   selectedClassification,
   onOfficeDivisionChange,
   onSourceChange,
+  onAudienceChange,
   onClassificationChange,
 }: FilterBarProps) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -37,6 +42,7 @@ export default function FilterBar({
   const hasActiveFilters =
     selectedOfficeDivision !== 'all' ||
     selectedSource !== 'all' ||
+    selectedAudience !== 'public' ||
     selectedClassification !== 'all';
 
   return (
@@ -81,26 +87,36 @@ export default function FilterBar({
                 </h4>
               </div>
               <div className='flex flex-wrap gap-1.5'>
-                <FilterPill
-                  label='All'
-                  selected={selectedSource === 'all'}
-                  onClick={() => onSourceChange('all')}
-                  data-testid='filter-source-all'
-                />
-                <FilterPill
-                  label='Official'
-                  selected={selectedSource === 'citizens-charter'}
-                  onClick={() => onSourceChange('citizens-charter')}
-                  data-testid='filter-source-official'
-                />
-                <FilterPill
-                  label='Community'
-                  selected={selectedSource === 'community'}
-                  onClick={() => onSourceChange('community')}
-                  data-testid='filter-source-community'
-                />
+                {(
+                  Object.keys(serviceSourceLabels) as ServiceSourceFilter[]
+                ).map(source => (
+                  <FilterPill
+                    key={source}
+                    label={serviceSourceLabels[source]}
+                    selected={selectedSource === source}
+                    onClick={() => onSourceChange(source)}
+                    data-testid={`filter-source-${source === 'citizens-charter' ? 'official' : source}`}
+                  />
+                ))}
               </div>
             </div>
+
+            <label className='flex-1'>
+              <span className='text-kapwa-text-disabled mb-2 block text-[10px] font-bold uppercase tracking-wider'>
+                Audience
+              </span>
+              <select
+                value={selectedAudience}
+                onChange={e =>
+                  onAudienceChange(e.target.value as CharterAudienceFilter)
+                }
+                className='border-kapwa-border-weak bg-kapwa-bg-surface-raised text-kapwa-text-strong w-full rounded-lg border px-3 py-1.5 text-xs'
+              >
+                <option value='public'>Public catalogue</option>
+                <option value='internal'>Internal Charter services</option>
+                <option value='all'>All audiences</option>
+              </select>
+            </label>
 
             {/* Classification Filter */}
             <div className='flex-1'>
@@ -128,6 +144,11 @@ export default function FilterBar({
                   selected={selectedClassification === 'Complex'}
                   onClick={() => onClassificationChange('Complex')}
                   data-testid='filter-classification-complex'
+                />
+                <FilterPill
+                  label='Highly Technical'
+                  selected={selectedClassification === 'Highly Technical'}
+                  onClick={() => onClassificationChange('Highly Technical')}
                 />
               </div>
             </div>
@@ -163,6 +184,7 @@ export default function FilterBar({
                   onClick={() => {
                     onOfficeDivisionChange('all');
                     onSourceChange('all');
+                    onAudienceChange('public');
                     onClassificationChange('all');
                   }}
                   className='text-kapwa-text-brand hover:text-kapwa-text-accent-orange text-xs font-bold transition-colors'
@@ -197,6 +219,7 @@ function FilterPill({
     <button
       type='button'
       onClick={onClick}
+      aria-pressed={selected}
       data-testid={testId}
       className={`transition-all ${
         selected

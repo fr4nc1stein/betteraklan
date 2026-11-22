@@ -6,20 +6,14 @@ import { Helmet } from 'react-helmet-async';
 import { Input } from '@bettergov/kapwa/input';
 import { SearchIcon } from 'lucide-react';
 
-import mergedServicesData from '@/data/citizens-charter/merged-services.json';
 import { Badge, EmptyState } from '@/components/ui';
+import { getMergedServices } from '@/lib/services';
+import type { Service } from '@/types/servicesTypes';
 
-interface MergedService {
-  slug: string;
-  service: string;
-  plainLanguageName?: string;
-  type: string;
-  category: { name: string; slug: string };
-  classification?: string;
-}
+const services = getMergedServices();
 
 interface HitProps {
-  hit: MergedService;
+  hit: Service;
 }
 
 const Hit: FC<HitProps> = ({ hit }) => {
@@ -29,8 +23,12 @@ const Hit: FC<HitProps> = ({ hit }) => {
         <h2 className='text-kapwa-text-info text-lg font-semibold hover:underline'>
           {hit.plainLanguageName || hit.service}
         </h2>
-        <div className='text-kapwa-text-support mt-1 flex items-center gap-2 text-xs'>
+        <div className='text-kapwa-text-support mt-1 flex flex-wrap items-center gap-2 text-xs'>
           {hit.category && <span>{hit.category.name}</span>}
+          {hit.officeDivision && <span>{hit.officeDivision}</span>}
+          {hit.charter?.audience === 'internal' && (
+            <Badge variant='secondary'>Internal</Badge>
+          )}
           <Badge
             variant='primary'
             className='bg-kapwa-bg-info-weak text-kapwa-text-info'
@@ -54,16 +52,20 @@ const SearchPage: FC = () => {
   const [categoryFilter, setCategoryFilter] = useState<string>('');
 
   const fuse = useMemo(() => {
-    return new Fuse(mergedServicesData as MergedService[], {
-      keys: ['service', 'plainLanguageName', 'category.name', 'officeDivision'],
+    return new Fuse(services, {
+      keys: [
+        'service',
+        'plainLanguageName',
+        'category.name',
+        'officeDivision',
+        'charter.division',
+      ],
       threshold: 0.3,
     });
   }, []);
 
   const filteredResults = useMemo(() => {
-    let results: MergedService[] = query
-      ? fuse.search(query).map(r => r.item)
-      : (mergedServicesData as MergedService[]);
+    let results = query ? fuse.search(query).map(r => r.item) : services;
 
     if (typeFilter) results = results.filter(s => s.type === typeFilter);
     if (categoryFilter)
@@ -72,9 +74,7 @@ const SearchPage: FC = () => {
     return results;
   }, [query, typeFilter, categoryFilter, fuse]);
 
-  const categories = Array.from(
-    new Set((mergedServicesData as MergedService[]).map(s => s.category.name))
-  );
+  const categories = Array.from(new Set(services.map(s => s.category.name)));
 
   const activeFiltersCount = (typeFilter ? 1 : 0) + (categoryFilter ? 1 : 0);
 

@@ -221,11 +221,18 @@ export default function DepartmentDetail() {
                         </div>
                         <div className='min-w-0'>
                           <p className='text-kapwa-text-brand mb-0.5 truncate text-[10px] font-bold tracking-widest uppercase'>
-                            Service
+                            {service.charter?.audience === 'internal'
+                              ? 'Internal service'
+                              : 'Service'}
                           </p>
                           <p className='group-hover:text-kapwa-text-brand-bold text-kapwa-text-support text-sm leading-tight font-bold transition-colors'>
                             {service.plainLanguageName || service.service}
                           </p>
+                          {service.charter && service.officeDivision && (
+                            <p className='text-kapwa-text-support mt-1 text-xs'>
+                              {service.officeDivision}
+                            </p>
+                          )}
                         </div>
                       </div>
                       <ArrowRight className='group-hover:text-kapwa-text-brand text-kapwa-text-support h-4 w-4 shrink-0 transition-all group-hover:translate-x-1' />

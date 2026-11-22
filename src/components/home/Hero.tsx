@@ -15,25 +15,7 @@ import { useTranslation } from 'react-i18next';
 import { Badge } from '@/components/ui/Badge';
 import SearchInput from '@/components/ui/SearchInput';
 
-import servicesData from '@/data/services/services.json';
-import mergedServicesData from '@/data/citizens-charter/merged-services.json';
-
-interface Service {
-  slug: string;
-  service?: string;
-  office_name?: string;
-  office?: string;
-  description?: string;
-  category?: { name: string; slug: string };
-  subcategory?: { name: string; slug: string };
-}
-
-interface MergedService {
-  slug: string;
-  service: string;
-  plainLanguageName?: string;
-  officeSlug: string;
-}
+import { filterServices } from '@/lib/services';
 
 interface QuickAccessCard {
   title: string;
@@ -45,20 +27,23 @@ interface QuickAccessCard {
 const Hero: FC = () => {
   const { t } = useTranslation('common');
   const [query, setQuery] = useState('');
+  const publicServices = useMemo(
+    () => filterServices({ audience: 'public' }),
+    []
+  );
 
   const fuse = useMemo(() => {
-    return new Fuse(servicesData as Service[], {
+    return new Fuse(publicServices, {
       keys: [
         'service',
-        'office_name',
-        'office',
+        'plainLanguageName',
+        'officeDivision',
         'description',
         'category.name',
-        'subcategory.name',
       ],
       threshold: 0.3,
     });
-  }, []);
+  }, [publicServices]);
 
   const results = useMemo(() => {
     if (!query) return [];
@@ -67,15 +52,16 @@ const Hero: FC = () => {
 
   // Random services from merged-services - using plain language titles
   const randomServices = useMemo(() => {
-    const services = mergedServicesData as MergedService[];
     // Filter services that have plainLanguageName
-    const servicesWithPlainNames = services.filter(s => s.plainLanguageName);
+    const servicesWithPlainNames = publicServices.filter(
+      s => s.plainLanguageName
+    );
     // Shuffle and pick 2
     const shuffled = [...servicesWithPlainNames].sort(
       () => Math.random() - 0.5
     );
     return shuffled.slice(0, 2);
-  }, []);
+  }, [publicServices]);
 
   // Quick access cards for key sections
   const quickAccessCards: QuickAccessCard[] = [
@@ -137,12 +123,10 @@ const Hero: FC = () => {
                     to={`/services/${hit.slug}`}
                     className='block p-3 border-b hover:bg-kapwa-bg-hover last:border-none'
                   >
-                    <strong>
-                      {hit.service || hit.office_name || hit.office}
-                    </strong>
-                    {hit.description && (
+                    <strong>{hit.plainLanguageName || hit.service}</strong>
+                    {(hit.officeDivision || hit.description) && (
                       <p className='text-kapwa-text-support kapwa-body-sm-default'>
-                        {hit.description}
+                        {hit.officeDivision || hit.description}
                       </p>
                     )}
                   </Link>

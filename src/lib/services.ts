@@ -8,11 +8,19 @@ import type {
   Service,
   ServiceFilterOptions,
   ServiceSource,
+  ServiceSourceFilter,
   VerificationItem,
 } from '@/types/servicesTypes';
 
 // Import the merged services data
 import mergedServicesData from '@/data/citizens-charter/merged-services.json';
+
+export const serviceSourceLabels: Record<ServiceSourceFilter, string> = {
+  all: 'All',
+  'aklan-2026': '2026 Aklan Charter',
+  'citizens-charter': 'Official',
+  community: 'Community',
+};
 
 /**
  * Get all merged services (Citizens Charter + community)
@@ -56,6 +64,17 @@ export function getServicesBySource(source: ServiceSource): Service[] {
   return getMergedServices().filter(service => service.source === source);
 }
 
+function matchesSearch(service: Service, lowerQuery: string): boolean {
+  return [
+    service.service,
+    service.plainLanguageName,
+    service.category.name,
+    service.officeDivision,
+    service.charter?.division,
+    service.description,
+  ].some(field => field?.toLowerCase().includes(lowerQuery));
+}
+
 /**
  * Search services by query string
  * @param query - The search query
@@ -64,12 +83,8 @@ export function getServicesBySource(source: ServiceSource): Service[] {
 export function searchServices(query: string): Service[] {
   if (!query) return getMergedServices();
   const lowerQuery = query.toLowerCase();
-  return getMergedServices().filter(
-    service =>
-      service.service.toLowerCase().includes(lowerQuery) ||
-      service.category.name.toLowerCase().includes(lowerQuery) ||
-      service.officeDivision?.toLowerCase().includes(lowerQuery) ||
-      service.description?.toLowerCase().includes(lowerQuery)
+  return getMergedServices().filter(service =>
+    matchesSearch(service, lowerQuery)
   );
 }
 
@@ -94,27 +109,32 @@ export function filterServices(options: ServiceFilterOptions): Service[] {
   }
 
   // Filter by source
-  if (options.source && options.source !== 'all') {
+  if (options.source === 'aklan-2026') {
+    services = services.filter(s => s.charter);
+  } else if (options.source && options.source !== 'all') {
     services = services.filter(s => s.source === options.source);
   }
 
-  // Filter by classification (Citizens Charter only)
-  if (options.classification) {
+  if (options.audience === 'public') {
+    services = services.filter(s => s.charter?.audience !== 'internal');
+  } else if (options.audience === 'internal') {
     services = services.filter(
-      s => s.classification === options.classification
+      s => s.charter?.audience === 'internal' || s.charter?.audience === 'mixed'
+    );
+  }
+
+  // Filter by classification (Citizens Charter only)
+  const classification = options.classification?.toLowerCase();
+  if (classification) {
+    services = services.filter(s =>
+      s.classification?.toLowerCase().includes(classification)
     );
   }
 
   // Search filter
   if (options.search) {
     const lowerQuery = options.search.toLowerCase();
-    services = services.filter(
-      service =>
-        service.service.toLowerCase().includes(lowerQuery) ||
-        service.category.name.toLowerCase().includes(lowerQuery) ||
-        service.officeDivision?.toLowerCase().includes(lowerQuery) ||
-        service.description?.toLowerCase().includes(lowerQuery)
-    );
+    services = services.filter(service => matchesSearch(service, lowerQuery));
   }
 
   return services;
