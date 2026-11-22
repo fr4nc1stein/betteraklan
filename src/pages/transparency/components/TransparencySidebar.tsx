@@ -1,4 +1,4 @@
-import { CreditCard, Hammer, Truck } from 'lucide-react';
+import { CreditCard, Hammer, Truck, Wallet } from 'lucide-react';
 
 import {
   SidebarContainer,
@@ -15,6 +15,11 @@ const sections = [
     name: 'Procurement',
     slug: 'procurement',
     icon: Hammer,
+  },
+  {
+    name: 'School and Disaster Funds',
+    slug: 'fund-tracker',
+    icon: Wallet,
   },
   {
     // The FY2027 budget transparency portal, deployed separately.

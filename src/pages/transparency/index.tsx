@@ -8,6 +8,7 @@ import {
   HeartHandshake,
   Landmark,
   Search,
+  Wallet,
   ShoppingBag,
   Users,
 } from 'lucide-react';
@@ -46,6 +47,15 @@ export default function TransparencyIndex() {
       color: 'blue',
       badge: 'Contracts',
     },
+    {
+      title: 'School and Disaster Funds',
+      description:
+        'Browse the province’s quarterly education and disaster fund utilization reports.',
+      icon: Wallet,
+      href: '/transparency/fund-tracker',
+      color: 'blue',
+      badge: 'Fund reports',
+    },
   ];
 
   return (
@@ -70,8 +80,8 @@ export default function TransparencyIndex() {
         </div>
       </div>
 
-      {/* 2. The Three Pillars of Oversight - Using CardGrid */}
-      <CardGrid columns={3}>
+      {/* 2. Transparency sections - Using CardGrid */}
+      <CardGrid columns={2}>
         {sections.map(section => (
           <Link
             key={section.href}

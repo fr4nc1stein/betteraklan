@@ -83,6 +83,10 @@ export const mainNavigation: NavigationItem[] = [
         href: '/transparency/procurement',
       },
       {
+        label: 'School and Disaster Funds',
+        href: '/transparency/fund-tracker',
+      },
+      {
         // The FY2027 budget transparency portal: a separate deployment of
         // bettergovph/transparency-portal, scoped to Aklan's two districts.
         label: 'DPWH Projects',
