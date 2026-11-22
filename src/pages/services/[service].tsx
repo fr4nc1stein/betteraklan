@@ -33,7 +33,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/navigation/Breadcrumb';
 import { Badge } from '@/components/ui/Badge';
-import { Card } from '@/components/ui/Card';
+import { Card, CardContent } from '@/components/ui/Card';
 import { RequirementGrid } from './components/RequirementGrid';
 import { ProcessTimeline } from './components/ProcessTimeline';
 import { SupportingDocumentsDetail } from './components/SupportingDocumentsDetail';
@@ -509,28 +509,30 @@ export default function ServiceDetail() {
           )}
 
           {/* SUGGEST AN EDIT - NEW PLACEMENT & STYLE */}
-          <Card hover={false} className='space-y-4'>
-            <div className='flex items-center gap-3'>
-              <div className='bg-kapwa-bg-accent-orange-weak text-kapwa-text-accent-orange rounded-lg p-2'>
-                <HeartHandshake className='h-5 w-5' />
+          <Card hover={false}>
+            <CardContent className='space-y-4'>
+              <div className='flex items-center gap-3'>
+                <div className='bg-kapwa-bg-accent-orange-weak text-kapwa-text-accent-orange rounded-lg p-2'>
+                  <HeartHandshake className='h-5 w-5' />
+                </div>
+                <h4 className='text-kapwa-text-strong text-sm leading-tight font-bold'>
+                  Help improve this data
+                </h4>
               </div>
-              <h4 className='text-kapwa-text-strong text-sm leading-tight font-bold'>
-                Help improve this data
-              </h4>
-            </div>
-            <p className='text-kapwa-text-disabled text-xs leading-relaxed'>
-              Find an error or outdated info? Our community helps keep this
-              portal accurate.
-            </p>
-            <a
-              href={`${config.portal.githubUrl}/issues/new?template=contribution.yml&title=${encodeURIComponent(`[Edit] ${service.service}`)}`}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='group border-kapwa-border-weak text-kapwa-text-support hover:border-kapwa-border-weak hover:bg-kapwa-bg-surface-raised flex min-h-[44px] w-full items-center justify-center gap-2 rounded-xl border-2 px-4 py-2.5 text-xs font-bold transition-all'
-            >
-              <Edit3 className='group-hover:text-kapwa-text-accent-orange text-kapwa-text-disabled h-3.5 w-3.5 transition-colors' />
-              Suggest an Edit
-            </a>
+              <p className='text-kapwa-text-support text-xs leading-relaxed'>
+                Find an error or outdated info? Our community helps keep this
+                portal accurate.
+              </p>
+              <a
+                href={`${config.portal.githubUrl}/issues/new?template=contribution.yml&title=${encodeURIComponent(`[Edit] ${service.service}`)}`}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='group border-kapwa-border-weak text-kapwa-text-support hover:border-kapwa-border-weak hover:bg-kapwa-bg-surface-raised flex min-h-[44px] w-full items-center justify-center gap-2 rounded-xl border-2 px-4 py-2.5 text-xs font-bold transition-all'
+              >
+                <Edit3 className='group-hover:text-kapwa-text-accent-orange text-kapwa-text-disabled h-3.5 w-3.5 transition-colors' />
+                Suggest an Edit
+              </a>
+            </CardContent>
           </Card>
         </aside>
       </div>

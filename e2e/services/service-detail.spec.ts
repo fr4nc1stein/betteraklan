@@ -1,6 +1,33 @@
 import { test, expect } from '../test-config';
 import { assertKapwaTokens } from '../utils/kapwa';
 
+test('keeps the feedback card content inset from its border', async ({
+  page,
+}) => {
+  await page.goto('/services/animal-bite-treatment-center');
+
+  const heading = page.getByRole('heading', { name: 'Help improve this data' });
+  const card = page.getByRole('article').filter({ has: heading });
+  const action = card.getByRole('link', { name: 'Suggest an Edit' });
+  await expect(heading).toBeVisible();
+  await expect(action).toBeVisible();
+
+  const cardBounds = (await card.boundingBox())!;
+  const headingBounds = (await heading.boundingBox())!;
+  const actionBounds = (await action.boundingBox())!;
+  const insets = {
+    top: headingBounds.y - cardBounds.y,
+    left: actionBounds.x - cardBounds.x,
+    right:
+      cardBounds.x + cardBounds.width - actionBounds.x - actionBounds.width,
+    bottom:
+      cardBounds.y + cardBounds.height - actionBounds.y - actionBounds.height,
+  };
+  for (const [edge, inset] of Object.entries(insets)) {
+    expect(inset, `Feedback card ${edge} inset`).toBeGreaterThanOrEqual(16);
+  }
+});
+
 test.describe('Service Detail Page', () => {
   test.beforeEach(async ({ page }) => {
     // Navigate to a service detail page before each test
