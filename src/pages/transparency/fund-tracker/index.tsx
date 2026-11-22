@@ -13,6 +13,7 @@ import {
   disclosureUrl,
   type Fund,
   funds,
+  listedDocument,
   quarters,
   reportedAmount,
   reportsFor,
@@ -86,9 +87,12 @@ export default function FundTracker() {
                 const nextYear = Number(event.target.value);
                 setYear(nextYear);
                 if (
+                  !allQuarters &&
                   !reportsFor(nextYear, fund).some(
                     report => String(report.quarter) === quarter
-                  )
+                  ) &&
+                  listedDocument(nextYear, fund, Number(quarter))?.kind !==
+                    'pdf'
                 ) {
                   setQuarter('all');
                 }

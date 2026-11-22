@@ -102,6 +102,12 @@ describe('School and Disaster Fund Tracker', () => {
     const quarter = screen.getByRole('combobox', { name: 'Quarter' });
     expect(within(year).getAllByRole('option')).toHaveLength(15);
 
+    fireEvent.change(year, { target: { value: '2013' } });
+    expect((quarter as HTMLSelectElement).value).toBe('4');
+    expect(
+      screen.getByRole('link', { name: /official pdf.*quarter 4.*2013/i })
+    ).toBeDefined();
+
     fireEvent.change(year, { target: { value: '2026' } });
     expect(
       screen.getAllByRole('table', { name: /education fund.*2026/i })
