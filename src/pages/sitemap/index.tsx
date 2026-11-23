@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 
 import { SEO } from '@/components/layout/SEO';
-import { config } from '@/lib/lguConfig';
+import { config, hasAklanLocalCodes } from '@/lib/lguConfig';
 
 interface SitemapSection {
   title: string;
@@ -126,6 +126,15 @@ const SitemapPage: FC = () => {
           url: '/government/departments',
           description: 'Government departments and agencies',
         },
+        ...(hasAklanLocalCodes
+          ? [
+              {
+                title: 'Local Codes',
+                url: '/government/local-codes',
+                description: 'Search published provincial codes and ordinances',
+              },
+            ]
+          : []),
         {
           title: 'Constitutional Bodies',
           url: '/government/constitutional',

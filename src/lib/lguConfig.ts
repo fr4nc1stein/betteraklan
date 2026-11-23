@@ -58,4 +58,7 @@ export interface LGUConfig {
 }
 
 export const config = lguConfig as LGUConfig;
+export const hasAklanLocalCodes =
+  config.lgu.type === 'province' &&
+  config.lgu.name.trim().toLowerCase() === 'aklan';
 export default config;

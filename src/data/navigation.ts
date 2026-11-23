@@ -1,4 +1,4 @@
-import { config } from '../lib/lguConfig';
+import { config, hasAklanLocalCodes } from '../lib/lguConfig';
 import { lguLabels } from '../lib/lguLabels';
 import { NavigationItem } from '../types';
 import serviceCategories from './service_categories.json';
@@ -24,6 +24,9 @@ export const mainNavigation: NavigationItem[] = [
       { label: 'Elected Officials', href: '/government/elected-officials' },
       { label: 'Departments', href: '/government/departments' },
       { label: 'Municipalities', href: '/government/municipalities' },
+      ...(hasAklanLocalCodes
+        ? [{ label: 'Local Codes', href: '/government/local-codes' }]
+        : []),
     ],
   },
   {

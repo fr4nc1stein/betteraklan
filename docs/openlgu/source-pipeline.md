@@ -14,6 +14,20 @@ The old numbered Python scripts remain available as legacy tooling, but this lan
 
 These files are local pipeline artifacts. They do not update canonical D1 records.
 
+## Public Aklan Local Codes catalogue
+
+`src/data/openlgu/aklan-local-codes.json` is the reviewed snapshot used by `/government/local-codes`. It covers the seven entries on the [provincial Local Codes index](https://aklan.gov.ph/local-codes/) and the additional documents in the [provincial ordinance archive](https://aklan.gov.ph/category/archives/ordinances/). Keep the 2008 and 2020 investment editions as separate records. The Environment Code is listed in both sources and appears once in the catalogue.
+
+Use the existing WordPress collector to discover ordinance changes:
+
+```sh
+node scripts/openlgu/collect-website-source-records.cjs --source ordinances
+```
+
+If the site blocks automated requests, use the collector’s `--html-dir` mode with saved archive and post HTML. Review the resulting source records before updating the public snapshot. Open PDFs anonymously and preserve any Google Drive resource key. For scanned ordinances, open the official gallery and verify that it contains and links the document pages. Verify ordinance numbers against the documents and preserve the publishing page separately from the document link. The collector's publication dates are WordPress timestamps.
+
+The public snapshot can be updated independently of D1 and does not activate the OpenLGU feature flag. Search indexes the reviewed title, ordinance number, and topics. The catalogue presents the published documents, including historical editions.
+
 ## Website Source Identity
 
 Website table rows use the PDF URL string as the primary source row identity when present, even if the linked PDF is dead.

@@ -1,12 +1,19 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
-import { Building2Icon, ChevronRight, HomeIcon, UsersIcon } from 'lucide-react';
+import {
+  Building2Icon,
+  ChevronRight,
+  HomeIcon,
+  ScrollText,
+  UsersIcon,
+} from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 import { PageHeader, SectionBlock } from '@/components/layout';
 
 import { cn } from '@/lib/utils';
 import { lguLabels } from '@/lib/lguLabels';
+import { hasAklanLocalCodes } from '@/lib/lguConfig';
 
 export default function GovernmentRootLayout() {
   const location = useLocation();
@@ -44,6 +51,17 @@ export default function GovernmentRootLayout() {
       path: '/government/municipalities',
       category: 'Local Units',
     },
+    ...(hasAklanLocalCodes
+      ? [
+          {
+            title: 'Local Codes',
+            description: 'Search published provincial codes and ordinances.',
+            icon: ScrollText,
+            path: '/government/local-codes',
+            category: 'Legislation',
+          },
+        ]
+      : []),
   ];
 
   return (
@@ -56,7 +74,14 @@ export default function GovernmentRootLayout() {
       />
 
       <SectionBlock className='pb-kapwa-xs md:pb-kapwa-sm'>
-        <div className='grid grid-cols-1 gap-4 md:grid-cols-3'>
+        <div
+          className={cn(
+            'grid grid-cols-1 gap-4',
+            hasAklanLocalCodes
+              ? 'sm:grid-cols-2 lg:grid-cols-4'
+              : 'md:grid-cols-3'
+          )}
+        >
           {branches.map(branch => {
             const isActive = currentPath.includes(branch.path);
             const Icon = branch.icon;

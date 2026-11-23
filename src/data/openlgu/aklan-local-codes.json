@@ -1,0 +1,138 @@
+[
+  {
+    "id": "childrens-code",
+    "type": "code",
+    "title": "Children’s Code",
+    "number": "General Ordinance No. 2009-006",
+    "topics": ["child protection", "children’s rights", "welfare"],
+    "sourceUrl": "https://aklan.gov.ph/local-codes/",
+    "documentUrl": "https://drive.google.com/file/d/0B57nO5rKmbOeUHVsR0J6S3FwNnM/view?resourcekey=0-OucJLqf7rI9CPZC6Jht4Hg",
+    "format": "PDF"
+  },
+  {
+    "id": "environment-code",
+    "type": "code",
+    "title": "Environment Code",
+    "number": "General Ordinance No. 2009-005",
+    "topics": ["environment", "natural resources", "conservation", "waste"],
+    "sourceUrl": "https://aklan.gov.ph/local-codes/",
+    "documentUrl": "https://drive.google.com/file/d/0B57nO5rKmbOeQU53djZUZ0hybWM/view?resourcekey=0-0208jpcAZmIRw9zJz1Ne-A",
+    "format": "PDF"
+  },
+  {
+    "id": "gender-and-development-code",
+    "type": "code",
+    "title": "Gender and Development Code",
+    "number": "General Ordinance No. 004, s. 2016",
+    "topics": ["GAD", "gender equality", "women"],
+    "sourceUrl": "https://aklan.gov.ph/local-codes/",
+    "documentUrl": "https://drive.google.com/file/d/0B57nO5rKmbOeVmt4WGtSWWd0dUk/view?resourcekey=0-SK-EepOrDZrohcnnOOC2WQ",
+    "format": "PDF"
+  },
+  {
+    "id": "investment-and-incentives-code",
+    "type": "code",
+    "title": "Investment and Incentives Code",
+    "number": "General Ordinance No. 2008-007",
+    "topics": ["investment", "business", "incentives"],
+    "sourceUrl": "https://aklan.gov.ph/local-codes/",
+    "documentUrl": "https://drive.google.com/file/d/0B57nO5rKmbOeUzYyUl9lVU1ENFk/view?resourcekey=0-4furXH7ae30xfJ-_L4a8RQ",
+    "format": "PDF"
+  },
+  {
+    "id": "public-private-partnership-code",
+    "type": "code",
+    "title": "Public Private Partnership (PPP) Code",
+    "number": "General Ordinance No. 002, s. 2015",
+    "topics": ["partnership", "infrastructure", "investment"],
+    "sourceUrl": "https://aklan.gov.ph/local-codes/",
+    "documentUrl": "https://drive.google.com/file/d/16-oWPcDGuNzEmpTYzSu_TA_0X43Nq8B1/view",
+    "format": "PDF"
+  },
+  {
+    "id": "revenue-code",
+    "type": "code",
+    "title": "Revenue Code",
+    "number": "General Ordinance No. 2019-002",
+    "topics": ["2020 Revenue Code", "tax", "fees", "charges"],
+    "sourceUrl": "https://aklan.gov.ph/local-codes/",
+    "documentUrl": "https://drive.google.com/file/d/1j616zIJzkHjDpSMi80Tw15B8UuypghQc/view",
+    "format": "PDF"
+  },
+  {
+    "id": "tourism-code",
+    "type": "code",
+    "title": "Tourism Code",
+    "number": "General Ordinance No. 2009-003",
+    "topics": ["tourism", "travel", "accommodation"],
+    "sourceUrl": "https://aklan.gov.ph/local-codes/",
+    "documentUrl": "https://drive.google.com/file/d/0B57nO5rKmbOeVTZnTEFQZTJ5TUE/view?resourcekey=0-iDmIs31vh7tU6c9BG8Visg",
+    "format": "PDF"
+  },
+  {
+    "id": "general-ordinance-2020-003",
+    "type": "code",
+    "title": "Aklan Investment and Incentives Code of 2020",
+    "number": "General Ordinance No. 2020-003",
+    "topics": ["investment", "business", "incentives"],
+    "sourceUrl": "https://aklan.gov.ph/aklan-investment-and-incentives-code-of-2020/",
+    "documentUrl": "https://drive.google.com/file/d/1Ldc8HmcbRRAWT_7bCpvNUb-woa3Mzefv/view",
+    "format": "PDF"
+  },
+  {
+    "id": "general-ordinance-2020-008",
+    "type": "ordinance",
+    "title": "Revenue Code amendment on agriculture and hospital fees",
+    "number": "General Ordinance No. 2020-008",
+    "topics": [
+      "revenue",
+      "agriculture",
+      "hospital",
+      "service fees",
+      "2019-002"
+    ],
+    "sourceUrl": "https://aklan.gov.ph/general-ordinance-no-2020-008/",
+    "documentUrl": "https://drive.google.com/file/d/12cItRkLnx0c6q6InCC43iVQSQNeovSJ5/view",
+    "format": "PDF"
+  },
+  {
+    "id": "general-ordinance-2020-009",
+    "type": "ordinance",
+    "title": "Revenue Code amendment on ATM rental charges",
+    "number": "General Ordinance No. 2020-009",
+    "topics": ["revenue", "rent", "banks", "ATM", "2019-002"],
+    "sourceUrl": "https://aklan.gov.ph/general-ordinance-no-2020-009/",
+    "documentUrl": "https://drive.google.com/file/d/1L68_plNB13scezF7dC4IZghbj4pjQZBq/view",
+    "format": "PDF"
+  },
+  {
+    "id": "general-ordinance-2020-007",
+    "type": "ordinance",
+    "title": "Ordinance on COVID-19 discrimination",
+    "number": "SP General Ordinance No. 2020-007",
+    "topics": ["pandemic", "public health", "stigma", "discrimination"],
+    "sourceUrl": "https://aklan.gov.ph/sp-general-ordinance-no-2020-007/",
+    "documentUrl": "https://aklan.gov.ph/sp-general-ordinance-no-2020-007/",
+    "format": "Scanned gallery"
+  },
+  {
+    "id": "general-ordinance-2020-006",
+    "type": "ordinance",
+    "title": "Ordinance on face coverings during the public health emergency",
+    "number": "SP General Ordinance No. 2020-006",
+    "topics": ["COVID-19", "pandemic", "public health", "face masks"],
+    "sourceUrl": "https://aklan.gov.ph/sp-general-ordinance-no-2020-006/",
+    "documentUrl": "https://aklan.gov.ph/sp-general-ordinance-no-2020-006/",
+    "format": "Scanned gallery"
+  },
+  {
+    "id": "tax-ordinance-2020-001",
+    "type": "ordinance",
+    "title": "2020 first-quarter real property tax deadline extension",
+    "number": "Tax Ordinance No. 2020-001",
+    "topics": ["revenue", "real property tax", "tax deadline", "surcharges"],
+    "sourceUrl": "https://aklan.gov.ph/tax-ordinance-no-2020-001/",
+    "documentUrl": "https://aklan.gov.ph/tax-ordinance-no-2020-001/",
+    "format": "Scanned gallery"
+  }
+]
