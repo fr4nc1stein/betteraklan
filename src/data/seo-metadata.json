@@ -39,6 +39,10 @@
     "title": "The Philippine Government: Learn More - {{portal.name}}.org",
     "description": "Find important information about The Philippine Government: Learn More through {{portal.name}}.org, the Philippines\u2019 civic information portal."
   },
+  "/government/local-codes": {
+    "title": "Aklan Local Codes and Ordinances | {{portal.name}}.org",
+    "description": "Search Aklan provincial codes and ordinances by topic or number and open the official source documents."
+  },
   "/government/constitutional": {
     "title": "Civil Service Commission (CSC) in Philippines | {{portal.name}}.org",
     "description": "Understand the Philippine Constitution\u2014its guiding principles, structure, and role in ensuring good governance at {{portal.name}}.org."

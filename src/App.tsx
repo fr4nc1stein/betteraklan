@@ -10,7 +10,7 @@ import { lazy, Suspense } from 'react';
 
 import { NuqsAdapter } from 'nuqs/adapters/react-router/v6';
 
-import { config } from '@/lib/lguConfig';
+import { config, hasAklanLocalCodes } from '@/lib/lguConfig';
 import { Footer } from '@/components/layout/Footer';
 // --- Layouts ---
 import { Navbar } from '@/components/layout/Navbar';
@@ -41,6 +41,7 @@ const ServiceDetail = lazy(() => import('@/pages/services/[service]'));
 
 // Government Directory
 const GovernmentRootLayout = lazy(() => import('@/pages/government/layout'));
+const LocalCodes = lazy(() => import('@/pages/government/local-codes'));
 const ElectedOfficialsLayout = lazy(
   () => import('@/pages/government/elected-officials/layout')
 );
@@ -207,6 +208,9 @@ function AppContent() {
 
           {/* Government Directory Hub */}
           <Route path='/government' element={<GovernmentRootLayout />}>
+            {hasAklanLocalCodes && (
+              <Route path='local-codes' element={<LocalCodes />} />
+            )}
             <Route
               index
               element={<Navigate to='elected-officials' replace />}
